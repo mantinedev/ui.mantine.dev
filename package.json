@@ -9,7 +9,8 @@
     "start": "next start -p 9522",
     "typecheck": "tsc --noEmit",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "plop": "esno scripts/plop"
   },
   "dependencies": {
     "@mantine/core": "3.7.0-alpha.1",
@@ -40,6 +41,7 @@
     "@storybook/testing-library": "^0.0.9",
     "@types/react": "^17.0.39",
     "babel-loader": "^8.2.3",
+    "esno": "^0.14.1",
     "typescript": "4.5.2"
   }
 }
