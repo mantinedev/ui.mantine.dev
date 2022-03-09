@@ -1,7 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { Code } from '@mantine/core';
-import corePackageJson from '../../../../../package.json';
 import { LogoImage } from './LogoImage';
 import useStyles from './Logo.styles';
 
@@ -15,9 +13,6 @@ export function Logo({ className, ...others }: any) {
           <LogoImage className={classes.image} />
         </a>
       </Link>
-      <a href="https://github.com/mantinedev/mantine/releases" className={classes.version}>
-        <Code>v{corePackageJson.version}</Code>
-      </a>
     </div>
   );
 }
