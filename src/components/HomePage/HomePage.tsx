@@ -20,7 +20,9 @@ export function HomePage({ componentsCountByCategory }: HomePageProps) {
         <title>Mantine UI</title>
       </Head>
       <Banner componentsCount={allComponentsCount} />
-      <CategoriesList groups={CATEGORIES} componentsCountByCategory={componentsCountByCategory} />
+      <div id="main">
+        <CategoriesList groups={CATEGORIES} componentsCountByCategory={componentsCountByCategory} />
+      </div>
     </>
   );
 }

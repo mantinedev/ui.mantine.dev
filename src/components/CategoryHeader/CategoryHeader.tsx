@@ -13,8 +13,8 @@ export function CategoryHeader({ category }: CategoryHeaderProps) {
   const { classes, theme } = useStyles();
   return (
     <>
-      <Link href="/">
-        <Anchor href="/">
+      <Link href="/#main" passHref>
+        <Anchor>
           <Center sx={{ display: 'inline-flex', flexDirection: 'row' }}>
             {theme.dir === 'rtl' ? <ArrowRightIcon /> : <ArrowLeftIcon />}
             <Box component="span" ml={5}>
