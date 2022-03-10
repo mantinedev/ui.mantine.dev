@@ -73,7 +73,7 @@ export function Banner({ componentsCount }: BannerProps) {
               className={cx(classes.control, classes.controlSecondary)}
               leftIcon={<MarkGithubIcon />}
               component="a"
-              href="https://github.com/mantinedev/mantine"
+              href="https://github.com/mantinedev/ui.mantine.dev"
             >
               GitHub
             </Button>
