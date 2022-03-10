@@ -39,7 +39,7 @@ function TooltipFocus() {
       withArrow
       opened={opened}
       sx={{ display: 'block', width: '100%' }}
-      color={valid ? 'teal' : undefined}
+      color={valid ? 'teal' : 'gray'}
     >
       <PasswordInput
         label="Tooltip shown onFocus"

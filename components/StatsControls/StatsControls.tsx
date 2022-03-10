@@ -20,6 +20,7 @@ const useStyles = createStyles((theme) => ({
   icon: {
     marginLeft: 'auto',
     marginRight: 'auto',
+    marginTop: theme.spacing.lg,
     color: theme.colors[theme.primaryColor][6],
   },
 

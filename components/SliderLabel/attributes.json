@@ -3,7 +3,6 @@
   "category": "sliders",
   "author": "rtivital",
   "withColor": true,
-  "responsive": true,
   "dependencies": [],
   "canvas": {
     "center": true,

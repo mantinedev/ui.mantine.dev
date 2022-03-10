@@ -26,6 +26,7 @@ export function StatsRing({ data }: StatsRingProps) {
           <RingProgress
             size={80}
             roundCaps
+            thickness={8}
             sections={[{ value: stat.progress, color: stat.color }]}
             label={
               <Center>
