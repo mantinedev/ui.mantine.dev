@@ -66,11 +66,12 @@ export function DropzoneButton() {
               {status.accepted
                 ? 'Drop files here'
                 : status.rejected
-                ? 'Pdf file less that 30mb'
+                ? 'Pdf file less than 30mb'
                 : 'Upload resume'}
             </Text>
             <Text align="center" size="sm" mt="xs" color="dimmed">
-              Drag&apos;n&apos;drop files here to upload. We can accept only <i>.pdf</i> files that
+              Drag&apos;n&apos;drop files here to upload. We can accept only <i>.pdf</i> files 
+              
               are less than 30mb in size.
             </Text>
           </div>
