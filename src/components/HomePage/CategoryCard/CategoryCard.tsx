@@ -15,7 +15,7 @@ export function CategoryCard({ count, category, className }: CategoryCardProps) 
   const theme = useMantineTheme();
 
   return (
-    <Link href={`/category/${category.slug}`}>
+    <Link href={`/category/${category.slug}`} passHref>
       <Card className={cx(classes.card, className)} radius="md">
         <CardSection className={classes.imageWrapper}>
           <Image
