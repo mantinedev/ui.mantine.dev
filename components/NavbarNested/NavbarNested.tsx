@@ -11,7 +11,7 @@ import {
 } from 'tabler-icons-react';
 import { UserButton } from '../UserButton/UserButton';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
-import { Logo } from './Logo';
+import { MantineLogoSmall } from '../../shared/MantineLogo';
 
 const mockdata = [
   { label: 'Dashboard', icon: Gauge },
@@ -93,7 +93,7 @@ export function NavbarNested() {
     <Navbar height={800} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section className={classes.header}>
         <Group position="apart">
-          <Logo width={120} />
+          <MantineLogoSmall />
           <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
         </Group>
       </Navbar.Section>
