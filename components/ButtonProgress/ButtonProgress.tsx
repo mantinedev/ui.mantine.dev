@@ -35,11 +35,11 @@ export function ButtonProgress() {
       setProgress((current) => {
         if (current < 100) {
           return current + 1;
-        } else {
-          interval.stop();
-          setLoaded(true);
-          return 0;
         }
+
+        interval.stop();
+        setLoaded(true);
+        return 0;
       }),
     20
   );
