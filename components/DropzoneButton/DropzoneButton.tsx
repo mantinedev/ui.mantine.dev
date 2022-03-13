@@ -66,7 +66,7 @@ export function DropzoneButton() {
               {status.accepted
                 ? 'Drop files here'
                 : status.rejected
-                ? 'Pdf file less that 30mb'
+                ? 'Pdf file less than 30mb'
                 : 'Upload resume'}
             </Text>
             <Text align="center" size="sm" mt="xs" color="dimmed">
