@@ -45,7 +45,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderSearchProps {
-  links: { link: string; label: string; links: { link: string; label: string }[] }[];
+  links: { link: string; label: string; links?: { link: string; label: string }[] }[];
 }
 
 export function HeaderMenu({ links }: HeaderSearchProps) {
