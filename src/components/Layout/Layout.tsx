@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
-import { useLocalStorageValue, useHotkeys } from '@mantine/hooks';
+import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { DirectionContext } from '../DirectionContext/DirectionContext';
 import { Header } from './Header/Header';
@@ -15,7 +15,7 @@ interface LayoutProps {
 const THEME_KEY = 'mantine-color-scheme';
 
 export function Layout({ children, noHeader = false }: LayoutProps) {
-  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: THEME_KEY,
     defaultValue: 'light',
   });

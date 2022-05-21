@@ -6,7 +6,7 @@ function TooltipIcon() {
   const rightSection = (
     <Tooltip
       label="We store your data securely"
-      placement="end"
+      position="top-end"
       withArrow
       transition="pop-bottom-right"
     >
@@ -34,12 +34,10 @@ function TooltipFocus() {
   return (
     <Tooltip
       label={valid ? 'All good!' : 'Password must include at least 6 characters'}
-      position="bottom"
-      placement="start"
+      position="bottom-start"
       withArrow
       opened={opened}
-      sx={{ display: 'block', width: '100%' }}
-      color={valid ? 'teal' : 'gray'}
+      color={valid ? 'teal' : undefined}
     >
       <PasswordInput
         label="Tooltip shown onFocus"

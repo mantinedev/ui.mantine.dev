@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Group } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack } from '@mantine/core';
 import {
   Icon as TablerIcon,
   Home2,
@@ -86,15 +86,15 @@ export function NavbarMinimal() {
         <MantineLogoSmall />
       </Center>
       <Navbar.Section grow mt={50}>
-        <Group direction="column" align="center" spacing={0}>
+        <Stack justify="center" spacing={0}>
           {links}
-        </Group>
+        </Stack>
       </Navbar.Section>
       <Navbar.Section>
-        <Group direction="column" align="center" spacing={0}>
+        <Stack justify="center" spacing={0}>
           <NavbarLink icon={SwitchHorizontal} label="Change account" />
           <NavbarLink icon={Logout} label="Logout" />
-        </Group>
+        </Stack>
       </Navbar.Section>
     </Navbar>
   );

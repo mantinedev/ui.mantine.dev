@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, ThemeIcon, Text, Group, SimpleGrid, Box } from '@mantine/core';
+import { createStyles, ThemeIcon, Text, SimpleGrid, Box, Stack } from '@mantine/core';
 import { Sun, Phone, MapPin, At } from 'tabler-icons-react';
 
 type ContactIconVariant = 'white' | 'gradient';
@@ -87,7 +87,7 @@ const MOCKDATA = [
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
   const items = data.map((item, index) => <ContactIcon key={index} variant={variant} {...item} />);
-  return <Group direction="column">{items}</Group>;
+  return <Stack>{items}</Stack>;
 }
 
 export function ContactIcons() {

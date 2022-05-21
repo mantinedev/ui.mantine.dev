@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, Table, Group, Text, ActionIcon, Menu, ScrollArea } from '@mantine/core';
-import { Pencil, Messages, Note, ReportAnalytics, Trash } from 'tabler-icons-react';
+import { Pencil, Messages, Note, ReportAnalytics, Trash, Dots } from 'tabler-icons-react';
 
 interface UsersStackProps {
   data: { avatar: string; name: string; job: string; email: string; rate: number }[];
@@ -39,13 +39,20 @@ export function UsersStack({ data }: UsersStackProps) {
           <ActionIcon>
             <Pencil size={16} />
           </ActionIcon>
-          <Menu transition="pop" withArrow placement="end">
-            <Menu.Item icon={<Messages size={16} />}>Send message</Menu.Item>
-            <Menu.Item icon={<Note size={16} />}>Add note</Menu.Item>
-            <Menu.Item icon={<ReportAnalytics size={16} />}>Analytics</Menu.Item>
-            <Menu.Item icon={<Trash size={16} />} color="red">
-              Terminate contract
-            </Menu.Item>
+          <Menu transition="pop" withArrow position="bottom-end">
+            <Menu.Target>
+              <ActionIcon>
+                <Dots size={16} />
+              </ActionIcon>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item icon={<Messages size={16} />}>Send message</Menu.Item>
+              <Menu.Item icon={<Note size={16} />}>Add note</Menu.Item>
+              <Menu.Item icon={<ReportAnalytics size={16} />}>Analytics</Menu.Item>
+              <Menu.Item icon={<Trash size={16} />} color="red">
+                Terminate contract
+              </Menu.Item>
+            </Menu.Dropdown>
           </Menu>
         </Group>
       </td>

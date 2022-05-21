@@ -62,12 +62,12 @@ export function LanguagePicker() {
 
   return (
     <Menu
-      transition="pop"
-      transitionDuration={150}
       onOpen={() => setOpened(true)}
       onClose={() => setOpened(false)}
       radius="md"
-      control={
+      width="target"
+    >
+      <Menu.Target>
         <UnstyledButton className={classes.control}>
           <Group spacing="xs">
             <Image src={selected.image} width={22} height={22} />
@@ -75,9 +75,8 @@ export function LanguagePicker() {
           </Group>
           <ChevronDown size={16} className={classes.icon} />
         </UnstyledButton>
-      }
-    >
-      {items}
+      </Menu.Target>
+      <Menu.Dropdown>{items}</Menu.Dropdown>
     </Menu>
   );
 }

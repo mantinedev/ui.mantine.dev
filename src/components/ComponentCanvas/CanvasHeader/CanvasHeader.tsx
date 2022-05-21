@@ -88,20 +88,16 @@ export function CanvasHeader({
             <GitHubLogoIcon style={{ width: 14, height: 14 }} />
           </ActionIcon>
 
-          <Menu
-            withArrow
-            placement="end"
-            position="bottom"
-            transition="pop-top-right"
-            transitionDuration={100}
-            control={
+          <Menu withArrow position="bottom-end" transition="pop-top-right" transitionDuration={100}>
+            <Menu.Target>
               <ActionIcon className={classes.action} title="Component dependencies">
                 <InfoCircledIcon style={{ width: 14, height: 14 }} />
               </ActionIcon>
-            }
-          >
-            <Menu.Label>Component dependencies</Menu.Label>
-            {dependencies}
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Label>Component dependencies</Menu.Label>
+              {dependencies}
+            </Menu.Dropdown>
           </Menu>
 
           {attributes.responsive && <Badge>Responsive</Badge>}

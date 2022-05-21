@@ -61,7 +61,7 @@ export function ImageActionBanner({
   style,
   className,
   ...others
-}: ImageActionBannerProps & Omit<CardProps<'div'>, keyof ImageActionBannerProps | 'children'>) {
+}: ImageActionBannerProps & Omit<CardProps, keyof ImageActionBannerProps | 'children'>) {
   const { classes, cx } = useStyles();
   const theme = useMantineTheme();
 

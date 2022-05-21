@@ -8,12 +8,11 @@ export function ButtonCopy() {
   return (
     <Tooltip
       label="Link copied!"
-      gutter={5}
-      placement="center"
+      offset={5}
       position="bottom"
       radius="xl"
       transition="slide-down"
-      transitionDuration={200}
+      transitionDuration={100}
       opened={clipboard.copied}
     >
       <Button

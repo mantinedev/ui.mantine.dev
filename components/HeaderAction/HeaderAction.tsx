@@ -69,14 +69,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
     if (menuItems) {
       return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          delay={0}
-          transitionDuration={0}
-          placement="end"
-          gutter={1}
-          control={
+        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+          <Menu.Target>
             <a
               href={link.link}
               className={classes.link}
@@ -87,9 +81,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
                 <ChevronDown size={12} />
               </Center>
             </a>
-          }
-        >
-          {menuItems}
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
       );
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-import { useForm, useToggle, upperFirst } from '@mantine/hooks';
+import { useToggle, upperFirst } from '@mantine/hooks';
+import { useForm } from '@mantine/form';
 import {
   TextInput,
   PasswordInput,
@@ -11,10 +12,11 @@ import {
   Divider,
   Checkbox,
   Anchor,
+  Stack,
 } from '@mantine/core';
 import { GoogleButton, TwitterButton } from '../SocialButtons/SocialButtons';
 
-export function AuthenticationForm(props: PaperProps<'div'>) {
+export function AuthenticationForm(props: PaperProps) {
   const [type, toggle] = useToggle('login', ['login', 'register']);
   const form = useForm({
     initialValues: {
@@ -24,9 +26,9 @@ export function AuthenticationForm(props: PaperProps<'div'>) {
       terms: true,
     },
 
-    validationRules: {
-      email: (val) => /^\S+@\S+$/.test(val),
-      password: (val) => val.length >= 6,
+    validate: {
+      email: (val) => /^\S+@\S+$/.test(val) && 'Invalid email',
+      password: (val) => val.length >= 6 && 'Password should include at least 6 characters',
     },
   });
 
@@ -44,7 +46,7 @@ export function AuthenticationForm(props: PaperProps<'div'>) {
       <Divider label="Or continue with email" labelPosition="center" my="lg" />
 
       <form onSubmit={form.onSubmit(() => {})}>
-        <Group direction="column" grow>
+        <Stack>
           {type === 'register' && (
             <TextInput
               label="Name"
@@ -79,7 +81,7 @@ export function AuthenticationForm(props: PaperProps<'div'>) {
               onChange={(event) => form.setFieldValue('terms', event.currentTarget.checked)}
             />
           )}
-        </Group>
+        </Stack>
 
         <Group position="apart" mt="xl">
           <Anchor component="button" type="button" color="gray" onClick={() => toggle()} size="xs">

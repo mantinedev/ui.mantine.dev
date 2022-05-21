@@ -35,7 +35,11 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
       opened={opened}
       onClose={() => setOpened(false)}
       transitionDuration={0}
-      target={
+      width={152}
+      position="bottom-end"
+      withArrow
+    >
+      <Popover.Target>
         <ColorSwatch
           component="button"
           type="button"
@@ -46,25 +50,10 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
         >
           <BlendingModeIcon style={{ width: 14, height: 14, color: theme.white }} />
         </ColorSwatch>
-      }
-      styles={{
-        root: {
-          marginRight: theme.spacing.xs,
-        },
-        body: {
-          width: 152,
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        },
-        arrow: {
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        },
-      }}
-      position="bottom"
-      placement="end"
-      withArrow
-      arrowSize={3}
-    >
-      <Group spacing="xs">{swatches}</Group>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Group spacing="xs">{swatches}</Group>
+      </Popover.Dropdown>
     </Popover>
   );
 }

@@ -23,8 +23,8 @@ export function SplitButton() {
   return (
     <Group noWrap spacing={0}>
       <Button className={classes.button}>Send</Button>
-      <Menu
-        control={
+      <Menu transition="pop" position="bottom-end">
+        <Menu.Target>
           <ActionIcon
             variant="filled"
             color={theme.primaryColor}
@@ -33,15 +33,14 @@ export function SplitButton() {
           >
             <ChevronDown size={16} />
           </ActionIcon>
-        }
-        transition="pop"
-        placement="end"
-      >
-        <Menu.Item icon={<Calendar size={16} color={menuIconColor} />}>
-          Schedule for later
-        </Menu.Item>
-        <Menu.Item icon={<Bookmark size={16} color={menuIconColor} />}>Save draft</Menu.Item>
-        <Menu.Item icon={<Trash size={16} color={menuIconColor} />}>Delete</Menu.Item>
+        </Menu.Target>
+        <Menu.Dropdown>
+          <Menu.Item icon={<Calendar size={16} color={menuIconColor} />}>
+            Schedule for later
+          </Menu.Item>
+          <Menu.Item icon={<Bookmark size={16} color={menuIconColor} />}>Save draft</Menu.Item>
+          <Menu.Item icon={<Trash size={16} color={menuIconColor} />}>Delete</Menu.Item>
+        </Menu.Dropdown>
       </Menu>
     </Group>
   );
