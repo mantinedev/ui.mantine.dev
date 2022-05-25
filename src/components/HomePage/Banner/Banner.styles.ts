@@ -68,6 +68,11 @@ export default createStyles((theme) => ({
   },
 
   control: {
+    boxShadow: '0 4px 6px hsla(0, 0%, 0%, .2)',
+    transitionDelay: '50ms',
+    '&:hover': {
+      boxShadow: '0 1px 3px hsla(0, 0%, 0%, .2)',
+    },
     '@media (max-width: 600px)': {
       flex: 1,
     },
@@ -78,7 +83,7 @@ export default createStyles((theme) => ({
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.cyan[6],
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.cyan[6],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[6] : theme.colors.cyan[7],
     },
   },
 
@@ -87,7 +92,7 @@ export default createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.white,
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2],
     },
   },
 
