@@ -92,7 +92,6 @@ export default createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 
     '&:hover': {
-      // a darker shade of white
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2],
     },
   },
