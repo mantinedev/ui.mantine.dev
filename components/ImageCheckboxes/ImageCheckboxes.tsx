@@ -57,7 +57,6 @@ export function ImageCheckbox({
     defaultValue: defaultChecked,
     finalValue: false,
     onChange,
-    rule: (val) => typeof val === 'boolean',
   });
 
   const { classes, cx } = useStyles({ checked: value });

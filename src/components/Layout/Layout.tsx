@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
-import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
+import {
+  MantineProvider,
+  ColorScheme,
+  ColorSchemeProvider,
+  createEmotionCache,
+} from '@mantine/core';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
 import { DirectionContext } from '../DirectionContext/DirectionContext';
@@ -13,6 +18,12 @@ interface LayoutProps {
 }
 
 const THEME_KEY = 'mantine-color-scheme';
+
+const rtlCache = createEmotionCache({
+  key: 'mantine-rtl',
+  prepend: true,
+  stylisPlugins: [rtlPlugin],
+});
 
 export function Layout({ children, noHeader = false }: LayoutProps) {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -43,9 +54,7 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
           theme={{ colorScheme, dir }}
           withGlobalStyles
           withNormalizeCSS
-          emotionOptions={
-            dir === 'rtl' ? { key: 'mantine-rtl', stylisPlugins: [rtlPlugin] } : { key: 'mantine' }
-          }
+          emotionCache={dir === 'rtl' ? rtlCache : undefined}
         >
           {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
           <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>
