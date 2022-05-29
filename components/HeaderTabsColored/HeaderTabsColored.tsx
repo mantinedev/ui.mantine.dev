@@ -12,16 +12,16 @@ import {
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
 import {
-  Logout,
-  Heart,
-  Star,
-  Message,
-  Settings,
-  PlayerPause,
-  Trash,
-  SwitchHorizontal,
-  ChevronDown,
-} from 'tabler-icons-react';
+  IconLogout as Logout,
+  IconHeart as Heart,
+  IconStar as Star,
+  IconMessage as Message,
+  IconSettings as Settings,
+  IconPlayerPause as PlayerPause,
+  IconTrash as Trash,
+  IconSwitchHorizontal as SwitchHorizontal,
+  IconChevronDown as ChevronDown,
+} from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

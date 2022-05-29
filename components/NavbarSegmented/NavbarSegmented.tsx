@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 import { Navbar, SegmentedControl, Text, createStyles } from '@mantine/core';
 import {
-  ShoppingCart,
-  License,
-  Message2,
-  BellRinging,
-  Messages,
-  Fingerprint,
-  Key,
-  Settings,
-  TwoFA,
-  Users,
-  FileAnalytics,
-  DatabaseImport,
-  Receipt2,
-  ReceiptRefund,
-  Logout,
-  SwitchHorizontal,
-} from 'tabler-icons-react';
+  IconShoppingCart as ShoppingCart,
+  IconLicense as License,
+  IconMessage2 as Message2,
+  IconBellRinging as BellRinging,
+  IconMessages as Messages,
+  IconFingerprint as Fingerprint,
+  IconKey as Key,
+  IconSettings as Settings,
+  Icon2fa as TwoFA,
+  IconUsers as Users,
+  IconFileAnalytics as FileAnalytics,
+  IconDatabaseImport as DatabaseImport,
+  IconReceipt2 as Receipt2,
+  IconReceiptRefund as ReceiptRefund,
+  IconLogout as Logout,
+  IconSwitchHorizontal as SwitchHorizontal,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');

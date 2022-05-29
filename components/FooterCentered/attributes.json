@@ -7,7 +7,7 @@
     "/core/group/",
     "/core/anchor/",
     "/core/button/#unstyled-button",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "links": [

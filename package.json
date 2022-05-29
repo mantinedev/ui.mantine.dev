@@ -23,6 +23,7 @@
     "@mantine/prism": "5.0.0-alpha.5",
     "@modulz/radix-icons": "^4.0.0",
     "@primer/octicons-react": "^17.0.0",
+    "@tabler/icons": "^1.68.0",
     "dayjs": "^1.10.8",
     "next": "12.1.5",
     "react": "^17.0.2",
@@ -30,8 +31,7 @@
     "react-dom": "^17.0.2",
     "storybook-dark-mode": "^1.1.0",
     "stylis": "^4.0.13",
-    "stylis-plugin-rtl": "^2.1.1",
-    "tabler-icons-react": "^1.37.0"
+    "stylis-plugin-rtl": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",

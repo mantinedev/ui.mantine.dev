@@ -11,7 +11,7 @@
     "/core/group/",
     "/core/action-icon/",
     "/core/tooltip/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "canvas": {
     "center": false

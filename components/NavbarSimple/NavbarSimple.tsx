@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 import { createStyles, Navbar, Group, Code } from '@mantine/core';
 import {
-  BellRinging,
-  Fingerprint,
-  Key,
-  Settings,
-  TwoFA,
-  DatabaseImport,
-  Receipt2,
-  SwitchHorizontal,
-  Logout,
-} from 'tabler-icons-react';
+  IconBellRinging as BellRinging,
+  IconFingerprint as Fingerprint,
+  IconKey as Key,
+  IconSettings as Settings,
+  Icon2fa as TwoFA,
+  IconDatabaseImport as DatabaseImport,
+  IconReceipt2 as Receipt2,
+  IconSwitchHorizontal as SwitchHorizontal,
+  IconLogout as Logout,
+} from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme, _params, getRef) => {

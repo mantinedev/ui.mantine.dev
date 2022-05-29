@@ -7,7 +7,7 @@
     "/core/select/",
     "/core/text-input/",
     "/dates/date-picker/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "canvas": {
     "center": true,
