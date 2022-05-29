@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, RangeSlider } from '@mantine/core';
-import {IconPoint as Point, IconGripVertical as GripVertical} from '@tabler/icons';
+import { IconPoint as Point, IconGripVertical as GripVertical } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   mark: {

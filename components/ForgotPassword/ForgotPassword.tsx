@@ -12,7 +12,7 @@ import {
   Center,
   Box,
 } from '@mantine/core';
-import {IconArrowLeft as ArrowLeft} from '@tabler/icons';
+import { IconArrowLeft as ArrowLeft } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   title: {

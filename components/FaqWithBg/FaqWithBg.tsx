@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Title, Container, Accordion, ThemeIcon } from '@mantine/core';
-import {IconPlus as Plus} from '@tabler/icons';
+import { IconPlus as Plus } from '@tabler/icons';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('control');

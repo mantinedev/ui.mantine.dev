@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { createStyles, NumberInput, NumberInputHandlers, ActionIcon } from '@mantine/core';
-import {IconPlus as Plus, IconMinus as Minus} from '@tabler/icons';
+import { IconPlus as Plus, IconMinus as Minus } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {

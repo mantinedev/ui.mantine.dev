@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconHeart as Heart} from '@tabler/icons';
+import { IconHeart as Heart } from '@tabler/icons';
 import {
   Card,
   Image,

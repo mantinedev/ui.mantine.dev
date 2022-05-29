@@ -1,6 +1,9 @@
 import React from 'react';
 import { RingProgress, Text, SimpleGrid, Paper, Center, Group } from '@mantine/core';
-import {IconArrowUpRight as ArrowUpRight, IconArrowDownRight as ArrowDownRight} from '@tabler/icons';
+import {
+  IconArrowUpRight as ArrowUpRight,
+  IconArrowDownRight as ArrowDownRight,
+} from '@tabler/icons';
 
 interface StatsRingProps {
   data: {

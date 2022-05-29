@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Avatar, Text, Group } from '@mantine/core';
-import {IconPhoneCall as PhoneCall, IconAt as At} from '@tabler/icons';
+import { IconPhoneCall as PhoneCall, IconAt as At } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   icon: {

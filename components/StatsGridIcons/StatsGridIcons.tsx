@@ -1,6 +1,9 @@
 import React from 'react';
 import { createStyles, Group, Paper, Text, ThemeIcon, SimpleGrid } from '@mantine/core';
-import {IconArrowUpRight as ArrowUpRight, IconArrowDownRight as ArrowDownRight} from '@tabler/icons';
+import {
+  IconArrowUpRight as ArrowUpRight,
+  IconArrowDownRight as ArrowDownRight,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   root: {

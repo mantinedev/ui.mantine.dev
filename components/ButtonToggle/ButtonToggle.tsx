@@ -8,7 +8,7 @@ import {
   Group,
 } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
-import {IconMoon as Moon, IconSun as Sun} from '@tabler/icons';
+import { IconMoon as Moon, IconSun as Sun } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   control: {

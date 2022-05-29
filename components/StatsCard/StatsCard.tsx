@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
-import {IconSwimming as Swimming} from '@tabler/icons';
+import { IconSwimming as Swimming } from '@tabler/icons';
 
 const ICON_SIZE = 60;
 

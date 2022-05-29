@@ -10,7 +10,7 @@ import {
   ScrollArea,
   useMantineTheme,
 } from '@mantine/core';
-import {IconPencil as Pencil, IconTrash as Trash} from '@tabler/icons';
+import { IconPencil as Pencil, IconTrash as Trash } from '@tabler/icons';
 
 interface UsersTableProps {
   data: { avatar: string; name: string; job: string; email: string; phone: string }[];

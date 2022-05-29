@@ -1,6 +1,11 @@
 import React from 'react';
 import { createStyles, ThemeIcon, Text, SimpleGrid, Box, Stack } from '@mantine/core';
-import {IconSun as Sun, IconPhone as Phone, IconMapPin as MapPin, IconAt as At} from '@tabler/icons';
+import {
+  IconSun as Sun,
+  IconPhone as Phone,
+  IconMapPin as MapPin,
+  IconAt as At,
+} from '@tabler/icons';
 
 type ContactIconVariant = 'white' | 'gradient';
 

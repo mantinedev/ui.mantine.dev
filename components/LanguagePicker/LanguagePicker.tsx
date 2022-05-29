@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createStyles, UnstyledButton, Menu, Image, Group } from '@mantine/core';
-import {IconChevronDown as ChevronDown} from '@tabler/icons';
+import { IconChevronDown as ChevronDown } from '@tabler/icons';
 import images from './images';
 
 const data = [
