@@ -10,7 +10,7 @@ import {
   List,
   ThemeIcon,
 } from '@mantine/core';
-import { Check } from 'tabler-icons-react';
+import { IconCheck as Check } from '@tabler/icons';
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({

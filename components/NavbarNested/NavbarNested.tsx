@@ -1,14 +1,14 @@
 import React from 'react';
 import { Navbar, Group, Code, ScrollArea, createStyles } from '@mantine/core';
 import {
-  Notes,
-  CalendarStats,
-  Gauge,
-  PresentationAnalytics,
-  FileAnalytics,
-  Adjustments,
-  Lock,
-} from 'tabler-icons-react';
+  IconNotes as Notes,
+  IconCalendarStats as CalendarStats,
+  IconGauge as Gauge,
+  IconPresentationAnalytics as PresentationAnalytics,
+  IconFileAnalytics as FileAnalytics,
+  IconAdjustments as Adjustments,
+  IconLock as Lock,
+} from '@tabler/icons';
 import { UserButton } from '../UserButton/UserButton';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
 import { Logo } from './Logo';

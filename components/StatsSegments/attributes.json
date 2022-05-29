@@ -11,7 +11,7 @@
     "/core/group/",
     "/core/paper/",
     "/core/simple-grid/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "total": "345,765",

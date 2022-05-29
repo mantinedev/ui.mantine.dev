@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, createStyles } from '@mantine/core';
-import { Icon as TablerIcon, CalendarStats, ChevronLeft, ChevronRight } from 'tabler-icons-react';
+import {
+  TablerIcon,
+  IconCalendarStats as CalendarStats,
+  IconChevronLeft as ChevronLeft,
+  IconChevronRight as ChevronRight,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   control: {

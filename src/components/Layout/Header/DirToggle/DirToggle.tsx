@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, Center, UnstyledButton } from '@mantine/core';
-import { Language } from 'tabler-icons-react';
+import { IconLanguage as Language } from '@tabler/icons';
 import useStyles from './DirToggle.styles';
 
 export function DirToggle({ className, dir, ...others }: React.ComponentPropsWithoutRef<'button'>) {

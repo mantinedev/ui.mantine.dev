@@ -1,17 +1,17 @@
 import React from 'react';
 import { Menu, Group, Text, Avatar, useMantineTheme, ActionIcon } from '@mantine/core';
 import {
-  Logout,
-  Heart,
-  Star,
-  Message,
-  Settings,
-  PlayerPause,
-  Trash,
-  SwitchHorizontal,
-  ChevronRight,
-  Dots,
-} from 'tabler-icons-react';
+  IconLogout as Logout,
+  IconHeart as Heart,
+  IconStar as Star,
+  IconMessage as Message,
+  IconSettings as Settings,
+  IconPlayerPause as PlayerPause,
+  IconTrash as Trash,
+  IconSwitchHorizontal as SwitchHorizontal,
+  IconChevronRight as ChevronRight,
+  IconDots as Dots,
+} from '@tabler/icons';
 
 export function UserMenu() {
   const theme = useMantineTheme();

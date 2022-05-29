@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { Text, Group, Button, createStyles, MantineTheme, useMantineTheme } from '@mantine/core';
 import { Dropzone, DropzoneStatus, MIME_TYPES } from '@mantine/dropzone';
-import { CloudUpload } from 'tabler-icons-react';
+import { IconCloudUpload as CloudUpload } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {

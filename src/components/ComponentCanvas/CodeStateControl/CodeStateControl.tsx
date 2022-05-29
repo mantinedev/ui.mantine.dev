@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionIcon, Tooltip } from '@mantine/core';
-import { Code, Database } from 'tabler-icons-react';
+import { IconCode as Code, IconDatabase as Database } from '@tabler/icons';
 
 interface CodeStateControlProps {
   state: 'code' | 'mockdata';

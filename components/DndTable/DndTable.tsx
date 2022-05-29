@@ -2,7 +2,7 @@ import React from 'react';
 import { createStyles, Table, ScrollArea } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { GripVertical } from 'tabler-icons-react';
+import { IconGripVertical as GripVertical } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   item: {

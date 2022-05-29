@@ -8,7 +8,7 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core';
-import { Icon as TablerIcon } from 'tabler-icons-react';
+import { TablerIcon } from '@tabler/icons';
 import { MOCKDATA } from './mockdata';
 
 interface FeatureProps {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { Search } from 'tabler-icons-react';
+import { IconSearch as Search } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

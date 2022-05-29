@@ -10,7 +10,11 @@ import {
   Group,
   ActionIcon,
 } from '@mantine/core';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
+import {
+  IconBrandTwitter as BrandTwitter,
+  IconBrandYoutube as BrandYoutube,
+  IconBrandInstagram as BrandInstagram,
+} from '@tabler/icons';
 import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles((theme) => ({

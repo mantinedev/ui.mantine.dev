@@ -1,6 +1,10 @@
 import React from 'react';
 import { createStyles, Anchor, Group, ActionIcon } from '@mantine/core';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
+import {
+  IconBrandTwitter as BrandTwitter,
+  IconBrandYoutube as BrandYoutube,
+  IconBrandInstagram as BrandInstagram,
+} from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

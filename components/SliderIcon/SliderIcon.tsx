@@ -1,6 +1,6 @@
 import React from 'react';
 import { Slider, RangeSlider } from '@mantine/core';
-import { Heart, HeartBroken } from 'tabler-icons-react';
+import { IconHeart as Heart, IconHeartBroken as HeartBroken } from '@tabler/icons';
 
 const styles = { thumb: { borderWidth: 2, height: 26, width: 26, padding: 3 } };
 

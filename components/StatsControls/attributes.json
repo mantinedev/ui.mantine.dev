@@ -9,7 +9,7 @@
     "/core/text/",
     "/core/paper/",
     "/core/group/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "canvas": {
     "center": true,

@@ -9,7 +9,7 @@
     "/core/group/",
     "/core/burger/",
     "/hooks/use-toggle/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "links": [

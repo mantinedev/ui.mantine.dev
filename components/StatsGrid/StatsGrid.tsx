@@ -1,13 +1,13 @@
 import React from 'react';
 import { createStyles, Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import {
-  UserPlus,
-  Discount2,
-  Receipt2,
-  Coin,
-  ArrowUpRight,
-  ArrowDownRight,
-} from 'tabler-icons-react';
+  IconUserPlus as UserPlus,
+  IconDiscount2 as Discount2,
+  IconReceipt2 as Receipt2,
+  IconCoin as Coin,
+  IconArrowUpRight as ArrowUpRight,
+  IconArrowDownRight as ArrowDownRight,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   root: {

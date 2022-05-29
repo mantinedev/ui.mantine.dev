@@ -1,6 +1,13 @@
 import React from 'react';
 import { Avatar, Table, Group, Text, ActionIcon, Menu, ScrollArea } from '@mantine/core';
-import { Pencil, Messages, Note, ReportAnalytics, Trash, Dots } from 'tabler-icons-react';
+import {
+  IconPencil as Pencil,
+  IconMessages as Messages,
+  IconNote as Note,
+  IconReportAnalytics as ReportAnalytics,
+  IconTrash as Trash,
+  IconDots as Dots,
+} from '@tabler/icons';
 
 interface UsersStackProps {
   data: { avatar: string; name: string; job: string; email: string; rate: number }[];
