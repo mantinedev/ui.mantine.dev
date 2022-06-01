@@ -68,7 +68,7 @@ const mockdata = [
   { icon: Settings, label: 'Settings' },
 ];
 
-export function NavbarMinimal() {
+export default function NavbarMinimal() {
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
