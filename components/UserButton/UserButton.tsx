@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-interface UserButtonProps extends UnstyledButtonProps {
+interface UserButtonProps extends UnstyledButtonProps<'button'> {
   image: string;
   name: string;
   email: string;
