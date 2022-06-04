@@ -14,12 +14,12 @@
     "plop": "esno scripts/plop"
   },
   "dependencies": {
-    "@mantine/core": "3.7.0-alpha.1",
-    "@mantine/dates": "3.7.0-alpha.1",
-    "@mantine/dropzone": "3.7.0-alpha.1",
-    "@mantine/hooks": "3.7.0-alpha.1",
-    "@mantine/next": "3.7.0-alpha.1",
-    "@mantine/prism": "3.7.0-alpha.1",
+    "@mantine/core": "^4.2.7",
+    "@mantine/dates": "^4.2.7",
+    "@mantine/dropzone": "^4.2.7",
+    "@mantine/hooks": "^4.2.7",
+    "@mantine/next": "^4.2.7",
+    "@mantine/prism": "^4.2.7",
     "@modulz/radix-icons": "^4.0.0",
     "@primer/octicons-react": "^17.0.0",
     "dayjs": "^1.10.8",
