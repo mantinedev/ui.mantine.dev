@@ -172,7 +172,7 @@ export function NavbarSearch() {
         icon={<Search size={12} />}
         rightSectionWidth={70}
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
-        styles={{ rightSection: { pointerEvents: 'none' } }}
+        styles={{ rightSection: { marginRight: 5, pointerEvents: 'none' } }}
         mb="sm"
       />
 
