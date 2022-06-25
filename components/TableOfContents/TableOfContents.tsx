@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Box, Text, Group } from '@mantine/core';
-import { ListSearch } from 'tabler-icons-react';
+import { IconListSearch as ListSearch } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   link: {

@@ -10,7 +10,7 @@ import {
   Burger,
 } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { ChevronDown } from 'tabler-icons-react';
+import { IconChevronDown as ChevronDown } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const HEADER_HEIGHT = 60;

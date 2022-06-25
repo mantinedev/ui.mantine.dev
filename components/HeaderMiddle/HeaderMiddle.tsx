@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Group, ActionIcon, Container, Burger } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
+import {
+  IconBrandTwitter as BrandTwitter,
+  IconBrandYoutube as BrandYoutube,
+  IconBrandInstagram as BrandInstagram,
+} from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

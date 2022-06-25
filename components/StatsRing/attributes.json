@@ -12,7 +12,7 @@
     "/core/group",
     "/core/paper/",
     "/core/simple-grid/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "data": [

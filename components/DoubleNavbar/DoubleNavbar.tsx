@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { createStyles, Navbar, UnstyledButton, Tooltip, Title } from '@mantine/core';
 import {
-  Home2,
-  Gauge,
-  DeviceDesktopAnalytics,
-  Fingerprint,
-  CalendarStats,
-  User,
-  Settings,
-} from 'tabler-icons-react';
+  IconHome2 as Home2,
+  IconGauge as Gauge,
+  IconDeviceDesktopAnalytics as DeviceDesktopAnalytics,
+  IconFingerprint as Fingerprint,
+  IconCalendarStats as CalendarStats,
+  IconUser as User,
+  IconSettings as Settings,
+} from '@tabler/icons';
 import { MantineLogoSmall } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

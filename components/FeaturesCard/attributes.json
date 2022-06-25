@@ -11,7 +11,7 @@
     "/core/badge/",
     "/core/image/",
     "/core/button/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "canvas": {
     "center": true,

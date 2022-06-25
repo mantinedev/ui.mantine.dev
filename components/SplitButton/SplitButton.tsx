@@ -1,6 +1,11 @@
 import React from 'react';
 import { createStyles, Button, Menu, Group, ActionIcon } from '@mantine/core';
-import { Trash, Bookmark, Calendar, ChevronDown } from 'tabler-icons-react';
+import {
+  IconTrash as Trash,
+  IconBookmark as Bookmark,
+  IconCalendar as Calendar,
+  IconChevronDown as ChevronDown,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   button: {

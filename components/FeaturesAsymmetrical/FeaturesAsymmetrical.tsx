@@ -1,6 +1,10 @@
 import React from 'react';
 import { createStyles, Text, SimpleGrid, Container } from '@mantine/core';
-import { Truck, Certificate, Coin } from 'tabler-icons-react';
+import {
+  IconTruck as Truck,
+  IconCertificate as Certificate,
+  IconCoin as Coin,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   feature: {

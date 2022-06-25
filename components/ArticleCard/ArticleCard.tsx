@@ -1,5 +1,5 @@
 import React from 'react';
-import { Bookmark, Heart, Share } from 'tabler-icons-react';
+import { IconBookmark as Bookmark, IconHeart as Heart, IconShare as Share } from '@tabler/icons';
 import {
   Card,
   Image,

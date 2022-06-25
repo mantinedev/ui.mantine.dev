@@ -2,7 +2,7 @@
   "title": "Slider with icon thumb",
   "category": "sliders",
   "author": "rtivital",
-  "dependencies": ["/core/slider/", "tabler-icons-react"],
+  "dependencies": ["/core/slider/", "@tabler/icons"],
   "canvas": {
     "center": true,
     "maxWidth": 420

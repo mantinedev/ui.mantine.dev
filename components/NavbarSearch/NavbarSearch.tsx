@@ -11,7 +11,14 @@ import {
   ActionIcon,
   Tooltip,
 } from '@mantine/core';
-import { Bulb, User, Checkbox, Search, Plus, Selector } from 'tabler-icons-react';
+import {
+  IconBulb as Bulb,
+  IconUser as User,
+  IconCheckbox as Checkbox,
+  IconSearch as Search,
+  IconPlus as Plus,
+  IconSelector as Selector,
+} from '@tabler/icons';
 import { UserButton } from '../UserButton/UserButton';
 
 const useStyles = createStyles((theme) => ({

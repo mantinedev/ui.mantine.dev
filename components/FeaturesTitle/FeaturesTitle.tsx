@@ -1,6 +1,11 @@
 import React from 'react';
 import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col } from '@mantine/core';
-import { ReceiptOff, Flame, CircleDotted, FileCode } from 'tabler-icons-react';
+import {
+  IconReceiptOff as ReceiptOff,
+  IconFlame as Flame,
+  IconCircleDotted as CircleDotted,
+  IconFileCode as FileCode,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {

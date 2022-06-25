@@ -1,16 +1,16 @@
 import React from 'react';
 import { createStyles, Card, Text, SimpleGrid, UnstyledButton, Anchor, Group } from '@mantine/core';
 import {
-  CreditCard,
-  BuildingBank,
-  Repeat,
-  ReceiptRefund,
-  Receipt,
-  ReceiptTax,
-  Report,
-  CashBanknote,
-  Coin,
-} from 'tabler-icons-react';
+  IconCreditCard as CreditCard,
+  IconBuildingBank as BuildingBank,
+  IconRepeat as Repeat,
+  IconReceiptRefund as ReceiptRefund,
+  IconReceipt as Receipt,
+  IconReceiptTax as ReceiptTax,
+  IconReport as Report,
+  IconCashBanknote as CashBanknote,
+  IconCoin as Coin,
+} from '@tabler/icons';
 
 const mockdata = [
   { title: 'Credit cards', icon: CreditCard, color: 'violet' },

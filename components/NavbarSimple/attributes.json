@@ -3,7 +3,7 @@
   "category": "navbars",
   "author": "rtivital",
   "withColor": true,
-  "dependencies": ["/core/app-shell/", "/core/group/", "/core/code/", "tabler-icons-react"],
+  "dependencies": ["/core/app-shell/", "/core/group/", "/core/code/", "@tabler/icons"],
   "canvas": {
     "center": false
   }

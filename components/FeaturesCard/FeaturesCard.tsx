@@ -1,6 +1,11 @@
 import React from 'react';
 import { Card, Image, Text, Group, Badge, createStyles, Center, Button } from '@mantine/core';
-import { GasStation, Gauge, ManualGearbox, Users } from 'tabler-icons-react';
+import {
+  IconGasStation as GasStation,
+  IconGauge as Gauge,
+  IconManualGearbox as ManualGearbox,
+  IconUsers as Users,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   card: {

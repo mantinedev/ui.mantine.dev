@@ -1,4 +1,10 @@
-import { Gauge, Cookie, User, Message2, Lock } from 'tabler-icons-react';
+import {
+  IconGauge as Gauge,
+  IconCookie as Cookie,
+  IconUser as User,
+  IconMessage2 as Message2,
+  IconLock as Lock,
+} from '@tabler/icons';
 
 export const MOCKDATA = [
   {

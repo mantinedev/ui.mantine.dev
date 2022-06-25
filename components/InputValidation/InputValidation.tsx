@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInput, createStyles } from '@mantine/core';
-import { AlertTriangle } from 'tabler-icons-react';
+import { IconAlertTriangle as AlertTriangle } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   invalid: {

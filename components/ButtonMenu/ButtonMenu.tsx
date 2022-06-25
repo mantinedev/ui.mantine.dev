@@ -1,6 +1,12 @@
 import React from 'react';
 import { Button, Menu, Text, useMantineTheme } from '@mantine/core';
-import { SquareCheck, Package, Users, Calendar, ChevronDown } from 'tabler-icons-react';
+import {
+  IconSquareCheck as SquareCheck,
+  IconPackage as Package,
+  IconUsers as Users,
+  IconCalendar as Calendar,
+  IconChevronDown as ChevronDown,
+} from '@tabler/icons';
 
 export function ButtonMenu() {
   const theme = useMantineTheme();

@@ -9,7 +9,12 @@ import {
   Center,
   TextInput,
 } from '@mantine/core';
-import { Selector, ChevronDown, ChevronUp, Search } from 'tabler-icons-react';
+import {
+  IconSelector as Selector,
+  IconChevronDown as ChevronDown,
+  IconChevronUp as ChevronUp,
+  IconSearch as Search,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   th: {

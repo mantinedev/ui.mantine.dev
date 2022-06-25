@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useBooleanToggle } from '@mantine/hooks';
-import { ChevronDown } from 'tabler-icons-react';
+import { IconChevronDown as ChevronDown } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({

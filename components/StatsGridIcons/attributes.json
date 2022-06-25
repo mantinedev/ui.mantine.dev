@@ -10,7 +10,7 @@
     "/core/text/",
     "/core/theme-icon/",
     "/core/simple-grid/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "data": [

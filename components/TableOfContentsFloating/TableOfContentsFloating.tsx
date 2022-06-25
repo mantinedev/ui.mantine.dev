@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createStyles, Box, Text, Group } from '@mantine/core';
-import { ListSearch } from 'tabler-icons-react';
+import { IconListSearch as ListSearch } from '@tabler/icons';
 
 const LINK_HEIGHT = 38;
 const INDICATOR_SIZE = 10;

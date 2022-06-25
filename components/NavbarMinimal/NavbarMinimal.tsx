@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack } from '@mantine/core';
 import {
-  Icon as TablerIcon,
-  Home2,
-  Gauge,
-  DeviceDesktopAnalytics,
-  Fingerprint,
-  CalendarStats,
-  User,
-  Settings,
-  Logout,
-  SwitchHorizontal,
-} from 'tabler-icons-react';
+  TablerIcon,
+  IconHome2 as Home2,
+  IconGauge as Gauge,
+  IconDeviceDesktopAnalytics as DeviceDesktopAnalytics,
+  IconFingerprint as Fingerprint,
+  IconCalendarStats as CalendarStats,
+  IconUser as User,
+  IconSettings as Settings,
+  IconLogout as Logout,
+  IconSwitchHorizontal as SwitchHorizontal,
+} from '@tabler/icons';
 import { MantineLogoSmall } from '../../shared/MantineLogo';
 
 const useStyles = createStyles((theme) => ({
