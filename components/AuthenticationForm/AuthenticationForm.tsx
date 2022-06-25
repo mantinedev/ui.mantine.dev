@@ -17,7 +17,7 @@ import {
 import { GoogleButton, TwitterButton } from '../SocialButtons/SocialButtons';
 
 export function AuthenticationForm(props: PaperProps) {
-  const [type, toggle] = useToggle('login', ['login', 'register']);
+  const [type, toggle] = useToggle(['login', 'register']);
   const form = useForm({
     initialValues: {
       email: '',

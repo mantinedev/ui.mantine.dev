@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import { IconSearch as Search } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
@@ -50,7 +50,7 @@ interface HeaderSearchProps {
 }
 
 export function HeaderSearch({ links }: HeaderSearchProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => (
@@ -68,7 +68,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
     <Header height={56} className={classes.header} mb={120}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={() => toggleOpened()} size="sm" />
+          <Burger opened={opened} onClick={toggle} size="sm" />
           <MantineLogo />
         </Group>
 

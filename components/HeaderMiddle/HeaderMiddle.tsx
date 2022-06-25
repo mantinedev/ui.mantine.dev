@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Group, ActionIcon, Container, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import {
   IconBrandTwitter as BrandTwitter,
   IconBrandYoutube as BrandYoutube,
@@ -76,7 +76,7 @@ interface HeaderMiddleProps {
 }
 
 export function HeaderMiddle({ links }: HeaderMiddleProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
@@ -97,12 +97,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
   return (
     <Header height={56} mb={120}>
       <Container className={classes.inner}>
-        <Burger
-          opened={opened}
-          onClick={() => toggleOpened()}
-          size="sm"
-          className={classes.burger}
-        />
+        <Burger opened={opened} onClick={toggle} size="sm" className={classes.burger} />
         <Group className={classes.links} spacing={5}>
           {items}
         </Group>

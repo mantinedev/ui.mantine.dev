@@ -9,7 +9,7 @@ import {
   Button,
   Burger,
 } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown as ChevronDown } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
@@ -61,7 +61,7 @@ interface HeaderActionProps {
 
 export function HeaderAction({ links }: HeaderActionProps) {
   const { classes } = useStyles();
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>{item.label}</Menu.Item>
@@ -103,12 +103,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
     <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
       <Container className={classes.inner} fluid>
         <Group>
-          <Burger
-            opened={opened}
-            onClick={() => toggleOpened()}
-            className={classes.burger}
-            size="sm"
-          />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
           <MantineLogo />
         </Group>
         <Group spacing={5} className={classes.links}>

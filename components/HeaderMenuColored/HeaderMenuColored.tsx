@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown as ChevronDown } from '@tabler/icons';
 import { MantineLogo } from '../../shared/MantineLogo';
 
@@ -54,7 +54,7 @@ interface HeaderSearchProps {
 }
 
 export function HeaderMenuColored({ links }: HeaderSearchProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => {
@@ -104,7 +104,7 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
           </Group>
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={toggle}
             className={classes.burger}
             size="sm"
             color="#fff"

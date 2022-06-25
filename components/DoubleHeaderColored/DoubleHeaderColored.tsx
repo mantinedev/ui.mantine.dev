@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '../../shared/MantineLogo';
 
 const HEADER_HEIGHT = 84;
@@ -90,7 +90,7 @@ interface DoubleHeaderProps {
 }
 
 export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
 
@@ -132,7 +132,7 @@ export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps)
         </div>
         <Burger
           opened={opened}
-          onClick={() => toggleOpened()}
+          onClick={toggle}
           className={classes.burger}
           size="sm"
           color="#fff"

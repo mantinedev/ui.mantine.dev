@@ -10,7 +10,7 @@ import {
   Tabs,
   Burger,
 } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import {
   IconLogout as Logout,
   IconHeart as Heart,
@@ -96,7 +96,7 @@ interface HeaderTabsProps {
 
 export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
   const { classes, theme, cx } = useStyles();
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
   const items = tabs.map((tab) => (
@@ -111,12 +111,7 @@ export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
         <Group position="apart">
           <MantineLogo />
 
-          <Burger
-            opened={opened}
-            onClick={() => toggleOpened()}
-            className={classes.burger}
-            size="sm"
-          />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
 
           <Menu
             width={260}
