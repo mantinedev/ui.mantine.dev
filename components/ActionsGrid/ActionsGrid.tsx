@@ -1,27 +1,27 @@
 import React from 'react';
 import { createStyles, Card, Text, SimpleGrid, UnstyledButton, Anchor, Group } from '@mantine/core';
 import {
-  IconCreditCard as CreditCard,
-  IconBuildingBank as BuildingBank,
-  IconRepeat as Repeat,
-  IconReceiptRefund as ReceiptRefund,
-  IconReceipt as Receipt,
-  IconReceiptTax as ReceiptTax,
-  IconReport as Report,
-  IconCashBanknote as CashBanknote,
-  IconCoin as Coin,
+  IconCreditCard,
+  IconBuildingBank,
+  IconRepeat,
+  IconReceiptRefund,
+  IconReceipt,
+  IconReceiptTax,
+  IconReport,
+  IconCashBanknote,
+  IconCoin,
 } from '@tabler/icons';
 
 const mockdata = [
-  { title: 'Credit cards', icon: CreditCard, color: 'violet' },
-  { title: 'Banks nearby', icon: BuildingBank, color: 'indigo' },
-  { title: 'Transfers', icon: Repeat, color: 'blue' },
-  { title: 'Refunds', icon: ReceiptRefund, color: 'green' },
-  { title: 'Receipts', icon: Receipt, color: 'teal' },
-  { title: 'Taxes', icon: ReceiptTax, color: 'cyan' },
-  { title: 'Reports', icon: Report, color: 'pink' },
-  { title: 'Payments', icon: Coin, color: 'red' },
-  { title: 'Cashback', icon: CashBanknote, color: 'orange' },
+  { title: 'Credit cards', icon: IconCreditCard, color: 'violet' },
+  { title: 'Banks nearby', icon: IconBuildingBank, color: 'indigo' },
+  { title: 'Transfers', icon: IconRepeat, color: 'blue' },
+  { title: 'Refunds', icon: IconReceiptRefund, color: 'green' },
+  { title: 'Receipts', icon: IconReceipt, color: 'teal' },
+  { title: 'Taxes', icon: IconReceiptTax, color: 'cyan' },
+  { title: 'Reports', icon: IconReport, color: 'pink' },
+  { title: 'Payments', icon: IconCoin, color: 'red' },
+  { title: 'Cashback', icon: IconCashBanknote, color: 'orange' },
 ];
 
 const useStyles = createStyles((theme) => ({

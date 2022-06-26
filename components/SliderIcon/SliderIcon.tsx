@@ -1,6 +1,6 @@
 import React from 'react';
 import { Slider, RangeSlider } from '@mantine/core';
-import { IconHeart as Heart, IconHeartBroken as HeartBroken } from '@tabler/icons';
+import { IconHeart, IconHeartBroken } from '@tabler/icons';
 
 const styles = { thumb: { borderWidth: 2, height: 26, width: 26, padding: 3 } };
 
@@ -8,7 +8,7 @@ export function SliderIcon() {
   return (
     <>
       <Slider
-        thumbChildren={<Heart size={16} />}
+        thumbChildren={<IconHeart size={16} stroke={1.5} />}
         color="red"
         label={null}
         defaultValue={40}
@@ -21,7 +21,10 @@ export function SliderIcon() {
         color="red"
         label={null}
         defaultValue={[20, 60]}
-        thumbChildren={[<Heart size={16} key="1" />, <HeartBroken size={16} key="2" />]}
+        thumbChildren={[
+          <IconHeart size={16} stroke={1.5} key="1" />,
+          <IconHeartBroken size={16} stroke={1.5} key="2" />,
+        ]}
       />
     </>
   );

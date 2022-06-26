@@ -10,7 +10,7 @@ import {
   List,
   ThemeIcon,
 } from '@mantine/core';
-import { IconCheck as Check } from '@tabler/icons';
+import { IconCheck } from '@tabler/icons';
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
@@ -89,7 +89,7 @@ export function HeroBullets() {
               size="sm"
               icon={
                 <ThemeIcon size={20} radius="xl">
-                  <Check size={12} />
+                  <IconCheck size={12} stroke={1.5} />
                 </ThemeIcon>
               }
             >

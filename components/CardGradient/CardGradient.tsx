@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Paper, Text, ThemeIcon } from '@mantine/core';
-import { IconColorSwatch as ColorSwatch } from '@tabler/icons';
+import { IconColorSwatch } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -43,7 +43,7 @@ export function CardGradient({ title, description }: CardGradientProps) {
         variant="gradient"
         gradient={{ deg: 0, from: 'pink', to: 'orange' }}
       >
-        <ColorSwatch size={28} />
+        <IconColorSwatch size={28} stroke={1.5} />
       </ThemeIcon>
       <Text size="xl" weight={500} mt="md">
         {title}

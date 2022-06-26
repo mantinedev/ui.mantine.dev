@@ -8,7 +8,7 @@ import {
   Group,
 } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
-import { IconMoon as Moon, IconSun as Sun } from '@tabler/icons';
+import { IconMoon, IconSun } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   control: {
@@ -39,7 +39,7 @@ const useStyles = createStyles((theme) => ({
 export function ButtonToggle() {
   const { classes } = useStyles();
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const Icon = colorScheme === 'dark' ? Sun : Moon;
+  const Icon = colorScheme === 'dark' ? IconSun : IconMoon;
 
   return (
     <Group position="center" my="xl">
@@ -54,7 +54,7 @@ export function ButtonToggle() {
         </Text>
 
         <Center className={classes.iconWrapper}>
-          <Icon size={18} />
+          <Icon size={18} stroke={1.5} />
         </Center>
       </UnstyledButton>
     </Group>

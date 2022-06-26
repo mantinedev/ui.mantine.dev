@@ -10,7 +10,7 @@ import {
   Burger,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown as ChevronDown } from '@tabler/icons';
+import { IconChevronDown } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 60;
@@ -78,7 +78,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <ChevronDown size={12} />
+                <IconChevronDown size={12} stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>

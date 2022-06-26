@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { createStyles, NumberInput, NumberInputHandlers, ActionIcon } from '@mantine/core';
-import { IconPlus as Plus, IconMinus as Minus } from '@tabler/icons';
+import { IconPlus, IconMinus } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -57,7 +57,7 @@ export function QuantityInput({ min = 1, max = 10 }: QuantityInputProps) {
         className={classes.control}
         onMouseDown={(event) => event.preventDefault()}
       >
-        <Minus size={16} />
+        <IconMinus size={16} stroke={1.5} />
       </ActionIcon>
 
       <NumberInput
@@ -78,7 +78,7 @@ export function QuantityInput({ min = 1, max = 10 }: QuantityInputProps) {
         className={classes.control}
         onMouseDown={(event) => event.preventDefault()}
       >
-        <Plus size={16} />
+        <IconPlus size={16} stroke={1.5} />
       </ActionIcon>
     </div>
   );

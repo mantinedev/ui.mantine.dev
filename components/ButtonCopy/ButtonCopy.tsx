@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Tooltip } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
-import { IconCopy as Copy } from '@tabler/icons';
+import { IconCopy } from '@tabler/icons';
 
 export function ButtonCopy() {
   const clipboard = useClipboard();
@@ -17,7 +17,7 @@ export function ButtonCopy() {
     >
       <Button
         variant="light"
-        rightIcon={<Copy size={20} />}
+        rightIcon={<IconCopy size={20} stroke={1.5} />}
         radius="xl"
         size="md"
         styles={{

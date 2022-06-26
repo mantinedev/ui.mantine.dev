@@ -1,16 +1,16 @@
 import React from 'react';
 import { Menu, Group, Text, Avatar, useMantineTheme, ActionIcon } from '@mantine/core';
 import {
-  IconLogout as Logout,
-  IconHeart as Heart,
-  IconStar as Star,
-  IconMessage as Message,
-  IconSettings as Settings,
-  IconPlayerPause as PlayerPause,
-  IconTrash as Trash,
-  IconSwitchHorizontal as SwitchHorizontal,
-  IconChevronRight as ChevronRight,
-  IconDots as Dots,
+  IconLogout,
+  IconHeart,
+  IconStar,
+  IconMessage,
+  IconSettings,
+  IconPlayerPause,
+  IconTrash,
+  IconSwitchHorizontal,
+  IconChevronRight,
+  IconDots,
 } from '@tabler/icons';
 
 export function UserMenu() {
@@ -20,11 +20,11 @@ export function UserMenu() {
       <Menu withArrow width={300} position="bottom" transition="pop">
         <Menu.Target>
           <ActionIcon>
-            <Dots size={16} />
+            <IconDots size={16} stroke={1.5} />
           </ActionIcon>
         </Menu.Target>
         <Menu.Dropdown>
-          <Menu.Item rightSection={<ChevronRight size={14} />}>
+          <Menu.Item rightSection={<IconChevronRight size={14} stroke={1.5} />}>
             <Group>
               <Avatar
                 radius="xl"
@@ -42,24 +42,30 @@ export function UserMenu() {
 
           <Menu.Divider />
 
-          <Menu.Item icon={<Heart size={14} color={theme.colors.red[6]} />}>Liked posts</Menu.Item>
-          <Menu.Item icon={<Star size={14} color={theme.colors.yellow[6]} />}>
+          <Menu.Item icon={<IconHeart size={14} stroke={1.5} color={theme.colors.red[6]} />}>
+            Liked posts
+          </Menu.Item>
+          <Menu.Item icon={<IconStar size={14} stroke={1.5} color={theme.colors.yellow[6]} />}>
             Saved posts
           </Menu.Item>
-          <Menu.Item icon={<Message size={14} color={theme.colors.blue[6]} />}>
+          <Menu.Item icon={<IconMessage size={14} stroke={1.5} color={theme.colors.blue[6]} />}>
             Your comments
           </Menu.Item>
 
           <Menu.Label>Settings</Menu.Label>
-          <Menu.Item icon={<Settings size={14} />}>Account settings</Menu.Item>
-          <Menu.Item icon={<SwitchHorizontal size={14} />}>Change account</Menu.Item>
-          <Menu.Item icon={<Logout size={14} />}>Logout</Menu.Item>
+          <Menu.Item icon={<IconSettings size={14} stroke={1.5} />}>Account settings</Menu.Item>
+          <Menu.Item icon={<IconSwitchHorizontal size={14} stroke={1.5} />}>
+            Change account
+          </Menu.Item>
+          <Menu.Item icon={<IconLogout size={14} stroke={1.5} />}>Logout</Menu.Item>
 
           <Menu.Divider />
 
           <Menu.Label>Danger zone</Menu.Label>
-          <Menu.Item icon={<PlayerPause size={14} />}>Pause subscription</Menu.Item>
-          <Menu.Item color="red" icon={<Trash size={14} />}>
+          <Menu.Item icon={<IconPlayerPause size={14} stroke={1.5} />}>
+            Pause subscription
+          </Menu.Item>
+          <Menu.Item color="red" icon={<IconTrash size={14} stroke={1.5} />}>
             Delete account
           </Menu.Item>
         </Menu.Dropdown>

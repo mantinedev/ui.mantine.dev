@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { createStyles, Navbar, UnstyledButton, Tooltip, Title } from '@mantine/core';
 import {
-  IconHome2 as Home2,
-  IconGauge as Gauge,
-  IconDeviceDesktopAnalytics as DeviceDesktopAnalytics,
-  IconFingerprint as Fingerprint,
-  IconCalendarStats as CalendarStats,
-  IconUser as User,
-  IconSettings as Settings,
+  IconHome2,
+  IconGauge,
+  IconDeviceDesktopAnalytics,
+  IconFingerprint,
+  IconCalendarStats,
+  IconUser,
+  IconSettings,
 } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
@@ -112,13 +112,13 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const mainLinksMockdata = [
-  { icon: Home2, label: 'Home' },
-  { icon: Gauge, label: 'Dashboard' },
-  { icon: DeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: CalendarStats, label: 'Releases' },
-  { icon: User, label: 'Account' },
-  { icon: Fingerprint, label: 'Security' },
-  { icon: Settings, label: 'Settings' },
+  { icon: IconHome2, label: 'Home' },
+  { icon: IconGauge, label: 'Dashboard' },
+  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
+  { icon: IconCalendarStats, label: 'Releases' },
+  { icon: IconUser, label: 'Account' },
+  { icon: IconFingerprint, label: 'Security' },
+  { icon: IconSettings, label: 'Settings' },
 ];
 
 const linksMockdata = [
@@ -146,7 +146,7 @@ export function DoubleNavbar() {
         onClick={() => setActive(link.label)}
         className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
       >
-        <link.icon />
+        <link.icon stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   ));

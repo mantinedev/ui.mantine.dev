@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown as ChevronDown } from '@tabler/icons';
+import { IconChevronDown } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -73,7 +73,7 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <ChevronDown size={12} />
+                <IconChevronDown size={12} stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>

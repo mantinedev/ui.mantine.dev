@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Title, Container, Accordion, ThemeIcon } from '@mantine/core';
-import { IconPlus as Plus } from '@tabler/icons';
+import { IconPlus } from '@tabler/icons';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('control');
@@ -97,7 +97,7 @@ export function FaqWithBg() {
           disableChevronRotation
           chevron={
             <ThemeIcon radius="xl" className={classes.gradient} size={32}>
-              <Plus size={18} />
+              <IconPlus size={18} stroke={1.5} />
             </ThemeIcon>
           }
         >

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Avatar, Text, Group } from '@mantine/core';
-import { IconPhoneCall as PhoneCall, IconAt as At } from '@tabler/icons';
+import { IconPhoneCall, IconAt } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   icon: {
@@ -36,14 +36,14 @@ export function UserInfoIcons({ avatar, name, title, phone, email }: UserInfoIco
           </Text>
 
           <Group noWrap spacing={10} mt={3}>
-            <At size={16} className={classes.icon} />
+            <IconAt stroke={1.5} size={16} className={classes.icon} />
             <Text size="xs" color="dimmed">
               {email}
             </Text>
           </Group>
 
           <Group noWrap spacing={10} mt={5}>
-            <PhoneCall size={16} className={classes.icon} />
+            <IconPhoneCall stroke={1.5} size={16} className={classes.icon} />
             <Text size="xs" color="dimmed">
               {phone}
             </Text>

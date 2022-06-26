@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { createStyles, Navbar, Group, Code } from '@mantine/core';
 import {
-  IconBellRinging as BellRinging,
-  IconFingerprint as Fingerprint,
-  IconKey as Key,
-  IconSettings as Settings,
-  Icon2fa as TwoFA,
-  IconDatabaseImport as DatabaseImport,
-  IconReceipt2 as Receipt2,
-  IconSwitchHorizontal as SwitchHorizontal,
-  IconLogout as Logout,
+  IconBellRinging,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconSwitchHorizontal,
+  IconLogout,
 } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
@@ -75,13 +75,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-  { link: '', label: 'Notifications', icon: BellRinging },
-  { link: '', label: 'Billing', icon: Receipt2 },
-  { link: '', label: 'Security', icon: Fingerprint },
-  { link: '', label: 'SSH Keys', icon: Key },
-  { link: '', label: 'Databases', icon: DatabaseImport },
-  { link: '', label: 'Authentication', icon: TwoFA },
-  { link: '', label: 'Other Settings', icon: Settings },
+  { link: '', label: 'Notifications', icon: IconBellRinging },
+  { link: '', label: 'Billing', icon: IconReceipt2 },
+  { link: '', label: 'Security', icon: IconFingerprint },
+  { link: '', label: 'SSH Keys', icon: IconKey },
+  { link: '', label: 'Databases', icon: IconDatabaseImport },
+  { link: '', label: 'Authentication', icon: Icon2fa },
+  { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 
 export function NavbarSimple() {
@@ -98,7 +98,7 @@ export function NavbarSimple() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} />
+      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -115,12 +115,12 @@ export function NavbarSimple() {
 
       <Navbar.Section className={classes.footer}>
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <SwitchHorizontal className={classes.linkIcon} />
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
         </a>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <Logout className={classes.linkIcon} />
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
       </Navbar.Section>

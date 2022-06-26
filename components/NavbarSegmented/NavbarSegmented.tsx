@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Navbar, SegmentedControl, Text, createStyles } from '@mantine/core';
 import {
-  IconShoppingCart as ShoppingCart,
-  IconLicense as License,
-  IconMessage2 as Message2,
-  IconBellRinging as BellRinging,
-  IconMessages as Messages,
-  IconFingerprint as Fingerprint,
-  IconKey as Key,
-  IconSettings as Settings,
-  Icon2fa as TwoFA,
-  IconUsers as Users,
-  IconFileAnalytics as FileAnalytics,
-  IconDatabaseImport as DatabaseImport,
-  IconReceipt2 as Receipt2,
-  IconReceiptRefund as ReceiptRefund,
-  IconLogout as Logout,
-  IconSwitchHorizontal as SwitchHorizontal,
+  IconShoppingCart,
+  IconLicense,
+  IconMessage2,
+  IconBellRinging,
+  IconMessages,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconUsers,
+  IconFileAnalytics,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconReceiptRefund,
+  IconLogout,
+  IconSwitchHorizontal,
 } from '@tabler/icons';
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -83,22 +83,22 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
 const tabs = {
   account: [
-    { link: '', label: 'Notifications', icon: BellRinging },
-    { link: '', label: 'Billing', icon: Receipt2 },
-    { link: '', label: 'Security', icon: Fingerprint },
-    { link: '', label: 'SSH Keys', icon: Key },
-    { link: '', label: 'Databases', icon: DatabaseImport },
-    { link: '', label: 'Authentication', icon: TwoFA },
-    { link: '', label: 'Other Settings', icon: Settings },
+    { link: '', label: 'Notifications', icon: IconBellRinging },
+    { link: '', label: 'Billing', icon: IconReceipt2 },
+    { link: '', label: 'Security', icon: IconFingerprint },
+    { link: '', label: 'SSH Keys', icon: IconKey },
+    { link: '', label: 'Databases', icon: IconDatabaseImport },
+    { link: '', label: 'Authentication', icon: Icon2fa },
+    { link: '', label: 'Other Settings', icon: IconSettings },
   ],
   general: [
-    { link: '', label: 'Orders', icon: ShoppingCart },
-    { link: '', label: 'Receipts', icon: License },
-    { link: '', label: 'Reviews', icon: Message2 },
-    { link: '', label: 'Messages', icon: Messages },
-    { link: '', label: 'Customers', icon: Users },
-    { link: '', label: 'Refunds', icon: ReceiptRefund },
-    { link: '', label: 'Files', icon: FileAnalytics },
+    { link: '', label: 'Orders', icon: IconShoppingCart },
+    { link: '', label: 'Receipts', icon: IconLicense },
+    { link: '', label: 'Reviews', icon: IconMessage2 },
+    { link: '', label: 'Messages', icon: IconMessages },
+    { link: '', label: 'Customers', icon: IconUsers },
+    { link: '', label: 'Refunds', icon: IconReceiptRefund },
+    { link: '', label: 'Files', icon: IconFileAnalytics },
   ],
 };
 
@@ -117,7 +117,7 @@ export function NavbarSegmented() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} />
+      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -147,12 +147,12 @@ export function NavbarSegmented() {
 
       <Navbar.Section className={classes.footer}>
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <SwitchHorizontal className={classes.linkIcon} />
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
         </a>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <Logout className={classes.linkIcon} />
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
       </Navbar.Section>

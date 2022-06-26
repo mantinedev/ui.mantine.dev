@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Box, Text, Group } from '@mantine/core';
-import { IconListSearch as ListSearch } from '@tabler/icons';
+import { IconListSearch } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -59,7 +59,7 @@ export function TableOfContents({ links, active }: TableOfContentsProps) {
   return (
     <div>
       <Group mb="md">
-        <ListSearch size={18} />
+        <IconListSearch size={18} stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       {items}

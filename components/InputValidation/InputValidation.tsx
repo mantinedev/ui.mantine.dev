@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInput, createStyles } from '@mantine/core';
-import { IconAlertTriangle as AlertTriangle } from '@tabler/icons';
+import { IconAlertTriangle } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   invalid: {
@@ -21,7 +21,7 @@ export function InputValidation() {
       error="Invalid email"
       defaultValue="hello!gmail.com"
       classNames={{ input: classes.invalid }}
-      rightSection={<AlertTriangle size={16} className={classes.icon} />}
+      rightSection={<IconAlertTriangle stroke={1.5} size={16} className={classes.icon} />}
     />
   );
 }

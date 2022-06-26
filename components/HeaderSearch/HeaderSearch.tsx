@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconSearch as Search } from '@tabler/icons';
+import { IconSearch } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -79,7 +79,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
           <Autocomplete
             className={classes.search}
             placeholder="Search"
-            icon={<Search size={16} />}
+            icon={<IconSearch size={16} stroke={1.5} />}
             data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
           />
         </Group>

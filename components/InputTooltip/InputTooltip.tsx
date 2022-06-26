@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TextInput, PasswordInput, Tooltip, Center, Text } from '@mantine/core';
-import { IconInfoCircle as InfoCircle } from '@tabler/icons';
+import { IconInfoCircle } from '@tabler/icons';
 
 function TooltipIcon() {
   const rightSection = (
@@ -12,7 +12,7 @@ function TooltipIcon() {
     >
       <Text color="dimmed" sx={{ cursor: 'help' }}>
         <Center>
-          <InfoCircle size={18} />
+          <IconInfoCircle size={18} stroke={1.5} />
         </Center>
       </Text>
     </Tooltip>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconEye as Eye, IconMessageCircle as MessageCircle } from '@tabler/icons';
+import { IconEye, IconMessageCircle } from '@tabler/icons';
 import { Card, Text, Group, Center, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme, _params, getRef) => {
@@ -99,13 +99,13 @@ export function ImageCard({ image, title, author, views, comments, link }: Image
 
             <Group spacing="lg">
               <Center>
-                <Eye size={16} color={theme.colors.dark[2]} />
+                <IconEye size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
                   {views}
                 </Text>
               </Center>
               <Center>
-                <MessageCircle size={16} color={theme.colors.dark[2]} />
+                <IconMessageCircle size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
                   {comments}
                 </Text>

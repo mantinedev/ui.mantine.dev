@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Slider } from '@mantine/core';
-import { IconGripHorizontal as GripHorizontal } from '@tabler/icons';
+import { IconGripHorizontal } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   thumb: {
@@ -20,7 +20,7 @@ export function SliderWhite() {
   return (
     <Slider
       classNames={classes}
-      thumbChildren={<GripHorizontal size={18} />}
+      thumbChildren={<IconGripHorizontal size={18} stroke={1.5} />}
       defaultValue={40}
       label={null}
     />

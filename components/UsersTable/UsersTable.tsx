@@ -10,7 +10,7 @@ import {
   ScrollArea,
   useMantineTheme,
 } from '@mantine/core';
-import { IconPencil as Pencil, IconTrash as Trash } from '@tabler/icons';
+import { IconPencil, IconTrash } from '@tabler/icons';
 
 interface UsersTableProps {
   data: { avatar: string; name: string; job: string; email: string; phone: string }[];
@@ -56,10 +56,10 @@ export function UsersTable({ data }: UsersTableProps) {
       <td>
         <Group spacing={0} position="right">
           <ActionIcon>
-            <Pencil size={16} />
+            <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
           <ActionIcon color="red">
-            <Trash size={16} />
+            <IconTrash size={16} stroke={1.5} />
           </ActionIcon>
         </Group>
       </td>

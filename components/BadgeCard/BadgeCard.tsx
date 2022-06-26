@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconHeart as Heart } from '@tabler/icons';
+import { IconHeart } from '@tabler/icons';
 import {
   Card,
   Image,
@@ -94,7 +94,7 @@ export function BadgeCard({ image, title, description, country, badges }: BadgeC
           Show details
         </Button>
         <ActionIcon variant="default" radius="md" size={36}>
-          <Heart size={18} className={classes.like} />
+          <IconHeart size={18} className={classes.like} stroke={1.5} />
         </ActionIcon>
       </Group>
     </Card>

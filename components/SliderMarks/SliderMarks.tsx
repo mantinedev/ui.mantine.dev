@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, RangeSlider } from '@mantine/core';
-import { IconPoint as Point, IconGripVertical as GripVertical } from '@tabler/icons';
+import { IconPoint, IconGripVertical } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   mark: {
@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const point = <Point size={10} style={{ marginTop: 6 }} />;
+const point = <IconPoint size={10} style={{ marginTop: 6 }} stroke={1.5} />;
 
 export function SliderMarks() {
   const { classes } = useStyles();
@@ -32,7 +32,7 @@ export function SliderMarks() {
       mb="xl"
       classNames={classes}
       defaultValue={[30, 60]}
-      thumbChildren={<GripVertical />}
+      thumbChildren={<IconGripVertical stroke={1.5} />}
       marks={[
         { value: 0, label: '0' },
         { value: 12.5, label: point },

@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStyles, Card, Image, ActionIcon, Group, Text, Avatar, Badge } from '@mantine/core';
-import { IconHeart as Heart, IconBookmark as Bookmark, IconShare as Share } from '@tabler/icons';
+import { IconHeart, IconBookmark, IconShare } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -70,13 +70,13 @@ export function ArticleCardFooter({
           </Text>
           <Group spacing={0}>
             <ActionIcon>
-              <Heart size={18} color={theme.colors.red[6]} />
+              <IconHeart size={18} color={theme.colors.red[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon>
-              <Bookmark size={18} color={theme.colors.yellow[6]} />
+              <IconBookmark size={18} color={theme.colors.yellow[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon>
-              <Share size={16} color={theme.colors.blue[6]} />
+              <IconShare size={16} color={theme.colors.blue[6]} stroke={1.5} />
             </ActionIcon>
           </Group>
         </Group>

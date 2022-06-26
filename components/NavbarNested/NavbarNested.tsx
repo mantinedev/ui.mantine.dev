@@ -1,23 +1,23 @@
 import React from 'react';
 import { Navbar, Group, Code, ScrollArea, createStyles } from '@mantine/core';
 import {
-  IconNotes as Notes,
-  IconCalendarStats as CalendarStats,
-  IconGauge as Gauge,
-  IconPresentationAnalytics as PresentationAnalytics,
-  IconFileAnalytics as FileAnalytics,
-  IconAdjustments as Adjustments,
-  IconLock as Lock,
+  IconNotes,
+  IconCalendarStats,
+  IconGauge,
+  IconPresentationAnalytics,
+  IconFileAnalytics,
+  IconAdjustments,
+  IconLock,
 } from '@tabler/icons';
 import { UserButton } from '../UserButton/UserButton';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
 import { Logo } from './Logo';
 
 const mockdata = [
-  { label: 'Dashboard', icon: Gauge },
+  { label: 'Dashboard', icon: IconGauge },
   {
     label: 'Market news',
-    icon: Notes,
+    icon: IconNotes,
     initiallyOpened: true,
     links: [
       { label: 'Overview', link: '/' },
@@ -28,19 +28,19 @@ const mockdata = [
   },
   {
     label: 'Releases',
-    icon: CalendarStats,
+    icon: IconCalendarStats,
     links: [
       { label: 'Upcoming releases', link: '/' },
       { label: 'Previous releases', link: '/' },
       { label: 'Releases schedule', link: '/' },
     ],
   },
-  { label: 'Analytics', icon: PresentationAnalytics },
-  { label: 'Contracts', icon: FileAnalytics },
-  { label: 'Settings', icon: Adjustments },
+  { label: 'Analytics', icon: IconPresentationAnalytics },
+  { label: 'Contracts', icon: IconFileAnalytics },
+  { label: 'Settings', icon: IconAdjustments },
   {
     label: 'Security',
-    icon: Lock,
+    icon: IconLock,
     links: [
       { label: 'Enable 2FA', link: '/' },
       { label: 'Change password', link: '/' },

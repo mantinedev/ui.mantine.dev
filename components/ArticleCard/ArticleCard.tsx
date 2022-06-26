@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconBookmark as Bookmark, IconHeart as Heart, IconShare as Share } from '@tabler/icons';
+import { IconBookmark, IconHeart, IconShare } from '@tabler/icons';
 import {
   Card,
   Image,
@@ -97,13 +97,13 @@ export function ArticleCard({
 
         <Group spacing={8} mr={0}>
           <ActionIcon className={classes.action} style={{ color: theme.colors.red[6] }}>
-            <Heart size={16} />
+            <IconHeart size={16} stroke={1.5} />
           </ActionIcon>
           <ActionIcon className={classes.action} style={{ color: theme.colors.yellow[7] }}>
-            <Bookmark size={16} />
+            <IconBookmark size={16} stroke={1.5} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <Share size={16} />
+            <IconShare size={16} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Group>

@@ -1,10 +1,6 @@
 import React from 'react';
 import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import {
-  IconBrandTwitter as BrandTwitter,
-  IconBrandYoutube as BrandYoutube,
-  IconBrandInstagram as BrandInstagram,
-} from '@tabler/icons';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -152,13 +148,13 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <BrandTwitter size={18} stroke={1.5} />
+            <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandYoutube size={18} stroke={1.5} />
+            <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>

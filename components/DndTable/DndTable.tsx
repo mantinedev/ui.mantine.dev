@@ -2,7 +2,7 @@ import React from 'react';
 import { createStyles, Table, ScrollArea } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { IconGripVertical as GripVertical } from '@tabler/icons';
+import { IconGripVertical } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -39,7 +39,7 @@ export function DndTable({ data }: DndTableProps) {
         <tr className={classes.item} ref={provided.innerRef} {...provided.draggableProps}>
           <td>
             <div className={classes.dragHandle} {...provided.dragHandleProps}>
-              <GripVertical size={18} />
+              <IconGripVertical size={18} stroke={1.5} />
             </div>
           </td>
           <td style={{ width: 80 }}>{item.position}</td>

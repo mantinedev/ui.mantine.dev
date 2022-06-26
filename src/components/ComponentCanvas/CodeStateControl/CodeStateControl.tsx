@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionIcon, Tooltip } from '@mantine/core';
-import { IconCode as Code, IconDatabase as Database } from '@tabler/icons';
+import { IconCode, IconDatabase } from '@tabler/icons';
 
 interface CodeStateControlProps {
   state: 'code' | 'mockdata';
@@ -8,7 +8,7 @@ interface CodeStateControlProps {
 }
 
 export function CodeStateControl({ state, onToggle }: CodeStateControlProps) {
-  const Icon = state === 'code' ? Database : Code;
+  const Icon = state === 'code' ? IconDatabase : IconCode;
   return (
     <Tooltip
       label={`View ${state === 'code' ? 'mockdata' : 'code'}`}
@@ -19,7 +19,7 @@ export function CodeStateControl({ state, onToggle }: CodeStateControlProps) {
       transition="fade"
     >
       <ActionIcon onClick={onToggle}>
-        <Icon size={16} />
+        <Icon size={16} stroke={1.5} />
       </ActionIcon>
     </Tooltip>
   );

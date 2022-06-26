@@ -10,12 +10,7 @@ import {
   TextInput,
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
-import {
-  IconSelector as Selector,
-  IconChevronDown as ChevronDown,
-  IconChevronUp as ChevronUp,
-  IconSearch as Search,
-} from '@tabler/icons';
+import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   th: {
@@ -57,7 +52,7 @@ interface ThProps {
 
 function Th({ children, reversed, sorted, onSort }: ThProps) {
   const { classes } = useStyles();
-  const Icon = sorted ? (reversed ? ChevronUp : ChevronDown) : Selector;
+  const Icon = sorted ? (reversed ? IconChevronUp : IconChevronDown) : IconSelector;
   return (
     <th className={classes.th}>
       <UnstyledButton onClick={onSort} className={classes.control}>
@@ -66,7 +61,7 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
             {children}
           </Text>
           <Center className={classes.icon}>
-            <Icon size={14} />
+            <Icon size={14} stroke={1.5} />
           </Center>
         </Group>
       </UnstyledButton>
@@ -135,7 +130,7 @@ export function TableSort({ data }: TableSortProps) {
       <TextInput
         placeholder="Search by any field"
         mb="md"
-        icon={<Search size={14} />}
+        icon={<IconSearch size={14} stroke={1.5} />}
         value={search}
         onChange={handleSearchChange}
       />
