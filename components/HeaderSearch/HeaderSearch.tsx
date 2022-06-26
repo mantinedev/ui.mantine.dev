@@ -2,7 +2,7 @@ import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch as Search } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -69,7 +69,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
       <div className={classes.inner}>
         <Group>
           <Burger opened={opened} onClick={toggle} size="sm" />
-          <MantineLogo />
+          <MantineLogo size={28} />
         </Group>
 
         <Group>

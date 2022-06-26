@@ -6,7 +6,7 @@ import {
   IconBrandYoutube as BrandYoutube,
   IconBrandInstagram as BrandInstagram,
 } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -102,7 +102,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           {items}
         </Group>
 
-        <MantineLogo />
+        <MantineLogo size={28} />
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">

@@ -9,7 +9,7 @@ import {
   IconUser as User,
   IconSettings as Settings,
 } from '@tabler/icons';
-import { MantineLogoSmall } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -170,7 +170,7 @@ export function DoubleNavbar() {
       <Navbar.Section grow className={classes.wrapper}>
         <div className={classes.aside}>
           <div className={classes.logo}>
-            <MantineLogoSmall />
+            <MantineLogo type="mark" size={30} />
           </div>
           {mainLinks}
         </div>

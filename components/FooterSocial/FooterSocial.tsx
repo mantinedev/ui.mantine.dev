@@ -5,7 +5,7 @@ import {
   IconBrandYoutube as BrandYoutube,
   IconBrandInstagram as BrandInstagram,
 } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -40,7 +40,7 @@ export function FooterSocial() {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <MantineLogo />
+        <MantineLogo size={28} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
             <BrandTwitter size={18} />

@@ -22,7 +22,7 @@ import {
   IconSwitchHorizontal as SwitchHorizontal,
   IconChevronDown as ChevronDown,
 } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -109,7 +109,7 @@ export function HeaderTabsColored({ user, tabs }: HeaderTabsProps) {
     <div className={classes.header}>
       <Container className={classes.mainSection}>
         <Group position="apart">
-          <MantineLogo variant="white" />
+          <MantineLogo size={28} inverted />
 
           <Burger
             opened={opened}

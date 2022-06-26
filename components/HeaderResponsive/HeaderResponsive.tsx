@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 60;
 
@@ -104,7 +104,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <MantineLogo />
+        <MantineLogo size={28} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>

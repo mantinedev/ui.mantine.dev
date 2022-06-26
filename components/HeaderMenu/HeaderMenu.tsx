@@ -2,7 +2,7 @@ import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown as ChevronDown } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -93,7 +93,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
     <Header height={56} mb={120}>
       <Container>
         <div className={classes.inner}>
-          <MantineLogo />
+          <MantineLogo size={28} />
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>

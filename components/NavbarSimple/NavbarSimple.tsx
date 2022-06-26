@@ -11,7 +11,7 @@ import {
   IconSwitchHorizontal as SwitchHorizontal,
   IconLogout as Logout,
 } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');
@@ -107,7 +107,7 @@ export function NavbarSimple() {
     <Navbar height={700} width={{ sm: 300 }} p="md">
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
-          <MantineLogo />
+          <MantineLogo size={28} />
           <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
         </Group>
         {links}

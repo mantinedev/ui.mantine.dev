@@ -11,7 +11,7 @@ import {
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown as ChevronDown } from '@tabler/icons';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 60;
 
@@ -104,7 +104,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
       <Container className={classes.inner} fluid>
         <Group>
           <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
-          <MantineLogo />
+          <MantineLogo size={28} />
         </Group>
         <Group spacing={5} className={classes.links}>
           {items}

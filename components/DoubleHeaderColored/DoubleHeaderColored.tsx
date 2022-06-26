@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 84;
 
@@ -122,7 +122,9 @@ export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps)
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.header}>
       <Container className={classes.inner}>
-        <MantineLogo width={130} variant="white" />
+        <div style={{ color: '#fff' }}>
+          <MantineLogo width={130} inverted />
+        </div>
 
         <div className={classes.links}>
           <Group position="right">{secondaryItems}</Group>
