@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { CheckIcon } from '@primer/octicons-react';
 import { BlendingModeIcon } from '@modulz/radix-icons';
-import { ColorSwatch, Group, Popover, useMantineTheme } from '@mantine/core';
+import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 
 interface ColorControlProps {
   onChange(color: string): void;
@@ -26,7 +25,7 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
       size={22}
       style={{ color: theme.white, cursor: 'pointer' }}
     >
-      {value === color && <CheckIcon size={10} />}
+      {value === color && <CheckIcon width={10} />}
     </ColorSwatch>
   ));
 
