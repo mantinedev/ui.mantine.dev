@@ -67,7 +67,7 @@ export function Banner({ componentsCount }: BannerProps) {
               className={cx(classes.control, classes.controlMain)}
               onClick={() => scrollTo({ y: 700 })}
             >
-              Explore everything
+              Browse components
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
