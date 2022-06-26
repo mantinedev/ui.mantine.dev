@@ -106,7 +106,7 @@ export function CanvasHeader({
               size="xs"
               href={`https://github.com/${attributes.author}`}
               target="_blank"
-              color="gray"
+              color="dimmed"
             >
               @{attributes.author}
             </Anchor>
