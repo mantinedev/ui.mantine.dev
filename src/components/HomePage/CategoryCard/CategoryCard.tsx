@@ -16,7 +16,7 @@ export function CategoryCard({ count, category, className }: CategoryCardProps) 
 
   return (
     <Link href={`/category/${category.slug}`} passHref>
-      <Card className={cx(classes.card, className)} radius="md">
+      <Card component="a" className={cx(classes.card, className)} radius="md">
         <CardSection className={classes.imageWrapper}>
           <Image
             className={classes.image}
