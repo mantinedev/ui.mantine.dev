@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@mantine/core": "5.0.0-alpha.16",
+    "@mantine/ds": "5.0.0-alpha.16",
     "@mantine/dates": "5.0.0-alpha.16",
     "@mantine/dropzone": "5.0.0-alpha.16",
     "@mantine/form": "5.0.0-alpha.16",
