@@ -6,6 +6,7 @@
     "dev": "next dev -p 7522",
     "build": "next build && next export",
     "analyze": "ANALYZE=true next build",
+    "test": "npm run lint && npm run typecheck",
     "lint": "next lint",
     "start": "next start -p 9522",
     "typecheck": "tsc --noEmit",
