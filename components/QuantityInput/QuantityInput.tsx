@@ -44,15 +44,15 @@ interface QuantityInputProps {
 
 export function QuantityInput({ min = 1, max = 10 }: QuantityInputProps) {
   const { classes } = useStyles();
-  const handlers = useRef<NumberInputHandlers>();
-  const [value, setValue] = useState(1);
+  const handlers = useRef<NumberInputHandlers>(null);
+  const [value, setValue] = useState<number | undefined>(1);
 
   return (
     <div className={classes.wrapper}>
       <ActionIcon<'button'>
         size={28}
         variant="transparent"
-        onClick={() => handlers.current.decrement()}
+        onClick={() => handlers.current?.decrement()}
         disabled={value === min}
         className={classes.control}
         onMouseDown={(event) => event.preventDefault()}
@@ -73,7 +73,7 @@ export function QuantityInput({ min = 1, max = 10 }: QuantityInputProps) {
       <ActionIcon<'button'>
         size={28}
         variant="transparent"
-        onClick={() => handlers.current.increment()}
+        onClick={() => handlers.current?.increment()}
         disabled={value === max}
         className={classes.control}
         onMouseDown={(event) => event.preventDefault()}

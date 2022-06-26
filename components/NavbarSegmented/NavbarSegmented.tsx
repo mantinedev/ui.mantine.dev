@@ -104,7 +104,7 @@ const tabs = {
 
 export function NavbarSegmented() {
   const { classes, cx } = useStyles();
-  const [section, setSection] = useState('account');
+  const [section, setSection] = useState<'account' | 'general'>('account');
   const [active, setActive] = useState('Billing');
 
   const links = tabs[section].map((item) => (
@@ -131,7 +131,7 @@ export function NavbarSegmented() {
 
         <SegmentedControl
           value={section}
-          onChange={setSection}
+          onChange={(value: 'account' | 'general') => setSection(value)}
           transitionTimingFunction="ease"
           fullWidth
           data={[

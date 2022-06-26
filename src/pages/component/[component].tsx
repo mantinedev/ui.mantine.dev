@@ -10,10 +10,11 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-export const getStaticProps: GetStaticProps<{ data: UiComponent }, { component: string }> = (
-  context
-) => ({
+export const getStaticProps: GetStaticProps<
+  { data: UiComponent | undefined },
+  { component: string }
+> = (context) => ({
   props: {
-    data: getAllComponents().find((component) => component.slug === context.params.component),
+    data: getAllComponents().find((component) => component.slug === context!.params!.component),
   },
 });

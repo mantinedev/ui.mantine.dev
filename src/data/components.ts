@@ -9,7 +9,14 @@ function convertCase(string: string) {
   return splitted.join('-');
 }
 
-export function getAllComponents() {
+interface ComponentInfo {
+  component: string;
+  slug: string;
+  code: string;
+  attributes: any;
+}
+
+export function getAllComponents(): ComponentInfo[] {
   const rootFolder = path.join('components');
   const paths = fs.readdirSync(rootFolder);
 
@@ -32,11 +39,11 @@ export function getAllComponents() {
 
       return null;
     })
-    .filter((c) => c);
+    .filter((c) => c) as ComponentInfo[];
 }
 
 export function getComponentsByCategory() {
-  return getAllComponents().reduce((acc, component) => {
+  return getAllComponents().reduce<Record<string, ComponentInfo[]>>((acc, component) => {
     if (!(component.attributes.category in acc)) {
       acc[component.attributes.category] = [];
     }

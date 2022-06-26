@@ -52,7 +52,11 @@ export function ComponentPage({ data }: ComponentPageProps) {
       />
 
       {state === 'preview' ? (
-        <Preview component={UiComponents[data.component]} primaryColor={primaryColor} data={data} />
+        <Preview
+          component={UiComponents[data.component as keyof typeof UiComponents]}
+          primaryColor={primaryColor}
+          data={data}
+        />
       ) : (
         <Prism language="tsx">{data.code}</Prism>
       )}

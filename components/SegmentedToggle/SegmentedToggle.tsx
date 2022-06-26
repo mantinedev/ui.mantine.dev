@@ -9,7 +9,7 @@ export function SegmentedToggle() {
     <Group position="center" my="xl">
       <SegmentedControl
         value={colorScheme}
-        onChange={toggleColorScheme}
+        onChange={(value: 'light' | 'dark') => toggleColorScheme(value)}
         data={[
           {
             value: 'light',

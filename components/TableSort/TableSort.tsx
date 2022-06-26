@@ -9,6 +9,7 @@ import {
   Center,
   TextInput,
 } from '@mantine/core';
+import { keys } from '@mantine/utils';
 import {
   IconSelector as Selector,
   IconChevronDown as ChevronDown,
@@ -74,26 +75,29 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
 }
 
 function filterData(data: RowData[], search: string) {
-  const keys = Object.keys(data[0]);
   const query = search.toLowerCase().trim();
-  return data.filter((item) => keys.some((key) => item[key].toLowerCase().includes(query)));
+  return data.filter((item) =>
+    keys(data[0]).some((key) => item[key].toLowerCase().includes(query))
+  );
 }
 
 function sortData(
   data: RowData[],
-  payload: { sortBy: keyof RowData; reversed: boolean; search: string }
+  payload: { sortBy: keyof RowData | null; reversed: boolean; search: string }
 ) {
-  if (!payload.sortBy) {
+  const { sortBy } = payload;
+
+  if (!sortBy) {
     return filterData(data, payload.search);
   }
 
   return filterData(
     [...data].sort((a, b) => {
       if (payload.reversed) {
-        return b[payload.sortBy].localeCompare(a[payload.sortBy]);
+        return b[sortBy].localeCompare(a[sortBy]);
       }
 
-      return a[payload.sortBy].localeCompare(b[payload.sortBy]);
+      return a[sortBy].localeCompare(b[sortBy]);
     }),
     payload.search
   );
@@ -102,7 +106,7 @@ function sortData(
 export function TableSort({ data }: TableSortProps) {
   const [search, setSearch] = useState('');
   const [sortedData, setSortedData] = useState(data);
-  const [sortBy, setSortBy] = useState<keyof RowData>(null);
+  const [sortBy, setSortBy] = useState<keyof RowData | null>(null);
   const [reverseSortDirection, setReverseSortDirection] = useState(false);
 
   const setSorting = (field: keyof RowData) => {

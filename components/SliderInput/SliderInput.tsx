@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
 
 export function SliderInput() {
   const { classes } = useStyles();
-  const [value, setValue] = useState(2200);
+  const [value, setValue] = useState<number | undefined>(2200);
   return (
     <div className={classes.wrapper}>
       <NumberInput

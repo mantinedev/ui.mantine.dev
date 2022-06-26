@@ -39,7 +39,7 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
   const toggleDir = () => {
     const nextDir = dir === 'ltr' ? 'rtl' : 'ltr';
     setDir(nextDir);
-    document.querySelector('html').setAttribute('dir', nextDir);
+    document.querySelector('html')!.setAttribute('dir', nextDir);
   };
 
   useHotkeys([

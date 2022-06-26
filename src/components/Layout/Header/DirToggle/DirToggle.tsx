@@ -8,7 +8,7 @@ export function DirToggle({ className, dir, ...others }: React.ComponentPropsWit
 
   return (
     <UnstyledButton className={cx(classes.wrapper, className)} {...others}>
-      <Text size="sm">{dir.toUpperCase()}</Text>
+      <Text size="sm">{dir?.toUpperCase()}</Text>
       <Center className={classes.icon}>
         <Language size={20} />
       </Center>

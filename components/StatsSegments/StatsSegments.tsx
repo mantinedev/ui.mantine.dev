@@ -50,7 +50,7 @@ export function StatsSegments({ total, diff, data }: StatsSegmentsProps) {
   const segments = data.map((segment) => ({
     value: segment.part,
     color: segment.color,
-    label: segment.part > 10 ? `${segment.part}%` : null,
+    label: segment.part > 10 ? `${segment.part}%` : undefined,
   }));
 
   const descriptions = data.map((stat) => (

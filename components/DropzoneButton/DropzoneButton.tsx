@@ -29,7 +29,7 @@ const useStyles = createStyles((theme) => ({
 export function DropzoneButton() {
   const theme = useMantineTheme();
   const { classes } = useStyles();
-  const openRef = useRef<() => void>();
+  const openRef = useRef<() => void>(null);
 
   return (
     <div className={classes.wrapper}>
@@ -76,7 +76,7 @@ export function DropzoneButton() {
         </div>
       </Dropzone>
 
-      <Button className={classes.control} size="md" radius="xl" onClick={() => openRef.current()}>
+      <Button className={classes.control} size="md" radius="xl" onClick={() => openRef.current?.()}>
         Select files
       </Button>
     </div>

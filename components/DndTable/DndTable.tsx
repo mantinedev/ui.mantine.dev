@@ -55,7 +55,7 @@ export function DndTable({ data }: DndTableProps) {
     <ScrollArea>
       <DragDropContext
         onDragEnd={({ destination, source }) =>
-          handlers.reorder({ from: source.index, to: destination.index })
+          handlers.reorder({ from: source.index, to: destination?.index || 0 })
         }
       >
         <Table sx={{ minWidth: 420, '& tbody tr td': { borderBottom: 0 } }}>
