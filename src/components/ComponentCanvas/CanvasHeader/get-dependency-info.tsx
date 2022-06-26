@@ -1,8 +1,7 @@
 import React from 'react';
 import { upperFirst } from '@mantine/hooks';
 import { IconExternalLink } from '@tabler/icons';
-import { MantineIcon } from '../icons/MantineIcon';
-import { NpmIcon } from '../icons/NpmIcon';
+import { MantineLogo, NpmIcon } from '@mantine/ds';
 
 export function getDependencyInfo(url: string) {
   if (url.startsWith('/core') || url.startsWith('/hooks') || url.startsWith('/others')) {
@@ -12,7 +11,7 @@ export function getDependencyInfo(url: string) {
     return {
       name,
       url: `https://mantine.dev${url}`,
-      icon: <MantineIcon color="blue" />,
+      icon: <MantineLogo color="blue" size={16} type="mark" />,
     };
   }
 
@@ -20,7 +19,7 @@ export function getDependencyInfo(url: string) {
     return {
       name: url.split('/')[2].split('-').map(upperFirst).join(''),
       url,
-      icon: <MantineIcon color="cyan" />,
+      icon: <MantineLogo color="cyan" size={16} type="mark" />,
     };
   }
 
@@ -37,6 +36,6 @@ export function getDependencyInfo(url: string) {
   return {
     name: url,
     url: `https://www.npmjs.com/package/${url}`,
-    icon: <NpmIcon />,
+    icon: <NpmIcon size={16} />,
   };
 }
