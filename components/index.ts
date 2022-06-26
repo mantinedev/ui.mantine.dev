@@ -43,7 +43,6 @@ export { InputTooltip } from './InputTooltip/InputTooltip';
 export { InputValidation } from './InputValidation/InputValidation';
 export { InputWithButton } from './InputWithButton/InputWithButton';
 export { QuantityInput } from './QuantityInput/QuantityInput';
-export { TagPicker } from './TagPicker/TagPicker';
 export { LanguagePicker } from './LanguagePicker/LanguagePicker';
 export { PasswordStrength } from './PasswordStrength/PasswordStrength';
 
