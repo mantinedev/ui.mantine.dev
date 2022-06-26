@@ -59,15 +59,9 @@ export function DropzoneButton() {
           </Group>
 
           <Text align="center" weight={700} size="lg" mt="xl">
-            <Dropzone.Accept>
-              <span>Drop files here</span>
-            </Dropzone.Accept>
-            <Dropzone.Reject>
-              <span>Pdf file less than 30mb</span>
-            </Dropzone.Reject>
-            <Dropzone.Idle>
-              <span>Upload resume</span>
-            </Dropzone.Idle>
+            <Dropzone.Accept>Drop files here</Dropzone.Accept>
+            <Dropzone.Reject>Pdf file less than 30mb</Dropzone.Reject>
+            <Dropzone.Idle>Upload resume</Dropzone.Idle>
           </Text>
           <Text align="center" size="sm" mt="xs" color="dimmed">
             Drag&apos;n&apos;drop files here to upload. We can accept only <i>.pdf</i> files that
