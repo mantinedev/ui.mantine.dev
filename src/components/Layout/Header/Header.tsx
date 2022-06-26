@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Center } from '@mantine/core';
-import { HeaderControls, meta, MantineLogo } from '@mantine/ds';
+import { HeaderControls, meta, MantineLogo, ColorSchemeControl } from '@mantine/ds';
 import Link from 'next/link';
 import useStyles from './Header.styles';
 
@@ -20,11 +20,15 @@ export function Header({ toggleDir, dir }: HeaderProps) {
           </Center>
         </Link>
         <HeaderControls
+          sx={(theme) => ({ [theme.fn.smallerThan('sm')]: { display: 'none' } })}
           onSearch={() => {}}
           githubLink={meta.gitHubLinks.mantineUi}
           direction={dir}
           toggleDirection={toggleDir}
         />
+        <Center sx={(theme) => ({ [theme.fn.largerThan('sm')]: { display: 'none' } })}>
+          <ColorSchemeControl />
+        </Center>
       </Container>
     </div>
   );
