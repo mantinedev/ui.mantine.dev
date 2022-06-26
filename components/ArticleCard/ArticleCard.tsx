@@ -33,7 +33,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   action: {
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    ...theme.fn.hover({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+    }),
   },
 
   footer: {
@@ -96,14 +99,14 @@ export function ArticleCard({
         </Center>
 
         <Group spacing={8} mr={0}>
-          <ActionIcon className={classes.action} style={{ color: theme.colors.red[6] }}>
-            <IconHeart size={16} stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon className={classes.action} style={{ color: theme.colors.yellow[7] }}>
-            <IconBookmark size={16} stroke={1.5} />
+          <ActionIcon className={classes.action}>
+            <IconHeart size={16} color={theme.colors.red[6]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <IconShare size={16} stroke={1.5} />
+            <IconBookmark size={16} color={theme.colors.yellow[7]} />
+          </ActionIcon>
+          <ActionIcon className={classes.action}>
+            <IconShare size={16} />
           </ActionIcon>
         </Group>
       </Group>
