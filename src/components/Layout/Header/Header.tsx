@@ -1,10 +1,6 @@
 import React from 'react';
-import { Container, Group } from '@mantine/core';
-import { Logo } from './Logo/Logo';
-import { ColorSchemeToggle } from './ColorSchemeToggle/ColorSchemeToggle';
-import { Discord } from './Discord/Discord';
-import { SourceCode } from './SourceCode/SourceCode';
-import { DirToggle } from './DirToggle/DirToggle';
+import { Container } from '@mantine/core';
+import { HeaderControls, meta, MantineLogo } from '@mantine/ds';
 import useStyles from './Header.styles';
 
 interface HeaderProps {
@@ -17,13 +13,13 @@ export function Header({ toggleDir, dir }: HeaderProps) {
   return (
     <div className={classes.header}>
       <Container size="xl" px="md" className={classes.inner}>
-        <Logo />
-        <Group mr={-8}>
-          <Discord />
-          <SourceCode />
-          <DirToggle dir={dir} onClick={toggleDir} />
-          <ColorSchemeToggle />
-        </Group>
+        <MantineLogo variant="ui.mantine.dev" size={30} />
+        <HeaderControls
+          onSearch={() => {}}
+          githubLink={meta.gitHubLinks.mantineUi}
+          direction={dir}
+          toggleDirection={toggleDir}
+        />
       </Container>
     </div>
   );
