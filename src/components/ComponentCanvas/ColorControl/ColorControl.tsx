@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BlendingModeIcon } from '@modulz/radix-icons';
+import { IconColorPicker } from '@tabler/icons';
 import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 
 interface ColorControlProps {
@@ -47,7 +47,7 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
           size={22}
           style={{ display: 'block', cursor: 'pointer' }}
         >
-          <BlendingModeIcon style={{ width: 14, height: 14, color: theme.white }} />
+          <IconColorPicker size={14} color="#fff" />
         </ColorSwatch>
       </Popover.Target>
       <Popover.Dropdown>

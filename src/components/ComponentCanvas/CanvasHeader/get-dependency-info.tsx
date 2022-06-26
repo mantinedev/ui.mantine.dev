@@ -1,6 +1,6 @@
 import React from 'react';
 import { upperFirst } from '@mantine/hooks';
-import { ExternalLinkIcon } from '@modulz/radix-icons';
+import { IconExternalLink } from '@tabler/icons';
 import { MantineIcon } from '../icons/MantineIcon';
 import { NpmIcon } from '../icons/NpmIcon';
 
@@ -30,7 +30,7 @@ export function getDependencyInfo(url: string) {
     return {
       name,
       url,
-      icon: <ExternalLinkIcon />,
+      icon: <IconExternalLink size={14} stroke={1.5} />,
     };
   }
 

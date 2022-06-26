@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-  EyeOpenIcon,
-  CodeIcon,
-  ExternalLinkIcon,
-  GitHubLogoIcon,
-  InfoCircledIcon,
-} from '@modulz/radix-icons';
+import { GithubIcon } from '@mantine/ds';
+import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons';
 import {
   Group,
   Text,
@@ -65,19 +59,19 @@ export function CanvasHeader({
         <Group spacing="xs" className={classes.actions}>
           {!excludeExternal && (
             <ActionIcon
-              variant="outline"
+              variant="default"
               className={classes.action}
               title="View component in isolation"
               component="a"
               href={`/component/${slug}`}
               target="_blank"
             >
-              <ExternalLinkIcon style={{ width: 14, height: 14 }} />
+              <IconExternalLink size={14} stroke={1.5} />
             </ActionIcon>
           )}
 
           <ActionIcon
-            variant="outline"
+            variant="default"
             className={classes.action}
             title="View source on github"
             component="a"
@@ -85,13 +79,17 @@ export function CanvasHeader({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHubLogoIcon style={{ width: 14, height: 14 }} />
+            <GithubIcon size={14} />
           </ActionIcon>
 
           <Menu withArrow position="bottom-end" transition="pop-top-right" transitionDuration={100}>
             <Menu.Target>
-              <ActionIcon className={classes.action} title="Component dependencies">
-                <InfoCircledIcon style={{ width: 14, height: 14 }} />
+              <ActionIcon
+                className={classes.action}
+                title="Component dependencies"
+                variant="default"
+              >
+                <IconComponents size={16} stroke={1.5} />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
@@ -128,7 +126,7 @@ export function CanvasHeader({
               value: 'preview',
               label: (
                 <Center>
-                  <EyeOpenIcon />
+                  <IconEye size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Preview</div>
                 </Center>
               ),
@@ -137,7 +135,7 @@ export function CanvasHeader({
               value: 'code',
               label: (
                 <Center>
-                  <CodeIcon />
+                  <IconCode size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Code</div>
                 </Center>
               ),
