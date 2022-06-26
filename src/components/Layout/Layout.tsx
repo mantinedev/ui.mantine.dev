@@ -29,6 +29,7 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: THEME_KEY,
     defaultValue: 'light',
+    getInitialValueInEffect: true,
   });
 
   const [dir, setDir] = useState<'rtl' | 'ltr'>('ltr');
