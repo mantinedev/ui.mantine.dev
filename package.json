@@ -8,6 +8,7 @@
     "copy:cname": "cp -R ./CNAME ./out/CNAME",
     "dev": "next dev -p 7522",
     "build": "next build && next export && npm run copy:cname",
+    "deploy": "npm run clean && gh-pages -d out",
     "analyze": "ANALYZE=true next build",
     "test": "npm run lint && npm run typecheck",
     "lint": "next lint",
@@ -19,9 +20,9 @@
   },
   "dependencies": {
     "@mantine/core": "5.0.0-alpha.18",
-    "@mantine/ds": "5.0.0-alpha.18",
     "@mantine/dates": "5.0.0-alpha.18",
     "@mantine/dropzone": "5.0.0-alpha.18",
+    "@mantine/ds": "5.0.0-alpha.18",
     "@mantine/form": "5.0.0-alpha.18",
     "@mantine/hooks": "5.0.0-alpha.18",
     "@mantine/next": "5.0.0-alpha.18",
@@ -60,6 +61,7 @@
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
     "esno": "^0.14.1",
+    "gh-pages": "^4.0.0",
     "typescript": "4.6.4"
   }
 }
