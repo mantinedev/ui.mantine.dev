@@ -49,7 +49,7 @@ export function UsersTable({ data }: UsersTableProps) {
         </Anchor>
       </td>
       <td>
-        <Text size="sm" color="gray">
+        <Text size="sm" color="dimmed">
           {item.phone}
         </Text>
       </td>

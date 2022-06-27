@@ -61,13 +61,11 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
     linkActive: {
       '&, &:hover': {
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.fn.rgba(theme.colors[theme.primaryColor][8], 0.25)
-            : theme.colors[theme.primaryColor][0],
-        color: theme.colorScheme === 'dark' ? theme.white : theme.colors[theme.primaryColor][7],
+        backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
+          .background,
+        color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         [`& .${icon}`]: {
-          color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 5 : 7],
+          color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         },
       },
     },

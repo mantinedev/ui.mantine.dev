@@ -5,7 +5,7 @@ const useStyles = createStyles((theme) => ({
   root: {
     paddingTop: 80,
     paddingBottom: 120,
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
   },
 
   label: {

@@ -6,7 +6,7 @@ const useStyles = createStyles((theme) => ({
   root: {
     paddingTop: 120,
     paddingBottom: 120,
-    backgroundColor: theme.colors[theme.primaryColor][5],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
   },
 
   inner: {
