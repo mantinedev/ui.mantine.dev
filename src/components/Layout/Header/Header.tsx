@@ -16,7 +16,7 @@ export function Header({ toggleDir, dir }: HeaderProps) {
     <div className={classes.header}>
       <Container size="xl" px="md" className={classes.inner}>
         <Link href="/" passHref>
-          <Center component="a">
+          <Center component="a" sx={(theme) => theme.fn.focusStyles()}>
             <MantineLogo variant="ui.mantine.dev" size={30} />
           </Center>
         </Link>
