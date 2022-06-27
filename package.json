@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "clean": "rm -rf out",
+    "clean:cache": "rm -rf .next",
+    "copy:cname": "cp -R ./CNAME ./out/CNAME",
     "dev": "next dev -p 7522",
-    "build": "next build && next export",
+    "build": "next build && next export && npm run copy:cname",
     "analyze": "ANALYZE=true next build",
     "test": "npm run lint && npm run typecheck",
     "lint": "next lint",
