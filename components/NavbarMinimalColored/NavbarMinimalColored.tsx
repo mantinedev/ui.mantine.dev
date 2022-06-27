@@ -27,14 +27,20 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       opacity: 1,
-      backgroundColor: theme.colors[theme.primaryColor][5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
   },
 
   active: {
     opacity: 1,
     '&, &:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][7],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.15
+      ),
     },
   },
 }));
@@ -49,7 +55,7 @@ interface NavbarLinkProps {
 function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   const { classes, cx } = useStyles();
   return (
-    <Tooltip label={label} position="right" withArrow transitionDuration={0}>
+    <Tooltip label={label} position="right" transitionDuration={0}>
       <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
         <Icon stroke={1.5} />
       </UnstyledButton>
@@ -67,15 +73,8 @@ const mockdata = [
   { icon: IconSettings, label: 'Settings' },
 ];
 
-const useNavbarStyles = createStyles((theme) => ({
-  navbar: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
-  },
-}));
-
 export function NavbarMinimalColored() {
   const [active, setActive] = useState(2);
-  const { classes } = useNavbarStyles();
 
   const links = mockdata.map((link, index) => (
     <NavbarLink
@@ -87,7 +86,15 @@ export function NavbarMinimalColored() {
   ));
 
   return (
-    <Navbar height={750} width={{ base: 80 }} p="md" className={classes.navbar}>
+    <Navbar
+      height={750}
+      width={{ base: 80 }}
+      p="md"
+      sx={(theme) => ({
+        backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor })
+          .background,
+      })}
+    >
       <Center>
         <MantineLogo type="mark" inverted size={30} />
       </Center>

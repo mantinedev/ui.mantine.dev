@@ -27,8 +27,10 @@ import { MantineLogo } from '@mantine/ds';
 const useStyles = createStyles((theme) => ({
   header: {
     paddingTop: theme.spacing.sm,
-    backgroundColor: theme.colors[theme.primaryColor][6],
-    borderBottom: `1px solid ${theme.colors[theme.primaryColor][6]}`,
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+    borderBottom: `1px solid ${
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background
+    }`,
     marginBottom: 120,
   },
 
@@ -43,7 +45,10 @@ const useStyles = createStyles((theme) => ({
     transition: 'background-color 100ms ease',
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
 
     [theme.fn.smallerThan('xs')]: {
@@ -58,7 +63,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   userActive: {
-    backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+    backgroundColor: theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      0.1
+    ),
   },
 
   tabs: {
@@ -76,15 +84,21 @@ const useStyles = createStyles((theme) => ({
     height: 38,
     color: theme.white,
     backgroundColor: 'transparent',
-    borderColor: theme.colors[theme.primaryColor][6],
+    borderColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
 
     '&[data-active]': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
-      borderColor: theme.colors[theme.primaryColor][6],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
+      borderColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
     },
   },
 }));

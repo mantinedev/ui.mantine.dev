@@ -11,7 +11,7 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     transition: 'background-color 150ms ease, border-color 150ms ease',
     border: `1px solid ${
       checked
-        ? theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 9 : 6]
+        ? theme.fn.variant({ variant: 'outline', color: theme.primaryColor }).border
         : theme.colorScheme === 'dark'
         ? theme.colors.dark[8]
         : theme.colors.gray[3]
@@ -19,9 +19,7 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     borderRadius: theme.radius.sm,
     padding: theme.spacing.sm,
     backgroundColor: checked
-      ? theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][8], 0.3)
-        : theme.colors[theme.primaryColor][0]
+      ? theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background
       : theme.colorScheme === 'dark'
       ? theme.colors.dark[8]
       : theme.white,

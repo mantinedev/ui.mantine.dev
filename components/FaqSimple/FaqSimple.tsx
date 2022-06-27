@@ -9,7 +9,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   title: {
-    fontWeight: 400,
     marginBottom: theme.spacing.xl * 1.5,
   },
 
@@ -18,7 +17,7 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.lg,
 
     border: `1px solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[3]
+      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
 }));

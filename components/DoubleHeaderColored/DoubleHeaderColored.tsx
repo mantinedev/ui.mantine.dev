@@ -7,7 +7,7 @@ const HEADER_HEIGHT = 84;
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
     borderBottom: 0,
   },
 
@@ -75,7 +75,10 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     borderBottomColor:
       theme.colorScheme === 'dark' ? theme.white : theme.colors[theme.primaryColor][5],
-    backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 6 : 5],
+    backgroundColor: theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      0.1
+    ),
   },
 }));
 

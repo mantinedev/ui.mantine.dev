@@ -59,10 +59,7 @@ const useStyles = createStyles((theme) => ({
 
   highlight: {
     position: 'relative',
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][6], 0.55)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
     borderRadius: theme.radius.sm,
     padding: '4px 12px',
   },

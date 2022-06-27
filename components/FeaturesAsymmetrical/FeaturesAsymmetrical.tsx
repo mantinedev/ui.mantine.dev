@@ -15,10 +15,7 @@ const useStyles = createStyles((theme) => ({
     width: 160,
     top: 0,
     left: 0,
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][7], 0.2)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
     zIndex: 1,
   },
 
@@ -28,7 +25,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6],
+    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
   },
 
   title: {

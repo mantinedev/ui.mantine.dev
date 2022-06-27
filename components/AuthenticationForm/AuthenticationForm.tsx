@@ -84,7 +84,13 @@ export function AuthenticationForm(props: PaperProps) {
         </Stack>
 
         <Group position="apart" mt="xl">
-          <Anchor component="button" type="button" color="gray" onClick={() => toggle()} size="xs">
+          <Anchor
+            component="button"
+            type="button"
+            color="dimmed"
+            onClick={() => toggle()}
+            size="xs"
+          >
             {type === 'register'
               ? 'Already have an account? Login'
               : "Don't have an account? Register"}

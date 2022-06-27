@@ -6,7 +6,7 @@ import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
     borderBottom: 0,
   },
 
@@ -40,7 +40,10 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
   },
 

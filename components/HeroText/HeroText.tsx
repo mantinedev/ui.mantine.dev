@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStyles, Title, Text, Button, Container, useMantineTheme } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container } from '@mantine/core';
 import { Dots } from './Dots';
 
 const useStyles = createStyles((theme) => ({
@@ -48,6 +48,10 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  highlight: {
+    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6],
+  },
+
   description: {
     textAlign: 'center',
 
@@ -86,7 +90,6 @@ const useStyles = createStyles((theme) => ({
 
 export function HeroText() {
   const { classes } = useStyles();
-  const theme = useMantineTheme();
 
   return (
     <Container className={classes.wrapper} size={1400}>
@@ -98,7 +101,7 @@ export function HeroText() {
       <div className={classes.inner}>
         <Title className={classes.title}>
           Automated AI{' '}
-          <Text component="span" color={theme.primaryColor} inherit>
+          <Text component="span" className={classes.highlight} inherit>
             code reviews
           </Text>{' '}
           for any stack
