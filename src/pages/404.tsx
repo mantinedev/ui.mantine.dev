@@ -1,6 +1,8 @@
 import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons';
 import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import { getAllComponents } from '../data/components';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -61,3 +63,9 @@ export default function NotFoundPage() {
     </Container>
   );
 }
+
+export const getStaticProps: GetStaticProps = () => ({
+  props: {
+    allComponents: getAllComponents(),
+  },
+});
