@@ -23,6 +23,7 @@
     "@mantine/hooks": "5.0.0-alpha.18",
     "@mantine/next": "5.0.0-alpha.18",
     "@mantine/prism": "5.0.0-alpha.18",
+    "@mantine/spotlight": "5.0.0-alpha.18",
     "@tabler/icons": "^1.71.0",
     "dayjs": "^1.11.3",
     "next": "12.1.5",

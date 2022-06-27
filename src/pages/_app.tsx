@@ -16,7 +16,10 @@ export default function App(props: AppProps) {
         <link rel="icon" href={favicon.src} />
       </Head>
 
-      <Layout noHeader={props.router.pathname === '/component/[component]'}>
+      <Layout
+        noHeader={props.router.pathname === '/component/[component]'}
+        data={props.pageProps.allComponents}
+      >
         <Component {...pageProps} />
       </Layout>
     </>

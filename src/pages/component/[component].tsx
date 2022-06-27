@@ -13,8 +13,12 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 export const getStaticProps: GetStaticProps<
   { data: UiComponent | undefined },
   { component: string }
-> = (context) => ({
-  props: {
-    data: getAllComponents().find((component) => component.slug === context!.params!.component),
-  },
-});
+> = (context) => {
+  const allComponents = getAllComponents();
+  return {
+    props: {
+      data: allComponents.find((component) => component.slug === context!.params!.component),
+      allComponents,
+    },
+  };
+};

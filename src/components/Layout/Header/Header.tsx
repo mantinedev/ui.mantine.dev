@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Center } from '@mantine/core';
+import { openSpotlight } from '@mantine/spotlight';
 import { HeaderControls, meta, MantineLogo, ColorSchemeControl } from '@mantine/ds';
 import Link from 'next/link';
 import useStyles from './Header.styles';
@@ -21,7 +22,7 @@ export function Header({ toggleDir, dir }: HeaderProps) {
         </Link>
         <HeaderControls
           sx={(theme) => ({ [theme.fn.smallerThan('sm')]: { display: 'none' } })}
-          onSearch={() => {}}
+          onSearch={openSpotlight}
           githubLink={meta.gitHubLinks.mantineUi}
           direction={dir}
           toggleDirection={toggleDir}

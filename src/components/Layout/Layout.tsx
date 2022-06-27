@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IconSearch } from '@tabler/icons';
 import {
   MantineProvider,
   ColorScheme,
@@ -7,14 +8,18 @@ import {
 } from '@mantine/core';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
+import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight';
+import { useRouter } from 'next/router';
 import { DirectionContext } from '../DirectionContext/DirectionContext';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { HEADER_HEIGHT } from './Header/Header.styles';
+import { UiComponent } from '../../data';
 
 interface LayoutProps {
   children: React.ReactNode;
   noHeader?: boolean;
+  data: UiComponent[];
 }
 
 const THEME_KEY = 'mantine-color-scheme';
@@ -25,7 +30,8 @@ const rtlCache = createEmotionCache({
   stylisPlugins: [rtlPlugin],
 });
 
-export function Layout({ children, noHeader = false }: LayoutProps) {
+export function Layout({ children, noHeader = false, data }: LayoutProps) {
+  const router = useRouter();
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: THEME_KEY,
     defaultValue: 'light',
@@ -48,6 +54,12 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
     ['mod+L', toggleDir],
   ]);
 
+  const actions: SpotlightAction[] = data?.map((item) => ({
+    title: item.component,
+    description: item.attributes.title,
+    onTrigger: () => router.push(`/component/${item.slug}`),
+  }));
+
   return (
     <DirectionContext.Provider value={dir}>
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
@@ -57,9 +69,22 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
           withNormalizeCSS
           emotionCache={dir === 'rtl' ? rtlCache : undefined}
         >
-          {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
-          <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>
-          {!noHeader && <Footer />}
+          <SpotlightProvider
+            actions={actions || []}
+            searchIcon={<IconSearch size={18} />}
+            searchPlaceholder="Search components"
+            shortcut={['mod + K', 'mod + P', '/']}
+            highlightQuery
+            transition={{
+              in: { transform: 'translateY(0)', opacity: 1 },
+              out: { transform: 'translateY(-20px)', opacity: 0 },
+              transitionProperty: 'transform, opacity',
+            }}
+          >
+            {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
+            <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>
+            {!noHeader && <Footer />}
+          </SpotlightProvider>
         </MantineProvider>
       </ColorSchemeProvider>
     </DirectionContext.Provider>

@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { CATEGORIES_SLUGS, getCategoryData, Category } from '../../data';
-import { getComponentsByCategory } from '../../data/components';
+import { getAllComponents, getComponentsByCategory } from '../../data/components';
 import { CategoryPage } from '../../components/CategoryPage/CategoryPage';
 
 export default CategoryPage;
@@ -17,5 +17,6 @@ export const getStaticProps: GetStaticProps<
   props: {
     category: getCategoryData(context!.params!.category),
     components: getComponentsByCategory()[context!.params!.category],
+    allComponents: getAllComponents(),
   },
 });
