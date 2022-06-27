@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useDarkMode } from 'storybook-dark-mode';
 import {
   MantineProvider,

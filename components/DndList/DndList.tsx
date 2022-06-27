@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';

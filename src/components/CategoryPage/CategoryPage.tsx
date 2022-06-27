@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '@mantine/core';
 import Head from 'next/head';
 import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconBookmark, IconHeart, IconShare } from '@tabler/icons';
 import {
   Card,

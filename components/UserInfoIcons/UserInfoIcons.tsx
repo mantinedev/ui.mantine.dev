@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Avatar, Text, Group } from '@mantine/core';
 import { IconPhoneCall, IconAt } from '@tabler/icons';
 

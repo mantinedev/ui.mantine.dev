@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Progress, Box, Text, Group, Paper, SimpleGrid } from '@mantine/core';
 import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Text, SimpleGrid, Container } from '@mantine/core';
 import { IconTruck, IconCertificate, IconCoin, TablerIcon } from '@tabler/icons';
 

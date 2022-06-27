@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Navbar, UnstyledButton, Tooltip, Title } from '@mantine/core';
 import {
   IconHome2,

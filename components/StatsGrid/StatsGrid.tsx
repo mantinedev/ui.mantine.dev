@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import {
   IconUserPlus,

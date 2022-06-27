@@ -1,4 +1,3 @@
-import React from 'react';
 import { Navbar, Group, Code, ScrollArea, createStyles } from '@mantine/core';
 import {
   IconNotes,

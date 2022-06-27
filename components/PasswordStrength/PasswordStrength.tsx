@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Progress, PasswordInput, Group, Text, Center } from '@mantine/core';
 import { useInputState } from '@mantine/hooks';
 import { IconCheck, IconX } from '@tabler/icons';

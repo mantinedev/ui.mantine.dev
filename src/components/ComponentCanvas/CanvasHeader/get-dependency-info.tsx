@@ -1,4 +1,3 @@
-import React from 'react';
 import { upperFirst } from '@mantine/hooks';
 import { IconExternalLink } from '@tabler/icons';
 import { MantineLogo, NpmIcon } from '@mantine/ds';

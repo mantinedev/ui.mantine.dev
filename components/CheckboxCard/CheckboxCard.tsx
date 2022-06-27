@@ -1,4 +1,3 @@
-import React from 'react';
 import { UnstyledButton, Checkbox, Text, createStyles } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 

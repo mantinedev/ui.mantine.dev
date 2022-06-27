@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head';
 import { MantineProvider, useMantineTheme } from '@mantine/core';
 import { Prism } from '@mantine/prism';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Box, Text, Group } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons';
 

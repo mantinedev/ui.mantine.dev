@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Table, ScrollArea } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({

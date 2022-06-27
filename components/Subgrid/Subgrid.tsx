@@ -1,4 +1,3 @@
-import React from 'react';
 import { SimpleGrid, Skeleton, Container, Stack, useMantineTheme } from '@mantine/core';
 
 const getChild = (height: number) => <Skeleton height={height} radius="md" animate={false} />;

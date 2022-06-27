@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Center } from '@mantine/core';
 import { openSpotlight } from '@mantine/spotlight';
 import { HeaderControls, meta, MantineLogo, ColorSchemeControl } from '@mantine/ds';

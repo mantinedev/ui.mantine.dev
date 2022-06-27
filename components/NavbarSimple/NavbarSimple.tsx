@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Navbar, Group, Code } from '@mantine/core';
 import {
   IconBellRinging,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Grid, SimpleGrid, Skeleton, useMantineTheme } from '@mantine/core';
 
 const PRIMARY_COL_HEIGHT = 300;

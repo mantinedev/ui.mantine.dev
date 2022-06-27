@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, RangeSlider } from '@mantine/core';
 import { IconPoint, IconGripVertical } from '@tabler/icons';
 

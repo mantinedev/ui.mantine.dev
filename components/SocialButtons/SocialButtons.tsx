@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, ButtonProps, Group } from '@mantine/core';
 import { GithubIcon, DiscordIcon, TwitterIcon } from '@mantine/ds';
 import { GoogleIcon } from './GoogleIcon';

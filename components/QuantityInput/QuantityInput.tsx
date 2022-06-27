@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { createStyles, NumberInput, NumberInputHandlers, ActionIcon } from '@mantine/core';
 import { IconPlus, IconMinus } from '@tabler/icons';
 

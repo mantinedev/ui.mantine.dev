@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Button, Menu, Group, ActionIcon } from '@mantine/core';
 import { IconTrash, IconBookmark, IconCalendar, IconChevronDown } from '@tabler/icons';
 

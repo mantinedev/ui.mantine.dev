@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
 import { IconSwimming } from '@tabler/icons';
 

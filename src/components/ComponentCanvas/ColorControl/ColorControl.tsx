@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { IconColorPicker } from '@tabler/icons';
 import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 

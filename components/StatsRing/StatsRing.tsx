@@ -1,4 +1,3 @@
-import React from 'react';
 import { RingProgress, Text, SimpleGrid, Paper, Center, Group } from '@mantine/core';
 import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons';
 

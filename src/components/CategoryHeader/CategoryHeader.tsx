@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Title, Anchor, Center, Box } from '@mantine/core';
 import { IconArrowRight, IconArrowLeft } from '@tabler/icons';

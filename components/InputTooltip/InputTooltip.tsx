@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextInput, PasswordInput, Tooltip, Center, Text } from '@mantine/core';
 import { IconInfoCircle } from '@tabler/icons';
 

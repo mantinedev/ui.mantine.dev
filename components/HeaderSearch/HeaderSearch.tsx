@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons';

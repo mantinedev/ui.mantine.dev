@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons';

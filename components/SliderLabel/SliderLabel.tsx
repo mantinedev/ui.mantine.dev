@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, RangeSlider } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({

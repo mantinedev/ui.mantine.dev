@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Prism } from '@mantine/prism';
 import { MantineProvider, Box } from '@mantine/core';
 import * as UiComponents from '../../../components';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Card, Text, SimpleGrid, UnstyledButton, Anchor, Group } from '@mantine/core';
 import {
   IconCreditCard,

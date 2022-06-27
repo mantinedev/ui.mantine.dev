@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Title, Text, Button, Container } from '@mantine/core';
 import { Dots } from './Dots';
 

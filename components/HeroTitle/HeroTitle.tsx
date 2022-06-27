@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Container, Text, Button, Group } from '@mantine/core';
 import { GithubIcon } from '@mantine/ds';
 

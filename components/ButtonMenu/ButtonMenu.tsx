@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Menu, Text, useMantineTheme } from '@mantine/core';
 import {
   IconSquareCheck,

@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Paper, Text, ThemeIcon } from '@mantine/core';
 import { IconColorSwatch } from '@tabler/icons';
 

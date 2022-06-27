@@ -1,4 +1,3 @@
-import React from 'react';
 import { TextInput, createStyles } from '@mantine/core';
 import { IconAlertTriangle } from '@tabler/icons';
 

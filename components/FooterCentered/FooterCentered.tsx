@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Anchor, Group, ActionIcon } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';

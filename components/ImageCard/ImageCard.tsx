@@ -1,4 +1,3 @@
-import React from 'react';
 import { IconEye, IconMessageCircle } from '@tabler/icons';
 import { Card, Text, Group, Center, createStyles } from '@mantine/core';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Menu, Group, Text, Avatar, useMantineTheme, ActionIcon } from '@mantine/core';
 import {
   IconLogout,
