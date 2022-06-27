@@ -98,8 +98,7 @@ interface FeaturesGridProps {
 }
 
 export function FeaturesGrid({ title, description, data = MOCKDATA }: FeaturesGridProps) {
-  const { classes } = useStyles();
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
   const features = data.map((feature, index) => <Feature {...feature} key={index} />);
 
   return (

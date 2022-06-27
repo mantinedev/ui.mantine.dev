@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Text, Group, Button, createStyles, useMantineTheme } from '@mantine/core';
+import { Text, Group, Button, createStyles } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
 import { IconCloudUpload, IconX, IconDownload } from '@tabler/icons';
 
@@ -27,8 +27,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export function DropzoneButton() {
-  const theme = useMantineTheme();
-  const { classes } = useStyles();
+  const { classes, theme } = useStyles();
   const openRef = useRef<() => void>(null);
 
   return (

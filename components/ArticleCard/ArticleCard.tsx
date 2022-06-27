@@ -9,7 +9,6 @@ import {
   Group,
   Center,
   Avatar,
-  useMantineTheme,
   createStyles,
 } from '@mantine/core';
 
@@ -66,8 +65,7 @@ export function ArticleCard({
   rating,
   ...others
 }: ArticleCardProps & Omit<React.ComponentPropsWithoutRef<'div'>, keyof ArticleCardProps>) {
-  const { classes, cx } = useStyles();
-  const theme = useMantineTheme();
+  const { classes, cx, theme } = useStyles();
   const linkProps = { href: link, target: '_blank', rel: 'noopener noreferrer' };
 
   return (

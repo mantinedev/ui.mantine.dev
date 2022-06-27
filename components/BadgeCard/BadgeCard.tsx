@@ -1,16 +1,6 @@
 import React from 'react';
 import { IconHeart } from '@tabler/icons';
-import {
-  Card,
-  Image,
-  Text,
-  Group,
-  Badge,
-  Button,
-  ActionIcon,
-  createStyles,
-  useMantineTheme,
-} from '@mantine/core';
+import { Card, Image, Text, Group, Badge, Button, ActionIcon, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -49,8 +39,7 @@ interface BadgeCardProps {
 }
 
 export function BadgeCard({ image, title, description, country, badges }: BadgeCardProps) {
-  const { classes } = useStyles();
-  const theme = useMantineTheme();
+  const { classes, theme } = useStyles();
 
   const features = badges.map((badge) => (
     <Badge
