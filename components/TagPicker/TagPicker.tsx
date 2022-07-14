@@ -7,7 +7,7 @@ export function TagPicker() {
   return (
     <MultiSelect
       label="Select tags or create new one"
-      placeholder="What you article is about?"
+      placeholder="What your article is about?"
       data={data}
       searchable
       creatable
