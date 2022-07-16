@@ -1,0 +1,16 @@
+{
+  "title": "Inline editable text",
+  "category": "inputs",
+  "author": "tuliren",
+  "dependencies": [
+    "/core/button/",
+    "/core/group/",
+    "/core/popover/",
+    "/core/text-input/",
+    "tabler-icons-react"
+  ],
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

@@ -39,6 +39,7 @@ export { CurrencyInput } from './CurrencyInput/CurrencyInput';
 export { FloatingLabelInput } from './FloatingLabelInput/FloatingLabelInput';
 export { ForgotPasswordInput } from './ForgotPasswordInput/ForgotPasswordInput';
 export { ImageCheckboxes } from './ImageCheckboxes/ImageCheckboxes';
+export { InlineEditableText } from './InlineEditableText/InlineEditableText';
 export { InputTooltip } from './InputTooltip/InputTooltip';
 export { InputValidation } from './InputValidation/InputValidation';
 export { InputWithButton } from './InputWithButton/InputWithButton';
