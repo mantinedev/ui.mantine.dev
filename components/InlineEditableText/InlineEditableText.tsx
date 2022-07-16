@@ -5,7 +5,7 @@ import { Check, X } from 'tabler-icons-react';
 
 export function InlineEditableText() {
   const theme = useMantineTheme();
-  const [text, setText] = useState<string>('');
+  const [text, setText] = useState<string>('Inline editable text (click to edit)');
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -23,25 +23,24 @@ export function InlineEditableText() {
   );
 
   const handleCancel = useCallback(() => {
-    form.reset();
-    setText(text);
+    form.setFieldValue('value', text);
     setIsEditing(false);
     inputRef.current && inputRef.current.blur();
-  }, [text, form, setText, setIsEditing, inputRef]);
+  }, [form, text, setIsEditing, inputRef]);
 
   const textInput = (
     <TextInput
       ref={inputRef}
       autoFocus={isEditing}
       variant="filled"
-      value={text}
+      value={form.values.value}
       readOnly={!isEditing}
       placeholder="(click to edit)"
       onClick={() => setIsEditing(true)}
       onChange={(event) => {
         form.setFieldValue('value', event.currentTarget.value);
-        setText(event.currentTarget.value);
       }}
+      sx={{ width: '400px' }}
       styles={{
         filledVariant: {
           backgroundColor: isEditing ? theme.colors.gray[2] : 'white',
@@ -77,7 +76,7 @@ export function InlineEditableText() {
 
   return (
     <>
-      <form onSubmit={form.onSubmit(({ value }) => setText(value))}>
+      <form onSubmit={form.onSubmit(({ value }) => handleSubmit(value))}>
         <Popover
           position="bottom"
           placement="end"
@@ -86,6 +85,8 @@ export function InlineEditableText() {
           onFocus={() => inputRef.current && inputRef.current.focus()}
           onClose={handleCancel}
           target={textInput}
+          closeOnEscape
+          closeOnClickOutside
         >
           <Group position="right" spacing="xs">
             {submitButton}
