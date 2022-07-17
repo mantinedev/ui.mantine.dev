@@ -5,9 +5,17 @@ import { MantineIcon } from '../icons/MantineIcon';
 import { NpmIcon } from '../icons/NpmIcon';
 
 export function getDependencyInfo(url: string) {
-  if (url.startsWith('/core') || url.startsWith('/hooks') || url.startsWith('/others')) {
+  if (
+    url.startsWith('/core') ||
+    url.startsWith('/hooks') ||
+    url.startsWith('/form') ||
+    url.startsWith('/others')
+  ) {
     const _name = url.split('/')[2];
-    const name = url.startsWith('/hooks') ? _name : _name.split('-').map(upperFirst).join('');
+    const name =
+      url.startsWith('/hooks') || url.startsWith('/form')
+        ? _name
+        : _name.split('-').map(upperFirst).join('');
 
     return {
       name,
