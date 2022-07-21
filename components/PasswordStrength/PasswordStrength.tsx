@@ -1,13 +1,12 @@
-import React from 'react';
 import { Box, Progress, PasswordInput, Group, Text, Center } from '@mantine/core';
 import { useInputState } from '@mantine/hooks';
-import { Check, X } from 'tabler-icons-react';
+import { IconCheck, IconX } from '@tabler/icons';
 
 function PasswordRequirement({ meets, label }: { meets: boolean; label: string }) {
   return (
     <Text color={meets ? 'teal' : 'red'} mt={5} size="sm">
       <Center inline>
-        {meets ? <Check size={14} /> : <X size={14} />}
+        {meets ? <IconCheck size={14} stroke={1.5} /> : <IconX size={14} stroke={1.5} />}
         <Box ml={7}>{label}</Box>
       </Center>
     </Text>

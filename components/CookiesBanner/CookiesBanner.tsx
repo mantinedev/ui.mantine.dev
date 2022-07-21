@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button, Paper, Text, Group, CloseButton } from '@mantine/core';
 
 export function CookiesBanner() {

@@ -8,4 +8,4 @@ export default {
   auditors: auditors.src,
   lawyers: lawyers.src,
   others: others.src,
-};
+} as Record<string, any>;

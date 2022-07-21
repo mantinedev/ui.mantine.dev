@@ -1,4 +1,3 @@
-import React from 'react';
 import { NativeSelect, TextInput } from '@mantine/core';
 
 const data = [

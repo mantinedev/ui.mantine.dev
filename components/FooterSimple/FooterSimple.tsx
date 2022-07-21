@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Container, Group, Anchor } from '@mantine/core';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -50,7 +49,7 @@ export function FooterSimple({ links }: FooterSimpleProps) {
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>
-        <MantineLogo />
+        <MantineLogo size={28} />
         <Group className={classes.links}>{items}</Group>
       </Container>
     </div>

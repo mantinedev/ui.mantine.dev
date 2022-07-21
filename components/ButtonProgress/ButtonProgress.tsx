@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useInterval } from '@mantine/hooks';
 import { createStyles, Button, Progress } from '@mantine/core';
 

@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Navbar, Group, Code } from '@mantine/core';
 import {
-  BellRinging,
-  Fingerprint,
-  Key,
-  Settings,
-  TwoFA,
-  DatabaseImport,
-  Receipt2,
-  SwitchHorizontal,
-  Logout,
-} from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+  IconBellRinging,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconSwitchHorizontal,
+  IconLogout,
+} from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');
   return {
     navbar: {
-      backgroundColor: theme.colors[theme.primaryColor][6],
+      backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor })
+        .background,
     },
 
     version: {
-      backgroundColor: theme.colors[theme.primaryColor][7],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
       color: theme.white,
       fontWeight: 700,
     },
@@ -29,13 +33,19 @@ const useStyles = createStyles((theme, _params, getRef) => {
     header: {
       paddingBottom: theme.spacing.md,
       marginBottom: theme.spacing.md * 1.5,
-      borderBottom: `1px solid ${theme.colors[theme.primaryColor][7]}`,
+      borderBottom: `1px solid ${theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      )}`,
     },
 
     footer: {
       paddingTop: theme.spacing.md,
       marginTop: theme.spacing.md,
-      borderTop: `1px solid ${theme.colors[theme.primaryColor][7]}`,
+      borderTop: `1px solid ${theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      )}`,
     },
 
     link: {
@@ -50,7 +60,10 @@ const useStyles = createStyles((theme, _params, getRef) => {
       fontWeight: 500,
 
       '&:hover': {
-        backgroundColor: theme.colors[theme.primaryColor][5],
+        backgroundColor: theme.fn.lighten(
+          theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+          0.1
+        ),
       },
     },
 
@@ -63,7 +76,10 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
     linkActive: {
       '&, &:hover': {
-        backgroundColor: theme.colors[theme.primaryColor][7],
+        backgroundColor: theme.fn.lighten(
+          theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+          0.15
+        ),
         [`& .${icon}`]: {
           opacity: 0.9,
         },
@@ -73,13 +89,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-  { link: '', label: 'Notifications', icon: BellRinging },
-  { link: '', label: 'Billing', icon: Receipt2 },
-  { link: '', label: 'Security', icon: Fingerprint },
-  { link: '', label: 'SSH Keys', icon: Key },
-  { link: '', label: 'Databases', icon: DatabaseImport },
-  { link: '', label: 'Authentication', icon: TwoFA },
-  { link: '', label: 'Other Settings', icon: Settings },
+  { link: '', label: 'Notifications', icon: IconBellRinging },
+  { link: '', label: 'Billing', icon: IconReceipt2 },
+  { link: '', label: 'Security', icon: IconFingerprint },
+  { link: '', label: 'SSH Keys', icon: IconKey },
+  { link: '', label: 'Databases', icon: IconDatabaseImport },
+  { link: '', label: 'Authentication', icon: Icon2fa },
+  { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 
 export function NavbarSimpleColored() {
@@ -96,7 +112,7 @@ export function NavbarSimpleColored() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} />
+      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -105,7 +121,7 @@ export function NavbarSimpleColored() {
     <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
-          <MantineLogo variant="white" />
+          <MantineLogo size={28} inverted />
           <Code className={classes.version}>v3.1.2</Code>
         </Group>
         {links}
@@ -113,12 +129,12 @@ export function NavbarSimpleColored() {
 
       <Navbar.Section className={classes.footer}>
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <SwitchHorizontal className={classes.linkIcon} />
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
         </a>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <Logout className={classes.linkIcon} />
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
       </Navbar.Section>

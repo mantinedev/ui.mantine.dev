@@ -1,4 +1,3 @@
-import React from 'react';
 import { useMantineTheme } from '@mantine/core';
 
 export function Illustration(props: React.ComponentPropsWithoutRef<'svg'>) {

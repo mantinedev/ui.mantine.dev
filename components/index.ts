@@ -43,7 +43,6 @@ export { InputTooltip } from './InputTooltip/InputTooltip';
 export { InputValidation } from './InputValidation/InputValidation';
 export { InputWithButton } from './InputWithButton/InputWithButton';
 export { QuantityInput } from './QuantityInput/QuantityInput';
-export { TagPicker } from './TagPicker/TagPicker';
 export { LanguagePicker } from './LanguagePicker/LanguagePicker';
 export { PasswordStrength } from './PasswordStrength/PasswordStrength';
 
@@ -146,7 +145,6 @@ export { TableSort } from './TableSort/TableSort';
 export { ButtonCopy } from './ButtonCopy/ButtonCopy';
 export { ButtonMenu } from './ButtonMenu/ButtonMenu';
 export { ButtonProgress } from './ButtonProgress/ButtonProgress';
-export { ButtonsGroup } from './ButtonsGroup/ButtonsGroup';
 export { SplitButton } from './SplitButton/SplitButton';
 
 // DND

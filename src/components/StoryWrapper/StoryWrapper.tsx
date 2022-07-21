@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 import { CanvasAttributes } from '../../data';
 

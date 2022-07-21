@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Button, Menu, Group, ActionIcon } from '@mantine/core';
-import { Trash, Bookmark, Calendar, ChevronDown } from 'tabler-icons-react';
+import { IconTrash, IconBookmark, IconCalendar, IconChevronDown } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   button: {
@@ -23,25 +22,28 @@ export function SplitButton() {
   return (
     <Group noWrap spacing={0}>
       <Button className={classes.button}>Send</Button>
-      <Menu
-        control={
+      <Menu transition="pop" position="bottom-end">
+        <Menu.Target>
           <ActionIcon
             variant="filled"
             color={theme.primaryColor}
             size={36}
             className={classes.menuControl}
           >
-            <ChevronDown size={16} />
+            <IconChevronDown size={16} stroke={1.5} />
           </ActionIcon>
-        }
-        transition="pop"
-        placement="end"
-      >
-        <Menu.Item icon={<Calendar size={16} color={menuIconColor} />}>
-          Schedule for later
-        </Menu.Item>
-        <Menu.Item icon={<Bookmark size={16} color={menuIconColor} />}>Save draft</Menu.Item>
-        <Menu.Item icon={<Trash size={16} color={menuIconColor} />}>Delete</Menu.Item>
+        </Menu.Target>
+        <Menu.Dropdown>
+          <Menu.Item icon={<IconCalendar size={16} stroke={1.5} color={menuIconColor} />}>
+            Schedule for later
+          </Menu.Item>
+          <Menu.Item icon={<IconBookmark size={16} stroke={1.5} color={menuIconColor} />}>
+            Save draft
+          </Menu.Item>
+          <Menu.Item icon={<IconTrash size={16} stroke={1.5} color={menuIconColor} />}>
+            Delete
+          </Menu.Item>
+        </Menu.Dropdown>
       </Menu>
     </Group>
   );

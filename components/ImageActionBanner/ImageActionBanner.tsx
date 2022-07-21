@@ -1,13 +1,4 @@
-import React from 'react';
-import {
-  createStyles,
-  Card,
-  Overlay,
-  CardProps,
-  Button,
-  Text,
-  useMantineTheme,
-} from '@mantine/core';
+import { createStyles, Card, Overlay, CardProps, Button, Text } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -61,9 +52,8 @@ export function ImageActionBanner({
   style,
   className,
   ...others
-}: ImageActionBannerProps & Omit<CardProps<'div'>, keyof ImageActionBannerProps | 'children'>) {
-  const { classes, cx } = useStyles();
-  const theme = useMantineTheme();
+}: ImageActionBannerProps & Omit<CardProps, keyof ImageActionBannerProps | 'children'>) {
+  const { classes, cx, theme } = useStyles();
 
   return (
     <Card

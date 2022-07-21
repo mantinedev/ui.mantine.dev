@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Progress, Box, Text, Group, Paper, SimpleGrid } from '@mantine/core';
-import { ArrowUpRight, DeviceAnalytics } from 'tabler-icons-react';
+import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   progressLabel: {
@@ -47,7 +46,7 @@ export function StatsSegments({ total, diff, data }: StatsSegmentsProps) {
   const segments = data.map((segment) => ({
     value: segment.part,
     color: segment.color,
-    label: segment.part > 10 ? `${segment.part}%` : null,
+    label: segment.part > 10 ? `${segment.part}%` : undefined,
   }));
 
   const descriptions = data.map((stat) => (
@@ -74,10 +73,10 @@ export function StatsSegments({ total, diff, data }: StatsSegmentsProps) {
           </Text>
           <Text color="teal" className={classes.diff} size="sm" weight={700}>
             <span>{diff}%</span>
-            <ArrowUpRight size={16} style={{ marginBottom: 4 }} />
+            <IconArrowUpRight size={16} style={{ marginBottom: 4 }} stroke={1.5} />
           </Text>
         </Group>
-        <DeviceAnalytics size={20} className={classes.icon} />
+        <IconDeviceAnalytics size={20} className={classes.icon} stroke={1.5} />
       </Group>
 
       <Text color="dimmed" size="sm">

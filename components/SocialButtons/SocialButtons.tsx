@@ -1,16 +1,13 @@
-import React from 'react';
 import { Button, ButtonProps, Group } from '@mantine/core';
-import { MarkGithubIcon } from '@primer/octicons-react';
+import { GithubIcon, DiscordIcon, TwitterIcon } from '@mantine/ds';
 import { GoogleIcon } from './GoogleIcon';
-import { DiscordIcon } from './DiscordIcon';
 import { FacebookIcon } from './FacebookIcon';
-import { TwitterIcon } from './TwitterIcon';
 
-export function GoogleButton(props: ButtonProps<'button'>) {
+export function GoogleButton(props: ButtonProps) {
   return <Button leftIcon={<GoogleIcon />} variant="default" color="gray" {...props} />;
 }
 
-export function FacebookButton(props: ButtonProps<'button'>) {
+export function FacebookButton(props: ButtonProps) {
   return (
     <Button
       leftIcon={<FacebookIcon />}
@@ -26,17 +23,17 @@ export function FacebookButton(props: ButtonProps<'button'>) {
   );
 }
 
-export function DiscordButton(props: ButtonProps<'button'>) {
+export function DiscordButton(props: ButtonProps) {
   return (
     <Button
-      leftIcon={<DiscordIcon />}
+      leftIcon={<DiscordIcon size={16} />}
       sx={(theme) => ({
-        backgroundColor: theme.colorScheme === 'dark' ? '#5865F2' : '#7289da',
+        backgroundColor: theme.colorScheme === 'dark' ? '#5865F2' : '#5865F2',
         '&:hover': {
           backgroundColor:
             theme.colorScheme === 'dark'
               ? theme.fn.lighten('#5865F2', 0.05)
-              : theme.fn.darken('#7289da', 0.05),
+              : theme.fn.darken('#5865F2', 0.05),
         },
       })}
       {...props}
@@ -45,15 +42,22 @@ export function DiscordButton(props: ButtonProps<'button'>) {
 }
 
 // Twitter button as anchor
-export function TwitterButton(props: ButtonProps<'a'>) {
-  return <Button component="a" leftIcon={<TwitterIcon />} variant="default" {...props} />;
+export function TwitterButton(props: ButtonProps & React.ComponentPropsWithoutRef<'a'>) {
+  return (
+    <Button
+      component="a"
+      leftIcon={<TwitterIcon size={16} color="#00ACEE" />}
+      variant="default"
+      {...props}
+    />
+  );
 }
 
-export function GithubButton(props: ButtonProps<'button'>) {
+export function GithubButton(props: ButtonProps) {
   return (
     <Button
       {...props}
-      leftIcon={<MarkGithubIcon />}
+      leftIcon={<GithubIcon size={16} />}
       sx={(theme) => ({
         backgroundColor: theme.colors.dark[theme.colorScheme === 'dark' ? 9 : 6],
         color: '#fff',

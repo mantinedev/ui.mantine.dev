@@ -17,7 +17,7 @@ if (fs.existsSync(componentPath)) {
   process.exit(1);
 }
 
-const component = `import React from 'react';
+const component = `
 import { createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({}));
@@ -42,7 +42,7 @@ const attributes = `{
 }
 `;
 
-const story = `import React from 'react';
+const story = `
 import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { GalleryStory } from '../../components/GalleryStory/GalleryStory';

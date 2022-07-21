@@ -6,7 +6,7 @@
     "/core/button/#unstyled-button",
     "/core/text/",
     "/core/center/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "canvas": {
     "center": true,

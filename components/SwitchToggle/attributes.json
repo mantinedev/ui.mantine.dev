@@ -3,7 +3,7 @@
   "category": "color-scheme",
   "author": "rtivital",
   "withColor": true,
-  "dependencies": ["/core/switch/", "tabler-icons-react"],
+  "dependencies": ["/core/switch/", "@tabler/icons"],
   "canvas": {
     "center": false
   }

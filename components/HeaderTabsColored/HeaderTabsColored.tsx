@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   createStyles,
   Container,
@@ -7,40 +7,35 @@ import {
   Group,
   Text,
   Menu,
-  Divider,
   Tabs,
   Burger,
 } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
+import { useDisclosure } from '@mantine/hooks';
 import {
-  Logout,
-  Heart,
-  Star,
-  Message,
-  Settings,
-  PlayerPause,
-  Trash,
-  SwitchHorizontal,
-  ChevronDown,
-} from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+  IconLogout,
+  IconHeart,
+  IconStar,
+  IconMessage,
+  IconSettings,
+  IconPlayerPause,
+  IconTrash,
+  IconSwitchHorizontal,
+  IconChevronDown,
+} from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
     paddingTop: theme.spacing.sm,
-    backgroundColor: theme.colors[theme.primaryColor][6],
-    borderBottom: `1px solid ${theme.colors[theme.primaryColor][6]}`,
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+    borderBottom: `1px solid ${
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background
+    }`,
     marginBottom: 120,
   },
 
   mainSection: {
     paddingBottom: theme.spacing.sm,
-  },
-
-  userMenu: {
-    [theme.fn.smallerThan('xs')]: {
-      display: 'none',
-    },
   },
 
   user: {
@@ -50,7 +45,14 @@ const useStyles = createStyles((theme) => ({
     transition: 'background-color 100ms ease',
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
+    },
+
+    [theme.fn.smallerThan('xs')]: {
+      display: 'none',
     },
   },
 
@@ -61,7 +63,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   userActive: {
-    backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+    backgroundColor: theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      0.1
+    ),
   },
 
   tabs: {
@@ -74,19 +79,27 @@ const useStyles = createStyles((theme) => ({
     borderBottom: '0 !important',
   },
 
-  tabControl: {
+  tab: {
     fontWeight: 500,
     height: 38,
-    color: `${theme.white} !important`,
+    color: theme.white,
+    backgroundColor: 'transparent',
+    borderColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
-  },
 
-  tabControlActive: {
-    color: `${theme.colorScheme === 'dark' ? theme.white : theme.black} !important`,
-    borderColor: `${theme.colors[theme.primaryColor][6]} !important`,
+    '&[data-active]': {
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
+      borderColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+    },
   },
 }));
 
@@ -97,33 +110,37 @@ interface HeaderTabsProps {
 
 export function HeaderTabsColored({ user, tabs }: HeaderTabsProps) {
   const { classes, theme, cx } = useStyles();
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
-  const items = tabs.map((tab) => <Tabs.Tab label={tab} key={tab} />);
+  const items = tabs.map((tab) => (
+    <Tabs.Tab value={tab} key={tab}>
+      {tab}
+    </Tabs.Tab>
+  ));
 
   return (
     <div className={classes.header}>
       <Container className={classes.mainSection}>
         <Group position="apart">
-          <MantineLogo variant="white" />
+          <MantineLogo size={28} inverted />
 
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={toggle}
             className={classes.burger}
             size="sm"
             color={theme.white}
           />
 
           <Menu
-            size={260}
-            placement="end"
+            width={260}
+            position="bottom-end"
             transition="pop-top-right"
-            className={classes.userMenu}
             onClose={() => setUserMenuOpened(false)}
             onOpen={() => setUserMenuOpened(true)}
-            control={
+          >
+            <Menu.Target>
               <UnstyledButton
                 className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
               >
@@ -132,33 +149,38 @@ export function HeaderTabsColored({ user, tabs }: HeaderTabsProps) {
                   <Text weight={500} size="sm" sx={{ lineHeight: 1, color: theme.white }} mr={3}>
                     {user.name}
                   </Text>
-                  <ChevronDown size={12} />
+                  <IconChevronDown size={12} stroke={1.5} />
                 </Group>
               </UnstyledButton>
-            }
-          >
-            <Menu.Item icon={<Heart size={14} color={theme.colors.red[6]} />}>
-              Liked posts
-            </Menu.Item>
-            <Menu.Item icon={<Star size={14} color={theme.colors.yellow[6]} />}>
-              Saved posts
-            </Menu.Item>
-            <Menu.Item icon={<Message size={14} color={theme.colors.blue[6]} />}>
-              Your comments
-            </Menu.Item>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item icon={<IconHeart size={14} stroke={1.5} color={theme.colors.red[6]} />}>
+                Liked posts
+              </Menu.Item>
+              <Menu.Item icon={<IconStar size={14} stroke={1.5} color={theme.colors.yellow[6]} />}>
+                Saved posts
+              </Menu.Item>
+              <Menu.Item icon={<IconMessage size={14} stroke={1.5} color={theme.colors.blue[6]} />}>
+                Your comments
+              </Menu.Item>
 
-            <Menu.Label>Settings</Menu.Label>
-            <Menu.Item icon={<Settings size={14} />}>Account settings</Menu.Item>
-            <Menu.Item icon={<SwitchHorizontal size={14} />}>Change account</Menu.Item>
-            <Menu.Item icon={<Logout size={14} />}>Logout</Menu.Item>
+              <Menu.Label>Settings</Menu.Label>
+              <Menu.Item icon={<IconSettings size={14} stroke={1.5} />}>Account settings</Menu.Item>
+              <Menu.Item icon={<IconSwitchHorizontal size={14} stroke={1.5} />}>
+                Change account
+              </Menu.Item>
+              <Menu.Item icon={<IconLogout size={14} stroke={1.5} />}>Logout</Menu.Item>
 
-            <Divider />
+              <Menu.Divider />
 
-            <Menu.Label>Danger zone</Menu.Label>
-            <Menu.Item icon={<PlayerPause size={14} />}>Pause subscription</Menu.Item>
-            <Menu.Item color="red" icon={<Trash size={14} />}>
-              Delete account
-            </Menu.Item>
+              <Menu.Label>Danger zone</Menu.Label>
+              <Menu.Item icon={<IconPlayerPause size={14} stroke={1.5} />}>
+                Pause subscription
+              </Menu.Item>
+              <Menu.Item color="red" icon={<IconTrash size={14} stroke={1.5} />}>
+                Delete account
+              </Menu.Item>
+            </Menu.Dropdown>
           </Menu>
         </Group>
       </Container>
@@ -167,12 +189,11 @@ export function HeaderTabsColored({ user, tabs }: HeaderTabsProps) {
           variant="outline"
           classNames={{
             root: classes.tabs,
-            tabsListWrapper: classes.tabsList,
-            tabControl: classes.tabControl,
-            tabActive: classes.tabControlActive,
+            tabsList: classes.tabsList,
+            tab: classes.tab,
           }}
         >
-          {items}
+          <Tabs.List>{items}</Tabs.List>
         </Tabs>
       </Container>
     </div>

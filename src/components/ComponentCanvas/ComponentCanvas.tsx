@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Prism } from '@mantine/prism';
 import { MantineProvider, Box } from '@mantine/core';
 import * as UiComponents from '../../../components';
@@ -13,7 +13,7 @@ export function ComponentCanvas(props: UiComponent & { zIndex: number }) {
   const [primaryColor, setPrimaryColor] = useState('blue');
   const [codeState, setCodeState] = useState<'code' | 'mockdata'>('code');
   const { classes, cx } = useStyles();
-  const Component = UiComponents[props.component];
+  const Component: any = UiComponents[props.component as keyof typeof UiComponents];
   const mockdata = props.attributes.props;
 
   return (

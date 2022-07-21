@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, UnstyledButton, Menu, Image, Group } from '@mantine/core';
-import { ChevronDown } from 'tabler-icons-react';
+import { IconChevronDown } from '@tabler/icons';
 import images from './images';
 
 const data = [
@@ -62,22 +62,21 @@ export function LanguagePicker() {
 
   return (
     <Menu
-      transition="pop"
-      transitionDuration={150}
       onOpen={() => setOpened(true)}
       onClose={() => setOpened(false)}
       radius="md"
-      control={
+      width="target"
+    >
+      <Menu.Target>
         <UnstyledButton className={classes.control}>
           <Group spacing="xs">
             <Image src={selected.image} width={22} height={22} />
             <span className={classes.label}>{selected.label}</span>
           </Group>
-          <ChevronDown size={16} className={classes.icon} />
+          <IconChevronDown size={16} className={classes.icon} stroke={1.5} />
         </UnstyledButton>
-      }
-    >
-      {items}
+      </Menu.Target>
+      <Menu.Dropdown>{items}</Menu.Dropdown>
     </Menu>
   );
 }

@@ -1,7 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
 import { Title, Anchor, Center, Box } from '@mantine/core';
-import { ArrowLeftIcon, ArrowRightIcon } from '@modulz/radix-icons';
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons';
 import { Category } from '../../data';
 import useStyles from './CategoryHeader.styles';
 
@@ -15,8 +14,8 @@ export function CategoryHeader({ category }: CategoryHeaderProps) {
     <>
       <Link href="/#main" passHref>
         <Anchor>
-          <Center sx={{ display: 'inline-flex', flexDirection: 'row' }}>
-            {theme.dir === 'rtl' ? <ArrowRightIcon /> : <ArrowLeftIcon />}
+          <Center inline>
+            {theme.dir === 'rtl' ? <IconArrowRight size={14} /> : <IconArrowLeft size={14} />}
             <Box component="span" ml={5}>
               Back to all categories
             </Box>

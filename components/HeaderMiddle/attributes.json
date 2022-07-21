@@ -10,7 +10,7 @@
     "/core/action-icon/",
     "/core/container/",
     "/core/burger/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "links": [

@@ -10,7 +10,7 @@
     "/core/text/",
     "/core/container/",
     "/core/simple-grid/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "title": "Integrate effortlessly with any technology stack",

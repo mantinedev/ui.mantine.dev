@@ -1,8 +1,7 @@
-import React from 'react';
 import { createStyles, Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { GripVertical } from 'tabler-icons-react';
+import { IconGripVertical } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   item: {
@@ -62,7 +61,7 @@ export function DndListHandle({ data }: DndListHandleProps) {
           {...provided.draggableProps}
         >
           <div {...provided.dragHandleProps} className={classes.dragHandle}>
-            <GripVertical size={18} />
+            <IconGripVertical size={18} stroke={1.5} />
           </div>
           <Text className={classes.symbol}>{item.symbol}</Text>
           <div>
@@ -79,7 +78,7 @@ export function DndListHandle({ data }: DndListHandleProps) {
   return (
     <DragDropContext
       onDragEnd={({ destination, source }) =>
-        handlers.reorder({ from: source.index, to: destination.index })
+        handlers.reorder({ from: source.index, to: destination?.index || 0 })
       }
     >
       <Droppable droppableId="dnd-list" direction="vertical">

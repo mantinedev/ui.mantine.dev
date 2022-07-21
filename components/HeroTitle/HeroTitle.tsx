@@ -1,5 +1,5 @@
-import React from 'react';
-import { createStyles, Container, Text, Button, Group, useMantineTheme } from '@mantine/core';
+import { createStyles, Container, Text, Button, Group } from '@mantine/core';
+import { GithubIcon } from '@mantine/ds';
 
 const BREAKPOINT = '@media (max-width: 755px)';
 
@@ -65,23 +65,10 @@ const useStyles = createStyles((theme) => ({
       flex: 1,
     },
   },
-
-  githubControl: {
-    borderWidth: 2,
-    borderColor: theme.colorScheme === 'dark' ? 'transparent' : theme.colors.dark[9],
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : 'transparent',
-
-    '&:hover': {
-      backgroundColor: `${
-        theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0]
-      } !important`,
-    },
-  },
 }));
 
 export function HeroTitle() {
-  const { classes, cx } = useStyles();
-  const theme = useMantineTheme();
+  const { classes } = useStyles();
 
   return (
     <div className={classes.wrapper}>
@@ -113,9 +100,9 @@ export function HeroTitle() {
             component="a"
             href="https://github.com/mantinedev/mantine"
             size="xl"
-            variant="outline"
-            className={cx(classes.control, classes.githubControl)}
-            color={theme.colorScheme === 'dark' ? 'gray' : 'dark'}
+            variant="default"
+            className={classes.control}
+            leftIcon={<GithubIcon size={20} />}
           >
             GitHub
           </Button>

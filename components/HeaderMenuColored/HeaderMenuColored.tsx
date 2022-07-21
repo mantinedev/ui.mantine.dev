@@ -1,12 +1,11 @@
-import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { ChevronDown } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { IconChevronDown } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
     borderBottom: 0,
   },
 
@@ -40,7 +39,10 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 7 : 5],
+      backgroundColor: theme.fn.lighten(
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        0.1
+      ),
     },
   },
 
@@ -54,7 +56,7 @@ interface HeaderSearchProps {
 }
 
 export function HeaderMenuColored({ links }: HeaderSearchProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => {
@@ -64,14 +66,8 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
 
     if (menuItems) {
       return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          delay={0}
-          transitionDuration={0}
-          placement="end"
-          gutter={1}
-          control={
+        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+          <Menu.Target>
             <a
               href={link.link}
               className={classes.link}
@@ -79,12 +75,11 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <ChevronDown size={12} />
+                <IconChevronDown size={12} stroke={1.5} />
               </Center>
             </a>
-          }
-        >
-          {menuItems}
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
       );
     }
@@ -105,13 +100,13 @@ export function HeaderMenuColored({ links }: HeaderSearchProps) {
     <Header height={56} className={classes.header} mb={120}>
       <Container>
         <div className={classes.inner}>
-          <MantineLogo variant="white" />
+          <MantineLogo size={28} inverted />
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
           <Burger
             opened={opened}
-            onClick={() => toggleOpened()}
+            onClick={toggle}
             className={classes.burger}
             size="sm"
             color="#fff"

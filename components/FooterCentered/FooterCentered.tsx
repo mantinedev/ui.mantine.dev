@@ -1,7 +1,6 @@
-import React from 'react';
 import { createStyles, Anchor, Group, ActionIcon } from '@mantine/core';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -52,19 +51,19 @@ export function FooterCentered({ links }: FooterCenteredProps) {
   return (
     <div className={classes.footer}>
       <div className={classes.inner}>
-        <MantineLogo />
+        <MantineLogo size={28} />
 
         <Group className={classes.links}>{items}</Group>
 
-        <Group spacing={0} position="right" noWrap>
-          <ActionIcon size="lg">
-            <BrandTwitter size={18} />
+        <Group spacing="xs" position="right" noWrap>
+          <ActionIcon size="lg" variant="default" radius="xl">
+            <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg">
-            <BrandYoutube size={18} />
+          <ActionIcon size="lg" variant="default" radius="xl">
+            <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg">
-            <BrandInstagram size={18} />
+          <ActionIcon size="lg" variant="default" radius="xl">
+            <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
       </div>

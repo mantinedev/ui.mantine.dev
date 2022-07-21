@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Group } from '@mantine/core';
+import { useState } from 'react';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack } from '@mantine/core';
 import {
-  Icon as TablerIcon,
-  Home2,
-  Gauge,
-  DeviceDesktopAnalytics,
-  Fingerprint,
-  CalendarStats,
-  User,
-  Settings,
-  Logout,
-  SwitchHorizontal,
-} from 'tabler-icons-react';
-import { MantineLogoSmall } from '../../shared/MantineLogo';
+  TablerIcon,
+  IconHome2,
+  IconGauge,
+  IconDeviceDesktopAnalytics,
+  IconFingerprint,
+  IconCalendarStats,
+  IconUser,
+  IconSettings,
+  IconLogout,
+  IconSwitchHorizontal,
+} from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -31,11 +31,8 @@ const useStyles = createStyles((theme) => ({
 
   active: {
     '&, &:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
-      color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 7],
+      backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
+      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     },
   },
 }));
@@ -50,22 +47,22 @@ interface NavbarLinkProps {
 function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   const { classes, cx } = useStyles();
   return (
-    <Tooltip label={label} position="right" withArrow transitionDuration={0}>
+    <Tooltip label={label} position="right" transitionDuration={0}>
       <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
-        <Icon />
+        <Icon stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   );
 }
 
 const mockdata = [
-  { icon: Home2, label: 'Home' },
-  { icon: Gauge, label: 'Dashboard' },
-  { icon: DeviceDesktopAnalytics, label: 'Analytics' },
-  { icon: CalendarStats, label: 'Releases' },
-  { icon: User, label: 'Account' },
-  { icon: Fingerprint, label: 'Security' },
-  { icon: Settings, label: 'Settings' },
+  { icon: IconHome2, label: 'Home' },
+  { icon: IconGauge, label: 'Dashboard' },
+  { icon: IconDeviceDesktopAnalytics, label: 'Analytics' },
+  { icon: IconCalendarStats, label: 'Releases' },
+  { icon: IconUser, label: 'Account' },
+  { icon: IconFingerprint, label: 'Security' },
+  { icon: IconSettings, label: 'Settings' },
 ];
 
 export function NavbarMinimal() {
@@ -83,18 +80,18 @@ export function NavbarMinimal() {
   return (
     <Navbar height={750} width={{ base: 80 }} p="md">
       <Center>
-        <MantineLogoSmall />
+        <MantineLogo type="mark" size={30} />
       </Center>
       <Navbar.Section grow mt={50}>
-        <Group direction="column" align="center" spacing={0}>
+        <Stack justify="center" spacing={0}>
           {links}
-        </Group>
+        </Stack>
       </Navbar.Section>
       <Navbar.Section>
-        <Group direction="column" align="center" spacing={0}>
-          <NavbarLink icon={SwitchHorizontal} label="Change account" />
-          <NavbarLink icon={Logout} label="Logout" />
-        </Group>
+        <Stack justify="center" spacing={0}>
+          <NavbarLink icon={IconSwitchHorizontal} label="Change account" />
+          <NavbarLink icon={IconLogout} label="Logout" />
+        </Stack>
       </Navbar.Section>
     </Navbar>
   );

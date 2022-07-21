@@ -1,6 +1,5 @@
-import React from 'react';
-import { createStyles, ThemeIcon, Text, Group, SimpleGrid, Box } from '@mantine/core';
-import { Sun, Phone, MapPin, At } from 'tabler-icons-react';
+import { createStyles, ThemeIcon, Text, SimpleGrid, Box, Stack } from '@mantine/core';
+import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons';
 
 type ContactIconVariant = 'white' | 'gradient';
 
@@ -79,15 +78,15 @@ interface ContactIconsListProps {
 }
 
 const MOCKDATA = [
-  { title: 'Email', description: 'hello@mantine.dev', icon: At },
-  { title: 'Phone', description: '+49 (800) 335 35 35', icon: Phone },
-  { title: 'Address', description: '844 Morris Park avenue', icon: MapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: Sun },
+  { title: 'Email', description: 'hello@mantine.dev', icon: IconAt },
+  { title: 'Phone', description: '+49 (800) 335 35 35', icon: IconPhone },
+  { title: 'Address', description: '844 Morris Park avenue', icon: IconMapPin },
+  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
   const items = data.map((item, index) => <ContactIcon key={index} variant={variant} {...item} />);
-  return <Group direction="column">{items}</Group>;
+  return <Stack>{items}</Stack>;
 }
 
 export function ContactIcons() {

@@ -11,7 +11,7 @@
     "/core/burger/",
     "/core/container/",
     "/hooks/use-toggle/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "links": [

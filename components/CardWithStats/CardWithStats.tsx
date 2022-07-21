@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Card, Image, Text, Group, RingProgress } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({

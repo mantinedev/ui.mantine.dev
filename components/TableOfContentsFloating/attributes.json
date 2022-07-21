@@ -3,7 +3,7 @@
   "category": "toc",
   "author": "rtivital",
   "withColor": true,
-  "dependencies": ["/core/box/", "/core/text/", "/core/text/", "tabler-icons-react"],
+  "dependencies": ["/core/box/", "/core/text/", "/core/text/", "@tabler/icons"],
   "props": {
     "links": [
       { "label": "Usage", "link": "#usage", "order": 1 },

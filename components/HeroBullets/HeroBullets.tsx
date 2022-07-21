@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createStyles,
   Image,
@@ -10,7 +9,7 @@ import {
   List,
   ThemeIcon,
 } from '@mantine/core';
-import { Check } from 'tabler-icons-react';
+import { IconCheck } from '@tabler/icons';
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
@@ -59,10 +58,7 @@ const useStyles = createStyles((theme) => ({
 
   highlight: {
     position: 'relative',
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][6], 0.55)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
     borderRadius: theme.radius.sm,
     padding: '4px 12px',
   },
@@ -89,7 +85,7 @@ export function HeroBullets() {
               size="sm"
               icon={
                 <ThemeIcon size={20} radius="xl">
-                  <Check size={12} />
+                  <IconCheck size={12} stroke={1.5} />
                 </ThemeIcon>
               }
             >

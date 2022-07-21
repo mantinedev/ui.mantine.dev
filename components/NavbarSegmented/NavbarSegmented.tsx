@@ -1,30 +1,30 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Navbar, SegmentedControl, Text, createStyles } from '@mantine/core';
 import {
-  ShoppingCart,
-  License,
-  Message2,
-  BellRinging,
-  Messages,
-  Fingerprint,
-  Key,
-  Settings,
-  TwoFA,
-  Users,
-  FileAnalytics,
-  DatabaseImport,
-  Receipt2,
-  ReceiptRefund,
-  Logout,
-  SwitchHorizontal,
-} from 'tabler-icons-react';
+  IconShoppingCart,
+  IconLicense,
+  IconMessage2,
+  IconBellRinging,
+  IconMessages,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconUsers,
+  IconFileAnalytics,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconReceiptRefund,
+  IconLogout,
+  IconSwitchHorizontal,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');
 
   return {
     navbar: {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     },
 
     title: {
@@ -44,7 +44,7 @@ const useStyles = createStyles((theme, _params, getRef) => {
       fontWeight: 500,
 
       '&:hover': {
-        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+        backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
         color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 
         [`& .${icon}`]: {
@@ -61,13 +61,11 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
     linkActive: {
       '&, &:hover': {
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-            : theme.colors[theme.primaryColor][0],
-        color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 7],
+        backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
+          .background,
+        color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         [`& .${icon}`]: {
-          color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 7],
+          color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         },
       },
     },
@@ -83,28 +81,28 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
 const tabs = {
   account: [
-    { link: '', label: 'Notifications', icon: BellRinging },
-    { link: '', label: 'Billing', icon: Receipt2 },
-    { link: '', label: 'Security', icon: Fingerprint },
-    { link: '', label: 'SSH Keys', icon: Key },
-    { link: '', label: 'Databases', icon: DatabaseImport },
-    { link: '', label: 'Authentication', icon: TwoFA },
-    { link: '', label: 'Other Settings', icon: Settings },
+    { link: '', label: 'Notifications', icon: IconBellRinging },
+    { link: '', label: 'Billing', icon: IconReceipt2 },
+    { link: '', label: 'Security', icon: IconFingerprint },
+    { link: '', label: 'SSH Keys', icon: IconKey },
+    { link: '', label: 'Databases', icon: IconDatabaseImport },
+    { link: '', label: 'Authentication', icon: Icon2fa },
+    { link: '', label: 'Other Settings', icon: IconSettings },
   ],
   general: [
-    { link: '', label: 'Orders', icon: ShoppingCart },
-    { link: '', label: 'Receipts', icon: License },
-    { link: '', label: 'Reviews', icon: Message2 },
-    { link: '', label: 'Messages', icon: Messages },
-    { link: '', label: 'Customers', icon: Users },
-    { link: '', label: 'Refunds', icon: ReceiptRefund },
-    { link: '', label: 'Files', icon: FileAnalytics },
+    { link: '', label: 'Orders', icon: IconShoppingCart },
+    { link: '', label: 'Receipts', icon: IconLicense },
+    { link: '', label: 'Reviews', icon: IconMessage2 },
+    { link: '', label: 'Messages', icon: IconMessages },
+    { link: '', label: 'Customers', icon: IconUsers },
+    { link: '', label: 'Refunds', icon: IconReceiptRefund },
+    { link: '', label: 'Files', icon: IconFileAnalytics },
   ],
 };
 
 export function NavbarSegmented() {
   const { classes, cx } = useStyles();
-  const [section, setSection] = useState('account');
+  const [section, setSection] = useState<'account' | 'general'>('account');
   const [active, setActive] = useState('Billing');
 
   const links = tabs[section].map((item) => (
@@ -117,7 +115,7 @@ export function NavbarSegmented() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} />
+      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -131,7 +129,7 @@ export function NavbarSegmented() {
 
         <SegmentedControl
           value={section}
-          onChange={setSection}
+          onChange={(value: 'account' | 'general') => setSection(value)}
           transitionTimingFunction="ease"
           fullWidth
           data={[
@@ -147,12 +145,12 @@ export function NavbarSegmented() {
 
       <Navbar.Section className={classes.footer}>
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <SwitchHorizontal className={classes.linkIcon} />
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
         </a>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <Logout className={classes.linkIcon} />
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
       </Navbar.Section>

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createStyles,
   Paper,
@@ -12,7 +11,7 @@ import {
   Center,
   Box,
 } from '@mantine/core';
-import { ArrowLeft } from 'tabler-icons-react';
+import { IconArrowLeft } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   title: {
@@ -52,7 +51,7 @@ export function ForgotPassword() {
         <Group position="apart" mt="lg" className={classes.controls}>
           <Anchor color="dimmed" size="sm" className={classes.control}>
             <Center inline>
-              <ArrowLeft size={12} />
+              <IconArrowLeft size={12} stroke={1.5} />
               <Box ml={5}>Back to login page</Box>
             </Center>
           </Anchor>

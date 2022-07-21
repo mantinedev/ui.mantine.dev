@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Container, Title, Text, Button, Group } from '@mantine/core';
 import { Illustration } from './Illustration';
 
@@ -6,7 +5,7 @@ const useStyles = createStyles((theme) => ({
   root: {
     paddingTop: 120,
     paddingBottom: 120,
-    backgroundColor: theme.colors[theme.primaryColor][5],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
   },
 
   inner: {

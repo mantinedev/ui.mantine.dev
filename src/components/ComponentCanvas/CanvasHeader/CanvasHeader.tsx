@@ -1,11 +1,5 @@
-import React from 'react';
-import {
-  EyeOpenIcon,
-  CodeIcon,
-  ExternalLinkIcon,
-  GitHubLogoIcon,
-  InfoCircledIcon,
-} from '@modulz/radix-icons';
+import { GithubIcon } from '@mantine/ds';
+import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons';
 import {
   Group,
   Text,
@@ -15,6 +9,7 @@ import {
   SegmentedControl,
   Center,
   Anchor,
+  Box,
 } from '@mantine/core';
 import { ColorControl } from '../ColorControl/ColorControl';
 import { getDependencyInfo } from './get-dependency-info';
@@ -58,26 +53,27 @@ export function CanvasHeader({
   return (
     <div className={classes.header} {...others}>
       <Group>
-        <Text weight={500} style={{ marginRight: 15 }}>
+        <Box id={slug} sx={{ visibility: 'hidden', position: 'absolute', top: -75 }} />
+        <Text weight={500} mr="md" component="a" href={`#${slug}`}>
           {attributes.title}
         </Text>
 
         <Group spacing="xs" className={classes.actions}>
           {!excludeExternal && (
             <ActionIcon
-              variant="outline"
+              variant="default"
               className={classes.action}
               title="View component in isolation"
               component="a"
               href={`/component/${slug}`}
               target="_blank"
             >
-              <ExternalLinkIcon style={{ width: 14, height: 14 }} />
+              <IconExternalLink size={14} stroke={1.5} />
             </ActionIcon>
           )}
 
           <ActionIcon
-            variant="outline"
+            variant="default"
             className={classes.action}
             title="View source on github"
             component="a"
@@ -85,23 +81,23 @@ export function CanvasHeader({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GitHubLogoIcon style={{ width: 14, height: 14 }} />
+            <GithubIcon size={14} />
           </ActionIcon>
 
-          <Menu
-            withArrow
-            placement="end"
-            position="bottom"
-            transition="pop-top-right"
-            transitionDuration={100}
-            control={
-              <ActionIcon className={classes.action} title="Component dependencies">
-                <InfoCircledIcon style={{ width: 14, height: 14 }} />
+          <Menu withArrow position="bottom-end" transition="pop-top-right" transitionDuration={100}>
+            <Menu.Target>
+              <ActionIcon
+                className={classes.action}
+                title="Component dependencies"
+                variant="default"
+              >
+                <IconComponents size={16} stroke={1.5} />
               </ActionIcon>
-            }
-          >
-            <Menu.Label>Component dependencies</Menu.Label>
-            {dependencies}
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Label>Component dependencies</Menu.Label>
+              {dependencies}
+            </Menu.Dropdown>
           </Menu>
 
           {attributes.responsive && <Badge>Responsive</Badge>}
@@ -112,7 +108,7 @@ export function CanvasHeader({
               size="xs"
               href={`https://github.com/${attributes.author}`}
               target="_blank"
-              color="gray"
+              color="dimmed"
             >
               @{attributes.author}
             </Anchor>
@@ -132,7 +128,7 @@ export function CanvasHeader({
               value: 'preview',
               label: (
                 <Center>
-                  <EyeOpenIcon />
+                  <IconEye size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Preview</div>
                 </Center>
               ),
@@ -141,7 +137,7 @@ export function CanvasHeader({
               value: 'code',
               label: (
                 <Center>
-                  <CodeIcon />
+                  <IconCode size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Code</div>
                 </Center>
               ),

@@ -1,23 +1,41 @@
-import React, { useState } from 'react';
-import { MantineProvider, ColorScheme, ColorSchemeProvider } from '@mantine/core';
-import { useLocalStorageValue, useHotkeys } from '@mantine/hooks';
+import { useState } from 'react';
+import { IconSearch } from '@tabler/icons';
+import {
+  MantineProvider,
+  ColorScheme,
+  ColorSchemeProvider,
+  createEmotionCache,
+} from '@mantine/core';
+import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
+import { SpotlightAction, SpotlightProvider } from '@mantine/spotlight';
+import { useRouter } from 'next/router';
 import { DirectionContext } from '../DirectionContext/DirectionContext';
 import { Header } from './Header/Header';
 import { Footer } from './Footer/Footer';
 import { HEADER_HEIGHT } from './Header/Header.styles';
+import { UiComponent } from '../../data';
 
 interface LayoutProps {
   children: React.ReactNode;
   noHeader?: boolean;
+  data: UiComponent[];
 }
 
 const THEME_KEY = 'mantine-color-scheme';
 
-export function Layout({ children, noHeader = false }: LayoutProps) {
-  const [colorScheme, setColorScheme] = useLocalStorageValue<ColorScheme>({
+const rtlCache = createEmotionCache({
+  key: 'mantine-rtl',
+  prepend: true,
+  stylisPlugins: [rtlPlugin],
+});
+
+export function Layout({ children, noHeader = false, data }: LayoutProps) {
+  const router = useRouter();
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
     key: THEME_KEY,
     defaultValue: 'light',
+    getInitialValueInEffect: true,
   });
 
   const [dir, setDir] = useState<'rtl' | 'ltr'>('ltr');
@@ -28,13 +46,19 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
   const toggleDir = () => {
     const nextDir = dir === 'ltr' ? 'rtl' : 'ltr';
     setDir(nextDir);
-    document.querySelector('html').setAttribute('dir', nextDir);
+    document.querySelector('html')!.setAttribute('dir', nextDir);
   };
 
   useHotkeys([
     ['mod+J', () => toggleColorScheme()],
     ['mod+L', toggleDir],
   ]);
+
+  const actions: SpotlightAction[] = data?.map((item) => ({
+    title: item.component,
+    description: item.attributes.title,
+    onTrigger: () => router.push(`/component/${item.slug}`),
+  }));
 
   return (
     <DirectionContext.Provider value={dir}>
@@ -43,13 +67,24 @@ export function Layout({ children, noHeader = false }: LayoutProps) {
           theme={{ colorScheme, dir }}
           withGlobalStyles
           withNormalizeCSS
-          emotionOptions={
-            dir === 'rtl' ? { key: 'mantine-rtl', stylisPlugins: [rtlPlugin] } : { key: 'mantine' }
-          }
+          emotionCache={dir === 'rtl' ? rtlCache : undefined}
         >
-          {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
-          <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>
-          {!noHeader && <Footer />}
+          <SpotlightProvider
+            actions={actions || []}
+            searchIcon={<IconSearch size={18} />}
+            searchPlaceholder="Search components"
+            shortcut={['mod + K', 'mod + P', '/']}
+            highlightQuery
+            transition={{
+              in: { transform: 'translateY(0)', opacity: 1 },
+              out: { transform: 'translateY(-20px)', opacity: 0 },
+              transitionProperty: 'transform, opacity',
+            }}
+          >
+            {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
+            <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>
+            {!noHeader && <Footer />}
+          </SpotlightProvider>
         </MantineProvider>
       </ColorSchemeProvider>
     </DirectionContext.Provider>

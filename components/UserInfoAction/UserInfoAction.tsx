@@ -1,4 +1,3 @@
-import React from 'react';
 import { Avatar, Text, Button, Paper } from '@mantine/core';
 
 interface UserInfoActionProps {

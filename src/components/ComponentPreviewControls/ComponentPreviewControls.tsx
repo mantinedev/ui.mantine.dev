@@ -1,4 +1,3 @@
-import React from 'react';
 import { Affix } from '@mantine/core';
 import { CanvasHeader, CanvasHeaderProps } from '../ComponentCanvas/CanvasHeader/CanvasHeader';
 

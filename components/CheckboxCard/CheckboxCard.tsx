@@ -1,4 +1,3 @@
-import React from 'react';
 import { UnstyledButton, Checkbox, Text, createStyles } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 
@@ -43,7 +42,6 @@ export function CheckboxCard({
     defaultValue: defaultChecked,
     finalValue: false,
     onChange,
-    rule: (val) => typeof val === 'boolean',
   });
 
   return (

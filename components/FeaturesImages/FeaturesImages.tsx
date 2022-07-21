@@ -1,4 +1,3 @@
-import React from 'react';
 import { Image, Text, Container, ThemeIcon, Title, SimpleGrid, createStyles } from '@mantine/core';
 import IMAGES from './images';
 
@@ -26,7 +25,7 @@ const useStyles = createStyles((theme) => ({
     textTransform: 'uppercase',
     fontWeight: 800,
     fontSize: theme.fontSizes.sm,
-    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 8],
+    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     letterSpacing: 0.5,
   },
 
@@ -42,10 +41,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   highlight: {
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][6], 0.55)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
     padding: 5,
     paddingTop: 0,
     borderRadius: theme.radius.sm,

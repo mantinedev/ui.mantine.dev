@@ -1,4 +1,3 @@
-import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Layout } from '../components/Layout/Layout';
@@ -16,7 +15,10 @@ export default function App(props: AppProps) {
         <link rel="icon" href={favicon.src} />
       </Head>
 
-      <Layout noHeader={props.router.pathname === '/component/[component]'}>
+      <Layout
+        noHeader={props.router.pathname === '/component/[component]'}
+        data={props.pageProps.allComponents}
+      >
         <Component {...pageProps} />
       </Layout>
     </>
