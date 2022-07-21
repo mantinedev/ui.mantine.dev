@@ -9,6 +9,7 @@ import {
   SegmentedControl,
   Center,
   Anchor,
+  Box,
 } from '@mantine/core';
 import { ColorControl } from '../ColorControl/ColorControl';
 import { getDependencyInfo } from './get-dependency-info';
@@ -52,7 +53,8 @@ export function CanvasHeader({
   return (
     <div className={classes.header} {...others}>
       <Group>
-        <Text weight={500} style={{ marginRight: 15 }}>
+        <Box id={slug} sx={{ visibility: 'hidden', position: 'absolute', top: -75 }} />
+        <Text weight={500} mr="md" component="a" href={`#${slug}`}>
           {attributes.title}
         </Text>
 
