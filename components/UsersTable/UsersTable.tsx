@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Avatar,
   Badge,
@@ -10,13 +9,13 @@ import {
   ScrollArea,
   useMantineTheme,
 } from '@mantine/core';
-import { Pencil, Trash } from 'tabler-icons-react';
+import { IconPencil, IconTrash } from '@tabler/icons';
 
 interface UsersTableProps {
   data: { avatar: string; name: string; job: string; email: string; phone: string }[];
 }
 
-const jobColors = {
+const jobColors: Record<string, string> = {
   engineer: 'blue',
   manager: 'cyan',
   designer: 'pink',
@@ -49,17 +48,17 @@ export function UsersTable({ data }: UsersTableProps) {
         </Anchor>
       </td>
       <td>
-        <Text size="sm" color="gray">
+        <Text size="sm" color="dimmed">
           {item.phone}
         </Text>
       </td>
       <td>
         <Group spacing={0} position="right">
           <ActionIcon>
-            <Pencil size={16} />
+            <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
           <ActionIcon color="red">
-            <Trash size={16} />
+            <IconTrash size={16} stroke={1.5} />
           </ActionIcon>
         </Group>
       </td>

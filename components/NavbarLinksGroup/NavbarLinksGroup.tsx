@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, createStyles } from '@mantine/core';
-import { Icon as TablerIcon, CalendarStats, ChevronLeft, ChevronRight } from 'tabler-icons-react';
+import { TablerIcon, IconCalendarStats, IconChevronLeft, IconChevronRight } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   control: {
@@ -52,7 +52,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
   const { classes, theme } = useStyles();
   const hasLinks = Array.isArray(links);
   const [opened, setOpened] = useState(initiallyOpened || false);
-  const ChevronIcon = theme.dir === 'ltr' ? ChevronRight : ChevronLeft;
+  const ChevronIcon = theme.dir === 'ltr' ? IconChevronRight : IconChevronLeft;
   const items = (hasLinks ? links : []).map((link) => (
     <Text<'a'>
       component="a"
@@ -79,6 +79,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
             <ChevronIcon
               className={classes.chevron}
               size={14}
+              stroke={1.5}
               style={{
                 transform: opened ? `rotate(${theme.dir === 'rtl' ? -90 : 90}deg)` : 'none',
               }}
@@ -93,7 +94,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
 
 const mockdata = {
   label: 'Releases',
-  icon: CalendarStats,
+  icon: IconCalendarStats,
   links: [
     { label: 'Upcoming releases', link: '/' },
     { label: 'Previous releases', link: '/' },

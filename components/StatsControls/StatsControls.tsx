@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import dayjs from 'dayjs';
 import { createStyles, UnstyledButton, Text, Paper, Group } from '@mantine/core';
-import { Swimming, Bike, Run, ChevronDown, ChevronUp } from 'tabler-icons-react';
+import { IconSwimming, IconBike, IconRun, IconChevronDown, IconChevronUp } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -120,9 +120,9 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const data = [
-  { icon: Run, label: 'Running' },
-  { icon: Swimming, label: 'Swimming' },
-  { icon: Bike, label: 'Bike' },
+  { icon: IconRun, label: 'Running' },
+  { icon: IconSwimming, label: 'Swimming' },
+  { icon: IconBike, label: 'Bike' },
 ];
 
 export function StatsControls() {
@@ -131,7 +131,7 @@ export function StatsControls() {
 
   const stats = data.map((stat) => (
     <Paper className={classes.stat} radius="md" shadow="md" p="xs" key={stat.label}>
-      <stat.icon size={32} className={classes.icon} />
+      <stat.icon size={32} className={classes.icon} stroke={1.5} />
       <div>
         <Text className={classes.label}>{stat.label}</Text>
         <Text size="xs" className={classes.count}>
@@ -148,7 +148,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).add(1, 'day').toDate())}
         >
-          <ChevronUp className={classes.controlIcon} />
+          <IconChevronUp className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
 
         <div className={classes.date}>
@@ -160,7 +160,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).subtract(1, 'day').toDate())}
         >
-          <ChevronDown className={classes.controlIcon} />
+          <IconChevronDown className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
       </div>
       <Group sx={{ flex: 1 }}>{stats}</Group>

@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Group, Paper, Text, ThemeIcon, SimpleGrid } from '@mantine/core';
-import { ArrowUpRight, ArrowDownRight } from 'tabler-icons-react';
+import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -19,7 +18,7 @@ interface StatsGridIconsProps {
 export function StatsGridIcons({ data }: StatsGridIconsProps) {
   const { classes } = useStyles();
   const stats = data.map((stat) => {
-    const DiffIcon = stat.diff > 0 ? ArrowUpRight : ArrowDownRight;
+    const DiffIcon = stat.diff > 0 ? IconArrowUpRight : IconArrowDownRight;
 
     return (
       <Paper withBorder p="md" radius="md" key={stat.title}>
@@ -45,7 +44,7 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
             size={38}
             radius="md"
           >
-            <DiffIcon size={28} />
+            <DiffIcon size={28} stroke={1.5} />
           </ThemeIcon>
         </Group>
         <Text color="dimmed" size="sm" mt="md">

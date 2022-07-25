@@ -1,7 +1,6 @@
-import React from 'react';
 import { createStyles, Text, Container, ActionIcon, Group } from '@mantine/core';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -108,6 +107,7 @@ interface FooterLinksProps {
 
 export function FooterLinks({ data }: FooterLinksProps) {
   const { classes } = useStyles();
+
   const groups = data.map((group) => {
     const links = group.links.map((link, index) => (
       <Text<'a'>
@@ -128,11 +128,12 @@ export function FooterLinks({ data }: FooterLinksProps) {
       </div>
     );
   });
+
   return (
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <MantineLogo />
+          <MantineLogo size={30} />
           <Text size="xs" color="dimmed" className={classes.description}>
             Build fully functional accessible web applications faster than ever
           </Text>
@@ -146,13 +147,13 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <BrandTwitter size={18} />
+            <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandYoutube size={18} />
+            <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <BrandInstagram size={18} />
+            <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>

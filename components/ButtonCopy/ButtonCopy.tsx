@@ -1,24 +1,28 @@
-import React from 'react';
 import { Button, Tooltip } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
-import { Copy } from 'tabler-icons-react';
+import { IconCopy, IconCheck } from '@tabler/icons';
 
 export function ButtonCopy() {
   const clipboard = useClipboard();
   return (
     <Tooltip
       label="Link copied!"
-      gutter={5}
-      placement="center"
+      offset={5}
       position="bottom"
       radius="xl"
       transition="slide-down"
-      transitionDuration={200}
+      transitionDuration={100}
       opened={clipboard.copied}
     >
       <Button
         variant="light"
-        rightIcon={<Copy size={20} />}
+        rightIcon={
+          clipboard.copied ? (
+            <IconCheck size={20} stroke={1.5} />
+          ) : (
+            <IconCopy size={20} stroke={1.5} />
+          )
+        }
         radius="xl"
         size="md"
         styles={{

@@ -1,22 +1,22 @@
-import { LawIcon, SunIcon, FlameIcon } from '@primer/octicons-react';
+import { IconLicense, IconMoonStars, IconFlame } from '@tabler/icons';
 
 export default [
   {
-    icon: FlameIcon,
+    icon: IconFlame,
     title: 'Flexible',
     description:
       'All components are built with Mantine theme, change colors, fonts, shadows and other properties.',
   },
 
   {
-    icon: SunIcon,
+    icon: IconMoonStars,
     title: 'Light and dark theme',
     description:
       'Most components support both dark and light color schemes by default, no additional modifications needed.',
   },
 
   {
-    icon: LawIcon,
+    icon: IconLicense,
     title: 'Free for everyone',
     description:
       'Free, open source, community-driven, MIT license. Use anywhere, including commercial projects.',

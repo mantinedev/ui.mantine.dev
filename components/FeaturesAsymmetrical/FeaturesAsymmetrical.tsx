@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Text, SimpleGrid, Container } from '@mantine/core';
-import { Truck, Certificate, Coin } from 'tabler-icons-react';
+import { IconTruck, IconCertificate, IconCoin, TablerIcon } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   feature: {
@@ -15,10 +14,7 @@ const useStyles = createStyles((theme) => ({
     width: 160,
     top: 0,
     left: 0,
-    backgroundColor:
-      theme.colorScheme === 'dark'
-        ? theme.fn.rgba(theme.colors[theme.primaryColor][7], 0.2)
-        : theme.colors[theme.primaryColor][0],
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
     zIndex: 1,
   },
 
@@ -28,7 +24,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 4 : 6],
+    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
   },
 
   title: {
@@ -37,7 +33,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
-  icon: React.FC<React.ComponentProps<typeof Truck>>;
+  icon: TablerIcon;
   title: string;
   description: string;
 }
@@ -50,7 +46,7 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
       <div className={classes.overlay} />
 
       <div className={classes.content}>
-        <Icon size={38} className={classes.icon} />
+        <Icon size={38} className={classes.icon} stroke={1.5} />
         <Text weight={700} size="lg" mb="xs" mt={5} className={classes.title}>
           {title}
         </Text>
@@ -64,19 +60,19 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
 
 const mockdata = [
   {
-    icon: Truck,
+    icon: IconTruck,
     title: 'Free Worldwide shipping',
     description:
       'As electricity builds up inside its body, it becomes more aggressive. One theory is that the electricity.',
   },
   {
-    icon: Certificate,
+    icon: IconCertificate,
     title: 'Best Quality Product',
     description:
       'Slakoth’s heart beats just once a minute. Whatever happens, it is content to loaf around motionless.',
   },
   {
-    icon: Coin,
+    icon: IconCoin,
     title: 'Very Affordable Pricing',
     description:
       'Thought to have gone extinct, Relicanth was given a name that is a variation of the name of the person who discovered.',

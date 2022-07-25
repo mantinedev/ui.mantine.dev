@@ -1,5 +1,4 @@
-import React from 'react';
-import { Bookmark, Heart, Share } from 'tabler-icons-react';
+import { IconBookmark, IconHeart, IconShare } from '@tabler/icons';
 import {
   Card,
   Image,
@@ -9,7 +8,6 @@ import {
   Group,
   Center,
   Avatar,
-  useMantineTheme,
   createStyles,
 } from '@mantine/core';
 
@@ -33,7 +31,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   action: {
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+    ...theme.fn.hover({
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+    }),
   },
 
   footer: {
@@ -63,8 +64,7 @@ export function ArticleCard({
   rating,
   ...others
 }: ArticleCardProps & Omit<React.ComponentPropsWithoutRef<'div'>, keyof ArticleCardProps>) {
-  const { classes, cx } = useStyles();
-  const theme = useMantineTheme();
+  const { classes, cx, theme } = useStyles();
   const linkProps = { href: link, target: '_blank', rel: 'noopener noreferrer' };
 
   return (
@@ -96,14 +96,14 @@ export function ArticleCard({
         </Center>
 
         <Group spacing={8} mr={0}>
-          <ActionIcon className={classes.action} style={{ color: theme.colors.red[6] }}>
-            <Heart size={16} />
-          </ActionIcon>
-          <ActionIcon className={classes.action} style={{ color: theme.colors.yellow[7] }}>
-            <Bookmark size={16} />
+          <ActionIcon className={classes.action}>
+            <IconHeart size={16} color={theme.colors.red[6]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <Share size={16} />
+            <IconBookmark size={16} color={theme.colors.yellow[7]} />
+          </ActionIcon>
+          <ActionIcon className={classes.action}>
+            <IconShare size={16} />
           </ActionIcon>
         </Group>
       </Group>

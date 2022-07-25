@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container } from '@mantine/core';
 import useStyles from './Footer.styles';
 

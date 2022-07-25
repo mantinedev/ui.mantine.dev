@@ -1,5 +1,5 @@
-import React from 'react';
-import { MarkGithubIcon, LinkExternalIcon } from '@primer/octicons-react';
+import { IconExternalLink } from '@tabler/icons';
+import { GithubIcon } from '@mantine/ds';
 import {
   Title,
   Overlay,
@@ -27,7 +27,7 @@ export function Banner({ componentsCount }: BannerProps) {
   const features = data.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon className={classes.featureIcon} size={44}>
-        <feature.icon size={20} />
+        <feature.icon size={24} stroke={1.5} />
       </ThemeIcon>
 
       <div className={classes.featureBody}>
@@ -67,11 +67,11 @@ export function Banner({ componentsCount }: BannerProps) {
               className={cx(classes.control, classes.controlMain)}
               onClick={() => scrollTo({ y: 700 })}
             >
-              Explore everything
+              Browse components
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              leftIcon={<MarkGithubIcon />}
+              leftIcon={<GithubIcon size={16} />}
               component="a"
               href="https://github.com/mantinedev/ui.mantine.dev"
             >
@@ -79,7 +79,7 @@ export function Banner({ componentsCount }: BannerProps) {
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              rightIcon={<LinkExternalIcon />}
+              rightIcon={<IconExternalLink size={16} stroke={1.5} />}
               component="a"
               href="https://mantine.dev/getting-started/"
             >

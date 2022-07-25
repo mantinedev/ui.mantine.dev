@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createStyles,
   Menu,
@@ -9,9 +8,9 @@ import {
   Button,
   Burger,
 } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { ChevronDown } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { IconChevronDown } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 60;
 
@@ -61,7 +60,7 @@ interface HeaderActionProps {
 
 export function HeaderAction({ links }: HeaderActionProps) {
   const { classes } = useStyles();
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
       <Menu.Item key={item.link}>{item.label}</Menu.Item>
@@ -69,14 +68,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
     if (menuItems) {
       return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          delay={0}
-          transitionDuration={0}
-          placement="end"
-          gutter={1}
-          control={
+        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+          <Menu.Target>
             <a
               href={link.link}
               className={classes.link}
@@ -84,12 +77,11 @@ export function HeaderAction({ links }: HeaderActionProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <ChevronDown size={12} />
+                <IconChevronDown size={12} stroke={1.5} />
               </Center>
             </a>
-          }
-        >
-          {menuItems}
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
       );
     }
@@ -110,13 +102,8 @@ export function HeaderAction({ links }: HeaderActionProps) {
     <Header height={HEADER_HEIGHT} sx={{ borderBottom: 0 }} mb={120}>
       <Container className={classes.inner} fluid>
         <Group>
-          <Burger
-            opened={opened}
-            onClick={() => toggleOpened()}
-            className={classes.burger}
-            size="sm"
-          />
-          <MantineLogo />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
+          <MantineLogo size={28} />
         </Group>
         <Group spacing={5} className={classes.links}>
           {items}

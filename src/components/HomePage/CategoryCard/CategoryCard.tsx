@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { Card, CardSection, Text, Image, useMantineTheme } from '@mantine/core';
 import { Category } from '../../../data';
@@ -16,7 +15,7 @@ export function CategoryCard({ count, category, className }: CategoryCardProps) 
 
   return (
     <Link href={`/category/${category.slug}`} passHref>
-      <Card className={cx(classes.card, className)} radius="md">
+      <Card component="a" className={cx(classes.card, className)} radius="md">
         <CardSection className={classes.imageWrapper}>
           <Image
             className={classes.image}

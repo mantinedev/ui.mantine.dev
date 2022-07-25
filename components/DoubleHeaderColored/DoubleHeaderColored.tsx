@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 84;
 
 const useStyles = createStyles((theme) => ({
   header: {
-    backgroundColor: theme.colors[theme.primaryColor][6],
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
     borderBottom: 0,
   },
 
@@ -75,7 +75,10 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     borderBottomColor:
       theme.colorScheme === 'dark' ? theme.white : theme.colors[theme.primaryColor][5],
-    backgroundColor: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 6 : 5],
+    backgroundColor: theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      0.1
+    ),
   },
 }));
 
@@ -90,7 +93,7 @@ interface DoubleHeaderProps {
 }
 
 export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes, cx } = useStyles();
   const [active, setActive] = useState(0);
 
@@ -122,7 +125,9 @@ export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps)
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.header}>
       <Container className={classes.inner}>
-        <MantineLogo width={130} variant="white" />
+        <div style={{ color: '#fff' }}>
+          <MantineLogo width={130} inverted />
+        </div>
 
         <div className={classes.links}>
           <Group position="right">{secondaryItems}</Group>
@@ -132,7 +137,7 @@ export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps)
         </div>
         <Burger
           opened={opened}
-          onClick={() => toggleOpened()}
+          onClick={toggle}
           className={classes.burger}
           size="sm"
           color="#fff"

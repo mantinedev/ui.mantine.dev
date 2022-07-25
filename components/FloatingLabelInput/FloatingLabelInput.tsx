@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextInput, createStyles } from '@mantine/core';
 
 const useStyles = createStyles((theme, { floating }: { floating: boolean }) => ({

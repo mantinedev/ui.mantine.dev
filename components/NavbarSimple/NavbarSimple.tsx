@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Navbar, Group, Code } from '@mantine/core';
 import {
-  BellRinging,
-  Fingerprint,
-  Key,
-  Settings,
-  TwoFA,
-  DatabaseImport,
-  Receipt2,
-  SwitchHorizontal,
-  Logout,
-} from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+  IconBellRinging,
+  IconFingerprint,
+  IconKey,
+  IconSettings,
+  Icon2fa,
+  IconDatabaseImport,
+  IconReceipt2,
+  IconSwitchHorizontal,
+  IconLogout,
+} from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');
@@ -61,13 +61,11 @@ const useStyles = createStyles((theme, _params, getRef) => {
 
     linkActive: {
       '&, &:hover': {
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.fn.rgba(theme.colors[theme.primaryColor][8], 0.25)
-            : theme.colors[theme.primaryColor][0],
-        color: theme.colorScheme === 'dark' ? theme.white : theme.colors[theme.primaryColor][7],
+        backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
+          .background,
+        color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         [`& .${icon}`]: {
-          color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 5 : 7],
+          color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
         },
       },
     },
@@ -75,13 +73,13 @@ const useStyles = createStyles((theme, _params, getRef) => {
 });
 
 const data = [
-  { link: '', label: 'Notifications', icon: BellRinging },
-  { link: '', label: 'Billing', icon: Receipt2 },
-  { link: '', label: 'Security', icon: Fingerprint },
-  { link: '', label: 'SSH Keys', icon: Key },
-  { link: '', label: 'Databases', icon: DatabaseImport },
-  { link: '', label: 'Authentication', icon: TwoFA },
-  { link: '', label: 'Other Settings', icon: Settings },
+  { link: '', label: 'Notifications', icon: IconBellRinging },
+  { link: '', label: 'Billing', icon: IconReceipt2 },
+  { link: '', label: 'Security', icon: IconFingerprint },
+  { link: '', label: 'SSH Keys', icon: IconKey },
+  { link: '', label: 'Databases', icon: IconDatabaseImport },
+  { link: '', label: 'Authentication', icon: Icon2fa },
+  { link: '', label: 'Other Settings', icon: IconSettings },
 ];
 
 export function NavbarSimple() {
@@ -98,7 +96,7 @@ export function NavbarSimple() {
         setActive(item.label);
       }}
     >
-      <item.icon className={classes.linkIcon} />
+      <item.icon className={classes.linkIcon} stroke={1.5} />
       <span>{item.label}</span>
     </a>
   ));
@@ -107,7 +105,7 @@ export function NavbarSimple() {
     <Navbar height={700} width={{ sm: 300 }} p="md">
       <Navbar.Section grow>
         <Group className={classes.header} position="apart">
-          <MantineLogo />
+          <MantineLogo size={28} />
           <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
         </Group>
         {links}
@@ -115,12 +113,12 @@ export function NavbarSimple() {
 
       <Navbar.Section className={classes.footer}>
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <SwitchHorizontal className={classes.linkIcon} />
+          <IconSwitchHorizontal className={classes.linkIcon} stroke={1.5} />
           <span>Change account</span>
         </a>
 
         <a href="#" className={classes.link} onClick={(event) => event.preventDefault()}>
-          <Logout className={classes.linkIcon} />
+          <IconLogout className={classes.linkIcon} stroke={1.5} />
           <span>Logout</span>
         </a>
       </Navbar.Section>

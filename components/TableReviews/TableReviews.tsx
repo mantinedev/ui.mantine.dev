@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Table, Progress, Anchor, Text, Group, ScrollArea } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({

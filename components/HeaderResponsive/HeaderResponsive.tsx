@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { MantineLogo } from '@mantine/ds';
 
 const HEADER_HEIGHT = 60;
 
@@ -68,11 +68,8 @@ const useStyles = createStyles((theme) => ({
 
   linkActive: {
     '&, &:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.fn.rgba(theme.colors[theme.primaryColor][9], 0.25)
-          : theme.colors[theme.primaryColor][0],
-      color: theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7],
+      backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
+      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     },
   },
 }));
@@ -82,7 +79,7 @@ interface HeaderResponsiveProps {
 }
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
@@ -94,7 +91,7 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
       onClick={(event) => {
         event.preventDefault();
         setActive(link.link);
-        toggleOpened(false);
+        close();
       }}
     >
       {link.label}
@@ -104,17 +101,12 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   return (
     <Header height={HEADER_HEIGHT} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <MantineLogo />
+        <MantineLogo size={28} />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
 
-        <Burger
-          opened={opened}
-          onClick={() => toggleOpened()}
-          className={classes.burger}
-          size="sm"
-        />
+        <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (

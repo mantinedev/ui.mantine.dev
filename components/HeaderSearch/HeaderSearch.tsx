@@ -1,8 +1,7 @@
-import React from 'react';
 import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { Search } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { IconSearch } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -50,7 +49,7 @@ interface HeaderSearchProps {
 }
 
 export function HeaderSearch({ links }: HeaderSearchProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => (
@@ -68,8 +67,8 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
     <Header height={56} className={classes.header} mb={120}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={() => toggleOpened()} size="sm" />
-          <MantineLogo />
+          <Burger opened={opened} onClick={toggle} size="sm" />
+          <MantineLogo size={28} />
         </Group>
 
         <Group>
@@ -79,7 +78,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
           <Autocomplete
             className={classes.search}
             placeholder="Search"
-            icon={<Search size={16} />}
+            icon={<IconSearch size={16} stroke={1.5} />}
             data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
           />
         </Group>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
@@ -65,7 +64,7 @@ export function DndList({ data }: DndListProps) {
   return (
     <DragDropContext
       onDragEnd={({ destination, source }) =>
-        handlers.reorder({ from: source.index, to: destination.index })
+        handlers.reorder({ from: source.index, to: destination?.index || 0 })
       }
     >
       <Droppable droppableId="dnd-list" direction="vertical">

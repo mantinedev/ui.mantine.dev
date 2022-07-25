@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, SimpleGrid, Title, Text } from '@mantine/core';
 import { CategoriesGroup } from '../../../data';
 import { CategoryCard } from '../CategoryCard/CategoryCard';

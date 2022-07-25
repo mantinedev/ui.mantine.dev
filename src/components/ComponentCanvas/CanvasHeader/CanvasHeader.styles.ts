@@ -4,6 +4,7 @@ const BREAKPOINT = '@media (max-width: 755px)';
 
 export default createStyles((theme) => ({
   header: {
+    position: 'relative',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',

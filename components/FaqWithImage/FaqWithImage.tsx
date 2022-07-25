@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Image, Accordion, Grid, Col, Container, Title } from '@mantine/core';
 import image from './image.svg';
 
@@ -38,30 +37,32 @@ export function FaqWithImage() {
               Frequently Asked Questions
             </Title>
 
-            <Accordion iconPosition="right" initialItem={0}>
-              <Accordion.Item label="How can I reset my password?" className={classes.item}>
-                {placeholder}
+            <Accordion chevronPosition="right" defaultValue="reset-password" variant="separated">
+              <Accordion.Item className={classes.item} value="reset-password">
+                <Accordion.Control>How can I reset my password?</Accordion.Control>
+                <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
-              <Accordion.Item label="Can I create more that one account?" className={classes.item}>
-                {placeholder}
+
+              <Accordion.Item className={classes.item} value="another-account">
+                <Accordion.Control>Can I create more that one account?</Accordion.Control>
+                <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
-              <Accordion.Item
-                label="How can I subscribe to monthly newsletter?"
-                className={classes.item}
-              >
-                {placeholder}
+
+              <Accordion.Item className={classes.item} value="newsletter">
+                <Accordion.Control>How can I subscribe to monthly newsletter?</Accordion.Control>
+                <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
-              <Accordion.Item
-                label="Do you store credit card information securely?"
-                className={classes.item}
-              >
-                {placeholder}
+
+              <Accordion.Item className={classes.item} value="credit-card">
+                <Accordion.Control>
+                  Do you store credit card information securely?
+                </Accordion.Control>
+                <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
-              <Accordion.Item
-                label="What payment systems to you work with?"
-                className={classes.item}
-              >
-                {placeholder}
+
+              <Accordion.Item className={classes.item} value="payment">
+                <Accordion.Control>What payment systems to you work with?</Accordion.Control>
+                <Accordion.Panel>{placeholder}</Accordion.Panel>
               </Accordion.Item>
             </Accordion>
           </Col>

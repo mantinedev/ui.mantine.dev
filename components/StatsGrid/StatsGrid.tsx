@@ -1,13 +1,12 @@
-import React from 'react';
 import { createStyles, Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import {
-  UserPlus,
-  Discount2,
-  Receipt2,
-  Coin,
-  ArrowUpRight,
-  ArrowDownRight,
-} from 'tabler-icons-react';
+  IconUserPlus,
+  IconDiscount2,
+  IconReceipt2,
+  IconCoin,
+  IconArrowUpRight,
+  IconArrowDownRight,
+} from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -37,10 +36,10 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const icons = {
-  user: UserPlus,
-  discount: Discount2,
-  receipt: Receipt2,
-  coin: Coin,
+  user: IconUserPlus,
+  discount: IconDiscount2,
+  receipt: IconReceipt2,
+  coin: IconCoin,
 };
 
 interface StatsGridProps {
@@ -51,7 +50,7 @@ export function StatsGrid({ data }: StatsGridProps) {
   const { classes } = useStyles();
   const stats = data.map((stat) => {
     const Icon = icons[stat.icon];
-    const DiffIcon = stat.diff > 0 ? ArrowUpRight : ArrowDownRight;
+    const DiffIcon = stat.diff > 0 ? IconArrowUpRight : IconArrowDownRight;
 
     return (
       <Paper withBorder p="md" radius="md" key={stat.title}>
@@ -59,7 +58,7 @@ export function StatsGrid({ data }: StatsGridProps) {
           <Text size="xs" color="dimmed" className={classes.title}>
             {stat.title}
           </Text>
-          <Icon className={classes.icon} size={22} />
+          <Icon className={classes.icon} size={22} stroke={1.5} />
         </Group>
 
         <Group align="flex-end" spacing="xs" mt={25}>
@@ -71,7 +70,7 @@ export function StatsGrid({ data }: StatsGridProps) {
             className={classes.diff}
           >
             <span>{stat.diff}%</span>
-            <DiffIcon size={16} />
+            <DiffIcon size={16} stroke={1.5} />
           </Text>
         </Group>
 

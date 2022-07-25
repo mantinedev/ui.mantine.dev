@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { CheckIcon } from '@primer/octicons-react';
-import { BlendingModeIcon } from '@modulz/radix-icons';
-import { ColorSwatch, Group, Popover, useMantineTheme } from '@mantine/core';
+import { useState } from 'react';
+import { IconColorPicker } from '@tabler/icons';
+import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 
 interface ColorControlProps {
   onChange(color: string): void;
@@ -26,7 +25,7 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
       size={22}
       style={{ color: theme.white, cursor: 'pointer' }}
     >
-      {value === color && <CheckIcon size={10} />}
+      {value === color && <CheckIcon width={10} />}
     </ColorSwatch>
   ));
 
@@ -35,7 +34,11 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
       opened={opened}
       onClose={() => setOpened(false)}
       transitionDuration={0}
-      target={
+      width={152}
+      position="bottom-end"
+      withArrow
+    >
+      <Popover.Target>
         <ColorSwatch
           component="button"
           type="button"
@@ -44,27 +47,12 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
           size={22}
           style={{ display: 'block', cursor: 'pointer' }}
         >
-          <BlendingModeIcon style={{ width: 14, height: 14, color: theme.white }} />
+          <IconColorPicker size={14} color="#fff" />
         </ColorSwatch>
-      }
-      styles={{
-        root: {
-          marginRight: theme.spacing.xs,
-        },
-        body: {
-          width: 152,
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        },
-        arrow: {
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-        },
-      }}
-      position="bottom"
-      placement="end"
-      withArrow
-      arrowSize={3}
-    >
-      <Group spacing="xs">{swatches}</Group>
+      </Popover.Target>
+      <Popover.Dropdown>
+        <Group spacing="xs">{swatches}</Group>
+      </Popover.Dropdown>
     </Popover>
   );
 }

@@ -1,10 +1,7 @@
-import React from 'react';
-import { Container, Group } from '@mantine/core';
-import { Logo } from './Logo/Logo';
-import { ColorSchemeToggle } from './ColorSchemeToggle/ColorSchemeToggle';
-import { Discord } from './Discord/Discord';
-import { SourceCode } from './SourceCode/SourceCode';
-import { DirToggle } from './DirToggle/DirToggle';
+import { Container, Center } from '@mantine/core';
+import { openSpotlight } from '@mantine/spotlight';
+import { HeaderControls, meta, MantineLogo, ColorSchemeControl } from '@mantine/ds';
+import Link from 'next/link';
 import useStyles from './Header.styles';
 
 interface HeaderProps {
@@ -17,13 +14,21 @@ export function Header({ toggleDir, dir }: HeaderProps) {
   return (
     <div className={classes.header}>
       <Container size="xl" px="md" className={classes.inner}>
-        <Logo />
-        <Group mr={-8}>
-          <Discord />
-          <SourceCode />
-          <DirToggle dir={dir} onClick={toggleDir} />
-          <ColorSchemeToggle />
-        </Group>
+        <Link href="/" passHref>
+          <Center component="a" sx={(theme) => theme.fn.focusStyles()}>
+            <MantineLogo variant="ui.mantine.dev" size={30} />
+          </Center>
+        </Link>
+        <HeaderControls
+          sx={(theme) => ({ [theme.fn.smallerThan('sm')]: { display: 'none' } })}
+          onSearch={openSpotlight}
+          githubLink={meta.gitHubLinks.mantineUi}
+          direction={dir}
+          toggleDirection={toggleDir}
+        />
+        <Center sx={(theme) => ({ [theme.fn.largerThan('sm')]: { display: 'none' } })}>
+          <ColorSchemeControl />
+        </Center>
       </Container>
     </div>
   );

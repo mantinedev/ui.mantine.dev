@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Image, Container, Title, Text, Button, SimpleGrid } from '@mantine/core';
 import image from './image.svg';
 

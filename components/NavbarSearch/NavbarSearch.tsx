@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createStyles,
   Navbar,
@@ -11,7 +10,14 @@ import {
   ActionIcon,
   Tooltip,
 } from '@mantine/core';
-import { Bulb, User, Checkbox, Search, Plus, Selector } from 'tabler-icons-react';
+import {
+  IconBulb,
+  IconUser,
+  IconCheckbox,
+  IconSearch,
+  IconPlus,
+  IconSelector,
+} from '@tabler/icons';
 import { UserButton } from '../UserButton/UserButton';
 
 const useStyles = createStyles((theme) => ({
@@ -110,9 +116,9 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const links = [
-  { icon: Bulb, label: 'Activity', notifications: 3 },
-  { icon: Checkbox, label: 'Tasks', notifications: 4 },
-  { icon: User, label: 'Contacts' },
+  { icon: IconBulb, label: 'Activity', notifications: 3 },
+  { icon: IconCheckbox, label: 'Tasks', notifications: 4 },
+  { icon: IconUser, label: 'Contacts' },
 ];
 
 const collections = [
@@ -133,7 +139,7 @@ export function NavbarSearch() {
   const mainLinks = links.map((link) => (
     <UnstyledButton key={link.label} className={classes.mainLink}>
       <div className={classes.mainLinkInner}>
-        <link.icon size={20} className={classes.mainLinkIcon} />
+        <link.icon size={20} className={classes.mainLinkIcon} stroke={1.5} />
         <span>{link.label}</span>
       </div>
       {link.notifications && (
@@ -162,14 +168,14 @@ export function NavbarSearch() {
           image="https://i.imgur.com/fGxgcDF.png"
           name="Bob Rulebreaker"
           email="Product owner"
-          icon={<Selector size={14} />}
+          icon={<IconSelector size={14} stroke={1.5} />}
         />
       </Navbar.Section>
 
       <TextInput
         placeholder="Search"
         size="xs"
-        icon={<Search size={12} />}
+        icon={<IconSearch size={12} stroke={1.5} />}
         rightSectionWidth={70}
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
         styles={{ rightSection: { pointerEvents: 'none' } }}
@@ -187,7 +193,7 @@ export function NavbarSearch() {
           </Text>
           <Tooltip label="Create collection" withArrow position="right">
             <ActionIcon variant="default" size={18}>
-              <Plus size={12} />
+              <IconPlus size={12} stroke={1.5} />
             </ActionIcon>
           </Tooltip>
         </Group>

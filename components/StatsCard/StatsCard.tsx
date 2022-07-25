@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
-import { Swimming } from 'tabler-icons-react';
+import { IconSwimming } from '@tabler/icons';
 
 const ICON_SIZE = 60;
 
@@ -30,7 +29,7 @@ export function StatsCard() {
   return (
     <Paper radius="md" withBorder className={classes.card} mt={ICON_SIZE / 3}>
       <ThemeIcon className={classes.icon} size={ICON_SIZE} radius={ICON_SIZE}>
-        <Swimming size={34} />
+        <IconSwimming size={34} stroke={1.5} />
       </ThemeIcon>
 
       <Text align="center" weight={700} className={classes.title}>

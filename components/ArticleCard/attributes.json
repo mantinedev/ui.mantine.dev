@@ -12,7 +12,7 @@
     "/core/badge/",
     "/core/image/",
     "/core/action-icon/",
-    "tabler-icons-react"
+    "@tabler/icons"
   ],
   "props": {
     "image": "https://i.imgur.com/Cij5vdL.png",

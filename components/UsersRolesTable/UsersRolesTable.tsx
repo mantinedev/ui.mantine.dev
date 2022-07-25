@@ -1,4 +1,3 @@
-import React from 'react';
 import { Avatar, Badge, Table, Group, Text, Select, ScrollArea } from '@mantine/core';
 
 interface UsersTableProps {

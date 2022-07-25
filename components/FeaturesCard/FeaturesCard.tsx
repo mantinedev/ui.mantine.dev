@@ -1,6 +1,5 @@
-import React from 'react';
 import { Card, Image, Text, Group, Badge, createStyles, Center, Button } from '@mantine/core';
-import { GasStation, Gauge, ManualGearbox, Users } from 'tabler-icons-react';
+import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -40,17 +39,17 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const mockdata = [
-  { label: '4 passengers', icon: Users },
-  { label: '100 km/h in 4 seconds', icon: Gauge },
-  { label: 'Automatic gearbox', icon: ManualGearbox },
-  { label: 'Electric', icon: GasStation },
+  { label: '4 passengers', icon: IconUsers },
+  { label: '100 km/h in 4 seconds', icon: IconGauge },
+  { label: 'Automatic gearbox', icon: IconManualGearbox },
+  { label: 'Electric', icon: IconGasStation },
 ];
 
 export function FeaturesCard() {
   const { classes } = useStyles();
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
-      <feature.icon size={18} className={classes.icon} />
+      <feature.icon size={18} className={classes.icon} stroke={1.5} />
       <Text size="xs">{feature.label}</Text>
     </Center>
   ));

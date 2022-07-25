@@ -1,4 +1,3 @@
-import React from 'react';
 import { createStyles, Container, Title, Text, Button } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({

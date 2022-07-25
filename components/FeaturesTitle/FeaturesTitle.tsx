@@ -1,6 +1,5 @@
-import React from 'react';
 import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col } from '@mantine/core';
-import { ReceiptOff, Flame, CircleDotted, FileCode } from 'tabler-icons-react';
+import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -19,23 +18,23 @@ const useStyles = createStyles((theme) => ({
 
 const features = [
   {
-    icon: ReceiptOff,
+    icon: IconReceiptOff,
     title: 'Free and open source',
     description: 'All packages are published under MIT license, you can use Mantine in any project',
   },
   {
-    icon: FileCode,
+    icon: IconFileCode,
     title: 'TypeScript based',
     description: 'Build type safe applications, all components and hooks export types',
   },
   {
-    icon: CircleDotted,
+    icon: IconCircleDotted,
     title: 'No annoying focus ring',
     description:
       'With new :focus-visible selector focus ring will appear only when user navigates with keyboard',
   },
   {
-    icon: Flame,
+    icon: IconFlame,
     title: 'Flexible',
     description:
       'Customize colors, spacing, shadows, fonts and many other settings with global theme object',
@@ -53,7 +52,7 @@ export function FeaturesTitle() {
         variant="gradient"
         gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
       >
-        <feature.icon size={26} />
+        <feature.icon size={26} stroke={1.5} />
       </ThemeIcon>
       <Text size="lg" mt="sm" weight={500}>
         {feature.title}

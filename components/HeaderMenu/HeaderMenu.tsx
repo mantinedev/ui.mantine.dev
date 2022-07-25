@@ -1,8 +1,7 @@
-import React from 'react';
 import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
-import { useBooleanToggle } from '@mantine/hooks';
-import { ChevronDown } from 'tabler-icons-react';
-import { MantineLogo } from '../../shared/MantineLogo';
+import { useDisclosure } from '@mantine/hooks';
+import { IconChevronDown } from '@tabler/icons';
+import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -49,7 +48,7 @@ interface HeaderSearchProps {
 }
 
 export function HeaderMenu({ links }: HeaderSearchProps) {
-  const [opened, toggleOpened] = useBooleanToggle(false);
+  const [opened, { toggle }] = useDisclosure(false);
   const { classes } = useStyles();
 
   const items = links.map((link) => {
@@ -59,14 +58,8 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
 
     if (menuItems) {
       return (
-        <Menu
-          key={link.label}
-          trigger="hover"
-          delay={0}
-          transitionDuration={0}
-          placement="end"
-          gutter={1}
-          control={
+        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+          <Menu.Target>
             <a
               href={link.link}
               className={classes.link}
@@ -74,12 +67,11 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <ChevronDown size={12} />
+                <IconChevronDown size={12} stroke={1.5} />
               </Center>
             </a>
-          }
-        >
-          {menuItems}
+          </Menu.Target>
+          <Menu.Dropdown>{menuItems}</Menu.Dropdown>
         </Menu>
       );
     }
@@ -100,16 +92,11 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
     <Header height={56} mb={120}>
       <Container>
         <div className={classes.inner}>
-          <MantineLogo />
+          <MantineLogo size={28} />
           <Group spacing={5} className={classes.links}>
             {items}
           </Group>
-          <Burger
-            opened={opened}
-            onClick={() => toggleOpened()}
-            className={classes.burger}
-            size="sm"
-          />
+          <Burger opened={opened} onClick={toggle} className={classes.burger} size="sm" />
         </div>
       </Container>
     </Header>

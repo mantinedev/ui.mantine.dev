@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TextInput, PasswordInput, Tooltip, Center, Text } from '@mantine/core';
-import { InfoCircle } from 'tabler-icons-react';
+import { IconInfoCircle } from '@tabler/icons';
 
 function TooltipIcon() {
   const rightSection = (
     <Tooltip
       label="We store your data securely"
-      placement="end"
+      position="top-end"
       withArrow
       transition="pop-bottom-right"
     >
       <Text color="dimmed" sx={{ cursor: 'help' }}>
         <Center>
-          <InfoCircle size={18} />
+          <IconInfoCircle size={18} stroke={1.5} />
         </Center>
       </Text>
     </Tooltip>
@@ -34,12 +34,10 @@ function TooltipFocus() {
   return (
     <Tooltip
       label={valid ? 'All good!' : 'Password must include at least 6 characters'}
-      position="bottom"
-      placement="start"
+      position="bottom-start"
       withArrow
       opened={opened}
-      sx={{ display: 'block', width: '100%' }}
-      color={valid ? 'teal' : 'gray'}
+      color={valid ? 'teal' : undefined}
     >
       <PasswordInput
         label="Tooltip shown onFocus"

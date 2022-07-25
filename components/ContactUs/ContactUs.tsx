@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   createStyles,
   Text,
@@ -10,7 +9,7 @@ import {
   Group,
   ActionIcon,
 } from '@mantine/core';
-import { BrandTwitter, BrandYoutube, BrandInstagram } from 'tabler-icons-react';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
 import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles((theme) => ({
@@ -77,14 +76,14 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const social = [BrandTwitter, BrandYoutube, BrandInstagram];
+const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
 export function ContactUs() {
   const { classes } = useStyles();
 
   const icons = social.map((Icon, index) => (
     <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
-      <Icon size={22} />
+      <Icon size={22} stroke={1.5} />
     </ActionIcon>
   ));
 
