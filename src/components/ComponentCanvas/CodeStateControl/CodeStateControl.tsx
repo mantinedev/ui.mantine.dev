@@ -11,13 +11,15 @@ export function CodeStateControl({ state, onToggle }: CodeStateControlProps) {
   return (
     <Tooltip
       label={`View ${state === 'code' ? 'mockdata' : 'code'}`}
-      sx={{ position: 'absolute', top: 42, right: 10, zIndex: 1000 }}
       position="left"
       withArrow
       arrowSize={4}
       transition="fade"
     >
-      <ActionIcon onClick={onToggle}>
+      <ActionIcon
+        onClick={onToggle}
+        sx={{ position: 'absolute', top: 42, right: 10, zIndex: 1000 }}
+      >
         <Icon size={16} stroke={1.5} />
       </ActionIcon>
     </Tooltip>
