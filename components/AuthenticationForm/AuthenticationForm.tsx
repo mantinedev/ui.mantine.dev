@@ -26,8 +26,8 @@ export function AuthenticationForm(props: PaperProps) {
     },
 
     validate: {
-      email: (val) => /^\S+@\S+$/.test(val) && 'Invalid email',
-      password: (val) => val.length >= 6 && 'Password should include at least 6 characters',
+      email: (val) => (/^\S+@\S+$/.test(val) ? null : 'Invalid email'),
+      password: (val) => (val.length <= 6 ? 'Password should include at least 6 characters' : null),
     },
   });
 
