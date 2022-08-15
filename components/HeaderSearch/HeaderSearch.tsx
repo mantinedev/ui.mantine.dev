@@ -42,6 +42,12 @@ const useStyles = createStyles((theme) => ({
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     },
   },
+
+  burger: {
+    [theme.fn.largerThan('xs')]: {
+      display: 'none',
+    },
+  },
 }));
 
 interface HeaderSearchProps {
@@ -67,7 +73,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
     <Header height={56} className={classes.header} mb={120}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={toggle} size="sm" />
+          <Burger className={classes.burger} opened={opened} onClick={toggle} size="sm" />
           <MantineLogo size={28} />
         </Group>
 
