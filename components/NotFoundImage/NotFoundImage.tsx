@@ -41,7 +41,7 @@ const useStyles = createStyles(theme => ({
   },
 }));
 
-export default function NotFoundImage() {
+export function NotFoundImage() {
   const { classes } = useStyles();
 
   return (
