@@ -7,7 +7,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import image from "./images/404.svg";
+import image from "./image.svg";
 
 const useStyles = createStyles(theme => ({
   root: {
