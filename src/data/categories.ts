@@ -19,6 +19,7 @@ export const CATEGORIES: CategoriesGroup[] = [
       { slug: 'stats', name: 'Stats', images: images.stats },
       { slug: 'tables', name: 'Tables', images: images.tables },
       { slug: 'dnd', name: "Drag'n'Drop", images: images.dnd },
+      { slug: 'carousels', name: 'Carousels', images: images.carousels },
     ],
   },
   {
