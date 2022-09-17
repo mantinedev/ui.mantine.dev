@@ -45,11 +45,11 @@ const attributes = `{
 const story = `
 import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
-import { GalleryStory } from '../../components/GalleryStory/GalleryStory';
+import { StoryWrapper } from '../../src/components/StoryWrapper/StoryWrapper';
 import { ${name} } from './${name}';
 
-storiesOf('Gallery/${name}', module).add('${name}', () => (
-  <GalleryStory attributes={attributes} component={${name}} />
+storiesOf('${name}', module).add('${name}', () => (
+  <StoryWrapper attributes={attributes} component={${name}} />
 ));
 `;
 
