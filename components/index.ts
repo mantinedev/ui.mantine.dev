@@ -168,3 +168,6 @@ export { ServerOverload } from './ServerOverload/ServerOverload';
 // Comments
 export { CommentSimple } from './CommentSimple/CommentSimple';
 export { CommentHtml } from './CommentHtml/CommentHtml';
+
+// Carousels
+export { CarouselCard } from './CarouselCard/CarouselCard';
