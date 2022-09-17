@@ -1,0 +1,11 @@
+{
+  "title": "Custom switch",
+  "category": "inputs",
+  "author": "rtivital",
+  "withColor": true,
+  "dependencies": ["/core/switch/"],
+  "changelog": "september-2022",
+  "canvas": {
+    "center": true
+  }
+}

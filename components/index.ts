@@ -47,6 +47,7 @@ export { QuantityInput } from './QuantityInput/QuantityInput';
 export { LanguagePicker } from './LanguagePicker/LanguagePicker';
 export { PasswordStrength } from './PasswordStrength/PasswordStrength';
 export { GradientSegmentedControl } from './GradientSegmentedControl/GradientSegmentedControl';
+export { CustomSwitch } from './CustomSwitch/CustomSwitch';
 
 // Hero
 export { HeroBullets } from './HeroBullets/HeroBullets';
