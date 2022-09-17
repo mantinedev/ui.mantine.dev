@@ -171,3 +171,4 @@ export { CommentHtml } from './CommentHtml/CommentHtml';
 
 // Carousels
 export { CarouselCard } from './CarouselCard/CarouselCard';
+export { CardsCarousel } from './CardsCarousel/CardsCarousel';
