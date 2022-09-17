@@ -3,7 +3,7 @@
   "category": "carousels",
   "author": "rtivital",
   "withColor": true,
-  "changelog": "September 2022",
+  "changelog": "september-2022",
   "dependencies": [
     "/core/image/",
     "/core/text/",

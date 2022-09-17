@@ -61,3 +61,13 @@ export function countComponentsByCategory() {
     return acc;
   }, {});
 }
+
+export function getComponentsByChangelog(changelogId: string) {
+  return getAllComponents().filter((component) => component.attributes.changelog === changelogId);
+}
+
+export function getAllChangelogs() {
+  return Array.from(
+    new Set(getAllComponents().map((component) => component.attributes.changelog))
+  ).filter((c) => c);
+}
