@@ -1,0 +1,19 @@
+{
+  "title": "Get in touch form",
+  "category": "contact",
+  "author": "rtivital",
+  "withColor": true,
+  "responsive": true,
+  "dependencies": [
+    "/core/text-input/",
+    "/core/textarea/",
+    "/core/title/",
+    "/core/simple-grid/",
+    "/core/group/",
+    "/core/button/"
+  ],
+  "canvas": {
+    "center": true,
+    "maxWidth": 620
+  }
+}

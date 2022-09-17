@@ -4,7 +4,14 @@
   "author": "rtivital",
   "changelog": "september-2022",
   "responsive": true,
-  "dependencies": [],
+  "dependencies": [
+    "/others/carousel",
+    "/core/paper/",
+    "/core/button/",
+    "/core/text/",
+    "/core/title/",
+    "/hooks/use-media-query/"
+  ],
   "canvas": {
     "center": true,
     "maxWidth": 820

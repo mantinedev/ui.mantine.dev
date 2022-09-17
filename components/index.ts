@@ -30,6 +30,7 @@ export { StatsRingCard } from './StatsRingCard/StatsRingCard';
 export { ContactIcons } from './ContactIcons/ContactIcons';
 export { ContactUs } from './ContactUs/ContactUs';
 export { GetInTouch } from './GetInTouch/GetInTouch';
+export { GetInTouchSimple } from './GetInTouchSimple/GetInTouchSimple';
 
 // Inputs
 export { AutocompleteLoading } from './AutocompleteLoading/AutocompleteLoading';
