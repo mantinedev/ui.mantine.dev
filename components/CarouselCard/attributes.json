@@ -1,0 +1,13 @@
+{
+  "title": "Card with carousel",
+  "category": "carousels",
+  "author": "rtivital",
+  "withColor": true,
+  "responsive": true,
+  "changelog": "September 2022",
+  "dependencies": [],
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}
