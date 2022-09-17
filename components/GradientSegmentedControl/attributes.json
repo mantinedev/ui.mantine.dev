@@ -1,0 +1,11 @@
+{
+  "title": "Gradient segmented control",
+  "category": "inputs",
+  "author": "rtivital",
+  "dependencies": ["/core/segmented-control/"],
+  "changelog": "september-2022",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

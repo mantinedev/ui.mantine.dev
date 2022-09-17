@@ -46,6 +46,7 @@ export { InputWithButton } from './InputWithButton/InputWithButton';
 export { QuantityInput } from './QuantityInput/QuantityInput';
 export { LanguagePicker } from './LanguagePicker/LanguagePicker';
 export { PasswordStrength } from './PasswordStrength/PasswordStrength';
+export { GradientSegmentedControl } from './GradientSegmentedControl/GradientSegmentedControl';
 
 // Hero
 export { HeroBullets } from './HeroBullets/HeroBullets';
