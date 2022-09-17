@@ -1519,6 +1519,13 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@mantine/carousel@^5.3.3":
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/@mantine/carousel/-/carousel-5.3.3.tgz#07d85b0caed038e040e92c27e6ceda21c0e3a333"
+  integrity sha512-V8YmYance9ZKtPdqk3pWum+6RD2LWDxB0Uet6PT4Vzfg6grHnvOYSY5JpYWQgCyiV9OhRafj/LLQqRjP+YeBYQ==
+  dependencies:
+    "@mantine/utils" "5.3.3"
+
 "@mantine/core@5.3.3":
   version "5.3.3"
   resolved "https://registry.yarnpkg.com/@mantine/core/-/core-5.3.3.tgz#dbdd3c18eabe4dd90962992365eb22c90a4671af"
@@ -5240,6 +5247,18 @@ email-addresses@^3.0.1:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/email-addresses/-/email-addresses-3.1.0.tgz#cabf7e085cbdb63008a70319a74e6136188812fb"
   integrity sha512-k0/r7GrWVL32kZlGwfPNgB2Y/mMXVTq/decgLczm/j34whdaspNrZO8CnXPf1laaHxI6ptUlsnAxN+UAPw+fzg==
+
+embla-carousel-react@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel-react/-/embla-carousel-react-7.0.3.tgz#343c972a1ac5869acba3d6e9c7eeb3bd27f7e335"
+  integrity sha512-nvgAAmoFuXyCPuH2rSTnSdaTSMwFX/ilXDlfMCCDfdaj4X3u25+x8lMC1bINuk+4G2Hm6SOlrZ1eGkYdBg5HAg==
+  dependencies:
+    embla-carousel "7.0.3"
+
+embla-carousel@7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/embla-carousel/-/embla-carousel-7.0.3.tgz#7173a0f27b697a42266d34764c657eeba85bd7b5"
+  integrity sha512-Zo8E/qNb8J7n/jcfQxPrfdARlTgsMvmcXshn3J/2oxWVLwL/3N4cAhuqLQiud/oCjZzl+A8maCJDe2PDVlc/cA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"

@@ -3,11 +3,16 @@
   "category": "carousels",
   "author": "rtivital",
   "withColor": true,
-  "responsive": true,
   "changelog": "September 2022",
-  "dependencies": [],
+  "dependencies": [
+    "/core/image/",
+    "/core/text/",
+    "/core/card/",
+    "/core/button/",
+    "/others/carousel/"
+  ],
   "canvas": {
     "center": true,
-    "maxWidth": 420
+    "maxWidth": 350
   }
 }

@@ -21,6 +21,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
+    "@mantine/carousel": "^5.3.3",
     "@mantine/core": "5.3.3",
     "@mantine/dates": "5.3.3",
     "@mantine/dropzone": "5.3.3",
@@ -32,6 +33,7 @@
     "@mantine/spotlight": "5.3.3",
     "@tabler/icons": "^1.71.0",
     "dayjs": "^1.11.3",
+    "embla-carousel-react": "^7.0.3",
     "next": "12.1.5",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.0",
