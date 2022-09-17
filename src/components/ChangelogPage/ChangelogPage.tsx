@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Container, Title } from '@mantine/core';
+import { Container, Title, Text } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
 import { UiComponent } from '../../data';
 import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';
@@ -30,10 +30,12 @@ export function ChangelogPage({ components }: ChangelogPageProps) {
             [theme.fn.smallerThan(500)]: { fontSize: 26 },
           })}
           weight={900}
-          mb="xl"
         >
           {title}
         </Title>
+        <Text size="sm" color="dimmed" mb="xl" mt="sm">
+          {components.length} new components were added
+        </Text>
         {canvases}
       </Container>
     </>
