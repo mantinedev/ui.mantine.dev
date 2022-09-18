@@ -17,6 +17,7 @@ export { ArticleCardVertical } from './ArticleCardVertical/ArticleCardVertical';
 export { ArticleCardImage } from './ArticleCardImage/ArticleCardImage';
 export { ImageCard } from './ImageCard/ImageCard';
 export { CardGradient } from './CardGradient/CardGradient';
+export { ArticlesCardsGrid } from './ArticlesCardsGrid/ArticlesCardsGrid';
 
 // App cards
 export { BadgeCard } from './BadgeCard/BadgeCard';

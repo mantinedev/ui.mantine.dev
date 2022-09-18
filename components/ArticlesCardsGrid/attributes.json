@@ -1,0 +1,18 @@
+{
+  "title": "Articles cards grid",
+  "category": "article-cards",
+  "author": "rtivital",
+  "changelog": "september-2022",
+  "responsive": true,
+  "dependencies": [
+    "/core/card/",
+    "/core/text/",
+    "/core/image/",
+    "/core/aspect-ratio/",
+    "/core/container/",
+    "/core/simple-grid/"
+  ],
+  "canvas": {
+    "center": false
+  }
+}
