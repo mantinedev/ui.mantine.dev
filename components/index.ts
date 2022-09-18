@@ -121,6 +121,7 @@ export { HeaderResponsive } from './HeaderResponsive/HeaderResponsive';
 export { HeaderTabsColored } from './HeaderTabsColored/HeaderTabsColored';
 export { HeaderMenuColored } from './HeaderMenuColored/HeaderMenuColored';
 export { DoubleHeaderColored } from './DoubleHeaderColored/DoubleHeaderColored';
+export { HeaderMegaMenu } from './HeaderMegaMenu/HeaderMegaMenu';
 
 // Tables of contents
 export { TableOfContents } from './TableOfContents/TableOfContents';

@@ -1,7 +1,7 @@
 import {
   createStyles,
   Header,
-  Popover,
+  HoverCard,
   Group,
   Button,
   UnstyledButton,
@@ -12,8 +12,12 @@ import {
   Divider,
   Center,
   Box,
+  Burger,
+  Drawer,
+  Collapse,
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
+import { useDisclosure } from '@mantine/hooks';
 import {
   IconNotification,
   IconCode,
@@ -36,12 +40,22 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 500,
     fontSize: theme.fontSizes.sm,
 
+    [theme.fn.smallerThan('sm')]: {
+      height: 42,
+      display: 'flex',
+      alignItems: 'center',
+      width: `calc(100% + ${theme.spacing.md * 2}px)`,
+      marginLeft: -theme.spacing.md,
+      marginRight: -theme.spacing.md,
+    },
+
     ...theme.fn.hover({
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     }),
   },
 
   subLink: {
+    width: '100%',
     padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
     borderRadius: theme.radius.md,
 
@@ -61,6 +75,18 @@ const useStyles = createStyles((theme) => ({
     borderTop: `1px solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
     }`,
+  },
+
+  hiddenMobile: {
+    [theme.fn.smallerThan('sm')]: {
+      display: 'none',
+    },
+  },
+
+  hiddenDesktop: {
+    [theme.fn.largerThan('sm')]: {
+      display: 'none',
+    },
   },
 }));
 
@@ -98,7 +124,10 @@ const mockdata = [
 ];
 
 export function HeaderMegaMenu() {
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
+  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
+
   const links = mockdata.map((item) => (
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
@@ -118,72 +147,113 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Header height={60} px="md">
-      <Group position="apart" sx={{ height: '100%' }}>
-        <MantineLogo size={30} />
+    <>
+      <Header height={60} px="md">
+        <Group position="apart" sx={{ height: '100%' }}>
+          <MantineLogo size={30} />
 
-        <Group sx={{ height: '100%' }} spacing={0}>
-          <a href="#" className={classes.link}>
-            Home
-          </a>
-          <Popover width={600} position="bottom" opened radius="md" shadow="md">
-            <Popover.Target>
-              <a href="#" className={classes.link}>
-                <Center inline>
-                  <Box component="span" mr={5}>
-                    Features
-                  </Box>
-                  <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-                </Center>
-              </a>
-            </Popover.Target>
+          <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
+            <a href="#" className={classes.link}>
+              Home
+            </a>
+            <HoverCard width={600} position="bottom" radius="md" shadow="md">
+              <HoverCard.Target>
+                <a href="#" className={classes.link}>
+                  <Center inline>
+                    <Box component="span" mr={5}>
+                      Features
+                    </Box>
+                    <IconChevronDown size={16} color={theme.fn.primaryColor()} />
+                  </Center>
+                </a>
+              </HoverCard.Target>
 
-            <Popover.Dropdown sx={{ overflow: 'hidden' }}>
-              <Group position="apart" px="md">
-                <Text weight={500}>Features</Text>
-                <Anchor href="#" size="xs">
-                  View all
-                </Anchor>
-              </Group>
-
-              <Divider
-                my="sm"
-                mx="-md"
-                color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
-              />
-
-              <SimpleGrid cols={2} spacing={0}>
-                {links}
-              </SimpleGrid>
-
-              <div className={classes.dropdownFooter}>
-                <Group position="apart">
-                  <div>
-                    <Text weight={500} size="sm">
-                      Get started
-                    </Text>
-                    <Text size="xs" color="dimmed">
-                      Their food sources have decreased, and their numbers
-                    </Text>
-                  </div>
-                  <Button variant="default">Get started</Button>
+              <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
+                <Group position="apart" px="md">
+                  <Text weight={500}>Features</Text>
+                  <Anchor href="#" size="xs">
+                    View all
+                  </Anchor>
                 </Group>
-              </div>
-            </Popover.Dropdown>
-          </Popover>
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a>
-        </Group>
 
-        <Group>
+                <Divider
+                  my="sm"
+                  mx="-md"
+                  color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+                />
+
+                <SimpleGrid cols={2} spacing={0}>
+                  {links}
+                </SimpleGrid>
+
+                <div className={classes.dropdownFooter}>
+                  <Group position="apart">
+                    <div>
+                      <Text weight={500} size="sm">
+                        Get started
+                      </Text>
+                      <Text size="xs" color="dimmed">
+                        Their food sources have decreased, and their numbers
+                      </Text>
+                    </div>
+                    <Button variant="default">Get started</Button>
+                  </Group>
+                </div>
+              </HoverCard.Dropdown>
+            </HoverCard>
+            <a href="#" className={classes.link}>
+              Learn
+            </a>
+            <a href="#" className={classes.link}>
+              Academy
+            </a>
+          </Group>
+
+          <Group className={classes.hiddenMobile}>
+            <Button variant="default">Log in</Button>
+            <Button>Sign up</Button>
+          </Group>
+
+          <Burger opened={drawerOpened} onClick={toggleDrawer} className={classes.hiddenDesktop} />
+        </Group>
+      </Header>
+
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        className={classes.hiddenDesktop}
+      >
+        <Divider my="sm" mx="-md" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+
+        <a href="#" className={classes.link}>
+          Home
+        </a>
+        <UnstyledButton className={classes.link} onClick={toggleLinks}>
+          <Center inline>
+            <Box component="span" mr={5}>
+              Features
+            </Box>
+            <IconChevronDown size={16} color={theme.fn.primaryColor()} />
+          </Center>
+        </UnstyledButton>
+        <Collapse in={linksOpened}>{links}</Collapse>
+        <a href="#" className={classes.link}>
+          Learn
+        </a>
+        <a href="#" className={classes.link}>
+          Academy
+        </a>
+
+        <Divider my="sm" mx="-md" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+
+        <Group position="center" grow>
           <Button variant="default">Log in</Button>
           <Button>Sign up</Button>
         </Group>
-      </Group>
-    </Header>
+      </Drawer>
+    </>
   );
 }

@@ -15,6 +15,10 @@
     "/core/theme-icon/",
     "/core/anchor/",
     "/core/divider/",
+    "/core/burger/",
+    "/core/collapse/",
+    "/core/center/",
+    "/core/drawer/",
     "@tabler/icons"
   ],
   "canvas": {
