@@ -1,0 +1,23 @@
+{
+  "title": "Header with mega menu",
+  "category": "headers",
+  "author": "rtivital",
+  "withColor": true,
+  "responsive": true,
+  "changelog": "september-2022",
+  "dependencies": [
+    "/core/text/",
+    "/core/button/",
+    "/core/group/",
+    "/core/simple-grid/",
+    "/core/hover-card/",
+    "/core/app-shell/",
+    "/core/theme-icon/",
+    "/core/anchor/",
+    "/core/divider/",
+    "@tabler/icons"
+  ],
+  "canvas": {
+    "center": false
+  }
+}
