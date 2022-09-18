@@ -32,11 +32,12 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     textDecoration: 'none',
-    color: theme.black,
+    color: theme.colorScheme === 'dark' ? theme.white : theme.black,
+    fontWeight: 500,
     fontSize: theme.fontSizes.sm,
 
     ...theme.fn.hover({
-      backgroundColor: theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     }),
   },
 
@@ -45,19 +46,21 @@ const useStyles = createStyles((theme) => ({
     borderRadius: theme.radius.md,
 
     ...theme.fn.hover({
-      backgroundColor: theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
     }),
 
     '&:active': theme.activeStyles,
   },
 
   dropdownFooter: {
-    backgroundColor: theme.colors.gray[0],
+    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
     margin: -theme.spacing.md,
     marginTop: theme.spacing.sm,
     padding: `${theme.spacing.md}px ${theme.spacing.md * 2}px`,
     paddingBottom: theme.spacing.xl,
-    borderTop: `1px solid ${theme.colors.gray[1]}`,
+    borderTop: `1px solid ${
+      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
+    }`,
   },
 }));
 
@@ -143,7 +146,11 @@ export function HeaderMegaMenu() {
                 </Anchor>
               </Group>
 
-              <Divider my="sm" mx="-md" color="gray.1" />
+              <Divider
+                my="sm"
+                mx="-md"
+                color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'}
+              />
 
               <SimpleGrid cols={2} spacing={0}>
                 {links}
