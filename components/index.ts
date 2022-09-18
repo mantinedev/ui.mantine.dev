@@ -62,6 +62,7 @@ export { FeaturesAsymmetrical } from './FeaturesAsymmetrical/FeaturesAsymmetrica
 export { FeaturesGrid } from './FeaturesGrid/FeaturesGrid';
 export { FeaturesImages } from './FeaturesImages/FeaturesImages';
 export { FeaturesTitle } from './FeaturesTitle/FeaturesTitle';
+export { FeaturesCards } from './FeaturesCards/FeaturesCards';
 
 // Faq
 export { FaqSimple } from './FaqSimple/FaqSimple';

@@ -1,0 +1,21 @@
+{
+  "title": "Features with cards",
+  "category": "features",
+  "author": "rtivital",
+  "changelog": "september-2022",
+  "withColor": true,
+  "responsive": true,
+  "dependencies": [
+    "/core/badge/",
+    "/core/card/",
+    "/core/container/",
+    "/core/text/",
+    "/core/title/",
+    "/core/simple-grid/",
+    "/core/group/",
+    "@tabler/icons"
+  ],
+  "canvas": {
+    "center": false
+  }
+}
