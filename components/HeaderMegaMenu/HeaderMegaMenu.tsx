@@ -15,6 +15,7 @@ import {
   Burger,
   Drawer,
   Collapse,
+  ScrollArea,
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
@@ -44,9 +45,7 @@ const useStyles = createStyles((theme) => ({
       height: 42,
       display: 'flex',
       alignItems: 'center',
-      width: `calc(100% + ${theme.spacing.md * 2}px)`,
-      marginLeft: -theme.spacing.md,
-      marginRight: -theme.spacing.md,
+      width: '100%',
     },
 
     ...theme.fn.hover({
@@ -147,7 +146,7 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <>
+    <Box pb={120}>
       <Header height={60} px="md">
         <Group position="apart" sx={{ height: '100%' }}>
           <MantineLogo size={30} />
@@ -156,7 +155,7 @@ export function HeaderMegaMenu() {
             <a href="#" className={classes.link}>
               Home
             </a>
-            <HoverCard width={600} position="bottom" radius="md" shadow="md">
+            <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
                   <Center inline>
@@ -225,35 +224,38 @@ export function HeaderMegaMenu() {
         padding="md"
         title="Navigation"
         className={classes.hiddenDesktop}
+        zIndex={1000000}
       >
-        <Divider my="sm" mx="-md" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+        <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
-        <a href="#" className={classes.link}>
-          Home
-        </a>
-        <UnstyledButton className={classes.link} onClick={toggleLinks}>
-          <Center inline>
-            <Box component="span" mr={5}>
-              Features
-            </Box>
-            <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-          </Center>
-        </UnstyledButton>
-        <Collapse in={linksOpened}>{links}</Collapse>
-        <a href="#" className={classes.link}>
-          Learn
-        </a>
-        <a href="#" className={classes.link}>
-          Academy
-        </a>
+          <a href="#" className={classes.link}>
+            Home
+          </a>
+          <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            <Center inline>
+              <Box component="span" mr={5}>
+                Features
+              </Box>
+              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
+            </Center>
+          </UnstyledButton>
+          <Collapse in={linksOpened}>{links}</Collapse>
+          <a href="#" className={classes.link}>
+            Learn
+          </a>
+          <a href="#" className={classes.link}>
+            Academy
+          </a>
 
-        <Divider my="sm" mx="-md" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
+          <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
-        <Group position="center" grow>
-          <Button variant="default">Log in</Button>
-          <Button>Sign up</Button>
-        </Group>
+          <Group position="center" grow pb="xl" px="md">
+            <Button variant="default">Log in</Button>
+            <Button>Sign up</Button>
+          </Group>
+        </ScrollArea>
       </Drawer>
-    </>
+    </Box>
   );
 }
