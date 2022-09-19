@@ -26,6 +26,7 @@ export { SwitchesCard } from './SwitchesCard/SwitchesCard';
 export { CardWithStats } from './CardWithStats/CardWithStats';
 export { ActionsGrid } from './ActionsGrid/ActionsGrid';
 export { StatsRingCard } from './StatsRingCard/StatsRingCard';
+export { TaskCard } from './TaskCard/TaskCard';
 
 // Contact us
 export { ContactIcons } from './ContactIcons/ContactIcons';

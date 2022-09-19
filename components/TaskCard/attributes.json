@@ -1,0 +1,13 @@
+{
+  "title": "Tasks card",
+  "category": "app-cards",
+  "dimmed": true,
+  "changelog": "september-2022",
+  "author": "rtivital",
+  "withColor": true,
+  "dependencies": [],
+  "canvas": {
+    "center": true,
+    "maxWidth": 360
+  }
+}
