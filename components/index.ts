@@ -135,6 +135,7 @@ export { StatsGridIcons } from './StatsGridIcons/StatsGridIcons';
 export { StatsGroup } from './StatsGroup/StatsGroup';
 export { StatsRing } from './StatsRing/StatsRing';
 export { StatsSegments } from './StatsSegments/StatsSegments';
+export { ProgressCard } from './ProgressCard/ProgressCard';
 
 // Grids
 export { GridAsymmetrical } from './GridAsymmetrical/GridAsymmetrical';

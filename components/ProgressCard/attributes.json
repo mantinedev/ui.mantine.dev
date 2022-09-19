@@ -1,0 +1,13 @@
+{
+  "title": "Progress card",
+  "category": "stats",
+  "author": "rtivital",
+  "changelog": "september-2022",
+  "withColor": true,
+  "dimmed": true,
+  "dependencies": [],
+  "canvas": {
+    "center": true,
+    "maxWidth": 380
+  }
+}
