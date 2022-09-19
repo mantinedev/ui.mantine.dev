@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
     },

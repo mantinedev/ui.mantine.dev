@@ -76,7 +76,7 @@ const useStyles = createStyles((theme) => ({
     borderBottomColor:
       theme.colorScheme === 'dark' ? theme.white : theme.colors[theme.primaryColor][5],
     backgroundColor: theme.fn.lighten(
-      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
       0.1
     ),
   },

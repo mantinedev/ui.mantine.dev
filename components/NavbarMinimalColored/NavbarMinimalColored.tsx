@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     '&:hover': {
       opacity: 1,
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
     },
@@ -38,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     opacity: 1,
     '&, &:hover': {
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.15
       ),
     },

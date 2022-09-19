@@ -46,7 +46,7 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
     },
@@ -64,7 +64,7 @@ const useStyles = createStyles((theme) => ({
 
   userActive: {
     backgroundColor: theme.fn.lighten(
-      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
       0.1
     ),
   },
@@ -88,14 +88,14 @@ const useStyles = createStyles((theme) => ({
 
     '&:hover': {
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
     },
 
     '&[data-active]': {
       backgroundColor: theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
       borderColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
