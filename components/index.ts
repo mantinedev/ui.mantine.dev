@@ -136,6 +136,7 @@ export { StatsGroup } from './StatsGroup/StatsGroup';
 export { StatsRing } from './StatsRing/StatsRing';
 export { StatsSegments } from './StatsSegments/StatsSegments';
 export { ProgressCard } from './ProgressCard/ProgressCard';
+export { ProgressCardColored } from './ProgressCardColored/ProgressCardColored';
 
 // Grids
 export { GridAsymmetrical } from './GridAsymmetrical/GridAsymmetrical';
