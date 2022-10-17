@@ -55,7 +55,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderActionProps {
-  links: { link: string; label: string; links: { link: string; label: string }[] }[];
+  links: { link: string; label: string; links?: { link: string; label: string }[] }[];
 }
 
 export function HeaderAction({ links }: HeaderActionProps) {
