@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { IconSearch } from '@tabler/icons';
+import { IconSearch, IconExternalLink } from '@tabler/icons';
 import {
   MantineProvider,
   ColorScheme,
   ColorSchemeProvider,
   createEmotionCache,
+  Button,
 } from '@mantine/core';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import rtlPlugin from 'stylis-plugin-rtl';
@@ -49,6 +50,20 @@ export function Layout({ children, noHeader = false, data }: LayoutProps) {
     document.querySelector('html')!.setAttribute('dir', nextDir);
   };
 
+  const openExternalLink = (e: any) => {
+    return (
+      <Button
+        variant="outline"
+        onClick={() => {
+          const BASE_URL = window.location.href;
+          window.open(`${BASE_URL}/component/${e}`, '_blank');
+        }}
+      >
+        <IconExternalLink size={16} stroke={1.5} />
+      </Button>
+    );
+  };
+
   useHotkeys([
     ['mod+J', () => toggleColorScheme()],
     ['mod+L', toggleDir],
@@ -57,6 +72,7 @@ export function Layout({ children, noHeader = false, data }: LayoutProps) {
   const actions: SpotlightAction[] = data?.map((item) => ({
     title: item.component,
     description: item.attributes.title,
+    icon: openExternalLink(item.slug),
     onTrigger: () => router.push(`/component/${item.slug}`),
   }));
 
