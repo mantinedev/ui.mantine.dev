@@ -30,8 +30,8 @@ export function AuthenticationTitle() {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <TextInput label="Email" placeholder="you@mantine.dev" required />
         <PasswordInput label="Password" placeholder="Your password" required mt="md" />
-        <Group position="apart" mt="md">
-          <Checkbox label="Remember me" />
+        <Group position="apart" mt="lg">
+          <Checkbox label="Remember me" sx={{ lineHeight: 1 }} />
           <Anchor<'a'> onClick={(event) => event.preventDefault()} href="#" size="sm">
             Forgot password?
           </Anchor>
