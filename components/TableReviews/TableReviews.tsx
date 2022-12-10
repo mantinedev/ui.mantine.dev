@@ -28,13 +28,13 @@ export function TableReviews({ data }: TableReviewsProps) {
     return (
       <tr key={row.title}>
         <td>
-          <Anchor<'a'> size="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor size="sm" onClick={(event) => event.preventDefault()}>
             {row.title}
           </Anchor>
         </td>
         <td>{row.year}</td>
         <td>
-          <Anchor<'a'> size="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor size="sm" onClick={(event) => event.preventDefault()}>
             {row.author}
           </Anchor>
         </td>
