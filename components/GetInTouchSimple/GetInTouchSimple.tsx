@@ -62,7 +62,7 @@ export function GetInTouchSimple() {
         autosize
         name="message"
         variant="filled"
-        {...form.getInputProps('subject')}
+        {...form.getInputProps('message')}
       />
 
       <Group position="center" mt="xl">
