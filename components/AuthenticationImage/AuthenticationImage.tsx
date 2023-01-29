@@ -54,7 +54,7 @@ export function AuthenticationImage() {
           Login
         </Button>
 
-        <Text align="center" mt="md">
+        <Text ta="center" mt="md">
           Don&apos;t have an account?{' '}
           <Anchor<'a'> href="#" weight={700} onClick={(event) => event.preventDefault()}>
             Register
