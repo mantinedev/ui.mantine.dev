@@ -1,4 +1,4 @@
-import { createStyles, Header, Autocomplete, Group, Burger } from '@mantine/core';
+import { createStyles, Header, Autocomplete, Group, Burger, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
@@ -10,7 +10,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   inner: {
-    height: 56,
+    height: rem(56),
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
@@ -78,7 +78,7 @@ export function HeaderSearch({ links }: HeaderSearchProps) {
           <Autocomplete
             className={classes.search}
             placeholder="Search"
-            icon={<IconSearch size={16} stroke={1.5} />}
+            icon={<IconSearch size="1rem" stroke={1.5} />}
             data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
           />
         </Group>

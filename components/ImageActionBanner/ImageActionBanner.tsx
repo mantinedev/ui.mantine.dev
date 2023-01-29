@@ -1,20 +1,16 @@
-import { createStyles, Card, Overlay, CardProps, Button, Text } from '@mantine/core';
+import { createStyles, Card, Overlay, CardProps, Button, Text, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: 240,
+    height: rem(240),
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
 
   content: {
-    position: 'absolute',
+    ...theme.fn.cover(),
     padding: theme.spacing.xl,
     zIndex: 1,
-    top: 0,
-    bottom: 0,
-    right: 0,
-    left: 0,
   },
 
   action: {
@@ -25,12 +21,12 @@ const useStyles = createStyles((theme) => ({
 
   title: {
     color: theme.white,
-    marginBottom: theme.spacing.xs / 2,
+    marginBottom: `calc(${theme.spacing.xs} / 2)`,
   },
 
   description: {
     color: theme.white,
-    maxWidth: 220,
+    maxWidth: rem(220),
   },
 }));
 

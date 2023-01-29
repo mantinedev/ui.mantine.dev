@@ -1,15 +1,15 @@
-import { createStyles, Title, Text, Button, Container } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, rem } from '@mantine/core';
 import { Dots } from './Dots';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    paddingTop: 120,
-    paddingBottom: 80,
+    paddingTop: rem(120),
+    paddingBottom: rem(80),
 
-    '@media (max-width: 755px)': {
-      paddingTop: 80,
-      paddingBottom: 60,
+    [theme.fn.smallerThan('sm')]: {
+      paddingTop: rem(80),
+      paddingBottom: rem(60),
     },
   },
 
@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
     position: 'absolute',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
 
-    '@media (max-width: 755px)': {
+    [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
   },
@@ -35,14 +35,14 @@ const useStyles = createStyles((theme) => ({
   title: {
     textAlign: 'center',
     fontWeight: 800,
-    fontSize: 40,
+    fontSize: rem(40),
     letterSpacing: -1,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     marginBottom: theme.spacing.xs,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    '@media (max-width: 520px)': {
-      fontSize: 28,
+    [theme.fn.smallerThan('xs')]: {
+      fontSize: rem(28),
       textAlign: 'left',
     },
   },
@@ -54,7 +54,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     textAlign: 'center',
 
-    '@media (max-width: 520px)': {
+    [theme.fn.smallerThan('xs')]: {
       textAlign: 'left',
       fontSize: theme.fontSizes.md,
     },
@@ -65,7 +65,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
 
-    '@media (max-width: 520px)': {
+    [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',
     },
   },
@@ -75,8 +75,8 @@ const useStyles = createStyles((theme) => ({
       marginLeft: theme.spacing.md,
     },
 
-    '@media (max-width: 520px)': {
-      height: 42,
+    [theme.fn.smallerThan('xs')]: {
+      height: rem(42),
       fontSize: theme.fontSizes.md,
 
       '&:not(:first-of-type)': {

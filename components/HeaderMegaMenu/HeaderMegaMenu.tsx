@@ -56,7 +56,7 @@ const useStyles = createStyles((theme) => ({
 
   subLink: {
     width: '100%',
-    padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
     borderRadius: theme.radius.md,
 
     ...theme.fn.hover({
@@ -132,10 +132,10 @@ export function HeaderMegaMenu() {
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.fn.primaryColor()} />
+          <item.icon size={rem(22)} color={theme.fn.primaryColor()} />
         </ThemeIcon>
         <div>
-          <Text size="sm" weight={500}>
+          <Text size="sm" fw={500}>
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">
@@ -170,8 +170,8 @@ export function HeaderMegaMenu() {
 
               <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
                 <Group position="apart" px="md">
-                  <Text weight={500}>Features</Text>
-                  <Anchor href="#" size="xs">
+                  <Text fw={500}>Features</Text>
+                  <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
                 </Group>
@@ -189,7 +189,7 @@ export function HeaderMegaMenu() {
                 <div className={classes.dropdownFooter}>
                   <Group position="apart">
                     <div>
-                      <Text weight={500} size="sm">
+                      <Text fw={500} fz="sm">
                         Get started
                       </Text>
                       <Text size="xs" color="dimmed">
@@ -227,7 +227,7 @@ export function HeaderMegaMenu() {
         className={classes.hiddenDesktop}
         zIndex={1000000}
       >
-        <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
+        <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
           <a href="#" className={classes.link}>
