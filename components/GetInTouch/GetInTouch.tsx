@@ -7,6 +7,7 @@ import {
   Group,
   SimpleGrid,
   createStyles,
+  rem,
 } from '@mantine/core';
 import { ContactIconsList } from '../ContactIcons/ContactIcons';
 import bg from './bg.svg';
@@ -19,8 +20,8 @@ const useStyles = createStyles((theme) => {
       display: 'flex',
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
       borderRadius: theme.radius.lg,
-      padding: 4,
-      border: `1px solid ${
+      padding: rem(4),
+      border: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[2]
       }`,
 
@@ -33,7 +34,7 @@ const useStyles = createStyles((theme) => {
       boxSizing: 'border-box',
       flex: 1,
       padding: theme.spacing.xl,
-      paddingLeft: theme.spacing.xl * 2,
+      paddingLeft: `calc(${theme.spacing.xl} * 2)`,
       borderLeft: 0,
 
       [BREAKPOINT]: {
@@ -43,7 +44,7 @@ const useStyles = createStyles((theme) => {
     },
 
     fields: {
-      marginTop: -12,
+      marginTop: rem(-12),
     },
 
     fieldInput: {
@@ -70,13 +71,13 @@ const useStyles = createStyles((theme) => {
     contacts: {
       boxSizing: 'border-box',
       position: 'relative',
-      borderRadius: theme.radius.lg - 2,
+      borderRadius: theme.radius.lg,
       backgroundImage: `url(${bg.src})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
-      border: '1px solid transparent',
+      border: `${rem(1)} solid transparent`,
       padding: theme.spacing.xl,
-      flex: '0 0 280px',
+      flex: `0 0 ${rem(280)}`,
 
       [BREAKPOINT]: {
         marginBottom: theme.spacing.sm,
@@ -85,7 +86,7 @@ const useStyles = createStyles((theme) => {
     },
 
     title: {
-      marginBottom: theme.spacing.xl * 1.5,
+      marginBottom: `calc(${theme.spacing.xl} * 1.5)`,
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
       [BREAKPOINT]: {
@@ -108,7 +109,7 @@ export function GetInTouch() {
     <Paper shadow="md" radius="lg">
       <div className={classes.wrapper}>
         <div className={classes.contacts}>
-          <Text size="lg" weight={700} className={classes.title} sx={{ color: '#fff' }}>
+          <Text fz="lg" fw={700} className={classes.title} c="#fff">
             Contact information
           </Text>
 
@@ -116,7 +117,7 @@ export function GetInTouch() {
         </div>
 
         <form className={classes.form} onSubmit={(event) => event.preventDefault()}>
-          <Text size="lg" weight={700} className={classes.title}>
+          <Text fz="lg" fw={700} className={classes.title}>
             Get in touch
           </Text>
 

@@ -1,4 +1,4 @@
-import { Card, Image, Text, Group, Badge, createStyles, Center, Button } from '@mantine/core';
+import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem } from '@mantine/core';
 import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
@@ -21,19 +21,19 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1,
     fontWeight: 700,
     fontSize: theme.fontSizes.xs,
-    letterSpacing: -0.25,
+    letterSpacing: rem(-0.25),
     textTransform: 'uppercase',
   },
 
   section: {
     padding: theme.spacing.md,
-    borderTop: `1px solid ${
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
 
   icon: {
-    marginRight: 5,
+    marginRight: rem(5),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[5],
   },
 }));
@@ -49,7 +49,7 @@ export function FeaturesCard() {
   const { classes } = useStyles();
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
-      <feature.icon size={18} className={classes.icon} stroke={1.5} />
+      <feature.icon size="1.05rem" className={classes.icon} stroke={1.5} />
       <Text size="xs">{feature.label}</Text>
     </Center>
   ));

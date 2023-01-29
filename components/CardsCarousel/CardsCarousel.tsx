@@ -1,10 +1,10 @@
 import { Carousel } from '@mantine/carousel';
 import { useMediaQuery } from '@mantine/hooks';
-import { createStyles, Paper, Text, Title, Button, useMantineTheme } from '@mantine/core';
+import { createStyles, Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
-    height: 440,
+    height: rem(440),
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 900,
     color: theme.white,
     lineHeight: 1.2,
-    fontSize: 32,
+    fontSize: rem(32),
     marginTop: theme.spacing.xs,
   },
 
@@ -113,7 +113,7 @@ export function CardsCarousel() {
   return (
     <Carousel
       slideSize="50%"
-      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: 2 }]}
+      breakpoints={[{ maxWidth: 'sm', slideSize: '100%', slideGap: rem(2) }]}
       slideGap="xl"
       align="start"
       slidesToScroll={mobile ? 1 : 2}

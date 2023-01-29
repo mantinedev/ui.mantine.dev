@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Navbar, UnstyledButton, Tooltip, Title } from '@mantine/core';
+import { createStyles, Navbar, UnstyledButton, Tooltip, Title, rem } from '@mantine/core';
 import {
   IconHome2,
   IconGauge,
@@ -17,12 +17,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   aside: {
-    flex: '0 0 60px',
+    flex: `0 0 ${rem(60)}`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    borderRight: `1px solid ${
+    borderRight: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3]
     }`,
   },
@@ -33,8 +33,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   mainLink: {
-    width: 44,
-    height: 44,
+    width: rem(44),
+    height: rem(44),
     borderRadius: theme.radius.md,
     display: 'flex',
     alignItems: 'center',
@@ -59,9 +59,9 @@ const useStyles = createStyles((theme) => ({
     marginBottom: theme.spacing.xl,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     padding: theme.spacing.md,
-    paddingTop: 18,
-    height: 60,
-    borderBottom: `1px solid ${
+    paddingTop: rem(18),
+    height: rem(60),
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3]
     }`,
   },
@@ -71,9 +71,9 @@ const useStyles = createStyles((theme) => ({
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
-    height: 60,
+    height: rem(60),
     paddingTop: theme.spacing.md,
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3]
     }`,
     marginBottom: theme.spacing.xl,
@@ -86,12 +86,12 @@ const useStyles = createStyles((theme) => ({
     borderTopRightRadius: theme.radius.md,
     borderBottomRightRadius: theme.radius.md,
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
-    padding: `0 ${theme.spacing.md}px`,
+    padding: `0 ${theme.spacing.md}`,
     fontSize: theme.fontSizes.sm,
     marginRight: theme.spacing.md,
     fontWeight: 500,
-    height: 44,
-    lineHeight: '44px',
+    height: rem(44),
+    lineHeight: rem(44),
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
@@ -145,7 +145,7 @@ export function DoubleNavbar() {
         onClick={() => setActive(link.label)}
         className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}
       >
-        <link.icon stroke={1.5} />
+        <link.icon size="1.4rem" stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   ));

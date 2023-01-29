@@ -1,18 +1,18 @@
-import { createStyles, Text, Title, TextInput, Button, Image } from '@mantine/core';
+import { createStyles, Text, Title, TextInput, Button, Image, rem } from '@mantine/core';
 import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     display: 'flex',
     alignItems: 'center',
-    padding: theme.spacing.xl * 2,
+    padding: `calc(${theme.spacing.xl} * 2)`,
     borderRadius: theme.radius.md,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
     }`,
 
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+    [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column-reverse',
       padding: theme.spacing.xl,
     },
@@ -21,15 +21,15 @@ const useStyles = createStyles((theme) => ({
   image: {
     maxWidth: '40%',
 
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+    [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
     },
   },
 
   body: {
-    paddingRight: theme.spacing.xl * 4,
+    paddingRight: `calc(${theme.spacing.xl} * 4)`,
 
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+    [theme.fn.smallerThan('sm')]: {
       paddingRight: 0,
       marginTop: theme.spacing.xl,
     },
@@ -70,10 +70,10 @@ export function EmailBanner() {
     <div className={classes.wrapper}>
       <div className={classes.body}>
         <Title className={classes.title}>Wait a minute...</Title>
-        <Text weight={500} size="lg" mb={5}>
+        <Text fw={500} fz="lg" mb={5}>
           Subscribe to our newsletter!
         </Text>
-        <Text size="sm" color="dimmed">
+        <Text fz="sm" c="dimmed">
           You will never miss important product updates, latest news and community QA sessions. Our
           newsletter is once a week, every Sunday.
         </Text>

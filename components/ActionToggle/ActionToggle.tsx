@@ -15,7 +15,7 @@ export function ActionToggle() {
           color: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.blue[6],
         })}
       >
-        {colorScheme === 'dark' ? <IconSun size={18} /> : <IconMoonStars size={18} />}
+        {colorScheme === 'dark' ? <IconSun size="1.2rem" /> : <IconMoonStars size="1.2rem" />}
       </ActionIcon>
     </Group>
   );

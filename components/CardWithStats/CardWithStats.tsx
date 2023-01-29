@@ -1,4 +1,4 @@
-import { createStyles, Card, Image, Text, Group, RingProgress } from '@mantine/core';
+import { createStyles, Card, Image, Text, Group, RingProgress, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -8,8 +8,8 @@ const useStyles = createStyles((theme) => ({
   footer: {
     display: 'flex',
     justifyContent: 'space-between',
-    padding: `${theme.spacing.sm}px ${theme.spacing.lg}px`,
-    borderTop: `1px solid ${
+    padding: `${theme.spacing.sm} ${theme.spacing.lg}`,
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
   },
@@ -45,23 +45,23 @@ export function CardWithStats({ image, title, description, stats }: CardWithStat
   ));
 
   return (
-    <Card withBorder p="lg" className={classes.card}>
+    <Card withBorder padding="lg" className={classes.card}>
       <Card.Section>
         <Image src={image} alt={title} height={100} />
       </Card.Section>
 
       <Group position="apart" mt="xl">
-        <Text size="sm" weight={700} className={classes.title}>
+        <Text fz="sm" fw={700} className={classes.title}>
           {title}
         </Text>
         <Group spacing={5}>
-          <Text size="xs" color="dimmed">
+          <Text fz="xs" c="dimmed">
             80% completed
           </Text>
           <RingProgress size={18} sections={[{ value: 80, color: 'blue' }]} />
         </Group>
       </Group>
-      <Text mt="sm" mb="md" color="dimmed" size="xs">
+      <Text mt="sm" mb="md" c="dimmed" fz="xs">
         {description}
       </Text>
       <Card.Section className={classes.footer}>{items}</Card.Section>

@@ -1,17 +1,17 @@
 import { useRef } from 'react';
-import { Text, Group, Button, createStyles } from '@mantine/core';
+import { Text, Group, Button, createStyles, rem } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
 import { IconCloudUpload, IconX, IconDownload } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    marginBottom: 30,
+    marginBottom: rem(30),
   },
 
   dropzone: {
-    borderWidth: 1,
-    paddingBottom: 50,
+    borderWidth: rem(1),
+    paddingBottom: rem(50),
   },
 
   icon: {
@@ -20,9 +20,9 @@ const useStyles = createStyles((theme) => ({
 
   control: {
     position: 'absolute',
-    width: 250,
-    left: 'calc(50% - 125px)',
-    bottom: -20,
+    width: rem(250),
+    left: `calc(50% - ${rem(125)})`,
+    bottom: rem(-20),
   },
 }));
 
@@ -43,26 +43,30 @@ export function DropzoneButton() {
         <div style={{ pointerEvents: 'none' }}>
           <Group position="center">
             <Dropzone.Accept>
-              <IconDownload size={50} color={theme.colors[theme.primaryColor][6]} stroke={1.5} />
+              <IconDownload
+                size={rem(50)}
+                color={theme.colors[theme.primaryColor][6]}
+                stroke={1.5}
+              />
             </Dropzone.Accept>
             <Dropzone.Reject>
-              <IconX size={50} color={theme.colors.red[6]} stroke={1.5} />
+              <IconX size={rem(50)} color={theme.colors.red[6]} stroke={1.5} />
             </Dropzone.Reject>
             <Dropzone.Idle>
               <IconCloudUpload
-                size={50}
+                size={rem(50)}
                 color={theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black}
                 stroke={1.5}
               />
             </Dropzone.Idle>
           </Group>
 
-          <Text align="center" weight={700} size="lg" mt="xl">
+          <Text ta="center" fw={700} fz="lg" mt="xl">
             <Dropzone.Accept>Drop files here</Dropzone.Accept>
             <Dropzone.Reject>Pdf file less than 30mb</Dropzone.Reject>
             <Dropzone.Idle>Upload resume</Dropzone.Idle>
           </Text>
-          <Text align="center" size="sm" mt="xs" color="dimmed">
+          <Text ta="center" fz="sm" mt="xs" c="dimmed">
             Drag&apos;n&apos;drop files here to upload. We can accept only <i>.pdf</i> files that
             are less than 30mb in size.
           </Text>

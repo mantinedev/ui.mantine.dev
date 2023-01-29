@@ -9,6 +9,7 @@ import {
   Center,
   Avatar,
   createStyles,
+  rem,
 } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
@@ -20,14 +21,14 @@ const useStyles = createStyles((theme) => ({
   rating: {
     position: 'absolute',
     top: theme.spacing.xs,
-    right: theme.spacing.xs + 2,
+    right: rem(12),
     pointerEvents: 'none',
   },
 
   title: {
     display: 'block',
     marginTop: theme.spacing.md,
-    marginBottom: theme.spacing.xs / 2,
+    marginBottom: rem(5),
   },
 
   action: {
@@ -79,31 +80,31 @@ export function ArticleCard({
         {rating}
       </Badge>
 
-      <Text className={classes.title} weight={500} component="a" {...linkProps}>
+      <Text className={classes.title} fw={500} component="a" {...linkProps}>
         {title}
       </Text>
 
-      <Text size="sm" color="dimmed" lineClamp={4}>
+      <Text fz="sm" color="dimmed" lineClamp={4}>
         {description}
       </Text>
 
       <Group position="apart" className={classes.footer}>
         <Center>
           <Avatar src={author.image} size={24} radius="xl" mr="xs" />
-          <Text size="sm" inline>
+          <Text fz="sm" inline>
             {author.name}
           </Text>
         </Center>
 
         <Group spacing={8} mr={0}>
           <ActionIcon className={classes.action}>
-            <IconHeart size={16} color={theme.colors.red[6]} />
+            <IconHeart size="1rem" color={theme.colors.red[6]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <IconBookmark size={16} color={theme.colors.yellow[7]} />
+            <IconBookmark size="1rem" color={theme.colors.yellow[7]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <IconShare size={16} />
+            <IconShare size="1rem" />
           </ActionIcon>
         </Group>
       </Group>

@@ -1,4 +1,14 @@
-import { createStyles, Card, Image, ActionIcon, Group, Text, Avatar, Badge } from '@mantine/core';
+import {
+  createStyles,
+  Card,
+  Image,
+  ActionIcon,
+  Group,
+  Text,
+  Avatar,
+  Badge,
+  rem,
+} from '@mantine/core';
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
@@ -11,9 +21,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   footer: {
-    padding: `${theme.spacing.xs}px ${theme.spacing.lg}px`,
+    padding: `${theme.spacing.xs} ${theme.spacing.lg}`,
     marginTop: theme.spacing.md,
-    borderTop: `1px solid ${
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
   },
@@ -41,22 +51,22 @@ export function ArticleCardFooter({
   const { classes, theme } = useStyles();
 
   return (
-    <Card withBorder p="lg" radius="md" className={classes.card}>
+    <Card withBorder padding="lg" radius="md" className={classes.card}>
       <Card.Section mb="sm">
         <Image src={image} alt={title} height={180} />
       </Card.Section>
 
       <Badge>{category}</Badge>
 
-      <Text weight={700} className={classes.title} mt="xs">
+      <Text fw={700} className={classes.title} mt="xs">
         {title}
       </Text>
 
       <Group mt="lg">
         <Avatar src={author.image} radius="sm" />
         <div>
-          <Text weight={500}>{author.name}</Text>
-          <Text size="xs" color="dimmed">
+          <Text fw={500}>{author.name}</Text>
+          <Text fz="xs" c="dimmed">
             {author.description}
           </Text>
         </div>
@@ -64,18 +74,18 @@ export function ArticleCardFooter({
 
       <Card.Section className={classes.footer}>
         <Group position="apart">
-          <Text size="xs" color="dimmed">
+          <Text fz="xs" c="dimmed">
             {footer}
           </Text>
           <Group spacing={0}>
             <ActionIcon>
-              <IconHeart size={18} color={theme.colors.red[6]} stroke={1.5} />
+              <IconHeart size="1.2rem" color={theme.colors.red[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon>
-              <IconBookmark size={18} color={theme.colors.yellow[6]} stroke={1.5} />
+              <IconBookmark size="1.2rem" color={theme.colors.yellow[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon>
-              <IconShare size={16} color={theme.colors.blue[6]} stroke={1.5} />
+              <IconShare size="1.2rem" color={theme.colors.blue[6]} stroke={1.5} />
             </ActionIcon>
           </Group>
         </Group>

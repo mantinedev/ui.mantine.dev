@@ -1,4 +1,4 @@
-import { Box } from '@mantine/core';
+import { Box, rem } from '@mantine/core';
 import { CanvasAttributes } from '../../data';
 
 interface ComponentPreviewProps {
@@ -11,8 +11,8 @@ export function ComponentPreview({ children, canvas, withSpacing = false }: Comp
   return (
     <Box
       sx={{
-        paddingTop: canvas?.maxWidth && withSpacing ? 40 : 0,
-        maxWidth: canvas?.maxWidth || '100%',
+        paddingTop: canvas?.maxWidth && withSpacing ? rem(40) : 0,
+        maxWidth: canvas?.maxWidth ? rem(canvas.maxWidth) : '100%',
         marginLeft: canvas?.center ? 'auto' : 'unset',
         marginRight: canvas?.center ? 'auto' : 'unset',
       }}

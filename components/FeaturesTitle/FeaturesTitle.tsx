@@ -1,14 +1,24 @@
-import { createStyles, Title, SimpleGrid, Text, Button, ThemeIcon, Grid, Col } from '@mantine/core';
+import {
+  createStyles,
+  Title,
+  SimpleGrid,
+  Text,
+  Button,
+  ThemeIcon,
+  Grid,
+  Col,
+  rem,
+} from '@mantine/core';
 import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    padding: `${theme.spacing.xl * 2}px ${theme.spacing.xl}px`,
+    padding: `calc(${theme.spacing.xl} * 2) ${theme.spacing.xl}`,
   },
 
   title: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 36,
+    fontSize: rem(36),
     fontWeight: 900,
     lineHeight: 1.1,
     marginBottom: theme.spacing.md,
@@ -52,12 +62,12 @@ export function FeaturesTitle() {
         variant="gradient"
         gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
       >
-        <feature.icon size={26} stroke={1.5} />
+        <feature.icon size={rem(26)} stroke={1.5} />
       </ThemeIcon>
-      <Text size="lg" mt="sm" weight={500}>
+      <Text fz="lg" mt="sm" fw={500}>
         {feature.title}
       </Text>
-      <Text color="dimmed" size="sm">
+      <Text c="dimmed" fz="sm">
         {feature.description}
       </Text>
     </div>
@@ -70,7 +80,7 @@ export function FeaturesTitle() {
           <Title className={classes.title} order={2}>
             A fully featured React components library for your next project
           </Title>
-          <Text color="dimmed">
+          <Text c="dimmed">
             Build fully functional accessible web applications faster than ever – Mantine includes
             more than 120 customizable components and hooks to cover you in any situation
           </Text>

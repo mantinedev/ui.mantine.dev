@@ -3,8 +3,8 @@ import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
   },
 
   title: {
@@ -33,7 +33,7 @@ export function FaqWithImage() {
             <Image src={image.src} alt="Frequently Asked Questions" />
           </Col>
           <Col span={12} md={6}>
-            <Title order={2} align="left" className={classes.title}>
+            <Title order={2} ta="left" className={classes.title}>
               Frequently Asked Questions
             </Title>
 

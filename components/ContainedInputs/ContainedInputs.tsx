@@ -1,5 +1,5 @@
-import { createStyles, Select, TextInput } from '@mantine/core';
-import { DatePicker } from '@mantine/dates';
+import { createStyles, rem, Select, TextInput } from '@mantine/core';
+import { DatePickerInput } from '@mantine/dates';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -7,8 +7,8 @@ const useStyles = createStyles((theme) => ({
   },
 
   input: {
-    height: 'auto',
-    paddingTop: 18,
+    height: rem(54),
+    paddingTop: rem(18),
   },
 
   label: {
@@ -16,7 +16,7 @@ const useStyles = createStyles((theme) => ({
     pointerEvents: 'none',
     fontSize: theme.fontSizes.xs,
     paddingLeft: theme.spacing.sm,
-    paddingTop: theme.spacing.sm / 2,
+    paddingTop: `calc(${theme.spacing.sm} / 2)`,
     zIndex: 1,
   },
 }));
@@ -30,15 +30,17 @@ export function ContainedInputs() {
       <TextInput label="Shipping address" placeholder="15329 Huston 21st" classNames={classes} />
 
       <Select
-        style={{ marginTop: 20, zIndex: 2 }}
+        mt="md"
+        withinPortal
         data={['React', 'Angular', 'Svelte', 'Vue']}
         placeholder="Pick one"
         label="Your favorite library/framework"
         classNames={classes}
       />
 
-      <DatePicker
-        style={{ marginTop: 20 }}
+      <DatePickerInput
+        mt="md"
+        popoverProps={{ withinPortal: true }}
         label="Departure date"
         placeholder="When will you leave?"
         classNames={classes}

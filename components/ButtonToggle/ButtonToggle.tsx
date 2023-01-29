@@ -5,6 +5,7 @@ import {
   Center,
   useMantineColorScheme,
   Group,
+  rem,
 } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
 import { IconMoon, IconSun } from '@tabler/icons-react';
@@ -17,15 +18,15 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'space-between',
     borderRadius: 1000,
     paddingLeft: theme.spacing.sm,
-    paddingRight: 4,
-    width: 136,
-    height: 36,
+    paddingRight: rem(4),
+    width: rem(136),
+    height: rem(36),
   },
 
   iconWrapper: {
-    height: 28,
-    width: 28,
-    borderRadius: 28,
+    height: rem(28),
+    width: rem(28),
+    borderRadius: rem(28),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.dark[4],
     color: theme.colorScheme === 'dark' ? theme.black : theme.colors.blue[2],
   },
@@ -53,7 +54,7 @@ export function ButtonToggle() {
         </Text>
 
         <Center className={classes.iconWrapper}>
-          <Icon size={18} stroke={1.5} />
+          <Icon size="1.05rem" stroke={1.5} />
         </Center>
       </UnstyledButton>
     </Group>

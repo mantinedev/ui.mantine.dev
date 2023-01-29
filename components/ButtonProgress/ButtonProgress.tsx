@@ -2,18 +2,14 @@ import { useState } from 'react';
 import { useInterval } from '@mantine/hooks';
 import { createStyles, Button, Progress } from '@mantine/core';
 
-const useStyles = createStyles(() => ({
+const useStyles = createStyles((theme) => ({
   button: {
     position: 'relative',
     transition: 'background-color 150ms ease',
   },
 
   progress: {
-    position: 'absolute',
-    bottom: -1,
-    right: -1,
-    left: -1,
-    top: -1,
+    ...theme.fn.cover(-1),
     height: 'auto',
     backgroundColor: 'transparent',
     zIndex: 0,
@@ -43,6 +39,7 @@ export function ButtonProgress() {
       }),
     20
   );
+
   return (
     <Button
       fullWidth

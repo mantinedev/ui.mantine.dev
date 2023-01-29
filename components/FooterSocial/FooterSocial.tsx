@@ -1,11 +1,11 @@
-import { createStyles, Container, Group, ActionIcon } from '@mantine/core';
+import { createStyles, Container, Group, ActionIcon, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
-    borderTop: `1px solid ${
+    marginTop: rem(120),
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
   },
@@ -38,13 +38,13 @@ export function FooterSocial() {
         <MantineLogo size={28} />
         <Group spacing={0} className={classes.links} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size={18} stroke={1.5} />
+            <IconBrandTwitter size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
+            <IconBrandYoutube size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram size="1.05rem" stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>

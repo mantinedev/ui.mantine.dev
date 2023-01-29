@@ -1,4 +1,13 @@
-import { createStyles, Card, Text, SimpleGrid, UnstyledButton, Anchor, Group } from '@mantine/core';
+import {
+  createStyles,
+  Card,
+  Text,
+  SimpleGrid,
+  UnstyledButton,
+  Anchor,
+  Group,
+  rem,
+} from '@mantine/core';
 import {
   IconCreditCard,
   IconBuildingBank,
@@ -40,12 +49,12 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     textAlign: 'center',
     borderRadius: theme.radius.md,
-    height: 90,
+    height: rem(90),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
     transition: 'box-shadow 150ms ease, transform 100ms ease',
 
     '&:hover': {
-      boxShadow: `${theme.shadows.md} !important`,
+      boxShadow: theme.shadows.md,
       transform: 'scale(1.05)',
     },
   },
@@ -56,7 +65,7 @@ export function ActionsGrid() {
 
   const items = mockdata.map((item) => (
     <UnstyledButton key={item.title} className={classes.item}>
-      <item.icon color={theme.colors[item.color][6]} size={32} />
+      <item.icon color={theme.colors[item.color][6]} size="2rem" />
       <Text size="xs" mt={7}>
         {item.title}
       </Text>

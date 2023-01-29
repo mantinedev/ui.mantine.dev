@@ -1,10 +1,19 @@
-import { Image, Text, Container, ThemeIcon, Title, SimpleGrid, createStyles } from '@mantine/core';
+import {
+  Image,
+  Text,
+  Container,
+  ThemeIcon,
+  Title,
+  SimpleGrid,
+  createStyles,
+  rem,
+} from '@mantine/core';
 import IMAGES from './images';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: 80,
-    paddingBottom: 50,
+    paddingTop: rem(80),
+    paddingBottom: rem(50),
   },
 
   item: {
@@ -17,7 +26,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   itemTitle: {
-    marginBottom: theme.spacing.xs / 2,
+    marginBottom: `calc(${theme.spacing.xs} / 2)`,
   },
 
   supTitle: {
@@ -26,7 +35,7 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 800,
     fontSize: theme.fontSizes.sm,
     color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
-    letterSpacing: 0.5,
+    letterSpacing: rem(0.5),
   },
 
   title: {
@@ -42,7 +51,7 @@ const useStyles = createStyles((theme) => ({
 
   highlight: {
     backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
-    padding: 5,
+    padding: rem(5),
     paddingTop: 0,
     borderRadius: theme.radius.sm,
     display: 'inline-block',
@@ -72,10 +81,10 @@ export function FeaturesImages({ supTitle, description, data }: FeaturesImagesPr
       </ThemeIcon>
 
       <div>
-        <Text weight={700} size="lg" className={classes.itemTitle}>
+        <Text fw={700} fz="lg" className={classes.itemTitle}>
           {item.title}
         </Text>
-        <Text color="dimmed">{item.description}</Text>
+        <Text c="dimmed">{item.description}</Text>
       </div>
     </div>
   ));
