@@ -12,7 +12,7 @@ function TooltipIcon() {
     >
       <Text color="dimmed" sx={{ cursor: 'help' }}>
         <Center>
-          <IconInfoCircle size={18} stroke={1.5} />
+          <IconInfoCircle size="1.1rem" stroke={1.5} />
         </Center>
       </Text>
     </Tooltip>

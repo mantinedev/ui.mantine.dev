@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack } from '@mantine/core';
+import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack, rem } from '@mantine/core';
 import {
-  TablerIcon,
   IconHome2,
   IconGauge,
   IconDeviceDesktopAnalytics,
@@ -16,8 +15,8 @@ import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   link: {
-    width: 50,
-    height: 50,
+    width: rem(50),
+    height: rem(50),
     borderRadius: theme.radius.md,
     display: 'flex',
     alignItems: 'center',
@@ -38,7 +37,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface NavbarLinkProps {
-  icon: TablerIcon;
+  icon: React.FC<any>;
   label: string;
   active?: boolean;
   onClick?(): void;
@@ -49,7 +48,7 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   return (
     <Tooltip label={label} position="right" transitionDuration={0}>
       <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
-        <Icon stroke={1.5} />
+        <Icon size="1.2rem" stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   );

@@ -1,4 +1,12 @@
-import { UnstyledButton, Checkbox, Text, Image, SimpleGrid, createStyles } from '@mantine/core';
+import {
+  UnstyledButton,
+  Checkbox,
+  Text,
+  Image,
+  SimpleGrid,
+  createStyles,
+  rem,
+} from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 import icons from './icons';
 
@@ -8,7 +16,7 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     alignItems: 'center',
     width: '100%',
     transition: 'background-color 150ms ease, border-color 150ms ease',
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       checked
         ? theme.fn.variant({ variant: 'outline', color: theme.primaryColor }).border
         : theme.colorScheme === 'dark'

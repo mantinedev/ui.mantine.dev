@@ -1,4 +1,4 @@
-import { Navbar, Group, Code, ScrollArea, createStyles } from '@mantine/core';
+import { Navbar, Group, Code, ScrollArea, createStyles, rem } from '@mantine/core';
 import {
   IconNotes,
   IconCalendarStats,
@@ -57,17 +57,17 @@ const useStyles = createStyles((theme) => ({
   header: {
     padding: theme.spacing.md,
     paddingTop: 0,
-    marginLeft: -theme.spacing.md,
-    marginRight: -theme.spacing.md,
+    marginLeft: `calc(${theme.spacing.md} * -1)`,
+    marginRight: `calc(${theme.spacing.md} * -1)`,
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
 
   links: {
-    marginLeft: -theme.spacing.md,
-    marginRight: -theme.spacing.md,
+    marginLeft: `calc(${theme.spacing.md} * -1)`,
+    marginRight: `calc(${theme.spacing.md} * -1)`,
   },
 
   linksInner: {
@@ -76,9 +76,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   footer: {
-    marginLeft: -theme.spacing.md,
-    marginRight: -theme.spacing.md,
-    borderTop: `1px solid ${
+    marginLeft: `calc(${theme.spacing.md} * -1)`,
+    marginRight: `calc(${theme.spacing.md} * -1)`,
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
@@ -92,7 +92,7 @@ export function NavbarNested() {
     <Navbar height={800} width={{ sm: 300 }} p="md" className={classes.navbar}>
       <Navbar.Section className={classes.header}>
         <Group position="apart">
-          <Logo width={120} />
+          <Logo width={rem(120)} />
           <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
         </Group>
       </Navbar.Section>

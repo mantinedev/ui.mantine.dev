@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, UnstyledButton, Menu, Image, Group } from '@mantine/core';
+import { createStyles, UnstyledButton, Menu, Image, Group, rem } from '@mantine/core';
 import { IconChevronDown } from '@tabler/icons-react';
 import images from './images';
 
@@ -13,13 +13,13 @@ const data = [
 
 const useStyles = createStyles((theme, { opened }: { opened: boolean }) => ({
   control: {
-    width: 200,
+    width: rem(200),
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 15px',
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
     borderRadius: theme.radius.md,
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[2]
     }`,
     transition: 'background-color 150ms ease',
@@ -73,7 +73,7 @@ export function LanguagePicker() {
             <Image src={selected.image} width={22} height={22} />
             <span className={classes.label}>{selected.label}</span>
           </Group>
-          <IconChevronDown size={16} className={classes.icon} stroke={1.5} />
+          <IconChevronDown size="1rem" className={classes.icon} stroke={1.5} />
         </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>{items}</Menu.Dropdown>

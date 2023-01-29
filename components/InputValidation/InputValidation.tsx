@@ -20,7 +20,7 @@ export function InputValidation() {
       error="Invalid email"
       defaultValue="hello!gmail.com"
       classNames={{ input: classes.invalid }}
-      rightSection={<IconAlertTriangle stroke={1.5} size={16} className={classes.icon} />}
+      rightSection={<IconAlertTriangle stroke={1.5} size="1.1rem" className={classes.icon} />}
     />
   );
 }
