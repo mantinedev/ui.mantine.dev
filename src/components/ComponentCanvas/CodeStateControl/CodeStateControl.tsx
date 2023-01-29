@@ -1,5 +1,5 @@
 import { ActionIcon, Tooltip } from '@mantine/core';
-import { IconCode, IconDatabase } from '@tabler/icons-react-react';
+import { IconCode, IconDatabase } from '@tabler/icons-react';
 
 interface CodeStateControlProps {
   state: 'code' | 'mockdata';
