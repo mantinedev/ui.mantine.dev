@@ -1,4 +1,4 @@
-import { IconExternalLink } from '@tabler/icons';
+import { IconExternalLink } from '@tabler/icons-react-react';
 import { GithubIcon } from '@mantine/ds';
 import {
   Title,

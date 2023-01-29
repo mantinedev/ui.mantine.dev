@@ -1,5 +1,5 @@
 import { upperFirst } from '@mantine/hooks';
-import { IconExternalLink } from '@tabler/icons';
+import { IconExternalLink } from '@tabler/icons-react-react';
 import { MantineLogo, NpmIcon } from '@mantine/ds';
 
 export function getDependencyInfo(url: string) {

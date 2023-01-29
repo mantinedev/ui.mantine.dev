@@ -1,4 +1,4 @@
-import { IconBookmark, IconHeart, IconShare } from '@tabler/icons';
+import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
 import {
   Card,
   Image,

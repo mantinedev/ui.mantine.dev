@@ -10,7 +10,7 @@ import {
   IconSwitchHorizontal,
   IconChevronRight,
   IconDots,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 export function UserMenu() {
   const theme = useMantineTheme();

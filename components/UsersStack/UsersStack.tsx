@@ -6,7 +6,7 @@ import {
   IconReportAnalytics,
   IconTrash,
   IconDots,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 interface UsersStackProps {
   data: { avatar: string; name: string; job: string; email: string; rate: number }[];

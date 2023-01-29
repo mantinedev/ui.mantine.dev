@@ -8,7 +8,7 @@ import {
   SimpleGrid,
   Container,
 } from '@mantine/core';
-import { IconGauge, IconUser, IconCookie } from '@tabler/icons';
+import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
 
 const mockdata = [
   {

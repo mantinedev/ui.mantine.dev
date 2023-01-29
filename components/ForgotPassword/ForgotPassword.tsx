@@ -11,7 +11,7 @@ import {
   Center,
   Box,
 } from '@mantine/core';
-import { IconArrowLeft } from '@tabler/icons';
+import { IconArrowLeft } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   title: {

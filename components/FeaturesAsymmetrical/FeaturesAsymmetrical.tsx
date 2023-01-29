@@ -1,5 +1,5 @@
 import { createStyles, Text, SimpleGrid, Container } from '@mantine/core';
-import { IconTruck, IconCertificate, IconCoin, TablerIcon } from '@tabler/icons';
+import { IconTruck, IconCertificate, IconCoin, TablerIcon } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   feature: {

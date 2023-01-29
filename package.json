@@ -31,7 +31,7 @@
     "@mantine/next": "6.0.0-alpha.1",
     "@mantine/prism": "6.0.0-alpha.1",
     "@mantine/spotlight": "6.0.0-alpha.1",
-    "@tabler/icons": "^1.71.0",
+    "@tabler/icons-react": "^2.1.2",
     "dayjs": "^1.11.3",
     "embla-carousel-react": "^7.0.3",
     "next": "12.1.5",

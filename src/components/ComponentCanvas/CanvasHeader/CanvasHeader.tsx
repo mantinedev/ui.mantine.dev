@@ -1,5 +1,5 @@
 import { GithubIcon } from '@mantine/ds';
-import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons';
+import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons-react-react';
 import {
   Group,
   Text,

@@ -10,7 +10,7 @@ import {
   IconReceipt2,
   IconSwitchHorizontal,
   IconLogout,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme, _params, getRef) => {

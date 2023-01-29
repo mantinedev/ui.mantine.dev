@@ -1,5 +1,5 @@
 import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
-import { IconSwimming } from '@tabler/icons';
+import { IconSwimming } from '@tabler/icons-react';
 
 const ICON_SIZE = 60;
 

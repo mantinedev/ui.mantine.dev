@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconColorPicker } from '@tabler/icons';
+import { IconColorPicker } from '@tabler/icons-react-react';
 import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 
 interface ColorControlProps {

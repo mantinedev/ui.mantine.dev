@@ -1,7 +1,13 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
 import { createStyles, UnstyledButton, Text, Paper, Group } from '@mantine/core';
-import { IconSwimming, IconBike, IconRun, IconChevronDown, IconChevronUp } from '@tabler/icons';
+import {
+  IconSwimming,
+  IconBike,
+  IconRun,
+  IconChevronDown,
+  IconChevronUp,
+} from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   root: {

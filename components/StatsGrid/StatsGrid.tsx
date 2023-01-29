@@ -6,7 +6,7 @@ import {
   IconCoin,
   IconArrowUpRight,
   IconArrowDownRight,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   root: {

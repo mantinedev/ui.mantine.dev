@@ -1,5 +1,5 @@
 import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
-import { IconArrowLeft } from '@tabler/icons';
+import { IconArrowLeft } from '@tabler/icons-react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
 import { getAllComponents } from '../data/components';

@@ -8,7 +8,7 @@ import {
   IconCalendarStats,
   IconUser,
   IconSettings,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({

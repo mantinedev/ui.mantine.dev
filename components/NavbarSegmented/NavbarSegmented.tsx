@@ -17,7 +17,7 @@ import {
   IconReceiptRefund,
   IconLogout,
   IconSwitchHorizontal,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon');

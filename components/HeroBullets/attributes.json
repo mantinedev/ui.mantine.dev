@@ -13,7 +13,7 @@
     "/core/button/",
     "/core/group/",
     "/core/text/",
-    "@tabler/icons",
+    "@tabler/icons-react",
     "https://www.freepik.com/"
   ],
   "canvas": {

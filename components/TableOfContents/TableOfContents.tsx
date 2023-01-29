@@ -1,5 +1,5 @@
 import { createStyles, Box, Text, Group } from '@mantine/core';
-import { IconListSearch } from '@tabler/icons';
+import { IconListSearch } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   link: {

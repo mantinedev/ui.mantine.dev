@@ -7,7 +7,7 @@ import {
   IconFileAnalytics,
   IconAdjustments,
   IconLock,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { UserButton } from '../UserButton/UserButton';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
 import { Logo } from './Logo';

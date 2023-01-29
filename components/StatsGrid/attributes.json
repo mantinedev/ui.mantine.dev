@@ -9,7 +9,7 @@
     "/core/paper/",
     "/core/simple-grid/",
     "/core/text/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "props": {
     "data": [

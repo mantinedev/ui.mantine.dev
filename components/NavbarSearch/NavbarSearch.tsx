@@ -17,7 +17,7 @@ import {
   IconSearch,
   IconPlus,
   IconSelector,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { UserButton } from '../UserButton/UserButton';
 
 const useStyles = createStyles((theme) => ({

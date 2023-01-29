@@ -5,7 +5,7 @@ import {
   IconUsers,
   IconCalendar,
   IconChevronDown,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 export function ButtonMenu() {
   const theme = useMantineTheme();

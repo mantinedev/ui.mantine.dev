@@ -1,5 +1,5 @@
 import { createStyles, Progress, Box, Text, Group, Paper, SimpleGrid } from '@mantine/core';
-import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons';
+import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   progressLabel: {

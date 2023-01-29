@@ -1,6 +1,6 @@
 import { createStyles, Image, Card, Text, Group, Button } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
-import { IconStar } from '@tabler/icons';
+import { IconStar } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme, _params, getRef) => ({
   price: {

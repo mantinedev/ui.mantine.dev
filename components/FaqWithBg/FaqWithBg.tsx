@@ -6,7 +6,7 @@ import {
   ThemeIcon,
   MantineProvider,
 } from '@mantine/core';
-import { IconPlus } from '@tabler/icons';
+import { IconPlus } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('control');

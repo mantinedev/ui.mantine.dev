@@ -27,7 +27,7 @@ import {
   IconFingerprint,
   IconCoin,
   IconChevronDown,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   link: {

@@ -7,7 +7,7 @@
     "/core/menu/",
     "/core/action-icon/",
     "/core/group",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": true,

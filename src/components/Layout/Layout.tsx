@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconSearch } from '@tabler/icons';
+import { IconSearch } from '@tabler/icons-react-react';
 import {
   MantineProvider,
   ColorScheme,

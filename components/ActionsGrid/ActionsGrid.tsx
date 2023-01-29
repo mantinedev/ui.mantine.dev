@@ -9,7 +9,7 @@ import {
   IconReport,
   IconCashBanknote,
   IconCoin,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 const mockdata = [
   { title: 'Credit cards', icon: IconCreditCard, color: 'violet' },

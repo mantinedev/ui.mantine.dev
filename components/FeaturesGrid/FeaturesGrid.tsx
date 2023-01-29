@@ -7,7 +7,14 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon } from '@tabler/icons';
+import {
+  IconGauge,
+  IconCookie,
+  IconUser,
+  IconMessage2,
+  IconLock,
+  TablerIcon,
+} from '@tabler/icons-react';
 
 export const MOCKDATA = [
   {

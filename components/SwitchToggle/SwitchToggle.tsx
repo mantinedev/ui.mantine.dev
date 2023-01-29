@@ -1,5 +1,5 @@
 import { Switch, Group, useMantineColorScheme, useMantineTheme } from '@mantine/core';
-import { IconSun, IconMoonStars } from '@tabler/icons';
+import { IconSun, IconMoonStars } from '@tabler/icons-react';
 
 export function SwitchToggle() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();

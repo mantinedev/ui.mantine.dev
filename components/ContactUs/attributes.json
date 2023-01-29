@@ -14,7 +14,7 @@
     "/core/simple-grid/",
     "/core/action-icon/",
     "/component/contact-icons/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": true,

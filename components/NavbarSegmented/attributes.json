@@ -7,7 +7,7 @@
     "/core/app-shell/",
     "/core/segmented-control/",
     "/core/text/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": false

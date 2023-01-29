@@ -1,5 +1,5 @@
 import { createStyles, Slider } from '@mantine/core';
-import { IconGripHorizontal } from '@tabler/icons';
+import { IconGripHorizontal } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   thumb: {
