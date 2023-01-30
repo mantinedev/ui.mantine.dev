@@ -14,7 +14,7 @@ export function SegmentedToggle() {
             value: 'light',
             label: (
               <Center>
-                <IconSun size={16} stroke={1.5} />
+                <IconSun size="1rem" stroke={1.5} />
                 <Box ml={10}>Light</Box>
               </Center>
             ),
@@ -23,7 +23,7 @@ export function SegmentedToggle() {
             value: 'dark',
             label: (
               <Center>
-                <IconMoon size={16} stroke={1.5} />
+                <IconMoon size="1rem" stroke={1.5} />
                 <Box ml={10}>Dark</Box>
               </Center>
             ),

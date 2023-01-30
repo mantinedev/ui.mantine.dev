@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, NumberInput, Slider } from '@mantine/core';
+import { createStyles, NumberInput, Slider, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -8,8 +8,8 @@ const useStyles = createStyles((theme) => ({
 
   input: {
     height: 'auto',
-    paddingTop: 22,
-    paddingBottom: 3,
+    paddingTop: rem(22),
+    paddingBottom: rem(3),
     borderBottomRightRadius: 0,
     borderBottomLeftRadius: 0,
   },
@@ -18,19 +18,19 @@ const useStyles = createStyles((theme) => ({
     position: 'absolute',
     pointerEvents: 'none',
     paddingLeft: theme.spacing.sm,
-    paddingTop: theme.spacing.sm / 2,
+    paddingTop: `calc(${theme.spacing.sm} / 2)`,
     zIndex: 1,
   },
 
   slider: {
     position: 'absolute',
     width: '100%',
-    bottom: -1,
+    bottom: rem(-1),
   },
 
   thumb: {
-    width: 16,
-    height: 16,
+    width: rem(16),
+    height: rem(16),
   },
 
   track: {
@@ -40,7 +40,7 @@ const useStyles = createStyles((theme) => ({
 
 export function SliderInput() {
   const { classes } = useStyles();
-  const [value, setValue] = useState<number | undefined>(2200);
+  const [value, setValue] = useState<number | ''>(2200);
   return (
     <div className={classes.wrapper}>
       <NumberInput
@@ -59,7 +59,7 @@ export function SliderInput() {
         step={50}
         min={0}
         label={null}
-        value={value}
+        value={value === '' ? 0 : value}
         onChange={setValue}
         size={2}
         radius={0}

@@ -7,7 +7,7 @@ export function SliderIcon() {
   return (
     <>
       <Slider
-        thumbChildren={<IconHeart size={16} stroke={1.5} />}
+        thumbChildren={<IconHeart size="1rem" stroke={1.5} />}
         color="red"
         label={null}
         defaultValue={40}
@@ -21,8 +21,8 @@ export function SliderIcon() {
         label={null}
         defaultValue={[20, 60]}
         thumbChildren={[
-          <IconHeart size={16} stroke={1.5} key="1" />,
-          <IconHeartBroken size={16} stroke={1.5} key="2" />,
+          <IconHeart size="1rem" stroke={1.5} key="1" />,
+          <IconHeartBroken size="1rem" stroke={1.5} key="2" />,
         ]}
       />
     </>

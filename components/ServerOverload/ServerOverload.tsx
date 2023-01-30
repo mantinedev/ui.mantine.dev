@@ -1,10 +1,10 @@
-import { createStyles, Container, Title, Text, Button, Group } from '@mantine/core';
+import { createStyles, Container, Title, Text, Button, Group, rem } from '@mantine/core';
 import { Illustration } from './Illustration';
 
 const useStyles = createStyles((theme) => ({
   root: {
-    paddingTop: 120,
-    paddingBottom: 120,
+    paddingTop: rem(120),
+    paddingBottom: rem(120),
     backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
   },
 
@@ -13,21 +13,17 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    left: 0,
-    zIndex: 0,
+    ...theme.fn.cover(),
     opacity: 0.65,
   },
 
   content: {
-    paddingTop: 220,
+    paddingTop: rem(220),
     position: 'relative',
     zIndex: 1,
 
     [theme.fn.smallerThan('sm')]: {
-      paddingTop: 120,
+      paddingTop: rem(120),
     },
   },
 
@@ -35,19 +31,19 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     textAlign: 'center',
     fontWeight: 900,
-    fontSize: 38,
+    fontSize: rem(38),
     color: theme.white,
 
     [theme.fn.smallerThan('sm')]: {
-      fontSize: 32,
+      fontSize: rem(32),
     },
   },
 
   description: {
-    maxWidth: 460,
+    maxWidth: rem(460),
     margin: 'auto',
     marginTop: theme.spacing.xl,
-    marginBottom: theme.spacing.xl * 1.5,
+    marginBottom: `calc(${theme.spacing.xl} * 1.5)`,
     color: theme.colors[theme.primaryColor][1],
   },
 }));
