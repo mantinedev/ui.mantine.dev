@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import { createStyles, UnstyledButton, Text, Paper, Group } from '@mantine/core';
+import { createStyles, UnstyledButton, Text, Paper, Group, rem } from '@mantine/core';
 import {
   IconSwimming,
   IconBike,
@@ -31,9 +31,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   stat: {
-    minWidth: 98,
+    minWidth: rem(98),
     paddingTop: theme.spacing.xl,
-    minHeight: 140,
+    minHeight: rem(140),
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
@@ -61,7 +61,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   day: {
-    fontSize: 44,
+    fontSize: rem(44),
     fontWeight: 700,
     color: theme.white,
     lineHeight: 1,
@@ -80,7 +80,7 @@ const useStyles = createStyles((theme) => ({
   controls: {
     display: 'flex',
     flexDirection: 'column',
-    marginRight: theme.spacing.xl * 2,
+    marginRight: `calc(${theme.spacing.xl} * 2)`,
 
     [theme.fn.smallerThan('xs')]: {
       flexDirection: 'row',
@@ -98,7 +98,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   control: {
-    height: 28,
+    height: rem(28),
     width: '100%',
     color: theme.colors[theme.primaryColor][2],
     display: 'flex',
@@ -108,8 +108,8 @@ const useStyles = createStyles((theme) => ({
     transition: 'background-color 50ms ease',
 
     [theme.fn.smallerThan('xs')]: {
-      height: 34,
-      width: 34,
+      height: rem(34),
+      width: rem(34),
     },
 
     '&:hover': {
@@ -140,7 +140,7 @@ export function StatsControls() {
       <stat.icon size={32} className={classes.icon} stroke={1.5} />
       <div>
         <Text className={classes.label}>{stat.label}</Text>
-        <Text size="xs" className={classes.count}>
+        <Text fz="xs" className={classes.count}>
           <span className={classes.value}>{Math.floor(Math.random() * 6 + 4)}km</span> / 10km
         </Text>
       </div>
@@ -154,7 +154,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).add(1, 'day').toDate())}
         >
-          <IconChevronUp className={classes.controlIcon} stroke={1.5} />
+          <IconChevronUp size="1rem" className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
 
         <div className={classes.date}>
@@ -166,7 +166,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).subtract(1, 'day').toDate())}
         >
-          <IconChevronDown className={classes.controlIcon} stroke={1.5} />
+          <IconChevronDown size="1rem" className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
       </div>
       <Group sx={{ flex: 1 }}>{stats}</Group>

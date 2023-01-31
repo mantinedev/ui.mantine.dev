@@ -14,7 +14,7 @@ export function FacebookButton(props: ButtonProps) {
       sx={(theme) => ({
         backgroundColor: '#4267B2',
         color: '#fff',
-        '&:hover': {
+        '&:not([data-disabled]):hover': {
           backgroundColor: theme.fn.darken('#4267B2', 0.1),
         },
       })}
@@ -29,7 +29,7 @@ export function DiscordButton(props: ButtonProps) {
       leftIcon={<DiscordIcon size="1rem" />}
       sx={(theme) => ({
         backgroundColor: theme.colorScheme === 'dark' ? '#5865F2' : '#5865F2',
-        '&:hover': {
+        '&:not([data-disabled]):hover': {
           backgroundColor:
             theme.colorScheme === 'dark'
               ? theme.fn.lighten('#5865F2', 0.05)

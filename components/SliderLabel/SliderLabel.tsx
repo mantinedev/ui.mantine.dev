@@ -1,11 +1,11 @@
-import { createStyles, RangeSlider } from '@mantine/core';
+import { createStyles, RangeSlider, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   label: {
     top: 0,
-    height: 28,
-    lineHeight: '28px',
-    width: 34,
+    height: rem(28),
+    lineHeight: rem(28),
+    width: rem(34),
     padding: 0,
     display: 'flex',
     justifyContent: 'center',
@@ -16,8 +16,8 @@ const useStyles = createStyles((theme) => ({
 
   thumb: {
     backgroundColor: theme.colors[theme.primaryColor][6],
-    height: 28,
-    width: 34,
+    height: rem(28),
+    width: rem(34),
     border: 'none',
   },
 

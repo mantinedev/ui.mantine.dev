@@ -3,7 +3,7 @@ import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   root: {
-    padding: theme.spacing.xl * 1.5,
+    padding: `calc(${theme.spacing.xl} * 1.5)`,
   },
 
   label: {
@@ -24,16 +24,10 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
       <Paper withBorder p="md" radius="md" key={stat.title}>
         <Group position="apart">
           <div>
-            <Text
-              color="dimmed"
-              transform="uppercase"
-              weight={700}
-              size="xs"
-              className={classes.label}
-            >
+            <Text c="dimmed" tt="uppercase" fw={700} fz="xs" className={classes.label}>
               {stat.title}
             </Text>
-            <Text weight={700} size="xl">
+            <Text fw={700} fz="xl">
               {stat.value}
             </Text>
           </div>
@@ -44,11 +38,11 @@ export function StatsGridIcons({ data }: StatsGridIconsProps) {
             size={38}
             radius="md"
           >
-            <DiffIcon size={28} stroke={1.5} />
+            <DiffIcon size="1.8rem" stroke={1.5} />
           </ThemeIcon>
         </Group>
-        <Text color="dimmed" size="sm" mt="md">
-          <Text component="span" color={stat.diff > 0 ? 'teal' : 'red'} weight={700}>
+        <Text c="dimmed" fz="sm" mt="md">
+          <Text component="span" c={stat.diff > 0 ? 'teal' : 'red'} fw={700}>
             {stat.diff}%
           </Text>{' '}
           {stat.diff > 0 ? 'increase' : 'decrease'} compared to last month
