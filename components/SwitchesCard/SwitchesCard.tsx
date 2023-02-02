@@ -1,4 +1,4 @@
-import { createStyles, Card, Group, Switch, Text } from '@mantine/core';
+import { createStyles, Card, Group, Switch, Text, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     '& + &': {
       paddingTop: theme.spacing.sm,
       marginTop: theme.spacing.sm,
-      borderTop: `1px solid ${
+      borderTop: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
       }`,
     },
@@ -52,10 +52,10 @@ export function SwitchesCard({ title, description, data }: SwitchesCardProps) {
 
   return (
     <Card withBorder radius="md" p="xl" className={classes.card}>
-      <Text size="lg" className={classes.title} weight={500}>
+      <Text fz="lg" className={classes.title} fw={500}>
         {title}
       </Text>
-      <Text size="xs" color="dimmed" mt={3} mb="xl">
+      <Text fz="xs" c="dimmed" mt={3} mb="xl">
         {description}
       </Text>
       {items}

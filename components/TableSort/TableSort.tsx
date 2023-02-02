@@ -8,6 +8,7 @@ import {
   Text,
   Center,
   TextInput,
+  rem,
 } from '@mantine/core';
 import { keys } from '@mantine/utils';
 import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons-react';
@@ -19,7 +20,7 @@ const useStyles = createStyles((theme) => ({
 
   control: {
     width: '100%',
-    padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
 
     '&:hover': {
       backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
@@ -27,9 +28,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    width: 21,
-    height: 21,
-    borderRadius: 21,
+    width: rem(21),
+    height: rem(21),
+    borderRadius: rem(21),
   },
 }));
 
@@ -57,11 +58,11 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
     <th className={classes.th}>
       <UnstyledButton onClick={onSort} className={classes.control}>
         <Group position="apart">
-          <Text weight={500} size="sm">
+          <Text fw={500} fz="sm">
             {children}
           </Text>
           <Center className={classes.icon}>
-            <Icon size={14} stroke={1.5} />
+            <Icon size="0.9rem" stroke={1.5} />
           </Center>
         </Group>
       </UnstyledButton>
@@ -130,15 +131,11 @@ export function TableSort({ data }: TableSortProps) {
       <TextInput
         placeholder="Search by any field"
         mb="md"
-        icon={<IconSearch size={14} stroke={1.5} />}
+        icon={<IconSearch size="0.9rem" stroke={1.5} />}
         value={search}
         onChange={handleSearchChange}
       />
-      <Table
-        horizontalSpacing="md"
-        verticalSpacing="xs"
-        sx={{ tableLayout: 'fixed', minWidth: 700 }}
-      >
+      <Table horizontalSpacing="md" verticalSpacing="xs" miw={700} sx={{ tableLayout: 'fixed' }}>
         <thead>
           <tr>
             <Th

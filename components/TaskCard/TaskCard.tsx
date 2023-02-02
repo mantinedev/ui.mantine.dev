@@ -10,25 +10,25 @@ const avatars = [
 
 export function TaskCard() {
   return (
-    <Card withBorder radius="md">
+    <Card withBorder padding="lg" radius="md">
       <Group position="apart">
-        <MantineLogo type="mark" size={28} />
+        <MantineLogo type="mark" size="2rem" />
         <Badge>12 days left</Badge>
       </Group>
 
-      <Text size="lg" weight={500} mt="md">
+      <Text fz="lg" fw={500} mt="md">
         5.3 minor release (September 2022)
       </Text>
-      <Text size="sm" color="dimmed" mt={5}>
+      <Text fz="sm" c="dimmed" mt={5}>
         Form context management, Switch, Grid and Indicator components improvements, new hook and
         10+ other changes
       </Text>
 
-      <Text color="dimmed" size="sm" mt="md">
+      <Text c="dimmed" fz="sm" mt="md">
         Tasks completed:{' '}
         <Text
           span
-          weight={500}
+          fw={500}
           sx={(theme) => ({ color: theme.colorScheme === 'dark' ? theme.white : theme.black })}
         >
           23/36
@@ -45,7 +45,7 @@ export function TaskCard() {
           <Avatar radius="xl">+5</Avatar>
         </Avatar.Group>
         <ActionIcon variant="default">
-          <IconUpload size={18} />
+          <IconUpload size="1.1rem" />
         </ActionIcon>
       </Group>
     </Card>

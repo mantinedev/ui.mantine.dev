@@ -28,7 +28,7 @@ export function UsersTable({ data }: UsersTableProps) {
       <td>
         <Group spacing="sm">
           <Avatar size={30} src={item.avatar} radius={30} />
-          <Text size="sm" weight={500}>
+          <Text fz="sm" fw={500}>
             {item.name}
           </Text>
         </Group>
@@ -43,22 +43,22 @@ export function UsersTable({ data }: UsersTableProps) {
         </Badge>
       </td>
       <td>
-        <Anchor<'a'> size="sm" href="#" onClick={(event) => event.preventDefault()}>
+        <Anchor size="sm" href="#" onClick={(event) => event.preventDefault()}>
           {item.email}
         </Anchor>
       </td>
       <td>
-        <Text size="sm" color="dimmed">
+        <Text fz="sm" c="dimmed">
           {item.phone}
         </Text>
       </td>
       <td>
         <Group spacing={0} position="right">
           <ActionIcon>
-            <IconPencil size={16} stroke={1.5} />
+            <IconPencil size="1rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon color="red">
-            <IconTrash size={16} stroke={1.5} />
+            <IconTrash size="1rem" stroke={1.5} />
           </ActionIcon>
         </Group>
       </td>

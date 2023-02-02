@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Table, Checkbox, ScrollArea, Group, Avatar, Text } from '@mantine/core';
+import { createStyles, Table, Checkbox, ScrollArea, Group, Avatar, Text, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   rowSelected: {
@@ -51,10 +51,10 @@ export function TableSelection({ data }: TableSelectionProps) {
 
   return (
     <ScrollArea>
-      <Table sx={{ minWidth: 800 }} verticalSpacing="sm">
+      <Table miw={800} verticalSpacing="sm">
         <thead>
           <tr>
-            <th style={{ width: 40 }}>
+            <th style={{ width: rem(40) }}>
               <Checkbox
                 onChange={toggleAll}
                 checked={selection.length === data.length}
