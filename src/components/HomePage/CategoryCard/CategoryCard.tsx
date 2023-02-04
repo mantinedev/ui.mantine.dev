@@ -25,7 +25,7 @@ export function CategoryCard({ count, category, className }: CategoryCardProps) 
         </CardSection>
 
         <Text className={classes.title}>{category.name}</Text>
-        <Text className={classes.description} size="xs">
+        <Text className={classes.description} fz="xs">
           {count} {count === 1 ? 'component' : 'components'}
         </Text>
       </Card>

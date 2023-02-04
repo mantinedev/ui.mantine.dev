@@ -1,8 +1,8 @@
-import { createStyles } from '@mantine/core';
+import { createStyles, rem } from '@mantine/core';
 
 export default createStyles((theme) => ({
   wrapper: {
-    paddingTop: 80,
+    paddingTop: rem(80),
   },
 
   header: {
@@ -10,7 +10,7 @@ export default createStyles((theme) => ({
     alignItems: 'center',
     marginBottom: theme.spacing.lg,
 
-    '@media (max-width: 755px)': {
+    [`@media (max-width: ${rem(755)})`]: {
       display: 'block',
     },
   },
@@ -23,9 +23,9 @@ export default createStyles((theme) => ({
 
   count: {
     marginLeft: theme.spacing.md,
-    marginTop: 4,
+    marginTop: rem(4),
 
-    '@media (max-width: 755px)': {
+    [`@media (max-width: ${rem(755)})`]: {
       marginTop: theme.spacing.xs,
       marginLeft: 0,
     },
@@ -33,7 +33,7 @@ export default createStyles((theme) => ({
 
   group: {
     '& + &': {
-      marginTop: theme.spacing.xl * 4,
+      marginTop: `calc(${theme.spacing.xl} * 4)`,
     },
   },
 }));

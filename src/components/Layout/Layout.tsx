@@ -71,7 +71,7 @@ export function Layout({ children, noHeader = false, data }: LayoutProps) {
         >
           <SpotlightProvider
             actions={actions || []}
-            searchIcon={<IconSearch size={18} />}
+            searchIcon={<IconSearch size="1.1rem" />}
             searchPlaceholder="Search components"
             shortcut={['mod + K', 'mod + P', '/']}
             highlightQuery

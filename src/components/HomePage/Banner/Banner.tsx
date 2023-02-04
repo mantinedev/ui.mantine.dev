@@ -10,6 +10,7 @@ import {
   SimpleGrid,
   Container,
   useMantineTheme,
+  rem,
 } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
 import data from './data';
@@ -27,7 +28,7 @@ export function Banner({ componentsCount }: BannerProps) {
   const features = data.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon className={classes.featureIcon} size={44}>
-        <feature.icon size={24} stroke={1.5} />
+        <feature.icon size={rem(24)} stroke={1.5} />
       </ThemeIcon>
 
       <div className={classes.featureBody}>
@@ -71,7 +72,7 @@ export function Banner({ componentsCount }: BannerProps) {
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              leftIcon={<GithubIcon size={16} />}
+              leftIcon={<GithubIcon size="1rem" />}
               component="a"
               href="https://github.com/mantinedev/ui.mantine.dev"
             >
@@ -79,7 +80,7 @@ export function Banner({ componentsCount }: BannerProps) {
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              rightIcon={<IconExternalLink size={16} stroke={1.5} />}
+              rightIcon={<IconExternalLink size="1rem" stroke={1.5} />}
               component="a"
               href="https://mantine.dev/pages/getting-started/"
             >
@@ -91,7 +92,7 @@ export function Banner({ componentsCount }: BannerProps) {
             cols={3}
             spacing="xl"
             className={classes.features}
-            style={{ marginTop: 100 }}
+            mt={100}
             breakpoints={[{ maxWidth: 755, cols: 1, spacing: 'lg' }]}
           >
             {features}

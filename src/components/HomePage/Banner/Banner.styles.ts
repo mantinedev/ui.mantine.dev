@@ -1,10 +1,10 @@
-import { createStyles } from '@mantine/core';
+import { createStyles, rem } from '@mantine/core';
 import banner from './banner.webp';
 
 export default createStyles((theme) => ({
   wrapper: {
     position: 'relative',
-    minHeight: 700,
+    minHeight: rem(700),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[1],
   },
 
@@ -20,7 +20,7 @@ export default createStyles((theme) => ({
   title: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 44,
+    fontSize: rem(44),
     lineHeight: 1.2,
     fontWeight: 900,
   },
@@ -32,20 +32,20 @@ export default createStyles((theme) => ({
   description: {
     color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[7],
     lineHeight: 1.5,
-    maxWidth: 580,
+    maxWidth: rem(580),
     marginTop: theme.spacing.md,
   },
 
   body: {
-    flex: '0 0 700px',
-    paddingTop: 140,
+    flex: `0 0 ${rem(700)}`,
+    paddingTop: rem(140),
     position: 'relative',
     zIndex: 1,
   },
 
   image: {
-    minHeight: 700,
-    width: 800,
+    minHeight: rem(700),
+    width: rem(800),
     flex: 1,
     backgroundImage: `url(${banner.src})`,
     backgroundSize: 'auto 100%',
@@ -58,7 +58,7 @@ export default createStyles((theme) => ({
     zIndex: 0,
     display: theme.dir === 'rtl' ? 'none' : undefined,
 
-    '@media (max-width: 1230px)': {
+    [`@media (max-width: ${rem(1230)})`]: {
       display: 'none',
     },
   },
@@ -68,7 +68,7 @@ export default createStyles((theme) => ({
   },
 
   control: {
-    '@media (max-width: 600px)': {
+    [`@media (max-width: ${rem(600)})`]: {
       flex: 1,
     },
   },
@@ -92,11 +92,11 @@ export default createStyles((theme) => ({
   },
 
   features: {
-    maxWidth: 740,
+    maxWidth: rem(740),
     paddingBottom: theme.spacing.xl,
 
-    '@media (max-width: 755px)': {
-      marginTop: theme.spacing.xl * 2,
+    [`@media (max-width: ${rem(755)})`]: {
+      marginTop: `calc(${theme.spacing.xl} * 2)`,
     },
   },
 
@@ -113,7 +113,7 @@ export default createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
     fontWeight: 500,
     lineHeight: 1,
-    marginBottom: 7,
+    marginBottom: rem(7),
   },
 
   featureDescription: {

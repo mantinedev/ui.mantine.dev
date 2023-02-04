@@ -43,7 +43,7 @@ export function UsersTable({ data }: UsersTableProps) {
         </Badge>
       </td>
       <td>
-        <Anchor size="sm" href="#" onClick={(event) => event.preventDefault()}>
+        <Anchor component="button" size="sm">
           {item.email}
         </Anchor>
       </td>

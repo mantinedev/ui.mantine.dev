@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   form: {
-    borderRight: `1px solid ${
+    borderRight: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3]
     }`,
     minHeight: rem(900),

@@ -1,6 +1,4 @@
-import { createStyles } from '@mantine/core';
-
-const BREAKPOINT = '@media (max-width: 755px)';
+import { createStyles, rem } from '@mantine/core';
 
 export default createStyles((theme) => ({
   header: {
@@ -8,22 +6,22 @@ export default createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
     borderTopRightRadius: theme.radius.md,
     borderTopLeftRadius: theme.radius.md,
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
 
-    [BREAKPOINT]: {
+    [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
       alignItems: 'flex-start',
     },
   },
 
   controls: {
-    [BREAKPOINT]: {
+    [theme.fn.smallerThan('sm')]: {
       marginTop: 0,
       flexDirection: 'row-reverse',
     },
@@ -43,7 +41,7 @@ export default createStyles((theme) => ({
   },
 
   actions: {
-    [BREAKPOINT]: {
+    [theme.fn.smallerThan('sm')]: {
       display: 'none',
     },
   },

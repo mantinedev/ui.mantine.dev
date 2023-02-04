@@ -1,4 +1,4 @@
-import { createStyles, Title, Text, Button, Container, Group } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, Group, rem } from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons-react';
 import Link from 'next/link';
 import { GetStaticProps } from 'next';
@@ -6,16 +6,16 @@ import { getAllComponents } from '../data/components';
 
 const useStyles = createStyles((theme) => ({
   root: {
-    paddingTop: 80,
-    paddingBottom: 80,
+    paddingTop: rem(80),
+    paddingBottom: rem(80),
   },
 
   label: {
     textAlign: 'center',
     fontWeight: 900,
-    fontSize: 220,
+    fontSize: rem(220),
     lineHeight: 1,
-    marginBottom: theme.spacing.xl * 1.5,
+    marginBottom: `calc(${theme.spacing.xl} * 1.5)`,
     color: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2],
 
     [theme.fn.smallerThan('sm')]: {
@@ -27,10 +27,10 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     textAlign: 'center',
     fontWeight: 900,
-    fontSize: 38,
+    fontSize: rem(38),
 
     [theme.fn.smallerThan('sm')]: {
-      fontSize: 32,
+      fontSize: rem(32),
     },
   },
 
@@ -38,7 +38,7 @@ const useStyles = createStyles((theme) => ({
     maxWidth: 500,
     margin: 'auto',
     marginTop: theme.spacing.xl,
-    marginBottom: theme.spacing.xl * 1.5,
+    marginBottom: `calc(${theme.spacing.xl} * 1.5)`,
   },
 }));
 
@@ -55,7 +55,7 @@ export default function NotFoundPage() {
       </Text>
       <Group position="center">
         <Link href="/" passHref>
-          <Button component="a" size="md" leftIcon={<IconArrowLeft size={16} stroke={1.5} />}>
+          <Button component="a" size="md" leftIcon={<IconArrowLeft size="1rem" stroke={1.5} />}>
             Take me back to home page
           </Button>
         </Link>

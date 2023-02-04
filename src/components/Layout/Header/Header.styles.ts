@@ -1,6 +1,6 @@
-import { createStyles } from '@mantine/styles';
+import { createStyles, rem } from '@mantine/styles';
 
-export const HEADER_HEIGHT = 60;
+export const HEADER_HEIGHT = rem(60);
 
 export default createStyles((theme) => ({
   header: {
@@ -11,7 +11,7 @@ export default createStyles((theme) => ({
     right: 0,
     height: HEADER_HEIGHT,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[3]
     }`,
   },

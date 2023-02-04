@@ -30,13 +30,13 @@ export function TableReviews({ data }: TableReviewsProps) {
     return (
       <tr key={row.title}>
         <td>
-          <Anchor fz="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor component="button" fz="sm">
             {row.title}
           </Anchor>
         </td>
         <td>{row.year}</td>
         <td>
-          <Anchor fz="sm" onClick={(event) => event.preventDefault()}>
+          <Anchor component="button" fz="sm">
             {row.author}
           </Anchor>
         </td>

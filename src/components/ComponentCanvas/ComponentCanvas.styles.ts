@@ -1,27 +1,25 @@
-import { createStyles, getStylesRef } from '@mantine/core';
-
-const BREAKPOINT = '@media (max-width: 755px)';
+import { createStyles, getStylesRef, rem } from '@mantine/core';
 
 export default createStyles((theme) => ({
   canvas: {
     borderRadius: theme.radius.md,
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[2]
     }`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
 
     '&:not(:first-of-type)': {
-      marginTop: theme.spacing.xl * 2,
+      marginTop: `calc(${theme.spacing.xl} * 2)`,
     },
   },
 
   body: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
-    padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
-    borderBottomRightRadius: theme.radius.md - 1,
-    borderBottomLeftRadius: theme.radius.md - 1,
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
+    borderBottomRightRadius: `calc(${theme.radius.md} - ${rem(1)})`,
+    borderBottomLeftRadius: `calc(${theme.radius.md} - ${rem(1)})`,
 
-    [BREAKPOINT]: {
+    [theme.fn.smallerThan('sm')]: {
       padding: 0,
     },
   },
@@ -30,7 +28,7 @@ export default createStyles((theme) => ({
     padding: 0,
 
     [`& .${getStylesRef('preview')}`]: {
-      padding: 4,
+      padding: rem(4),
       borderTopRightRadius: 0,
       borderTopLeftRadius: 0,
     },
@@ -46,8 +44,8 @@ export default createStyles((theme) => ({
   },
 
   code: {
-    borderBottomRightRadius: theme.radius.md - 1,
-    borderBottomLeftRadius: theme.radius.md - 1,
+    borderBottomRightRadius: `calc(${theme.radius.md} - ${rem(1)})`,
+    borderBottomLeftRadius: `calc(${theme.radius.md} - ${rem(1)})`,
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
   },
@@ -59,7 +57,7 @@ export default createStyles((theme) => ({
     borderRadius: theme.radius.md,
     position: 'relative',
 
-    [BREAKPOINT]: {
+    [theme.fn.smallerThan('sm')]: {
       padding: theme.spacing.xs,
       borderTopRightRadius: 0,
       borderTopLeftRadius: 0,

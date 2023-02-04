@@ -103,7 +103,7 @@ const data = [
 
 export function CardsCarousel() {
   const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm}px)`);
+  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (
     <Carousel.Slide key={item.title}>
       <Card {...item} />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Navbar, Group, Code, getStylesRef } from '@mantine/core';
+import { createStyles, Navbar, Group, Code, getStylesRef, rem } from '@mantine/core';
 import {
   IconBellRinging,
   IconFingerprint,
@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   header: {
     paddingBottom: theme.spacing.md,
     marginBottom: `calc(${theme.spacing.md} * 1.5)`,
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
   },
@@ -25,7 +25,7 @@ const useStyles = createStyles((theme) => ({
   footer: {
     paddingTop: theme.spacing.md,
     marginTop: theme.spacing.md,
-    borderTop: `1px solid ${
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
   },

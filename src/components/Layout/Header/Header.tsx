@@ -19,6 +19,7 @@ export function Header({ toggleDir, dir }: HeaderProps) {
             <MantineLogo variant="ui.mantine.dev" size={30} />
           </Center>
         </Link>
+
         <HeaderControls
           sx={(theme) => ({ [theme.fn.smallerThan('sm')]: { display: 'none' } })}
           onSearch={openSpotlight}
@@ -26,6 +27,7 @@ export function Header({ toggleDir, dir }: HeaderProps) {
           direction={dir}
           toggleDirection={toggleDir}
         />
+
         <Center sx={(theme) => ({ [theme.fn.largerThan('sm')]: { display: 'none' } })}>
           <ColorSchemeControl />
         </Center>
