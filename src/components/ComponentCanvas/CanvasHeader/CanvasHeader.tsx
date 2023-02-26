@@ -84,7 +84,11 @@ export function CanvasHeader({
             <GithubIcon size="0.9rem" />
           </ActionIcon>
 
-          <Menu withArrow position="bottom-end" transition="pop-top-right" transitionDuration={100}>
+          <Menu
+            withArrow
+            position="bottom-end"
+            transitionProps={{ transition: 'pop-top-right', duration: 100 }}
+          >
             <Menu.Target>
               <ActionIcon
                 className={classes.action}

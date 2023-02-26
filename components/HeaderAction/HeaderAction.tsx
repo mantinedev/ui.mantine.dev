@@ -69,7 +69,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }}>
           <Menu.Target>
             <a
               href={link.link}

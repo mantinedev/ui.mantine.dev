@@ -8,7 +8,7 @@ function TooltipIcon() {
       label="We store your data securely"
       position="top-end"
       withArrow
-      transition="pop-bottom-right"
+      transitionProps={{ transition: 'pop-bottom-right' }}
     >
       <Text color="dimmed" sx={{ cursor: 'help' }}>
         <Center>

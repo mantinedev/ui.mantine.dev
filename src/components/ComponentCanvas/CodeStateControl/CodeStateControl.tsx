@@ -14,7 +14,6 @@ export function CodeStateControl({ state, onToggle }: CodeStateControlProps) {
       position="left"
       withArrow
       arrowSize={4}
-      transition="fade"
     >
       <ActionIcon
         onClick={onToggle}

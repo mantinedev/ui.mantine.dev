@@ -10,7 +10,12 @@ import {
 export function ButtonMenu() {
   const theme = useMantineTheme();
   return (
-    <Menu transition="pop-top-right" position="top-end" width={220} withinPortal>
+    <Menu
+      transitionProps={{ transition: 'pop-top-right' }}
+      position="top-end"
+      width={220}
+      withinPortal
+    >
       <Menu.Target>
         <Button rightIcon={<IconChevronDown size="1.05rem" stroke={1.5} />} pr={12}>
           Create new

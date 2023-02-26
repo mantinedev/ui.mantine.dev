@@ -137,7 +137,7 @@ export function HeaderTabsColored({ user, tabs }: HeaderTabsProps) {
           <Menu
             width={260}
             position="bottom-end"
-            transition="pop-top-right"
+            transitionProps={{ transition: 'pop-top-right' }}
             onClose={() => setUserMenuOpened(false)}
             onOpen={() => setUserMenuOpened(true)}
           >

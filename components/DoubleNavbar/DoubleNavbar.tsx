@@ -140,7 +140,13 @@ export function DoubleNavbar() {
   const [activeLink, setActiveLink] = useState('Settings');
 
   const mainLinks = mainLinksMockdata.map((link) => (
-    <Tooltip label={link.label} position="right" withArrow transitionDuration={0} key={link.label}>
+    <Tooltip
+      label={link.label}
+      position="right"
+      withArrow
+      transitionProps={{ duration: 0 }}
+      key={link.label}
+    >
       <UnstyledButton
         onClick={() => setActive(link.label)}
         className={cx(classes.mainLink, { [classes.mainLinkActive]: link.label === active })}

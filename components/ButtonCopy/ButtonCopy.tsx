@@ -10,8 +10,7 @@ export function ButtonCopy() {
       offset={5}
       position="bottom"
       radius="xl"
-      transition="slide-down"
-      transitionDuration={100}
+      transitionProps={{ duration: 100, transition: 'slide-down' }}
       opened={clipboard.copied}
     >
       <Button

@@ -33,7 +33,7 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
     <Popover
       opened={opened}
       onClose={() => setOpened(false)}
-      transitionDuration={0}
+      transitionProps={{ duration: 0 }}
       width={152}
       position="bottom-end"
       withArrow

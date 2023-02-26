@@ -24,7 +24,7 @@ export function SplitButton() {
   return (
     <Group noWrap spacing={0}>
       <Button className={classes.button}>Send</Button>
-      <Menu transition="pop" position="bottom-end">
+      <Menu transitionProps={{ transition: 'pop' }} position="bottom-end">
         <Menu.Target>
           <ActionIcon
             variant="filled"
