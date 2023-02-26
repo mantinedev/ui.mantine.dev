@@ -66,6 +66,7 @@ export function LanguagePicker() {
       onClose={() => setOpened(false)}
       radius="md"
       width="target"
+      withinPortal
     >
       <Menu.Target>
         <UnstyledButton className={classes.control}>

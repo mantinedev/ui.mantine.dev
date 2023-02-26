@@ -120,6 +120,7 @@ export function HeaderTabs({ user, tabs }: HeaderTabsProps) {
             transitionProps={{ transition: 'pop-top-right' }}
             onClose={() => setUserMenuOpened(false)}
             onOpen={() => setUserMenuOpened(true)}
+            withinPortal
           >
             <Menu.Target>
               <UnstyledButton

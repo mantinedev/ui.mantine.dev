@@ -88,6 +88,7 @@ export function CanvasHeader({
             withArrow
             position="bottom-end"
             transitionProps={{ transition: 'pop-top-right', duration: 100 }}
+            withinPortal
           >
             <Menu.Target>
               <ActionIcon

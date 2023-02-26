@@ -16,7 +16,13 @@ export function UserMenu() {
   const theme = useMantineTheme();
   return (
     <Group position="center">
-      <Menu withArrow width={300} position="bottom" transitionProps={{ transition: 'pop' }}>
+      <Menu
+        withArrow
+        width={300}
+        position="bottom"
+        transitionProps={{ transition: 'pop' }}
+        withinPortal
+      >
         <Menu.Target>
           <ActionIcon>
             <IconDots size="1rem" stroke={1.5} />

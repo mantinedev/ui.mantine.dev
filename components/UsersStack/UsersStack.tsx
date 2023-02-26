@@ -45,7 +45,12 @@ export function UsersStack({ data }: UsersStackProps) {
           <ActionIcon>
             <IconPencil size="1rem" stroke={1.5} />
           </ActionIcon>
-          <Menu transitionProps={{ transition: 'pop' }} withArrow position="bottom-end">
+          <Menu
+            transitionProps={{ transition: 'pop' }}
+            withArrow
+            position="bottom-end"
+            withinPortal
+          >
             <Menu.Target>
               <ActionIcon>
                 <IconDots size="1rem" stroke={1.5} />
