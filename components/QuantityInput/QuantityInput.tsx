@@ -32,6 +32,10 @@ const useStyles = createStyles((theme) => ({
     },
   },
 
+  inputWrapper: {
+    display: 'flex',
+  },
+
   input: {
     textAlign: 'center',
     paddingRight: `${theme.spacing.sm} !important`,
@@ -71,7 +75,7 @@ export function QuantityInput({ min = 1, max = 10 }: QuantityInputProps) {
         handlersRef={handlers}
         value={value}
         onChange={setValue}
-        classNames={{ input: classes.input }}
+        classNames={{ input: classes.input, wrapper: classes.inputWrapper }}
       />
 
       <ActionIcon<'button'>
