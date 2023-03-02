@@ -1,4 +1,4 @@
-import { createStyles, Card, Avatar, Text, Group, Button } from '@mantine/core';
+import { createStyles, Card, Avatar, Text, Group, Button, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -6,7 +6,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   avatar: {
-    border: `2px solid ${theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white}`,
+    border: `${rem(2)} solid ${theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white}`,
   },
 }));
 
@@ -23,23 +23,23 @@ export function UserCardImage({ image, avatar, name, job, stats }: UserCardImage
 
   const items = stats.map((stat) => (
     <div key={stat.label}>
-      <Text align="center" size="lg" weight={500}>
+      <Text ta="center" fz="lg" fw={500}>
         {stat.value}
       </Text>
-      <Text align="center" size="sm" color="dimmed">
+      <Text ta="center" fz="sm" c="dimmed">
         {stat.label}
       </Text>
     </div>
   ));
 
   return (
-    <Card withBorder p="xl" radius="md" className={classes.card}>
+    <Card withBorder padding="xl" radius="md" className={classes.card}>
       <Card.Section sx={{ backgroundImage: `url(${image})`, height: 140 }} />
       <Avatar src={avatar} size={80} radius={80} mx="auto" mt={-30} className={classes.avatar} />
-      <Text align="center" size="lg" weight={500} mt="sm">
+      <Text ta="center" fz="lg" fw={500} mt="sm">
         {name}
       </Text>
-      <Text align="center" size="sm" color="dimmed">
+      <Text ta="center" fz="sm" c="dimmed">
         {job}
       </Text>
       <Group mt="md" position="center" spacing={30}>

@@ -12,7 +12,7 @@
     "/core/button/",
     "/core/text-input/",
     "/core/paper/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": false

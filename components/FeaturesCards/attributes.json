@@ -13,7 +13,7 @@
     "/core/title/",
     "/core/simple-grid/",
     "/core/group/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": false

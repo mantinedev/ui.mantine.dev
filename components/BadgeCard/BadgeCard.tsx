@@ -1,5 +1,15 @@
-import { IconHeart } from '@tabler/icons';
-import { Card, Image, Text, Group, Badge, Button, ActionIcon, createStyles } from '@mantine/core';
+import { IconHeart } from '@tabler/icons-react';
+import {
+  Card,
+  Image,
+  Text,
+  Group,
+  Badge,
+  Button,
+  ActionIcon,
+  createStyles,
+  rem,
+} from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -7,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   section: {
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
     paddingLeft: theme.spacing.md,
@@ -58,18 +68,18 @@ export function BadgeCard({ image, title, description, country, badges }: BadgeC
 
       <Card.Section className={classes.section} mt="md">
         <Group position="apart">
-          <Text size="lg" weight={500}>
+          <Text fz="lg" fw={500}>
             {title}
           </Text>
           <Badge size="sm">{country}</Badge>
         </Group>
-        <Text size="sm" mt="xs">
+        <Text fz="sm" mt="xs">
           {description}
         </Text>
       </Card.Section>
 
       <Card.Section className={classes.section}>
-        <Text mt="md" className={classes.label} color="dimmed">
+        <Text mt="md" className={classes.label} c="dimmed">
           Perfect for you, if you enjoy
         </Text>
         <Group spacing={7} mt={5}>
@@ -82,7 +92,7 @@ export function BadgeCard({ image, title, description, country, badges }: BadgeC
           Show details
         </Button>
         <ActionIcon variant="default" radius="md" size={36}>
-          <IconHeart size={18} className={classes.like} stroke={1.5} />
+          <IconHeart size="1.1rem" className={classes.like} stroke={1.5} />
         </ActionIcon>
       </Group>
     </Card>

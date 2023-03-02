@@ -8,8 +8,9 @@ import {
   Button,
   Group,
   ActionIcon,
+  rem,
 } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles((theme) => ({
@@ -20,10 +21,10 @@ const useStyles = createStyles((theme) => ({
       theme.colors[theme.primaryColor][7]
     } 100%)`,
     borderRadius: theme.radius.md,
-    padding: theme.spacing.xl * 2.5,
+    padding: `calc(${theme.spacing.xl} * 2.5)`,
 
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      padding: theme.spacing.xl * 1.5,
+    [theme.fn.smallerThan('sm')]: {
+      padding: `calc(${theme.spacing.xl} * 1.5)`,
     },
   },
 
@@ -35,9 +36,9 @@ const useStyles = createStyles((theme) => ({
 
   description: {
     color: theme.colors[theme.primaryColor][0],
-    maxWidth: 300,
+    maxWidth: rem(300),
 
-    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+    [theme.fn.smallerThan('sm')]: {
       maxWidth: '100%',
     },
   },
@@ -83,7 +84,7 @@ export function ContactUs() {
 
   const icons = social.map((Icon, index) => (
     <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
-      <Icon size={22} stroke={1.5} />
+      <Icon size="1.4rem" stroke={1.5} />
     </ActionIcon>
   ));
 

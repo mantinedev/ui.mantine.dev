@@ -1,4 +1,4 @@
-import { createStyles, Text, Card, RingProgress, Group } from '@mantine/core';
+import { createStyles, Text, Card, RingProgress, Group, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -14,14 +14,14 @@ const useStyles = createStyles((theme) => ({
   lead: {
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 700,
-    fontSize: 22,
+    fontSize: rem(22),
     lineHeight: 1,
   },
 
   inner: {
     display: 'flex',
 
-    [theme.fn.smallerThan(350)]: {
+    [theme.fn.smallerThan('xs')]: {
       flexDirection: 'column',
     },
   },
@@ -31,7 +31,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'flex-end',
 
-    [theme.fn.smallerThan(350)]: {
+    [theme.fn.smallerThan('xs')]: {
       justifyContent: 'center',
       marginTop: theme.spacing.md,
     },
@@ -63,14 +63,14 @@ export function StatsRingCard({ title, completed, total, stats }: StatsRingCardP
     <Card withBorder p="xl" radius="md" className={classes.card}>
       <div className={classes.inner}>
         <div>
-          <Text size="xl" className={classes.label}>
+          <Text fz="xl" className={classes.label}>
             {title}
           </Text>
           <div>
             <Text className={classes.lead} mt={30}>
               {completed}
             </Text>
-            <Text size="xs" color="dimmed">
+            <Text fz="xs" color="dimmed">
               Completed
             </Text>
           </div>
@@ -85,10 +85,10 @@ export function StatsRingCard({ title, completed, total, stats }: StatsRingCardP
             sections={[{ value: (completed / total) * 100, color: theme.primaryColor }]}
             label={
               <div>
-                <Text align="center" size="lg" className={classes.label} sx={{ fontSize: 22 }}>
+                <Text ta="center" fz="lg" className={classes.label}>
                   {((completed / total) * 100).toFixed(0)}%
                 </Text>
-                <Text align="center" size="xs" color="dimmed">
+                <Text ta="center" fz="xs" c="dimmed">
                   Completed
                 </Text>
               </div>

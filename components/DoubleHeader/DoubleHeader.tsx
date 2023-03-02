@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
+import { createStyles, Header, Container, Anchor, Group, Burger, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 
-const HEADER_HEIGHT = 84;
+const HEADER_HEIGHT = rem(84);
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -32,16 +32,16 @@ const useStyles = createStyles((theme) => ({
   },
 
   mainLinks: {
-    marginRight: -theme.spacing.sm,
+    marginRight: `calc(${theme.spacing.sm} * -1)`,
   },
 
   mainLink: {
     textTransform: 'uppercase',
-    fontSize: 13,
+    fontSize: rem(13),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[1] : theme.colors.gray[6],
-    padding: `7px ${theme.spacing.sm}px`,
+    padding: `${rem(7)} ${theme.spacing.sm}`,
     fontWeight: 700,
-    borderBottom: '2px solid transparent',
+    borderBottom: `${rem(2)} solid transparent`,
     transition: 'border-color 100ms ease, color 100ms ease',
 
     '&:hover': {

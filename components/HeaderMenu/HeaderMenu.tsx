@@ -1,11 +1,11 @@
-import { createStyles, Header, Menu, Group, Center, Burger, Container } from '@mantine/core';
+import { createStyles, Header, Menu, Group, Center, Burger, Container, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   inner: {
-    height: 56,
+    height: rem(56),
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -26,7 +26,7 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
@@ -39,7 +39,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   linkLabel: {
-    marginRight: 5,
+    marginRight: rem(5),
   },
 }));
 
@@ -58,7 +58,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
           <Menu.Target>
             <a
               href={link.link}
@@ -67,7 +67,7 @@ export function HeaderMenu({ links }: HeaderSearchProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size={12} stroke={1.5} />
+                <IconChevronDown size="0.9rem" stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>

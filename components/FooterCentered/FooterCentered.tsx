@@ -1,11 +1,11 @@
-import { createStyles, Anchor, Group, ActionIcon } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { createStyles, Anchor, Group, ActionIcon, rem } from '@mantine/core';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    marginTop: 120,
-    borderTop: `1px solid ${
+    marginTop: rem(120),
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
   },
@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: `${theme.spacing.md}px ${theme.spacing.md}px`,
+    padding: `${theme.spacing.md} ${theme.spacing.md}`,
 
     [theme.fn.smallerThan('sm')]: {
       flexDirection: 'column',
@@ -57,13 +57,13 @@ export function FooterCentered({ links }: FooterCenteredProps) {
 
         <Group spacing="xs" position="right" noWrap>
           <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandTwitter size={18} stroke={1.5} />
+            <IconBrandTwitter size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandYoutube size={18} stroke={1.5} />
+            <IconBrandYoutube size="1.05rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg" variant="default" radius="xl">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram size="1.05rem" stroke={1.5} />
           </ActionIcon>
         </Group>
       </div>

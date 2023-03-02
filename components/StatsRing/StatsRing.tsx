@@ -1,5 +1,5 @@
 import { RingProgress, Text, SimpleGrid, Paper, Center, Group } from '@mantine/core';
-import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons';
+import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
 
 interface StatsRingProps {
   data: {
@@ -29,7 +29,7 @@ export function StatsRing({ data }: StatsRingProps) {
             sections={[{ value: stat.progress, color: stat.color }]}
             label={
               <Center>
-                <Icon size={22} stroke={1.5} />
+                <Icon size="1.4rem" stroke={1.5} />
               </Center>
             }
           />
@@ -46,6 +46,7 @@ export function StatsRing({ data }: StatsRingProps) {
       </Paper>
     );
   });
+
   return (
     <SimpleGrid cols={3} breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
       {stats}

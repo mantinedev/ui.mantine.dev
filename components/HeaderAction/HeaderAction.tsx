@@ -7,12 +7,13 @@ import {
   Group,
   Button,
   Burger,
+  rem,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconChevronDown } from '@tabler/icons';
+import { IconChevronDown } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = rem(60);
 
 const useStyles = createStyles((theme) => ({
   inner: {
@@ -37,7 +38,7 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
@@ -50,7 +51,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   linkLabel: {
-    marginRight: 5,
+    marginRight: rem(5),
   },
 }));
 
@@ -68,7 +69,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" exitTransitionDuration={0}>
+        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
           <Menu.Target>
             <a
               href={link.link}
@@ -77,7 +78,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size={12} stroke={1.5} />
+                <IconChevronDown size={rem(12)} stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>
@@ -108,7 +109,7 @@ export function HeaderAction({ links }: HeaderActionProps) {
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
-        <Button radius="xl" sx={{ height: 30 }}>
+        <Button radius="xl" h={30}>
           Get early access
         </Button>
       </Container>

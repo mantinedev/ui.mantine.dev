@@ -16,6 +16,7 @@ import {
   Drawer,
   Collapse,
   ScrollArea,
+  rem,
 } from '@mantine/core';
 import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
@@ -27,7 +28,7 @@ import {
   IconFingerprint,
   IconCoin,
   IconChevronDown,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -42,7 +43,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.sm,
 
     [theme.fn.smallerThan('sm')]: {
-      height: 42,
+      height: rem(42),
       display: 'flex',
       alignItems: 'center',
       width: '100%',
@@ -55,7 +56,7 @@ const useStyles = createStyles((theme) => ({
 
   subLink: {
     width: '100%',
-    padding: `${theme.spacing.xs}px ${theme.spacing.md}px`,
+    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
     borderRadius: theme.radius.md,
 
     ...theme.fn.hover({
@@ -67,11 +68,11 @@ const useStyles = createStyles((theme) => ({
 
   dropdownFooter: {
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
-    margin: -theme.spacing.md,
+    margin: `calc(${theme.spacing.md} * -1)`,
     marginTop: theme.spacing.sm,
-    padding: `${theme.spacing.md}px ${theme.spacing.md * 2}px`,
+    padding: `${theme.spacing.md} calc(${theme.spacing.md} * 2)`,
     paddingBottom: theme.spacing.xl,
-    borderTop: `1px solid ${
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
     }`,
   },
@@ -131,10 +132,10 @@ export function HeaderMegaMenu() {
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group noWrap align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.fn.primaryColor()} />
+          <item.icon size={rem(22)} color={theme.fn.primaryColor()} />
         </ThemeIcon>
         <div>
-          <Text size="sm" weight={500}>
+          <Text size="sm" fw={500}>
             {item.title}
           </Text>
           <Text size="xs" color="dimmed">
@@ -169,8 +170,8 @@ export function HeaderMegaMenu() {
 
               <HoverCard.Dropdown sx={{ overflow: 'hidden' }}>
                 <Group position="apart" px="md">
-                  <Text weight={500}>Features</Text>
-                  <Anchor href="#" size="xs">
+                  <Text fw={500}>Features</Text>
+                  <Anchor href="#" fz="xs">
                     View all
                   </Anchor>
                 </Group>
@@ -188,7 +189,7 @@ export function HeaderMegaMenu() {
                 <div className={classes.dropdownFooter}>
                   <Group position="apart">
                     <div>
-                      <Text weight={500} size="sm">
+                      <Text fw={500} fz="sm">
                         Get started
                       </Text>
                       <Text size="xs" color="dimmed">
@@ -226,7 +227,7 @@ export function HeaderMegaMenu() {
         className={classes.hiddenDesktop}
         zIndex={1000000}
       >
-        <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
+        <ScrollArea h={`calc(100vh - ${rem(60)})`} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
           <a href="#" className={classes.link}>

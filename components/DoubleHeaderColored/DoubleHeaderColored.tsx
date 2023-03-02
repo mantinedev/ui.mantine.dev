@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Anchor, Group, Burger } from '@mantine/core';
+import { createStyles, Header, Container, Anchor, Group, Burger, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 
-const HEADER_HEIGHT = 84;
+const HEADER_HEIGHT = rem(84);
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -42,11 +42,11 @@ const useStyles = createStyles((theme) => ({
 
   mainLink: {
     textTransform: 'uppercase',
-    fontSize: 13,
+    fontSize: rem(13),
     color: theme.white,
-    padding: `7px ${theme.spacing.sm}px`,
+    padding: `${rem(7)} ${theme.spacing.sm}`,
     fontWeight: 700,
-    borderBottom: '2px solid transparent',
+    borderBottom: `${rem(2)} solid transparent`,
     transition: 'border-color 100ms ease, opacity 100ms ease',
     opacity: 0.9,
     borderTopRightRadius: theme.radius.sm,
@@ -126,7 +126,7 @@ export function DoubleHeaderColored({ mainLinks, userLinks }: DoubleHeaderProps)
     <Header height={HEADER_HEIGHT} mb={120} className={classes.header}>
       <Container className={classes.inner}>
         <div style={{ color: '#fff' }}>
-          <MantineLogo width={130} inverted />
+          <MantineLogo size={34} inverted />
         </div>
 
         <div className={classes.links}>

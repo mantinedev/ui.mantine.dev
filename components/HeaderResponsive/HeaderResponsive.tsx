@@ -1,9 +1,18 @@
 import { useState } from 'react';
-import { createStyles, Header, Container, Group, Burger, Paper, Transition } from '@mantine/core';
+import {
+  createStyles,
+  Header,
+  Container,
+  Group,
+  Burger,
+  Paper,
+  Transition,
+  rem,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantine/ds';
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = rem(60);
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -49,7 +58,7 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],

@@ -1,13 +1,13 @@
-import { createStyles, Slider } from '@mantine/core';
-import { IconGripHorizontal } from '@tabler/icons';
+import { createStyles, Slider, rem } from '@mantine/core';
+import { IconGripHorizontal } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   thumb: {
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[3]
     }`,
-    width: 28,
-    height: 22,
+    width: rem(28),
+    height: rem(22),
     color: theme.colors.gray[5],
     backgroundColor: theme.white,
     borderRadius: theme.radius.sm,
@@ -19,7 +19,7 @@ export function SliderWhite() {
   return (
     <Slider
       classNames={classes}
-      thumbChildren={<IconGripHorizontal size={18} stroke={1.5} />}
+      thumbChildren={<IconGripHorizontal size="1.2rem" stroke={1.5} />}
       defaultValue={40}
       label={null}
     />

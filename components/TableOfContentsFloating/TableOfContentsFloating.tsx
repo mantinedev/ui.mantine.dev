@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { createStyles, Box, Text, Group } from '@mantine/core';
-import { IconListSearch } from '@tabler/icons';
+import { createStyles, Box, Text, Group, rem } from '@mantine/core';
+import { IconListSearch } from '@tabler/icons-react';
 
 const LINK_HEIGHT = 38;
 const INDICATOR_SIZE = 10;
@@ -12,12 +12,12 @@ const useStyles = createStyles((theme) => ({
     display: 'block',
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
-    lineHeight: `${LINK_HEIGHT}px`,
+    lineHeight: rem(LINK_HEIGHT),
     fontSize: theme.fontSizes.sm,
-    height: LINK_HEIGHT,
+    height: rem(LINK_HEIGHT),
     borderTopRightRadius: theme.radius.sm,
     borderBottomRightRadius: theme.radius.sm,
-    borderLeft: `2px solid ${
+    borderLeft: `${rem(2)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
     }`,
 
@@ -37,13 +37,15 @@ const useStyles = createStyles((theme) => ({
 
   indicator: {
     transition: 'transform 150ms ease',
-    border: `2px solid ${theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7]}`,
+    border: `${rem(2)} solid ${
+      theme.colors[theme.primaryColor][theme.colorScheme === 'dark' ? 3 : 7]
+    }`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-    height: INDICATOR_SIZE,
-    width: INDICATOR_SIZE,
-    borderRadius: INDICATOR_SIZE,
+    height: rem(INDICATOR_SIZE),
+    width: rem(INDICATOR_SIZE),
+    borderRadius: rem(INDICATOR_SIZE),
     position: 'absolute',
-    left: -INDICATOR_SIZE / 2 + 1,
+    left: `calc(-${rem(INDICATOR_SIZE)} / 2 + ${rem(1)})`,
   },
 }));
 
@@ -65,7 +67,7 @@ export function TableOfContentsFloating({ links }: TableOfContentsFloatingProps)
       }}
       key={item.label}
       className={cx(classes.link, { [classes.linkActive]: active === index })}
-      sx={(theme) => ({ paddingLeft: item.order * theme.spacing.lg })}
+      sx={(theme) => ({ paddingLeft: `calc(${item.order} * ${theme.spacing.lg})` })}
     >
       {item.label}
     </Box>
@@ -74,13 +76,13 @@ export function TableOfContentsFloating({ links }: TableOfContentsFloatingProps)
   return (
     <div>
       <Group mb="md">
-        <IconListSearch size={18} stroke={1.5} />
+        <IconListSearch size="1.1rem" stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       <div className={classes.links}>
         <div
           className={classes.indicator}
-          style={{ transform: `translateY(${active * LINK_HEIGHT + INDICATOR_OFFSET}px)` }}
+          style={{ transform: `translateY(${rem(active * LINK_HEIGHT + INDICATOR_OFFSET)})` }}
         />
         {items}
       </div>

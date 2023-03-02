@@ -1,20 +1,20 @@
-import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
-import { IconSwimming } from '@tabler/icons';
+import { createStyles, ThemeIcon, Progress, Text, Group, Badge, Paper, rem } from '@mantine/core';
+import { IconSwimming } from '@tabler/icons-react';
 
-const ICON_SIZE = 60;
+const ICON_SIZE = rem(60);
 
 const useStyles = createStyles((theme) => ({
   card: {
     position: 'relative',
     overflow: 'visible',
     padding: theme.spacing.xl,
-    paddingTop: theme.spacing.xl * 1.5 + ICON_SIZE / 3,
+    paddingTop: `calc(${theme.spacing.xl} * 1.5 + ${ICON_SIZE} / 3)`,
   },
 
   icon: {
     position: 'absolute',
-    top: -ICON_SIZE / 3,
-    left: `calc(50% - ${ICON_SIZE / 2}px)`,
+    top: `calc(-${ICON_SIZE} / 3)`,
+    left: `calc(50% - ${ICON_SIZE} / 2)`,
   },
 
   title: {
@@ -27,23 +27,23 @@ export function StatsCard() {
   const { classes } = useStyles();
 
   return (
-    <Paper radius="md" withBorder className={classes.card} mt={ICON_SIZE / 3}>
+    <Paper radius="md" withBorder className={classes.card} mt={`calc(${ICON_SIZE} / 3)`}>
       <ThemeIcon className={classes.icon} size={ICON_SIZE} radius={ICON_SIZE}>
-        <IconSwimming size={34} stroke={1.5} />
+        <IconSwimming size="2rem" stroke={1.5} />
       </ThemeIcon>
 
-      <Text align="center" weight={700} className={classes.title}>
+      <Text ta="center" fw={700} className={classes.title}>
         Swimming challenge
       </Text>
-      <Text color="dimmed" align="center" size="sm">
+      <Text c="dimmed" ta="center" fz="sm">
         32 km / week
       </Text>
 
       <Group position="apart" mt="xs">
-        <Text size="sm" color="dimmed">
+        <Text fz="sm" color="dimmed">
           Progress
         </Text>
-        <Text size="sm" color="dimmed">
+        <Text fz="sm" color="dimmed">
           62%
         </Text>
       </Group>
@@ -51,7 +51,7 @@ export function StatsCard() {
       <Progress value={62} mt={5} />
 
       <Group position="apart" mt="md">
-        <Text size="sm">20 / 36 km</Text>
+        <Text fz="sm">20 / 36 km</Text>
         <Badge size="sm">4 days left</Badge>
       </Group>
     </Paper>

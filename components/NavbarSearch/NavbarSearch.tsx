@@ -9,6 +9,7 @@ import {
   Group,
   ActionIcon,
   Tooltip,
+  rem,
 } from '@mantine/core';
 import {
   IconBulb,
@@ -17,7 +18,7 @@ import {
   IconSearch,
   IconPlus,
   IconSelector,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { UserButton } from '../UserButton/UserButton';
 
 const useStyles = createStyles((theme) => ({
@@ -26,12 +27,12 @@ const useStyles = createStyles((theme) => ({
   },
 
   section: {
-    marginLeft: -theme.spacing.md,
-    marginRight: -theme.spacing.md,
+    marginLeft: `calc(${theme.spacing.md} * -1)`,
+    marginRight: `calc(${theme.spacing.md} * -1)`,
     marginBottom: theme.spacing.md,
 
     '&:not(:last-of-type)': {
-      borderBottom: `1px solid ${
+      borderBottom: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
       }`,
     },
@@ -39,16 +40,16 @@ const useStyles = createStyles((theme) => ({
 
   searchCode: {
     fontWeight: 700,
-    fontSize: 10,
+    fontSize: rem(10),
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[2]
     }`,
   },
 
   mainLinks: {
-    paddingLeft: theme.spacing.md - theme.spacing.xs,
-    paddingRight: theme.spacing.md - theme.spacing.xs,
+    paddingLeft: `calc(${theme.spacing.md} - ${theme.spacing.xs})`,
+    paddingRight: `calc(${theme.spacing.md} - ${theme.spacing.xs})`,
     paddingBottom: theme.spacing.md,
   },
 
@@ -57,7 +58,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
     width: '100%',
     fontSize: theme.fontSizes.xs,
-    padding: `8px ${theme.spacing.xs}px`,
+    padding: `${rem(8)} ${theme.spacing.xs}`,
     borderRadius: theme.radius.sm,
     fontWeight: 500,
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
@@ -81,26 +82,26 @@ const useStyles = createStyles((theme) => ({
 
   mainLinkBadge: {
     padding: 0,
-    width: 20,
-    height: 20,
+    width: rem(20),
+    height: rem(20),
     pointerEvents: 'none',
   },
 
   collections: {
-    paddingLeft: theme.spacing.md - 6,
-    paddingRight: theme.spacing.md - 6,
+    paddingLeft: `calc(${theme.spacing.md} - ${rem(6)})`,
+    paddingRight: `calc(${theme.spacing.md} - ${rem(6)})`,
     paddingBottom: theme.spacing.md,
   },
 
   collectionsHeader: {
-    paddingLeft: theme.spacing.md + 2,
+    paddingLeft: `calc(${theme.spacing.md} + ${rem(2)})`,
     paddingRight: theme.spacing.md,
-    marginBottom: 5,
+    marginBottom: rem(5),
   },
 
   collectionLink: {
     display: 'block',
-    padding: `8px ${theme.spacing.xs}px`,
+    padding: `${rem(8)} ${theme.spacing.xs}`,
     textDecoration: 'none',
     borderRadius: theme.radius.sm,
     fontSize: theme.fontSizes.xs,
@@ -157,7 +158,8 @@ export function NavbarSearch() {
       key={collection.label}
       className={classes.collectionLink}
     >
-      <span style={{ marginRight: 9, fontSize: 16 }}>{collection.emoji}</span> {collection.label}
+      <span style={{ marginRight: rem(9), fontSize: rem(16) }}>{collection.emoji}</span>{' '}
+      {collection.label}
     </a>
   ));
 
@@ -168,14 +170,14 @@ export function NavbarSearch() {
           image="https://i.imgur.com/fGxgcDF.png"
           name="Bob Rulebreaker"
           email="Product owner"
-          icon={<IconSelector size={14} stroke={1.5} />}
+          icon={<IconSelector size="0.9rem" stroke={1.5} />}
         />
       </Navbar.Section>
 
       <TextInput
         placeholder="Search"
         size="xs"
-        icon={<IconSearch size={12} stroke={1.5} />}
+        icon={<IconSearch size="0.8rem" stroke={1.5} />}
         rightSectionWidth={70}
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
         styles={{ rightSection: { pointerEvents: 'none' } }}
@@ -193,7 +195,7 @@ export function NavbarSearch() {
           </Text>
           <Tooltip label="Create collection" withArrow position="right">
             <ActionIcon variant="default" size={18}>
-              <IconPlus size={12} stroke={1.5} />
+              <IconPlus size="0.8rem" stroke={1.5} />
             </ActionIcon>
           </Tooltip>
         </Group>

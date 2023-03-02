@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Title, Anchor, Center, Box } from '@mantine/core';
-import { IconArrowRight, IconArrowLeft } from '@tabler/icons';
+import { IconArrowRight, IconArrowLeft } from '@tabler/icons-react';
 import { Category } from '../../data';
 import useStyles from './CategoryHeader.styles';
 
@@ -15,7 +15,11 @@ export function CategoryHeader({ category }: CategoryHeaderProps) {
       <Link href="/#main" passHref>
         <Anchor>
           <Center inline>
-            {theme.dir === 'rtl' ? <IconArrowRight size={14} /> : <IconArrowLeft size={14} />}
+            {theme.dir === 'rtl' ? (
+              <IconArrowRight size="0.9rem" />
+            ) : (
+              <IconArrowLeft size="0.9rem" />
+            )}
             <Box component="span" ml={5}>
               Back to all categories
             </Box>

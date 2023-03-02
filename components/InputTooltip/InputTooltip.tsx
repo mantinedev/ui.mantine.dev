@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TextInput, PasswordInput, Tooltip, Center, Text } from '@mantine/core';
-import { IconInfoCircle } from '@tabler/icons';
+import { IconInfoCircle } from '@tabler/icons-react';
 
 function TooltipIcon() {
   const rightSection = (
@@ -8,11 +8,11 @@ function TooltipIcon() {
       label="We store your data securely"
       position="top-end"
       withArrow
-      transition="pop-bottom-right"
+      transitionProps={{ transition: 'pop-bottom-right' }}
     >
       <Text color="dimmed" sx={{ cursor: 'help' }}>
         <Center>
-          <IconInfoCircle size={18} stroke={1.5} />
+          <IconInfoCircle size="1.1rem" stroke={1.5} />
         </Center>
       </Text>
     </Tooltip>

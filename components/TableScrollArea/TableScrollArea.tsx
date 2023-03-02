@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Table, ScrollArea } from '@mantine/core';
+import { createStyles, Table, ScrollArea, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -14,7 +14,7 @@ const useStyles = createStyles((theme) => ({
       left: 0,
       right: 0,
       bottom: 0,
-      borderBottom: `1px solid ${
+      borderBottom: `${rem(1)} solid ${
         theme.colorScheme === 'dark' ? theme.colors.dark[3] : theme.colors.gray[2]
       }`,
     },
@@ -42,8 +42,8 @@ export function TableScrollArea({ data }: TableScrollAreaProps) {
   ));
 
   return (
-    <ScrollArea sx={{ height: 300 }} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
-      <Table sx={{ minWidth: 700 }}>
+    <ScrollArea h={300} onScrollPositionChange={({ y }) => setScrolled(y !== 0)}>
+      <Table miw={700}>
         <thead className={cx(classes.header, { [classes.scrolled]: scrolled })}>
           <tr>
             <th>Name</th>

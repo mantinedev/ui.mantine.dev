@@ -13,10 +13,10 @@ export function UsersRolesTable({ data }: UsersTableProps) {
         <Group spacing="sm">
           <Avatar size={40} src={item.avatar} radius={40} />
           <div>
-            <Text size="sm" weight={500}>
+            <Text fz="sm" fw={500}>
               {item.name}
             </Text>
-            <Text size="xs" color="dimmed">
+            <Text fz="xs" c="dimmed">
               {item.email}
             </Text>
           </div>
@@ -41,7 +41,7 @@ export function UsersRolesTable({ data }: UsersTableProps) {
 
   return (
     <ScrollArea>
-      <Table sx={{ minWidth: 800 }} verticalSpacing="sm">
+      <Table miw={800} verticalSpacing="sm">
         <thead>
           <tr>
             <th>Employee</th>

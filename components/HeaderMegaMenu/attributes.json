@@ -19,7 +19,7 @@
     "/core/collapse/",
     "/core/center/",
     "/core/drawer/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": false

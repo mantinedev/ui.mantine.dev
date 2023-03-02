@@ -3,7 +3,7 @@
   "category": "grids",
   "author": "rtivital",
   "responsive": true,
-  "dependencies": ["/core/simple-grid/", "/core/grid/", "/core/"],
+  "dependencies": ["/core/simple-grid/", "/core/grid/", "/core/skeleton/", "/core/container/"],
   "canvas": {
     "center": false
   }

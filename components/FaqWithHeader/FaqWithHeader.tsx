@@ -6,17 +6,18 @@ import {
   UnstyledButton,
   Overlay,
   SimpleGrid,
+  rem,
 } from '@mantine/core';
 import { ContactIconsList } from '../ContactIcons/ContactIcons';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
     paddingTop: theme.spacing.md,
-    paddingBottom: theme.spacing.xl * 2,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
   },
 
   header: {
-    height: 400,
+    height: rem(400),
     boxSizing: 'border-box',
     backgroundImage: `linear-gradient(135deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
       theme.colors[theme.primaryColor][6]
@@ -26,11 +27,11 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'flex-end',
     justifyContent: 'space-between',
     position: 'relative',
-    padding: `${theme.spacing.xl * 1.5}px ${theme.spacing.xl * 2}px`,
+    padding: `calc(${theme.spacing.xl} * 1.5) calc(${theme.spacing.xl} * 2)`,
     borderRadius: theme.radius.lg,
     marginBottom: theme.spacing.lg,
 
-    '@media (max-width: 1080px)': {
+    [theme.fn.smallerThan(1080)]: {
       height: 'auto',
       flexDirection: 'column-reverse',
       alignItems: 'initial',
@@ -42,13 +43,13 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     position: 'relative',
     zIndex: 1,
-    fontSize: 46,
+    fontSize: rem(46),
     fontWeight: 800,
-    letterSpacing: -0.5,
+    letterSpacing: rem(-0.5),
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    '@media (max-width: 1080px)': {
-      fontSize: 22,
+    [theme.fn.smallerThan(1080)]: {
+      fontSize: rem(22),
       textAlign: 'center',
       marginTop: theme.spacing.xl,
     },
@@ -60,26 +61,26 @@ const useStyles = createStyles((theme) => ({
     color: theme.white,
     fontWeight: 900,
     opacity: 0.1,
-    fontSize: 320,
+    fontSize: rem(320),
     lineHeight: 1,
-    top: 10,
-    left: 32,
+    top: rem(10),
+    left: rem(32),
     pointerEvents: 'none',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
-    '@media (max-width: 1080px)': {
+    [theme.fn.smallerThan(1080)]: {
       display: 'none',
     },
   },
 
   contact: {
-    padding: `${theme.spacing.xl * 1.5}px`,
+    padding: `calc(${theme.spacing.xl} * 1.5)`,
     backgroundColor: theme.white,
     borderRadius: theme.radius.lg,
     boxShadow: theme.shadows.md,
 
-    '@media (max-width: 1080px)': {
-      padding: `${theme.spacing.xl}px`,
+    [theme.fn.smallerThan(1080)]: {
+      padding: theme.spacing.xl,
     },
   },
 
@@ -90,7 +91,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   categoryCard: {
-    height: 160,
+    height: rem(160),
     position: 'relative',
     backgroundSize: '100%',
     backgroundPosition: 'center',

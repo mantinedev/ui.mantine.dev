@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Container, Title, Text } from '@mantine/core';
+import { Container, Title, Text, rem } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
 import { UiComponent } from '../../data';
 import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';
@@ -27,9 +27,9 @@ export function ChangelogPage({ components }: ChangelogPageProps) {
         <Title
           sx={(theme) => ({
             fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-            [theme.fn.smallerThan(500)]: { fontSize: 26 },
+            [theme.fn.smallerThan(500)]: { fontSize: rem(26) },
           })}
-          weight={900}
+          fw={900}
         >
           {title}
         </Title>

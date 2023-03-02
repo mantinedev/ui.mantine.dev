@@ -7,8 +7,9 @@ import {
   Card,
   SimpleGrid,
   Container,
+  rem,
 } from '@mantine/core';
-import { IconGauge, IconUser, IconCookie } from '@tabler/icons';
+import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
 
 const mockdata = [
   {
@@ -33,10 +34,11 @@ const mockdata = [
 
 const useStyles = createStyles((theme) => ({
   title: {
-    fontSize: 34,
+    fontSize: rem(34),
     fontWeight: 900,
+
     [theme.fn.smallerThan('sm')]: {
-      fontSize: 24,
+      fontSize: rem(24),
     },
   },
 
@@ -48,8 +50,8 @@ const useStyles = createStyles((theme) => ({
       content: '""',
       display: 'block',
       backgroundColor: theme.fn.primaryColor(),
-      width: 45,
-      height: 2,
+      width: rem(45),
+      height: rem(2),
       marginTop: theme.spacing.sm,
       marginLeft: 'auto',
       marginRight: 'auto',
@@ -57,7 +59,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   card: {
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
     }`,
   },
@@ -67,8 +69,8 @@ const useStyles = createStyles((theme) => ({
       content: '""',
       display: 'block',
       backgroundColor: theme.fn.primaryColor(),
-      width: 45,
-      height: 2,
+      width: rem(45),
+      height: rem(2),
       marginTop: theme.spacing.sm,
     },
   },
@@ -77,16 +79,17 @@ const useStyles = createStyles((theme) => ({
 export function FeaturesCards() {
   const { classes, theme } = useStyles();
   const features = mockdata.map((feature) => (
-    <Card key={feature.title} shadow="md" radius="md" className={classes.card} p="xl">
-      <feature.icon size={50} stroke={2} color={theme.fn.primaryColor()} />
-      <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
+    <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
+      <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
+      <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
         {feature.title}
       </Text>
-      <Text size="sm" color="dimmed" mt="sm">
+      <Text fz="sm" c="dimmed" mt="sm">
         {feature.description}
       </Text>
     </Card>
   ));
+
   return (
     <Container size="lg" py="xl">
       <Group position="center">
@@ -95,11 +98,11 @@ export function FeaturesCards() {
         </Badge>
       </Group>
 
-      <Title order={2} className={classes.title} align="center" mt="sm">
+      <Title order={2} className={classes.title} ta="center" mt="sm">
         Integrate effortlessly with any technology stack
       </Title>
 
-      <Text color="dimmed" className={classes.description} align="center" mt="md">
+      <Text c="dimmed" className={classes.description} ta="center" mt="md">
         Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when
         hunger drives it to try biting a Steel-type Pokémon.
       </Text>

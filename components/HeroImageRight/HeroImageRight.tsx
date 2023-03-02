@@ -1,4 +1,4 @@
-import { createStyles, Container, Title, Text, Button } from '@mantine/core';
+import { createStyles, Container, Title, Text, Button, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   root: {
@@ -7,8 +7,8 @@ const useStyles = createStyles((theme) => ({
     backgroundPosition: 'center',
     backgroundImage:
       'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80)',
-    paddingTop: theme.spacing.xl * 3,
-    paddingBottom: theme.spacing.xl * 3,
+    paddingTop: `calc(${theme.spacing.xl} * 3)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
   },
 
   inner: {
@@ -27,9 +27,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   content: {
-    paddingTop: theme.spacing.xl * 2,
-    paddingBottom: theme.spacing.xl * 2,
-    marginRight: theme.spacing.xl * 3,
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    marginRight: `calc(${theme.spacing.xl} * 3)`,
 
     [theme.fn.smallerThan('md')]: {
       marginRight: 0,
@@ -41,12 +41,12 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     lineHeight: 1.05,
-    maxWidth: 500,
-    fontSize: 48,
+    maxWidth: rem(500),
+    fontSize: rem(48),
 
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
-      fontSize: 34,
+      fontSize: rem(34),
       lineHeight: 1.15,
     },
   },
@@ -54,7 +54,7 @@ const useStyles = createStyles((theme) => ({
   description: {
     color: theme.white,
     opacity: 0.75,
-    maxWidth: 500,
+    maxWidth: rem(500),
 
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
@@ -62,10 +62,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   control: {
-    paddingLeft: 50,
-    paddingRight: 50,
+    paddingLeft: rem(50),
+    paddingRight: rem(50),
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: 22,
+    fontSize: rem(22),
 
     [theme.fn.smallerThan('md')]: {
       width: '100%',

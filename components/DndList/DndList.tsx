@@ -1,4 +1,4 @@
-import { createStyles, Text } from '@mantine/core';
+import { createStyles, Text, rem } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
@@ -8,10 +8,10 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     borderRadius: theme.radius.md,
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
-    padding: `${theme.spacing.sm}px ${theme.spacing.xl}px`,
+    padding: `${theme.spacing.sm} ${theme.spacing.xl}`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.white,
     marginBottom: theme.spacing.sm,
   },
@@ -21,9 +21,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   symbol: {
-    fontSize: 30,
+    fontSize: rem(30),
     fontWeight: 700,
-    width: 60,
+    width: rem(60),
   },
 }));
 

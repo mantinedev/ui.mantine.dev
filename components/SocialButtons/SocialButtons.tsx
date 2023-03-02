@@ -14,7 +14,7 @@ export function FacebookButton(props: ButtonProps) {
       sx={(theme) => ({
         backgroundColor: '#4267B2',
         color: '#fff',
-        '&:hover': {
+        '&:not([data-disabled]):hover': {
           backgroundColor: theme.fn.darken('#4267B2', 0.1),
         },
       })}
@@ -26,10 +26,10 @@ export function FacebookButton(props: ButtonProps) {
 export function DiscordButton(props: ButtonProps) {
   return (
     <Button
-      leftIcon={<DiscordIcon size={16} />}
+      leftIcon={<DiscordIcon size="1rem" />}
       sx={(theme) => ({
         backgroundColor: theme.colorScheme === 'dark' ? '#5865F2' : '#5865F2',
-        '&:hover': {
+        '&:not([data-disabled]):hover': {
           backgroundColor:
             theme.colorScheme === 'dark'
               ? theme.fn.lighten('#5865F2', 0.05)
@@ -46,7 +46,7 @@ export function TwitterButton(props: ButtonProps & React.ComponentPropsWithoutRe
   return (
     <Button
       component="a"
-      leftIcon={<TwitterIcon size={16} color="#00ACEE" />}
+      leftIcon={<TwitterIcon size="1rem" color="#00ACEE" />}
       variant="default"
       {...props}
     />
@@ -57,7 +57,7 @@ export function GithubButton(props: ButtonProps) {
   return (
     <Button
       {...props}
-      leftIcon={<GithubIcon size={16} />}
+      leftIcon={<GithubIcon size="1rem" />}
       sx={(theme) => ({
         backgroundColor: theme.colors.dark[theme.colorScheme === 'dark' ? 9 : 6],
         color: '#fff',

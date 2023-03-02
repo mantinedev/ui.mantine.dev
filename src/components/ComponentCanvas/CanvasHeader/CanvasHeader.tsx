@@ -1,5 +1,5 @@
 import { GithubIcon } from '@mantine/ds';
-import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons';
+import { IconExternalLink, IconComponents, IconCode, IconEye } from '@tabler/icons-react';
 import {
   Group,
   Text,
@@ -68,7 +68,7 @@ export function CanvasHeader({
               href={`/component/${slug}`}
               target="_blank"
             >
-              <IconExternalLink size={14} stroke={1.5} />
+              <IconExternalLink size="0.9rem" stroke={1.5} />
             </ActionIcon>
           )}
 
@@ -81,17 +81,22 @@ export function CanvasHeader({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon size={14} />
+            <GithubIcon size="0.9rem" />
           </ActionIcon>
 
-          <Menu withArrow position="bottom-end" transition="pop-top-right" transitionDuration={100}>
+          <Menu
+            withArrow
+            position="bottom-end"
+            transitionProps={{ transition: 'pop-top-right', duration: 100 }}
+            withinPortal
+          >
             <Menu.Target>
               <ActionIcon
                 className={classes.action}
                 title="Component dependencies"
                 variant="default"
               >
-                <IconComponents size={16} stroke={1.5} />
+                <IconComponents size="1rem" stroke={1.5} />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
@@ -105,10 +110,10 @@ export function CanvasHeader({
           <Text size="xs">
             Built by{' '}
             <Anchor
-              size="xs"
+              fz="xs"
               href={`https://github.com/${attributes.author}`}
               target="_blank"
-              color="dimmed"
+              c="dimmed"
             >
               @{attributes.author}
             </Anchor>
@@ -128,7 +133,7 @@ export function CanvasHeader({
               value: 'preview',
               label: (
                 <Center>
-                  <IconEye size={16} stroke={1.5} />
+                  <IconEye size="1rem" stroke={1.5} />
                   <div className={classes.controlLabel}>Preview</div>
                 </Center>
               ),
@@ -137,7 +142,7 @@ export function CanvasHeader({
               value: 'code',
               label: (
                 <Center>
-                  <IconCode size={16} stroke={1.5} />
+                  <IconCode size="1rem" stroke={1.5} />
                   <div className={classes.controlLabel}>Code</div>
                 </Center>
               ),

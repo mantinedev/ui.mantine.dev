@@ -11,7 +11,7 @@
     "/core/button/#unstyled-button",
     "/component/user-button/",
     "/component/navbar-links-group/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": false

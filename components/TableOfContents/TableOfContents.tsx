@@ -1,5 +1,5 @@
-import { createStyles, Box, Text, Group } from '@mantine/core';
-import { IconListSearch } from '@tabler/icons';
+import { createStyles, Box, Text, Group, rem } from '@mantine/core';
+import { IconListSearch } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -12,7 +12,7 @@ const useStyles = createStyles((theme) => ({
     padding: theme.spacing.xs,
     borderTopRightRadius: theme.radius.sm,
     borderBottomRightRadius: theme.radius.sm,
-    borderLeft: `1px solid ${
+    borderLeft: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
 
@@ -49,7 +49,7 @@ export function TableOfContents({ links, active }: TableOfContentsProps) {
       onClick={(event) => event.preventDefault()}
       key={item.label}
       className={cx(classes.link, { [classes.linkActive]: active === item.link })}
-      sx={(theme) => ({ paddingLeft: item.order * theme.spacing.md })}
+      sx={(theme) => ({ paddingLeft: `calc(${item.order} * ${theme.spacing.md})` })}
     >
       {item.label}
     </Box>
@@ -58,7 +58,7 @@ export function TableOfContents({ links, active }: TableOfContentsProps) {
   return (
     <div>
       <Group mb="md">
-        <IconListSearch size={18} stroke={1.5} />
+        <IconListSearch size="1.1rem" stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       {items}

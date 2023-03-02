@@ -26,10 +26,10 @@ export function ProgressCardColored() {
   const { classes } = useStyles();
   return (
     <Card withBorder radius="md" p="xl" className={classes.card}>
-      <Text size="xs" transform="uppercase" weight={700} className={classes.title}>
+      <Text fz="xs" tt="uppercase" fw={700} className={classes.title}>
         Monthly goal
       </Text>
-      <Text size="lg" weight={500} className={classes.stats}>
+      <Text fz="lg" fw={500} className={classes.stats}>
         $5.431 / $10.000
       </Text>
       <Progress

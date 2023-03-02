@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { TextInput, createStyles } from '@mantine/core';
+import { TextInput, createStyles, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme, { floating }: { floating: boolean }) => ({
   root: {
@@ -9,7 +9,7 @@ const useStyles = createStyles((theme, { floating }: { floating: boolean }) => (
   label: {
     position: 'absolute',
     zIndex: 2,
-    top: 7,
+    top: rem(7),
     left: theme.spacing.sm,
     pointerEvents: 'none',
     color: floating
@@ -20,7 +20,7 @@ const useStyles = createStyles((theme, { floating }: { floating: boolean }) => (
       ? theme.colors.dark[3]
       : theme.colors.gray[5],
     transition: 'transform 150ms ease, color 150ms ease, font-size 150ms ease',
-    transform: floating ? `translate(-${theme.spacing.sm}px, -28px)` : 'none',
+    transform: floating ? `translate(-${theme.spacing.sm}, ${rem(-28)})` : 'none',
     fontSize: floating ? theme.fontSizes.xs : theme.fontSizes.sm,
     fontWeight: floating ? 500 : 400,
   },

@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { createStyles, Header, Group, ActionIcon, Container, Burger } from '@mantine/core';
+import { createStyles, Header, Group, ActionIcon, Container, Burger, rem } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
 const useStyles = createStyles((theme) => ({
@@ -9,7 +9,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: 56,
+    height: rem(56),
 
     [theme.fn.smallerThan('sm')]: {
       justifyContent: 'flex-start',
@@ -17,7 +17,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   links: {
-    width: 260,
+    width: rem(260),
 
     [theme.fn.smallerThan('sm')]: {
       display: 'none',
@@ -25,7 +25,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   social: {
-    width: 260,
+    width: rem(260),
 
     [theme.fn.smallerThan('sm')]: {
       width: 'auto',
@@ -44,7 +44,7 @@ const useStyles = createStyles((theme) => ({
   link: {
     display: 'block',
     lineHeight: 1,
-    padding: '8px 12px',
+    padding: `${rem(8)} ${rem(12)}`,
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
     color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
@@ -99,13 +99,13 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size={18} stroke={1.5} />
+            <IconBrandTwitter size="1.1rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandYoutube size={18} stroke={1.5} />
+            <IconBrandYoutube size="1.1rem" stroke={1.5} />
           </ActionIcon>
           <ActionIcon size="lg">
-            <IconBrandInstagram size={18} stroke={1.5} />
+            <IconBrandInstagram size="1.1rem" stroke={1.5} />
           </ActionIcon>
         </Group>
       </Container>

@@ -5,20 +5,25 @@ import {
   IconUsers,
   IconCalendar,
   IconChevronDown,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 
 export function ButtonMenu() {
   const theme = useMantineTheme();
   return (
-    <Menu transition="pop-top-right" position="top-end" width={220} withinPortal>
+    <Menu
+      transitionProps={{ transition: 'pop-top-right' }}
+      position="top-end"
+      width={220}
+      withinPortal
+    >
       <Menu.Target>
-        <Button rightIcon={<IconChevronDown size={18} stroke={1.5} />} pr={12}>
+        <Button rightIcon={<IconChevronDown size="1.05rem" stroke={1.5} />} pr={12}>
           Create new
         </Button>
       </Menu.Target>
       <Menu.Dropdown>
         <Menu.Item
-          icon={<IconPackage size={16} color={theme.colors.blue[6]} stroke={1.5} />}
+          icon={<IconPackage size="1rem" color={theme.colors.blue[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" transform="uppercase" weight={700} color="dimmed">
               Ctrl + P
@@ -28,7 +33,7 @@ export function ButtonMenu() {
           Project
         </Menu.Item>
         <Menu.Item
-          icon={<IconSquareCheck size={16} color={theme.colors.pink[6]} stroke={1.5} />}
+          icon={<IconSquareCheck size="1rem" color={theme.colors.pink[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" transform="uppercase" weight={700} color="dimmed">
               Ctrl + T
@@ -38,7 +43,7 @@ export function ButtonMenu() {
           Task
         </Menu.Item>
         <Menu.Item
-          icon={<IconUsers size={16} color={theme.colors.cyan[6]} stroke={1.5} />}
+          icon={<IconUsers size="1rem" color={theme.colors.cyan[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" transform="uppercase" weight={700} color="dimmed">
               Ctrl + U
@@ -48,7 +53,7 @@ export function ButtonMenu() {
           Team
         </Menu.Item>
         <Menu.Item
-          icon={<IconCalendar size={16} color={theme.colors.violet[6]} stroke={1.5} />}
+          icon={<IconCalendar size="1rem" color={theme.colors.violet[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" transform="uppercase" weight={700} color="dimmed">
               Ctrl + E

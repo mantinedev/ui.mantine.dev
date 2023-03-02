@@ -1,11 +1,11 @@
-import { UnstyledButton, Checkbox, Text, createStyles } from '@mantine/core';
+import { UnstyledButton, Checkbox, Text, createStyles, rem } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({
   button: {
     display: 'flex',
     width: '100%',
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]
     }`,
     borderRadius: theme.radius.sm,
@@ -60,10 +60,10 @@ export function CheckboxCard({
       />
 
       <div>
-        <Text weight={500} mb={7} sx={{ lineHeight: 1 }}>
+        <Text fw={500} mb={7} sx={{ lineHeight: 1 }}>
           {title}
         </Text>
-        <Text size="sm" color="dimmed">
+        <Text fz="sm" c="dimmed">
           {description}
         </Text>
       </div>

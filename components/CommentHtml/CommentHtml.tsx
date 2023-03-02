@@ -1,12 +1,20 @@
-import { createStyles, Text, Avatar, Group, TypographyStylesProvider, Paper } from '@mantine/core';
+import {
+  createStyles,
+  Text,
+  Avatar,
+  Group,
+  TypographyStylesProvider,
+  Paper,
+  rem,
+} from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   comment: {
-    padding: `${theme.spacing.lg}px ${theme.spacing.xl}px`,
+    padding: `${theme.spacing.lg} ${theme.spacing.xl}`,
   },
 
   body: {
-    paddingLeft: 54,
+    paddingLeft: rem(54),
     paddingTop: theme.spacing.sm,
     fontSize: theme.fontSizes.sm,
   },
@@ -34,8 +42,8 @@ export function CommentHtml({ postedAt, body, author }: CommentHtmlProps) {
       <Group>
         <Avatar src={author.image} alt={author.name} radius="xl" />
         <div>
-          <Text size="sm">{author.name}</Text>
-          <Text size="xs" color="dimmed">
+          <Text fz="sm">{author.name}</Text>
+          <Text fz="xs" c="dimmed">
             {postedAt}
           </Text>
         </div>

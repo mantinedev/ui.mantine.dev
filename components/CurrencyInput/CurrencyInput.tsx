@@ -1,4 +1,4 @@
-import { NativeSelect, TextInput } from '@mantine/core';
+import { NativeSelect, rem, TextInput } from '@mantine/core';
 
 const data = [
   { value: 'eur', label: '🇪🇺 EUR' },
@@ -17,6 +17,7 @@ export function CurrencyInput() {
           fontWeight: 500,
           borderTopLeftRadius: 0,
           borderBottomLeftRadius: 0,
+          width: rem(92),
         },
       }}
     />

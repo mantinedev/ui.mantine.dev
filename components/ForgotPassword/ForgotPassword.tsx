@@ -10,12 +10,13 @@ import {
   Anchor,
   Center,
   Box,
+  rem,
 } from '@mantine/core';
-import { IconArrowLeft } from '@tabler/icons';
+import { IconArrowLeft } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   title: {
-    fontSize: 26,
+    fontSize: rem(26),
     fontWeight: 900,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
   },
@@ -42,7 +43,7 @@ export function ForgotPassword() {
       <Title className={classes.title} align="center">
         Forgot your password?
       </Title>
-      <Text color="dimmed" size="sm" align="center">
+      <Text c="dimmed" fz="sm" ta="center">
         Enter your email to get a reset link
       </Text>
 
@@ -51,8 +52,8 @@ export function ForgotPassword() {
         <Group position="apart" mt="lg" className={classes.controls}>
           <Anchor color="dimmed" size="sm" className={classes.control}>
             <Center inline>
-              <IconArrowLeft size={12} stroke={1.5} />
-              <Box ml={5}>Back to login page</Box>
+              <IconArrowLeft size={rem(12)} stroke={1.5} />
+              <Box ml={5}>Back to the login page</Box>
             </Center>
           </Anchor>
           <Button className={classes.control}>Reset password</Button>

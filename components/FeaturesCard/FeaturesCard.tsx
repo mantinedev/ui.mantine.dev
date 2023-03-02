@@ -1,5 +1,5 @@
-import { Card, Image, Text, Group, Badge, createStyles, Center, Button } from '@mantine/core';
-import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons';
+import { Card, Image, Text, Group, Badge, createStyles, Center, Button, rem } from '@mantine/core';
+import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -11,7 +11,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    borderBottom: `1px solid ${
+    borderBottom: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
@@ -21,19 +21,19 @@ const useStyles = createStyles((theme) => ({
     lineHeight: 1,
     fontWeight: 700,
     fontSize: theme.fontSizes.xs,
-    letterSpacing: -0.25,
+    letterSpacing: rem(-0.25),
     textTransform: 'uppercase',
   },
 
   section: {
     padding: theme.spacing.md,
-    borderTop: `1px solid ${
+    borderTop: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[3]
     }`,
   },
 
   icon: {
-    marginRight: 5,
+    marginRight: rem(5),
     color: theme.colorScheme === 'dark' ? theme.colors.dark[2] : theme.colors.gray[5],
   },
 }));
@@ -49,7 +49,7 @@ export function FeaturesCard() {
   const { classes } = useStyles();
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
-      <feature.icon size={18} className={classes.icon} stroke={1.5} />
+      <feature.icon size="1.05rem" className={classes.icon} stroke={1.5} />
       <Text size="xs">{feature.label}</Text>
     </Center>
   ));
@@ -62,8 +62,8 @@ export function FeaturesCard() {
 
       <Group position="apart" mt="md">
         <div>
-          <Text weight={500}>Tesla Model S</Text>
-          <Text size="xs" color="dimmed">
+          <Text fw={500}>Tesla Model S</Text>
+          <Text fz="xs" c="dimmed">
             Free recharge at any station
           </Text>
         </div>
@@ -71,7 +71,7 @@ export function FeaturesCard() {
       </Group>
 
       <Card.Section className={classes.section} mt="md">
-        <Text size="sm" color="dimmed" className={classes.label}>
+        <Text fz="sm" c="dimmed" className={classes.label}>
           Basic configuration
         </Text>
 
@@ -83,10 +83,10 @@ export function FeaturesCard() {
       <Card.Section className={classes.section}>
         <Group spacing={30}>
           <div>
-            <Text size="xl" weight={700} sx={{ lineHeight: 1 }}>
+            <Text fz="xl" fw={700} sx={{ lineHeight: 1 }}>
               $168.00
             </Text>
-            <Text size="sm" color="dimmed" weight={500} sx={{ lineHeight: 1 }} mt={3}>
+            <Text fz="sm" c="dimmed" fw={500} sx={{ lineHeight: 1 }} mt={3}>
               per day
             </Text>
           </div>

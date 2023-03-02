@@ -1,4 +1,4 @@
-import { createStyles, Switch, Group } from '@mantine/core';
+import { createStyles, Switch, Group, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   body: {
@@ -7,15 +7,15 @@ const useStyles = createStyles((theme) => ({
   },
 
   track: {
-    width: 40,
-    height: 6,
+    width: rem(40),
+    height: rem(6),
     overflow: 'visible',
   },
 
   thumb: {
-    width: 20,
-    height: 20,
-    left: -2,
+    width: rem(20),
+    height: rem(20),
+    left: rem(-2),
     transition: 'background-color 100ms ease, left 100ms ease',
 
     'input:checked + * > &': {

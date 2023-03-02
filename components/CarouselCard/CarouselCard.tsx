@@ -1,33 +1,33 @@
-import { createStyles, Image, Card, Text, Group, Button } from '@mantine/core';
+import { createStyles, Image, Card, Text, Group, Button, getStylesRef, rem } from '@mantine/core';
 import { Carousel } from '@mantine/carousel';
-import { IconStar } from '@tabler/icons';
+import { IconStar } from '@tabler/icons-react';
 
-const useStyles = createStyles((theme, _params, getRef) => ({
+const useStyles = createStyles((theme) => ({
   price: {
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
   },
 
   carousel: {
     '&:hover': {
-      [`& .${getRef('carouselControls')}`]: {
+      [`& .${getStylesRef('carouselControls')}`]: {
         opacity: 1,
       },
     },
   },
 
   carouselControls: {
-    ref: getRef('carouselControls'),
+    ref: getStylesRef('carouselControls'),
     transition: 'opacity 150ms ease',
     opacity: 0,
   },
 
   carouselIndicator: {
-    width: 4,
-    height: 4,
+    width: rem(4),
+    height: rem(4),
     transition: 'width 250ms ease',
 
     '&[data-active]': {
-      width: 16,
+      width: rem(16),
     },
   },
 }));
@@ -50,7 +50,7 @@ export function CarouselCard() {
   ));
 
   return (
-    <Card radius="md" withBorder p="xl">
+    <Card radius="md" withBorder padding="xl">
       <Card.Section>
         <Carousel
           withIndicators
@@ -66,29 +66,29 @@ export function CarouselCard() {
       </Card.Section>
 
       <Group position="apart" mt="lg">
-        <Text weight={500} size="lg">
+        <Text fw={500} fz="lg">
           Forde, Norway
         </Text>
 
         <Group spacing={5}>
-          <IconStar size={16} />
-          <Text size="xs" weight={500}>
+          <IconStar size="1rem" />
+          <Text fz="xs" fw={500}>
             4.78
           </Text>
         </Group>
       </Group>
 
-      <Text size="sm" color="dimmed" mt="sm">
+      <Text fz="sm" c="dimmed" mt="sm">
         Relax, rejuvenate and unplug in this unique contemporary Birdbox. Feel close to nature in
         ultimate comfort. Enjoy the view of the epic mountain range of Blegja and the Førdefjord.
       </Text>
 
       <Group position="apart" mt="md">
         <div>
-          <Text size="xl" span weight={500} className={classes.price}>
+          <Text fz="xl" span fw={500} className={classes.price}>
             397$
           </Text>
-          <Text span size="sm" color="dimmed">
+          <Text span fz="sm" c="dimmed">
             {' '}
             / night
           </Text>

@@ -7,7 +7,7 @@
     "/core/button/",
     "/core/tooltip/",
     "/hooks/use-clipboard/",
-    "@tabler/icons"
+    "@tabler/icons-react"
   ],
   "canvas": {
     "center": true,

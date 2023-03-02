@@ -9,8 +9,8 @@ export function FacebookIcon(props: React.ComponentProps<'svg'>) {
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
-      width={14}
-      height={14}
+      width="0.9rem"
+      height="0.9rem"
       {...props}
     >
       <path

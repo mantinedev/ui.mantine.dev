@@ -15,8 +15,8 @@
     "/core/tabs/",
     "/core/burger/",
     "/hooks/use-toggle/",
-    "@tabler/icons",
-    "@tabler/icons"
+    "@tabler/icons-react",
+    "@tabler/icons-react"
   ],
   "props": {
     "user": {

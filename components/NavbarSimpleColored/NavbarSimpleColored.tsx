@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createStyles, Navbar, Group, Code } from '@mantine/core';
+import { createStyles, Navbar, Group, Code, getStylesRef, rem } from '@mantine/core';
 import {
   IconBellRinging,
   IconFingerprint,
@@ -10,83 +10,79 @@ import {
   IconReceipt2,
   IconSwitchHorizontal,
   IconLogout,
-} from '@tabler/icons';
+} from '@tabler/icons-react';
 import { MantineLogo } from '@mantine/ds';
 
-const useStyles = createStyles((theme, _params, getRef) => {
-  const icon = getRef('icon');
-  return {
-    navbar: {
-      backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor })
-        .background,
-    },
+const useStyles = createStyles((theme) => ({
+  navbar: {
+    backgroundColor: theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background,
+  },
 
-    version: {
+  version: {
+    backgroundColor: theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
+      0.1
+    ),
+    color: theme.white,
+    fontWeight: 700,
+  },
+
+  header: {
+    paddingBottom: theme.spacing.md,
+    marginBottom: `calc(${theme.spacing.md} * 1.5)`,
+    borderBottom: `${rem(1)} solid ${theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
+      0.1
+    )}`,
+  },
+
+  footer: {
+    paddingTop: theme.spacing.md,
+    marginTop: theme.spacing.md,
+    borderTop: `${rem(1)} solid ${theme.fn.lighten(
+      theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
+      0.1
+    )}`,
+  },
+
+  link: {
+    ...theme.fn.focusStyles(),
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: 'none',
+    fontSize: theme.fontSizes.sm,
+    color: theme.white,
+    padding: `${theme.spacing.xs} ${theme.spacing.sm}`,
+    borderRadius: theme.radius.sm,
+    fontWeight: 500,
+
+    '&:hover': {
       backgroundColor: theme.fn.lighten(
         theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
         0.1
       ),
-      color: theme.white,
-      fontWeight: 700,
     },
+  },
 
-    header: {
-      paddingBottom: theme.spacing.md,
-      marginBottom: theme.spacing.md * 1.5,
-      borderBottom: `1px solid ${theme.fn.lighten(
+  linkIcon: {
+    ref: getStylesRef('icon'),
+    color: theme.white,
+    opacity: 0.75,
+    marginRight: theme.spacing.sm,
+  },
+
+  linkActive: {
+    '&, &:hover': {
+      backgroundColor: theme.fn.lighten(
         theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
-        0.1
-      )}`,
-    },
-
-    footer: {
-      paddingTop: theme.spacing.md,
-      marginTop: theme.spacing.md,
-      borderTop: `1px solid ${theme.fn.lighten(
-        theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
-        0.1
-      )}`,
-    },
-
-    link: {
-      ...theme.fn.focusStyles(),
-      display: 'flex',
-      alignItems: 'center',
-      textDecoration: 'none',
-      fontSize: theme.fontSizes.sm,
-      color: theme.white,
-      padding: `${theme.spacing.xs}px ${theme.spacing.sm}px`,
-      borderRadius: theme.radius.sm,
-      fontWeight: 500,
-
-      '&:hover': {
-        backgroundColor: theme.fn.lighten(
-          theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
-          0.1
-        ),
+        0.15
+      ),
+      [`& .${getStylesRef('icon')}`]: {
+        opacity: 0.9,
       },
     },
-
-    linkIcon: {
-      ref: icon,
-      color: theme.white,
-      opacity: 0.75,
-      marginRight: theme.spacing.sm,
-    },
-
-    linkActive: {
-      '&, &:hover': {
-        backgroundColor: theme.fn.lighten(
-          theme.fn.variant({ variant: 'filled', color: theme.primaryColor }).background!,
-          0.15
-        ),
-        [`& .${icon}`]: {
-          opacity: 0.9,
-        },
-      },
-    },
-  };
-});
+  },
+}));
 
 const data = [
   { link: '', label: 'Notifications', icon: IconBellRinging },

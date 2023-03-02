@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IconSearch } from '@tabler/icons';
+import { IconSearch } from '@tabler/icons-react';
 import {
   MantineProvider,
   ColorScheme,
@@ -71,15 +71,11 @@ export function Layout({ children, noHeader = false, data }: LayoutProps) {
         >
           <SpotlightProvider
             actions={actions || []}
-            searchIcon={<IconSearch size={18} />}
+            searchIcon={<IconSearch size="1.1rem" />}
             searchPlaceholder="Search components"
             shortcut={['mod + K', 'mod + P', '/']}
             highlightQuery
-            transition={{
-              in: { transform: 'translateY(0)', opacity: 1 },
-              out: { transform: 'translateY(-20px)', opacity: 0 },
-              transitionProperty: 'transform, opacity',
-            }}
+            zIndex={10000000}
           >
             {!noHeader && <Header toggleDir={toggleDir} dir={dir} />}
             <main style={{ paddingTop: !noHeader ? HEADER_HEIGHT : 0 }}>{children}</main>

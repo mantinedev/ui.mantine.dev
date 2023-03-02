@@ -1,5 +1,5 @@
-import { createStyles, Paper, Text, ThemeIcon } from '@mantine/core';
-import { IconColorSwatch } from '@tabler/icons';
+import { createStyles, Paper, Text, ThemeIcon, rem } from '@mantine/core';
+import { IconColorSwatch } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   card: {
@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
     overflow: 'hidden',
     transition: 'transform 150ms ease, box-shadow 100ms ease',
     padding: theme.spacing.xl,
-    paddingLeft: theme.spacing.xl * 2,
+    paddingLeft: `calc(${theme.spacing.xl} * 2)`,
 
     '&:hover': {
       boxShadow: theme.shadows.md,
@@ -21,7 +21,7 @@ const useStyles = createStyles((theme) => ({
       top: 0,
       bottom: 0,
       left: 0,
-      width: 6,
+      width: rem(6),
       backgroundImage: theme.fn.linearGradient(0, theme.colors.pink[6], theme.colors.orange[6]),
     },
   },
@@ -42,7 +42,7 @@ export function CardGradient({ title, description }: CardGradientProps) {
         variant="gradient"
         gradient={{ deg: 0, from: 'pink', to: 'orange' }}
       >
-        <IconColorSwatch size={28} stroke={1.5} />
+        <IconColorSwatch size={rem(28)} stroke={1.5} />
       </ThemeIcon>
       <Text size="xl" weight={500} mt="md">
         {title}

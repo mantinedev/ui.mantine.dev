@@ -1,8 +1,8 @@
-import { createStyles, Text, Avatar, Group } from '@mantine/core';
+import { createStyles, Text, Avatar, Group, rem } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   body: {
-    paddingLeft: 54,
+    paddingLeft: rem(54),
     paddingTop: theme.spacing.sm,
   },
 }));

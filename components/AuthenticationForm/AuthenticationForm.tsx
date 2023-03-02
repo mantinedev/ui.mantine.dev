@@ -52,6 +52,7 @@ export function AuthenticationForm(props: PaperProps) {
               placeholder="Your name"
               value={form.values.name}
               onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
+              radius="md"
             />
           )}
 
@@ -62,6 +63,7 @@ export function AuthenticationForm(props: PaperProps) {
             value={form.values.email}
             onChange={(event) => form.setFieldValue('email', event.currentTarget.value)}
             error={form.errors.email && 'Invalid email'}
+            radius="md"
           />
 
           <PasswordInput
@@ -71,6 +73,7 @@ export function AuthenticationForm(props: PaperProps) {
             value={form.values.password}
             onChange={(event) => form.setFieldValue('password', event.currentTarget.value)}
             error={form.errors.password && 'Password should include at least 6 characters'}
+            radius="md"
           />
 
           {type === 'register' && (
@@ -94,7 +97,9 @@ export function AuthenticationForm(props: PaperProps) {
               ? 'Already have an account? Login'
               : "Don't have an account? Register"}
           </Anchor>
-          <Button type="submit">{upperFirst(type)}</Button>
+          <Button type="submit" radius="xl">
+            {upperFirst(type)}
+          </Button>
         </Group>
       </form>
     </Paper>

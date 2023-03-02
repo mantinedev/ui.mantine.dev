@@ -1,13 +1,5 @@
-import {
-  ThemeIcon,
-  Text,
-  Title,
-  Container,
-  SimpleGrid,
-  useMantineTheme,
-  createStyles,
-} from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock, TablerIcon } from '@tabler/icons';
+import { ThemeIcon, Text, Title, Container, SimpleGrid, createStyles, rem } from '@mantine/core';
+import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
 
 export const MOCKDATA = [
   {
@@ -43,20 +35,21 @@ export const MOCKDATA = [
 ];
 
 interface FeatureProps {
-  icon: TablerIcon;
+  icon: React.FC<any>;
   title: React.ReactNode;
   description: React.ReactNode;
 }
 
 export function Feature({ icon: Icon, title, description }: FeatureProps) {
-  const theme = useMantineTheme();
   return (
     <div>
       <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon size={20} stroke={1.5} />
+        <Icon size="1.1rem" stroke={1.5} />
       </ThemeIcon>
-      <Text style={{ marginTop: theme.spacing.sm, marginBottom: 7 }}>{title}</Text>
-      <Text size="sm" color="dimmed" style={{ lineHeight: 1.6 }}>
+      <Text mt="sm" mb={7}>
+        {title}
+      </Text>
+      <Text size="sm" color="dimmed" sx={{ lineHeight: 1.6 }}>
         {description}
       </Text>
     </div>
@@ -65,8 +58,8 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
-    paddingTop: theme.spacing.xl * 4,
-    paddingBottom: theme.spacing.xl * 4,
+    paddingTop: `calc(${theme.spacing.xl} * 4)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 4)`,
   },
 
   title: {
@@ -76,7 +69,7 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
 
     [theme.fn.smallerThan('sm')]: {
-      fontSize: 28,
+      fontSize: rem(28),
       textAlign: 'left',
     },
   },
@@ -97,7 +90,7 @@ interface FeaturesGridProps {
 }
 
 export function FeaturesGrid({ title, description, data = MOCKDATA }: FeaturesGridProps) {
-  const { classes, theme } = useStyles();
+  const { classes } = useStyles();
   const features = data.map((feature, index) => <Feature {...feature} key={index} />);
 
   return (
@@ -113,7 +106,7 @@ export function FeaturesGrid({ title, description, data = MOCKDATA }: FeaturesGr
       <SimpleGrid
         mt={60}
         cols={3}
-        spacing={theme.spacing.xl * 2}
+        spacing={50}
         breakpoints={[
           { maxWidth: 980, cols: 2, spacing: 'xl' },
           { maxWidth: 755, cols: 1, spacing: 'xl' },

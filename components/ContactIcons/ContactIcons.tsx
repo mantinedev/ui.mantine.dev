@@ -1,5 +1,5 @@
 import { createStyles, ThemeIcon, Text, SimpleGrid, Box, Stack } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons';
+import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
 
 type ContactIconVariant = 'white' | 'gradient';
 
@@ -54,11 +54,11 @@ function ContactIcon({
     <div className={cx(classes.wrapper, className)} {...others}>
       {variant === 'gradient' ? (
         <ThemeIcon size={40} radius="md" className={classes.icon}>
-          <Icon size={24} />
+          <Icon size="1.5rem" />
         </ThemeIcon>
       ) : (
         <Box mr="md">
-          <Icon size={24} />
+          <Icon size="1.5rem" />
         </Box>
       )}
 

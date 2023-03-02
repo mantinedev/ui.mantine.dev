@@ -1,18 +1,18 @@
-import { createStyles, Text } from '@mantine/core';
+import { createStyles, rem, Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { IconGripVertical } from '@tabler/icons';
+import { IconGripVertical } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   item: {
     display: 'flex',
     alignItems: 'center',
     borderRadius: theme.radius.md,
-    border: `1px solid ${
+    border: `${rem(1)} solid ${
       theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[2]
     }`,
-    padding: `${theme.spacing.sm}px ${theme.spacing.xl}px`,
-    paddingLeft: theme.spacing.xl - theme.spacing.md, // to offset drag handle
+    padding: `${theme.spacing.sm} ${theme.spacing.xl}`,
+    paddingLeft: `calc(${theme.spacing.xl} - ${theme.spacing.md})`, // to offset drag handle
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.white,
     marginBottom: theme.spacing.sm,
   },
@@ -22,9 +22,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   symbol: {
-    fontSize: 30,
+    fontSize: rem(30),
     fontWeight: 700,
-    width: 60,
+    width: rem(60),
   },
 
   dragHandle: {
@@ -61,7 +61,7 @@ export function DndListHandle({ data }: DndListHandleProps) {
           {...provided.draggableProps}
         >
           <div {...provided.dragHandleProps} className={classes.dragHandle}>
-            <IconGripVertical size={18} stroke={1.5} />
+            <IconGripVertical size="1.05rem" stroke={1.5} />
           </div>
           <Text className={classes.symbol}>{item.symbol}</Text>
           <div>

@@ -1,5 +1,5 @@
-import { createStyles, Text, SimpleGrid, Container } from '@mantine/core';
-import { IconTruck, IconCertificate, IconCoin, TablerIcon } from '@tabler/icons';
+import { createStyles, Text, SimpleGrid, Container, rem } from '@mantine/core';
+import { IconTruck, IconCertificate, IconCoin } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   feature: {
@@ -10,8 +10,8 @@ const useStyles = createStyles((theme) => ({
 
   overlay: {
     position: 'absolute',
-    height: 100,
-    width: 160,
+    height: rem(100),
+    width: rem(160),
     top: 0,
     left: 0,
     backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
@@ -33,7 +33,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {
-  icon: TablerIcon;
+  icon: React.FC<any>;
   title: string;
   description: string;
 }
@@ -46,11 +46,11 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
       <div className={classes.overlay} />
 
       <div className={classes.content}>
-        <Icon size={38} className={classes.icon} stroke={1.5} />
-        <Text weight={700} size="lg" mb="xs" mt={5} className={classes.title}>
+        <Icon size={rem(38)} className={classes.icon} stroke={1.5} />
+        <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
           {title}
         </Text>
-        <Text color="dimmed" size="sm">
+        <Text c="dimmed" fz="sm">
           {description}
         </Text>
       </div>
