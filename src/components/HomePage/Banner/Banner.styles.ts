@@ -78,7 +78,9 @@ export default createStyles((theme) => ({
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.cyan[6],
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.cyan[6],
+      backgroundColor: `${
+        theme.colorScheme === 'dark' ? theme.colors.yellow[4] : theme.colors.cyan[6]
+      } !important`,
     },
   },
 
@@ -87,7 +89,9 @@ export default createStyles((theme) => ({
     color: theme.colorScheme === 'dark' ? theme.white : theme.black,
 
     '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.white,
+      backgroundColor: `${
+        theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.white
+      } !important`,
     },
   },
 
