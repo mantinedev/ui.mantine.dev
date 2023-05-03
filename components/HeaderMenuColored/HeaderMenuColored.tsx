@@ -52,7 +52,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 interface HeaderSearchProps {
-  links: { link: string; label: string; links: { link: string; label: string }[] }[];
+  links: { link: string; label: string; links?: { link: string; label: string }[] }[];
 }
 
 export function HeaderMenuColored({ links }: HeaderSearchProps) {
