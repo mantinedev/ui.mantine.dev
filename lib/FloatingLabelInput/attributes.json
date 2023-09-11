@@ -1,0 +1,8 @@
+{
+  "title": "Input with floating label",
+  "category": "inputs",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

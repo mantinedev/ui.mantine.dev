@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: background-color 150ms ease, border-color 150ms ease;
+  border-radius: var(--mantine-radius-sm);
+  padding: var(--mantine-spacing-sm);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+
+  &[data-checked] {
+    border-color: var(--mantine-color-blue-filled);
+    background-color: var(--mantine-color-blue-light);
+  }
+}
+
+.body {
+  flex: 1;
+  margin-left: var(--mantine-spacing-md);
+}

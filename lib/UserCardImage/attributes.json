@@ -1,0 +1,9 @@
+{
+  "title": "User card with image",
+  "category": "users",
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 300
+  }
+}

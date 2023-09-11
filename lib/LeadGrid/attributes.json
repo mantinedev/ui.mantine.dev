@@ -1,0 +1,8 @@
+{
+  "title": "Grid with leading item",
+  "category": "grids",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

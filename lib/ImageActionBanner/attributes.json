@@ -1,0 +1,8 @@
+{
+  "title": "Banner with image and action",
+  "category": "banners",
+  "canvas": {
+    "center": true,
+    "maxWidth": 480
+  }
+}

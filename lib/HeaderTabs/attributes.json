@@ -1,0 +1,8 @@
+{
+  "title": "Header with tabs",
+  "category": "headers",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

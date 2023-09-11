@@ -1,0 +1,8 @@
+{
+  "title": "Slider with icon thumb",
+  "category": "sliders",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

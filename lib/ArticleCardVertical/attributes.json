@@ -1,0 +1,9 @@
+{
+  "title": "Vertical article card",
+  "category": "article-cards",
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 520
+  }
+}

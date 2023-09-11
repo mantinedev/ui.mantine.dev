@@ -1,0 +1,8 @@
+{
+  "title": "Range slider with labels",
+  "category": "sliders",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

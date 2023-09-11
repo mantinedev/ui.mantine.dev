@@ -1,0 +1,8 @@
+{
+  "title": "Grid with vertical items",
+  "category": "grids",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

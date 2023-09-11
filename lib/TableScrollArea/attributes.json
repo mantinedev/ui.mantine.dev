@@ -1,0 +1,8 @@
+{
+  "title": "Table with sticky header",
+  "category": "tables",
+  "canvas": {
+    "center": true,
+    "maxWidth": 920
+  }
+}

@@ -1,0 +1,5 @@
+.progressSection {
+  &:not(:first-of-type) {
+    border-left: rem(3px) solid light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  }
+}

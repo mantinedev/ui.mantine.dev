@@ -1,0 +1,8 @@
+{
+  "title": "Table with roles select",
+  "category": "users",
+  "canvas": {
+    "center": true,
+    "maxWidth": 800
+  }
+}

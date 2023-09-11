@@ -1,0 +1,20 @@
+.button {
+  position: relative;
+  transition: background-color 150ms ease;
+}
+
+.progress {
+  position: absolute;
+  top: rem(-1px);
+  left: rem(-1px);
+  right: rem(-1px);
+  bottom: rem(-1px);
+  height: auto;
+  background-color: transparent;
+  z-index: 0;
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+}

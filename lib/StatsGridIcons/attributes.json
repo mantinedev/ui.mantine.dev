@@ -1,0 +1,9 @@
+{
+  "title": "Stats grid with diff icons",
+  "category": "stats",
+  "responsive": true,
+  "dimmed": true,
+  "canvas": {
+    "center": false
+  }
+}

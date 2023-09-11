@@ -1,0 +1,11 @@
+{
+  "title": "Card with switches",
+  "category": "app-cards",
+  "withColor": true,
+  "responsive": true,
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 540
+  }
+}

@@ -1,0 +1,42 @@
+.image {
+  transition: transform 500ms ease;
+
+  &[data-dark] {
+    @mixin light {
+      display: none;
+    }
+  }
+
+  &[data-light] {
+    @mixin dark {
+      display: none;
+    }
+  }
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-5));
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
+
+  @mixin hover {
+    .image {
+      transform: scale(1.025);
+    }
+  }
+}
+
+.title {
+  margin-top: var(--mantine-spacing-sm);
+}
+
+.description {
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
+  margin-top: rem(2px);
+}
+
+.imageWrapper {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+  min-height: rem(154px);
+}

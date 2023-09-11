@@ -1,0 +1,8 @@
+{
+  "title": "Faq with background",
+  "category": "faq",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

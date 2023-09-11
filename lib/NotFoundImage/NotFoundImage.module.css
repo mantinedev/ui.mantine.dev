@@ -1,0 +1,33 @@
+.root {
+  padding-top: rem(80px);
+  padding-bottom: rem(80px);
+}
+
+.title {
+  font-weight: 900;
+  font-size: rem(34px);
+  margin-bottom: var(--mantine-spacing-md);
+  font-family: Greycliff CF, var(--mantine-font-family);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(32px);
+  }
+}
+
+.control {
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 100%;
+  }
+}
+
+.mobileImage {
+  @media (min-width: 48em) {
+    display: none;
+  }
+}
+
+.desktopImage {
+  @media (max-width: 47.99em) {
+    display: none;
+  }
+}

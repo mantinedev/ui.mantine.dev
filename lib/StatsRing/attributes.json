@@ -1,0 +1,10 @@
+{
+  "title": "Stats with ring progress",
+  "category": "stats",
+  "responsive": true,
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 840
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Simple footer",
+  "category": "footers",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

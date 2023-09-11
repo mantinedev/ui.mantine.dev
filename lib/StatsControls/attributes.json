@@ -1,0 +1,9 @@
+{
+  "title": "Stats with controls",
+  "category": "stats",
+  "responsive": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 500
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Table with progress",
+  "category": "tables",
+  "canvas": {
+    "center": true,
+    "maxWidth": 920
+  }
+}

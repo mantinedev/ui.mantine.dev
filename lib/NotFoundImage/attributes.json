@@ -1,0 +1,8 @@
+{
+  "title": "404 page with image",
+  "category": "error-pages",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

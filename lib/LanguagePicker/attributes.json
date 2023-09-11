@@ -1,0 +1,8 @@
+{
+  "title": "Language picker",
+  "category": "inputs",
+  "canvas": {
+    "center": true,
+    "maxWidth": 220
+  }
+}

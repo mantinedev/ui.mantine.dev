@@ -1,0 +1,8 @@
+{
+  "title": "Users stack",
+  "category": "users",
+  "canvas": {
+    "center": true,
+    "maxWidth": 800
+  }
+}

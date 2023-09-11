@@ -1,0 +1,8 @@
+{
+  "title": "User button",
+  "category": "users",
+  "canvas": {
+    "center": true,
+    "maxWidth": 320
+  }
+}

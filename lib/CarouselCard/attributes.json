@@ -1,0 +1,9 @@
+{
+  "title": "Card with carousel",
+  "category": "carousels",
+  "changelog": "september-2022",
+  "canvas": {
+    "center": true,
+    "maxWidth": 350
+  }
+}

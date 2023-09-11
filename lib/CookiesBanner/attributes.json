@@ -1,0 +1,10 @@
+{
+  "title": "Cookies banner",
+  "category": "banners",
+  "withColor": true,
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

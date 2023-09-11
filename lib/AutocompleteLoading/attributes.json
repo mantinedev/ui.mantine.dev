@@ -1,0 +1,8 @@
+{
+  "title": "Autocomplete async data",
+  "category": "inputs",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

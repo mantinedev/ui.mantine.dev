@@ -1,0 +1,8 @@
+{
+  "title": "Card with actions grid",
+  "category": "app-cards",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

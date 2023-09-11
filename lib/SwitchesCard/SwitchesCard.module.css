@@ -1,0 +1,21 @@
+.card {
+  background-color: var(--mantine-color-body);
+}
+
+.item {
+  & + & {
+    padding-top: var(--mantine-spacing-sm);
+    margin-top: var(--mantine-spacing-sm);
+    border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2) var(--mantine-color-dark-4));
+  }
+}
+
+.switch {
+  & * {
+    cursor: pointer;
+  }
+}
+
+.title {
+  line-height: 1;
+}

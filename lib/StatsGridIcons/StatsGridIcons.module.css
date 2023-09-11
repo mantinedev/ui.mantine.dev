@@ -1,0 +1,7 @@
+.root {
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+}
+
+.label {
+  font-family: Greycliff CF, var(--mantine-font-family);
+}

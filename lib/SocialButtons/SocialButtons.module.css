@@ -1,0 +1,32 @@
+.facebookButton {
+  background-color: #4267b2;
+  color: #fff;
+
+  @mixin hover {
+    background-color: #3a5a9b;
+  }
+}
+
+.discordButton {
+  background-color: #5865f2;
+  color: #fff;
+
+  @mixin hover {
+    background-color: #525ee0;
+  }
+}
+
+/* backgroundColor: theme.colors.dark[theme.colorScheme === 'dark' ? 9 : 6],
+        color: '#fff',
+        '&:hover': {
+          backgroundColor: theme.colors.dark[theme.colorScheme === 'dark' ? 9 : 6],
+        }, */
+
+.githubButton {
+  background-color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-dark-9));
+  color: #fff;
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-dark-6), var(--mantine-color-dark-9));
+  }
+}

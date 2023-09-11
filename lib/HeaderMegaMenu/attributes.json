@@ -1,0 +1,9 @@
+{
+  "title": "Header with mega menu",
+  "category": "headers",
+  "responsive": true,
+  "changelog": "september-2022",
+  "canvas": {
+    "center": false
+  }
+}

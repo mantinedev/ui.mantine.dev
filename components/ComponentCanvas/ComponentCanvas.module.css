@@ -1,0 +1,59 @@
+.canvas {
+  border-radius: var(--mantine-radius-md);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
+
+  &:not(:first-of-type) {
+    margin-top: calc(var(--mantine-spacing-xl) * 2);
+  }
+}
+
+.body {
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  border-bottom-right-radius: calc(var(--mantine-radius-md) - rem(1px));
+  border-bottom-left-radius: calc(var(--mantine-radius-md) - rem(1px));
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: 0;
+  }
+}
+
+.bodyRaw {
+  padding: 0;
+
+  & .preview {
+    padding: rem(4px);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+.bodyWithCode {
+  padding: 0;
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+}
+
+.code {
+  border-bottom-right-radius: calc(var(--mantine-radius-md) - rem(1px));
+  border-bottom-left-radius: calc(var(--mantine-radius-md) - rem(1px));
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.preview {
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--mantine-radius-md);
+  position: relative;
+
+  &[data-dimmed] {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  }
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-xs);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

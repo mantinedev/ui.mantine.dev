@@ -1,0 +1,8 @@
+{
+  "title": "Drag'n'drop list",
+  "category": "dnd",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

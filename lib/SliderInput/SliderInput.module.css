@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+}
+
+.input {
+  height: auto;
+  padding-top: rem(22px);
+  padding-bottom: rem(3px);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  padding-left: var(--mantine-spacing-sm);
+  padding-top: calc(var(--mantine-spacing-sm) / 2);
+  z-index: 1;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  bottom: rem(-1px);
+}
+
+.thumb {
+  width: rem(16px);
+  height: rem(16px);
+}
+
+.track {
+  &::before {
+    background-color: (var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+  }
+}
+
+.bar {
+  border-radius: 0;
+}

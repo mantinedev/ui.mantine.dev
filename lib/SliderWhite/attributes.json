@@ -1,0 +1,8 @@
+{
+  "title": "Slider with white thumb",
+  "category": "sliders",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}
