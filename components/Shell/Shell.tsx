@@ -26,6 +26,7 @@ export function Shell({ children }: ShellProps) {
             visibleFrom="sm"
             onSearch={() => {}}
             githubLink={meta.gitHubLinks.mantineUi}
+            withDirectionToggle={false}
           />
 
           <Group hiddenFrom="sm">
