@@ -9,6 +9,7 @@ import Head from 'next/head';
 import { MantineProvider, DirectionProvider } from '@mantine/core';
 import { HotKeysHandler } from '@/components/HotKeysHandler';
 import { Search } from '@/components/Search';
+import { GaScript } from '@/components/GaScript';
 import { theme } from '../theme';
 
 export default function App({ Component, pageProps }: any) {
@@ -22,6 +23,7 @@ export default function App({ Component, pageProps }: any) {
         />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
+      <GaScript />
 
       <DirectionProvider initialDirection="ltr" detectDirection={false}>
         <MantineProvider theme={theme} defaultColorScheme="auto">
