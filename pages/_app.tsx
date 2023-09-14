@@ -3,10 +3,12 @@ import '@mantine/core/styles.css';
 import '@mantine/code-highlight/styles.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/dropzone/styles.css';
+import '@mantine/spotlight/styles.css';
 import '@mantine/ds/styles.css';
 import Head from 'next/head';
 import { MantineProvider, DirectionProvider } from '@mantine/core';
 import { HotKeysHandler } from '@/components/HotKeysHandler';
+import { Search } from '@/components/Search';
 import { theme } from '../theme';
 
 export default function App({ Component, pageProps }: any) {
@@ -25,6 +27,7 @@ export default function App({ Component, pageProps }: any) {
         <MantineProvider theme={theme} defaultColorScheme="auto">
           <HotKeysHandler />
           <Component {...pageProps} />
+          <Search data={pageProps.allComponents} />
         </MantineProvider>
       </DirectionProvider>
     </>

@@ -7,6 +7,7 @@ import {
   meta,
   SearchMobileControl,
 } from '@mantine/ds';
+import { searchHandlers } from '../Search';
 import classes from './Shell.module.css';
 
 interface ShellProps {
@@ -24,13 +25,13 @@ export function Shell({ children }: ShellProps) {
 
           <HeaderControls
             visibleFrom="sm"
-            onSearch={() => {}}
+            onSearch={searchHandlers.open}
             githubLink={meta.gitHubLinks.mantineUi}
             withDirectionToggle={false}
           />
 
           <Group hiddenFrom="sm">
-            <SearchMobileControl onSearch={() => {}} />
+            <SearchMobileControl onSearch={searchHandlers.open} />
             <ColorSchemeControl />
           </Group>
         </Container>
