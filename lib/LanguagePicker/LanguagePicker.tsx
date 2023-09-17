@@ -36,7 +36,7 @@ export function LanguagePicker() {
       <Menu.Target>
         <UnstyledButton className={classes.control} data-expanded={opened || undefined}>
           <Group gap="xs">
-            <Image src={selected.image} width={22} height={22} style={{ flex: 0 }} />
+            <Image src={selected.image} width={22} height={22} />
             <span className={classes.label}>{selected.label}</span>
           </Group>
           <IconChevronDown size="1rem" className={classes.icon} stroke={1.5} />
