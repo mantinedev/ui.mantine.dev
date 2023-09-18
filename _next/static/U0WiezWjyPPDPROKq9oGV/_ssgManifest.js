@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002F404","\u002F","\u002Fcategory\u002F[category]","\u002Fchangelog\u002F[changelog]","\u002Fcomponent\u002F[component]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
