@@ -1,0 +1,9 @@
+{
+  "title": "Input with contained button",
+  "category": "inputs",
+  "withColor": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 520
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Articles cards grid",
+  "category": "article-cards",
+  "changelog": "september-2022",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

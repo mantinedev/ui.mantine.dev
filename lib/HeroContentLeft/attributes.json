@@ -1,0 +1,8 @@
+{
+  "title": "Hero with content on left",
+  "category": "hero",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

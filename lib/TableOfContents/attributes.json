@@ -1,0 +1,8 @@
+{
+  "title": "Table of contents",
+  "category": "toc",
+  "canvas": {
+    "center": true,
+    "maxWidth": 280
+  }
+}

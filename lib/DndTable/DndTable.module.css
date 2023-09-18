@@ -1,0 +1,12 @@
+.item {
+  background-color: var(--mantine-color-body);
+}
+
+.dragHandle {
+  width: rem(40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
+}

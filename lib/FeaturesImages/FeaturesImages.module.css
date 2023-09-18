@@ -1,0 +1,96 @@
+/* 
+const useStyles = createStyles((theme) => ({
+  wrapper: {
+    paddingTop: rem(80),
+    paddingBottom: rem(50),
+  },
+
+  item: {
+    display: 'flex',
+  },
+
+  itemIcon: {
+    padding: theme.spacing.xs,
+    marginRight: theme.spacing.md,
+  },
+
+  itemTitle: {
+    marginBottom: `calc(${theme.spacing.xs} / 2)`,
+  },
+
+  supTitle: {
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    fontWeight: 800,
+    fontSize: theme.fontSizes.sm,
+    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
+    letterSpacing: rem(0.5),
+  },
+
+  title: {
+    lineHeight: 1,
+    textAlign: 'center',
+    marginTop: theme.spacing.xl,
+  },
+
+  description: {
+    textAlign: 'center',
+    marginTop: theme.spacing.xs,
+  },
+
+  highlight: {
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
+    padding: rem(5),
+    paddingTop: 0,
+    borderRadius: theme.radius.sm,
+    display: 'inline-block',
+    color: theme.colorScheme === 'dark' ? theme.white : 'inherit',
+  },
+})); */
+
+.wrapper {
+  padding-top: rem(80px);
+  padding-bottom: rem(50px);
+}
+
+.item {
+  display: flex;
+}
+
+.itemIcon {
+  padding: var(--mantine-spacing-xs);
+  margin-right: var(--mantine-spacing-md);
+}
+
+.itemTitle {
+  margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+}
+
+.supTitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-blue-light-color);
+  letter-spacing: rem(0.5px);
+}
+
+.title {
+  line-height: 1;
+  text-align: center;
+  margin-top: var(--mantine-spacing-xl);
+}
+
+.description {
+  text-align: center;
+  margin-top: var(--mantine-spacing-xs);
+}
+
+.highlight {
+  background-color: var(--mantine-color-blue-light);
+  padding: rem(5px);
+  padding-top: 0;
+  border-radius: var(--mantine-radius-sm);
+  display: inline-block;
+  color: light-dark(inherit, var(--mantine-color-white));
+}

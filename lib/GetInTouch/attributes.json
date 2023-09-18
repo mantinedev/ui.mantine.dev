@@ -1,0 +1,9 @@
+{
+  "title": "Get in touch form",
+  "category": "contact",
+  "responsive": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 800
+  }
+}

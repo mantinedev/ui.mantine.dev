@@ -1,0 +1,8 @@
+{
+  "title": "Inputs with label inside input",
+  "category": "inputs",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Stats grid",
+  "category": "stats",
+  "responsive": true,
+  "dimmed": true,
+  "canvas": {
+    "center": false
+  }
+}

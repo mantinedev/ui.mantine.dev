@@ -1,0 +1,10 @@
+{
+  "title": "Authentication form",
+  "category": "authentication",
+  "withColor": true,
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

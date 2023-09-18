@@ -1,0 +1,8 @@
+{
+  "title": "Dropzone with button",
+  "category": "dropzones",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

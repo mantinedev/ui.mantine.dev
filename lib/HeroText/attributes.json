@@ -1,0 +1,8 @@
+{
+  "title": "Hero section with text",
+  "category": "hero",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

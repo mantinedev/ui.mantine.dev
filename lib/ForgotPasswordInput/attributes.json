@@ -1,0 +1,8 @@
+{
+  "title": "Forgot password on input label",
+  "category": "inputs",
+  "canvas": {
+    "center": true,
+    "maxWidth": 420
+  }
+}

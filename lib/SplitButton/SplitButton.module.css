@@ -1,0 +1,11 @@
+.button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.menuControl {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 0;
+  border-left: rem(1px) solid var(--mantine-color-body);
+}

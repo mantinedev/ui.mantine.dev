@@ -1,0 +1,50 @@
+.card {
+  position: relative;
+  height: rem(280px);
+  background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+
+  @mixin hover {
+    & .image {
+      transform: scale(1.03);
+    }
+  }
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  transition: transform 500ms ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.85) 90%);
+}
+
+.content {
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+}
+
+.title {
+  color: var(--mantine-color-white);
+  margin-bottom: rem(5px);
+}
+
+.bodyText {
+  color: var(--mantine-color-dark-2);
+  margin-left: rem(7px);
+}
+
+.author {
+  color: var(--mantine-color-dark-2);
+}

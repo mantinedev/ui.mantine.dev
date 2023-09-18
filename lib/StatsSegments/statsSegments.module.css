@@ -1,0 +1,25 @@
+.progressLabel {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  line-height: 1;
+  font-size: var(--mantine-font-size-sm);
+}
+
+.stat {
+  border-bottom: rem(3px) solid;
+  padding-bottom: rem(5px);
+}
+
+.statCount {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  line-height: 1.3;
+}
+
+.diff {
+  font-family: Greycliff CF, var(--mantine-font-family);
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+}

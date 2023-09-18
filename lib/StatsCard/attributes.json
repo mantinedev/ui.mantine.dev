@@ -1,0 +1,9 @@
+{
+  "title": "Card with progress",
+  "category": "stats",
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 320
+  }
+}

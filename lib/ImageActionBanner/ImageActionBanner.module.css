@@ -1,0 +1,39 @@
+.card {
+  height: rem(240px);
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80);
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  padding: var(--mantine-spacing-xl);
+  z-index: 1;
+}
+
+.action {
+  position: absolute;
+  bottom: var(--mantine-spacing-xl);
+  right: var(--mantine-spacing-xl);
+}
+
+.title {
+  color: var(--mantine-color-white);
+  margin-bottom: calc(var(--mantine-spacing-xs) / 2);
+}
+
+.description {
+  color: var(--mantine-color-white);
+  max-width: rem(220px);
+}
+
+.overlay {
+  background-color: transparent;
+  background-image: linear-gradient(
+    105deg,
+    var(--mantine-color-black) 20%,
+    #312f2f 50%,
+    var(--mantine-color-gray-4) 100%
+  );
+}

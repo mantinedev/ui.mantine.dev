@@ -1,0 +1,9 @@
+{
+  "title": "Features with cards",
+  "category": "features",
+  "changelog": "september-2022",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

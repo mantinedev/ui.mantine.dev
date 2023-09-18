@@ -1,0 +1,15 @@
+.wrapper {
+  padding-top: calc(var(--mantine-spacing-xl) * 2);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  min-height: rem(650px);
+}
+
+.title {
+  margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
+}
+
+.item {
+  border-radius: var(--mantine-radius-md);
+  margin-bottom: var(--mantine-spacing-lg);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+}

@@ -1,0 +1,8 @@
+{
+  "title": "503 page",
+  "category": "error-pages",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

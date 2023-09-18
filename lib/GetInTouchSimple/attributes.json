@@ -1,0 +1,10 @@
+{
+  "title": "Get in touch form",
+  "category": "contact",
+  "withColor": true,
+  "responsive": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 620
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Features with title",
+  "category": "features",
+  "responsive": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 1060
+  }
+}

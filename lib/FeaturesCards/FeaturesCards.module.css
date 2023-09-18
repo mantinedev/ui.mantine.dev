@@ -1,0 +1,84 @@
+/* 
+const useStyles = createStyles((theme) => ({
+  title: {
+    fontSize: rem(34),
+    fontWeight: 900,
+
+    [theme.fn.smallerThan('sm')]: {
+      fontSize: rem(24),
+    },
+  },
+
+  description: {
+    maxWidth: 600,
+    margin: 'auto',
+
+    '&::after': {
+      content: '""',
+      display: 'block',
+      backgroundColor: theme.fn.primaryColor(),
+      width: rem(45),
+      height: rem(2),
+      marginTop: theme.spacing.sm,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  },
+
+  card: {
+    border: `${rem(1)} solid ${
+      theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1]
+    }`,
+  },
+
+  cardTitle: {
+    '&::after': {
+      content: '""',
+      display: 'block',
+      backgroundColor: theme.fn.primaryColor(),
+      width: rem(45),
+      height: rem(2),
+      marginTop: theme.spacing.sm,
+    },
+  },
+})); */
+
+.title {
+  font-size: rem(34px);
+  font-weight: 900;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    font-size: rem(24px);
+  }
+}
+
+.description {
+  max-width: rem(600px);
+  margin: auto;
+
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: rem(45px);
+    height: rem(2px);
+    margin-top: var(--mantine-spacing-sm);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.card {
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-5));
+}
+
+.cardTitle {
+  &::after {
+    content: '';
+    display: block;
+    background-color: var(--mantine-color-blue-filled);
+    width: rem(45px);
+    height: rem(2px);
+    margin-top: var(--mantine-spacing-sm);
+  }
+}

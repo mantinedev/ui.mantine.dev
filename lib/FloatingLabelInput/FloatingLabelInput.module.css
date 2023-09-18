@@ -1,0 +1,42 @@
+.root {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  z-index: 2;
+  top: rem(7px);
+  left: var(--mantine-spacing-sm);
+  pointer-events: none;
+  color: light-dark(var(--mantine-color-gray-5), var(--mantine-color-dark-3));
+  transition: transform 150ms ease, font-size 150ms ease, color 150ms ease;
+
+  &[data-floating] {
+    transform: translate(calc(var(--mantine-spacing-sm) * -1), rem(-28px));
+    font-size: var(--mantine-font-size-xs);
+    font-weight: 500;
+    color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  }
+}
+
+.required {
+  transition: opacity 150ms ease;
+  opacity: 0;
+
+  [data-floating] & {
+    opacity: 1;
+  }
+}
+
+.input {
+  &::placeholder {
+    transition: color 150ms ease;
+    color: transparent;
+  }
+
+  &[data-floating] {
+    &::placeholder {
+      color: var(--mantine-color-placeholder);
+    }
+  }
+}

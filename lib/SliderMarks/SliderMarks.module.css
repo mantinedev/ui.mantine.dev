@@ -1,0 +1,11 @@
+.mark {
+  display: flex;
+}
+
+.thumb {
+  width: rem(16px);
+  height: rem(28px);
+  background-color: var(--mantine-color-white);
+  color: var(--mantine-color-gray-5);
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-2));
+}

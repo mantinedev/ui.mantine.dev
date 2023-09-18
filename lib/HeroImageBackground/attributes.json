@@ -1,0 +1,8 @@
+{
+  "title": "Hero with background image",
+  "category": "hero",
+  "responsive": true,
+  "canvas": {
+    "center": false
+  }
+}

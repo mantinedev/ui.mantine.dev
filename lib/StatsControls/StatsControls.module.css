@@ -1,0 +1,115 @@
+.root {
+  background-image: linear-gradient(
+    -60deg,
+    var(--mantine-color-blue-4) 0%,
+    var(--mantine-color-blue-7) 100%
+  );
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  display: flex;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+  }
+}
+
+.icon {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: var(--mantine-spacing-lg);
+  color: var(--mantine-color-blue-6);
+}
+
+.stat {
+  min-width: rem(98px);
+  padding-top: var(--mantine-spacing-xl);
+  min-height: rem(140px);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--mantine-color-white);
+}
+
+.label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: var(--mantine-font-size-xs);
+  font-family: Greycliff CF, var(--mantine-font-family);
+  color: var(--mantine-color-gray-6);
+  line-height: 1.2;
+}
+
+.value {
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 700;
+  color: var(--mantine-color-black);
+}
+
+.count {
+  color: var(--mantine-color-gray-6);
+}
+
+.day {
+  font-size: rem(44px);
+  font-weight: 700;
+  color: var(--mantine-color-white);
+  line-height: 1;
+  text-align: center;
+  margin-bottom: rem(5px);
+  font-family: Greycliff CF, var(--mantine-font-family);
+}
+
+.month {
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-white);
+  line-height: 1;
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  margin-right: calc(var(--mantine-spacing-xl) * 2);
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: row;
+    align-items: center;
+    margin-right: 0;
+    margin-bottom: var(--mantine-spacing-xl);
+  }
+}
+
+.date {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.control {
+  height: rem(28px);
+  width: 100%;
+  color: var(--mantine-color-blue-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--mantine-radius-md);
+  transition: background-color 50ms ease;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    height: rem(34px);
+    width: rem(34px);
+  }
+
+  @mixin hover {
+    background-color: var(--mantine-color-blue-5);
+    color: var(--mantine-color-white);
+  }
+}
+
+.controlIcon {
+  @media (max-width: $mantine-breakpoint-xs) {
+    transform: rotate(-90deg);
+  }
+}

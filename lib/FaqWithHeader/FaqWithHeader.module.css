@@ -1,0 +1,103 @@
+.wrapper {
+  padding-top: var(--mantine-spacing-md);
+  padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+}
+
+.header {
+  height: rem(400px);
+  padding-top: var(--mantine-spacing-md);
+  background-image: linear-gradient(
+    135deg,
+    var(--mantine-color-blue-4) 0%,
+    var(--mantine-color-blue-6) 100%
+  );
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  padding: calc(var(--mantine-spacing-xl) * 1.5) calc(var(--mantine-spacing-xl) * 2);
+  border-radius: var(--mantine-radius-lg);
+  margin-bottom: var(--mantine-spacing-lg);
+
+  @media (max-width: em(1080px)) {
+    height: auto;
+    flex-direction: column-reverse;
+    align-items: initial;
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.title {
+  color: var(--mantine-color-white);
+  position: relative;
+  z-index: 1;
+  font-size: rem(46px);
+  font-weight: 800;
+  letter-spacing: rem(-0.5px);
+  font-family: Greycliff CF, var(--mantine-font-family);
+
+  @media (max-width: em(1080px)) {
+    font-size: rem(22px);
+    text-align: center;
+    margin-top: var(--mantine-spacing-xl);
+  }
+}
+
+.titleOverlay {
+  z-index: 0;
+  position: absolute;
+  color: var(--mantine-color-white);
+  font-weight: 900;
+  opacity: 0.1;
+  font-size: rem(320px);
+  line-height: 1;
+  top: rem(10px);
+  left: rem(45px);
+  pointer-events: none;
+  font-family: Greycliff CF, var(--mantine-font-family);
+
+  @media (max-width: em(1080px)) {
+    display: none;
+  }
+}
+
+.contact {
+  padding: calc(var(--mantine-spacing-xl) * 1.5);
+  background-color: var(--mantine-color-white);
+  border-radius: var(--mantine-radius-lg);
+  box-shadow: var(--mantine-shadow-md);
+  align-self: center;
+
+  @media (max-width: em(1080px)) {
+    padding: var(--mantine-spacing-xl);
+  }
+}
+
+.contactTitle {
+  color: var(--mantine-color-black);
+  margin-bottom: var(--mantine-spacing-xl);
+  line-height: 1;
+}
+
+.categoryCard {
+  height: rem(160px);
+  position: relative;
+  background-size: 100%;
+  background-position: center;
+  color: var(--mantine-color-white);
+  border-radius: var(--mantine-radius-lg);
+  padding: var(--mantine-spacing-xl);
+  overflow: hidden;
+  transition: background-size 300ms ease;
+
+  @mixin hover {
+    background-size: 105%;
+  }
+}
+
+.categoryLabel {
+  color: var(--mantine-color-white);
+  z-index: 2;
+  position: relative;
+}

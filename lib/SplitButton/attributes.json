@@ -1,0 +1,8 @@
+{
+  "title": "Split button",
+  "category": "buttons",
+  "canvas": {
+    "center": true,
+    "maxWidth": 120
+  }
+}

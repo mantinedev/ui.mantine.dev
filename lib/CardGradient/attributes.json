@@ -1,0 +1,9 @@
+{
+  "title": "Card with gradient border",
+  "category": "article-cards",
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 360
+  }
+}

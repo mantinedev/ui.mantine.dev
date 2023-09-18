@@ -1,0 +1,12 @@
+.button {
+  display: flex;
+  width: 100%;
+  border: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  border-radius: var(--mantine-radius-sm);
+  padding: var(--mantine-spacing-lg);
+  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-9));
+  }
+}

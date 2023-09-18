@@ -1,0 +1,10 @@
+{
+  "title": "Progress card",
+  "category": "stats",
+  "changelog": "september-2022",
+  "dimmed": true,
+  "canvas": {
+    "center": true,
+    "maxWidth": 380
+  }
+}
