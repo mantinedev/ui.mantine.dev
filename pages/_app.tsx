@@ -6,7 +6,7 @@ import '@mantine/dropzone/styles.css';
 import '@mantine/spotlight/styles.css';
 import '@mantine/ds/styles.css';
 import Head from 'next/head';
-import { MantineProvider, DirectionProvider } from '@mantine/core';
+import { MantineProvider, DirectionProvider, localStorageColorSchemeManager } from '@mantine/core';
 import { HotKeysHandler } from '@/components/HotKeysHandler';
 import { Search } from '@/components/Search';
 import { GaScript } from '@/components/GaScript';
@@ -35,7 +35,11 @@ export default function App({ Component, pageProps }: any) {
       <GaScript />
 
       <DirectionProvider initialDirection="ltr" detectDirection={false}>
-        <MantineProvider theme={theme} defaultColorScheme="auto">
+        <MantineProvider
+          theme={theme}
+          defaultColorScheme="auto"
+          colorSchemeManager={localStorageColorSchemeManager({ key: 'mantine-ui-color-scheme' })}
+        >
           <HotKeysHandler />
           <Component {...pageProps} />
           <Search data={pageProps.allComponents} />

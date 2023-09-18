@@ -19,7 +19,7 @@ export function Search({ data }: { data: any[] }) {
     <Spotlight
       store={searchStore}
       shortcut={['mod + K', 'mod + P', '/']}
-      actions={actions}
+      actions={actions || []}
       tagsToIgnore={[]}
       highlightQuery
       clearQueryOnClose
