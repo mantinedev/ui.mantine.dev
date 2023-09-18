@@ -14,9 +14,11 @@ export const getStaticPaths: GetStaticPaths = async () => ({
   fallback: false,
 });
 
-export const getStaticProps: GetStaticProps<{ components: UiComponent[] }, { changelog: string }> =
-  (context) => {
-    const components = getComponentsByChangelog(context!.params!.changelog);
-    const allComponents = getAllComponents();
-    return { props: { components, allComponents } };
-  };
+export const getStaticProps: GetStaticProps<
+  { components: UiComponent[] },
+  { changelog: string }
+> = (context) => {
+  const components = getComponentsByChangelog(context!.params!.changelog);
+  const allComponents = getAllComponents();
+  return { props: { components, allComponents } };
+};
