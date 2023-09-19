@@ -53,7 +53,7 @@ export function CanvasHeader({
             className={classes.action}
             title="View source on github"
             component="a"
-            href={`https://github.com/mantinedev/ui.mantine.dev/tree/master/components/${component}/${component}.tsx`}
+            href={`https://github.com/mantinedev/ui.mantine.dev/tree/master/lib/${component}/${component}.tsx`}
             target="_blank"
             rel="noopener noreferrer"
           >

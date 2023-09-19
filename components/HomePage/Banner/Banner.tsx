@@ -75,7 +75,7 @@ export function Banner({ componentsCount }: BannerProps) {
               className={cx(classes.control, classes.controlSecondary)}
               rightSection={<IconExternalLink size="1rem" stroke={1.5} />}
               component="a"
-              href="https://mantine.dev/pages/getting-started/"
+              href="https://mantine.dev/getting-started/"
             >
               Get started with Mantine
             </Button>
