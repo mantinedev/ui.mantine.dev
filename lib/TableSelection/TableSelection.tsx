@@ -93,7 +93,7 @@ export function TableSelection() {
             <Table.Th>Job</Table.Th>
           </Table.Tr>
         </Table.Thead>
-        <tbody>{rows}</tbody>
+        <Table.Tbody>{rows}</Table.Tbody>
       </Table>
     </ScrollArea>
   );
