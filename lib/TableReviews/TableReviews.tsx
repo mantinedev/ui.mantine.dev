@@ -94,7 +94,7 @@ export function TableReviews() {
           <Table.Tr>
             <Table.Th>Book title</Table.Th>
             <Table.Th>Year</Table.Th>
-            <Table.Th>AuTable.Thor</Table.Th>
+            <Table.Th>Author</Table.Th>
             <Table.Th>Reviews</Table.Th>
             <Table.Th>Reviews distribution</Table.Th>
           </Table.Tr>
