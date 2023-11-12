@@ -5,7 +5,7 @@ export function CommentSimple() {
     <div>
       <Group>
         <Avatar
-          src="https://images.unsplash.com/photo-1624298357597-fd92dfbec01d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80"
+          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png"
           alt="Jacob Warnhalter"
           radius="xl"
         />

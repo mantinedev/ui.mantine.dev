@@ -7,7 +7,7 @@ const data = [
   {
     id: '1',
     avatar:
-      'https://images.unsplash.com/photo-1624298357597-fd92dfbec01d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80',
+      'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png',
     name: 'Robert Wolfkisser',
     job: 'Engineer',
     email: 'rob_wolf@gmail.com',
@@ -15,7 +15,7 @@ const data = [
   {
     id: '2',
     avatar:
-      'https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80',
+      'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png',
     name: 'Jill Jailbreaker',
     job: 'Engineer',
     email: 'jj@breaker.com',
@@ -23,7 +23,7 @@ const data = [
   {
     id: '3',
     avatar:
-      'https://images.unsplash.com/photo-1632922267756-9b71242b1592?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80',
+      'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',
     name: 'Henry Silkeater',
     job: 'Designer',
     email: 'henry@silkeater.io',
@@ -31,7 +31,7 @@ const data = [
   {
     id: '4',
     avatar:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80',
+      'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-3.png',
     name: 'Bill Horsefighter',
     job: 'Designer',
     email: 'bhorsefighter@gmail.com',
@@ -39,7 +39,7 @@ const data = [
   {
     id: '5',
     avatar:
-      'https://images.unsplash.com/photo-1630841539293-bd20634c5d72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=250&q=80',
+      'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-10.png',
     name: 'Jeremy Footviewer',
     job: 'Manager',
     email: 'jeremy@foot.dev',

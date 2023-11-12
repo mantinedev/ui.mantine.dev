@@ -35,7 +35,7 @@ export function ArticleCardFooter() {
 
       <Group mt="lg">
         <Avatar
-          src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=200&q=80"
+          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png"
           radius="sm"
         />
         <div>
