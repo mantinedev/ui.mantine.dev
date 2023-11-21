@@ -4,13 +4,9 @@ import { useMantineColorScheme, useComputedColorScheme, useDirection } from '@ma
 
 export function HotKeysHandler() {
   const { setColorScheme } = useMantineColorScheme();
-  const { toggleDirection } = useDirection();
   const computedColorScheme = useComputedColorScheme('light');
   useHotkeys(
-    [
-      ['mod + J', () => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')],
-      ['mod + shift + L', () => toggleDirection()],
-    ],
+    [['mod + J', () => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')]],
     []
   );
   return <>{null}</>;
