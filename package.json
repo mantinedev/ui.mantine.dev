@@ -5,10 +5,9 @@
   "scripts": {
     "dev": "next dev --port 1764",
     "analyze": "ANALYZE=true next build",
-    "build": "next build && next export && cp -R ./CNAME ./out/CNAME && touch out/.nojekyll",
+    "build": "next build && echo 'ui.mantine.dev' > out/CNAME && touch out/.nojekyll",
     "deploy": "npm run build && gh-pages -d out -t true",
     "start": "next start",
-    "export": "next build && next export",
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",

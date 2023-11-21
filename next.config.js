@@ -5,6 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   reactStrictMode: false,
   trailingSlash: true,
+  output: 'export',
   eslint: {
     ignoreDuringBuilds: true,
   },
