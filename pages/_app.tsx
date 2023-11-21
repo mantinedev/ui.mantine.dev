@@ -11,7 +11,6 @@ import { MantineProvider, DirectionProvider, localStorageColorSchemeManager } fr
 import { HotKeysHandler } from '@/components/HotKeysHandler';
 import { Search } from '@/components/Search';
 import { GaScript } from '@/components/GaScript';
-import { theme } from '../theme';
 
 export default function App({ Component, pageProps }: any) {
   return (
@@ -37,7 +36,6 @@ export default function App({ Component, pageProps }: any) {
 
       <DirectionProvider initialDirection="ltr" detectDirection={false}>
         <MantineProvider
-          theme={theme}
           defaultColorScheme="auto"
           colorSchemeManager={localStorageColorSchemeManager({ key: 'mantine-ui-color-scheme' })}
         >
