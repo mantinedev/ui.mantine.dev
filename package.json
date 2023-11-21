@@ -68,5 +68,6 @@
     "storybook": "^7.0.18",
     "storybook-dark-mode": "^3.0.0",
     "typescript": "5.0.4"
-  }
+  },
+  "packageManager": "yarn@4.0.2"
 }
