@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { ImageCard } from './ImageCard';
 
-storiesOf('ImageCard', module).add('ImageCard', () => (
-  <StoryWrapper attributes={attributes} component={ImageCard} />
-));
+export default { title: 'ImageCard' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={ImageCard} />;
+}

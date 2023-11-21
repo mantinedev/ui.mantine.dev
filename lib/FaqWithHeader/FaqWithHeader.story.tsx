@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { FaqWithHeader } from './FaqWithHeader';
 
-storiesOf('FaqWithHeader', module).add('FaqWithHeader', () => (
-  <StoryWrapper attributes={attributes} component={FaqWithHeader} />
-));
+export default { title: 'FaqWithHeader' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={FaqWithHeader} />;
+}

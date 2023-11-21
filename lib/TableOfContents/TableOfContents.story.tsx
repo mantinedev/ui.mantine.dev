@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { TableOfContents } from './TableOfContents';
 
-storiesOf('TableOfContents', module).add('TableOfContents', () => (
-  <StoryWrapper attributes={attributes} component={TableOfContents} />
-));
+export default { title: 'TableOfContents' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={TableOfContents} />;
+}

@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { AuthenticationForm } from './AuthenticationForm';
 
-storiesOf('AuthenticationForm', module).add('AuthenticationForm', () => (
-  <StoryWrapper attributes={attributes} component={AuthenticationForm} />
-));
+export default { title: 'AuthenticationForm' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={AuthenticationForm} />;
+}

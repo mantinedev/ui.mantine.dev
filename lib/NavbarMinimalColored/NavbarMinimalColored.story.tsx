@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { NavbarMinimalColored } from './NavbarMinimalColored';
 
-storiesOf('NavbarMinimalColored', module).add('NavbarMinimalColored', () => (
-  <StoryWrapper attributes={attributes} component={NavbarMinimalColored} />
-));
+export default { title: 'NavbarMinimalColored' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={NavbarMinimalColored} />;
+}

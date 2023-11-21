@@ -1,6 +1,6 @@
 import { Progress, Box, Text, Group, Paper, SimpleGrid, rem } from '@mantine/core';
 import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons-react';
-import classes from './StatsSegments.module.css';
+import classes from './1.module.css';
 
 const data = [
   { label: 'Mobile', count: '204,001', part: 59, color: '#47d6ab' },

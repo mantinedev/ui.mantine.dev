@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { HeaderMenu } from './HeaderMenu';
 
-storiesOf('HeaderMenu', module).add('HeaderMenu', () => (
-  <StoryWrapper attributes={attributes} component={HeaderMenu} />
-));
+export default { title: 'HeaderMenu' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={HeaderMenu} />;
+}

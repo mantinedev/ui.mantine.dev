@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { ButtonProgress } from './ButtonProgress';
 
-storiesOf('ButtonProgress', module).add('ButtonProgress', () => (
-  <StoryWrapper attributes={attributes} component={ButtonProgress} />
-));
+export default { title: 'ButtonProgress' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={ButtonProgress} />;
+}

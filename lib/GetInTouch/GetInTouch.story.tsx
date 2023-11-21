@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { GetInTouch } from './GetInTouch';
 
-storiesOf('GetInTouch', module).add('GetInTouch', () => (
-  <StoryWrapper attributes={attributes} component={GetInTouch} />
-));
+export default { title: 'GetInTouch' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={GetInTouch} />;
+}

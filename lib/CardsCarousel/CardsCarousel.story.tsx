@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { CardsCarousel } from './CardsCarousel';
 
-storiesOf('CardsCarousel', module).add('CardsCarousel', () => (
-  <StoryWrapper attributes={attributes} component={CardsCarousel} />
-));
+export default { title: 'CardsCarousel' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={CardsCarousel} />;
+}

@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { NavbarLinksGroup } from './NavbarLinksGroup';
 
-storiesOf('NavbarLinksGroup', module).add('NavbarLinksGroup', () => (
-  <StoryWrapper attributes={attributes} component={NavbarLinksGroup} />
-));
+export default { title: 'NavbarLinksGroup' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={NavbarLinksGroup} />;
+}

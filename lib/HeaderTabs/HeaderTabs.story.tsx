@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { HeaderTabs } from './HeaderTabs';
 
-storiesOf('HeaderTabs', module).add('HeaderTabs', () => (
-  <StoryWrapper attributes={attributes} component={HeaderTabs} />
-));
+export default { title: 'HeaderTabs' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={HeaderTabs} />;
+}

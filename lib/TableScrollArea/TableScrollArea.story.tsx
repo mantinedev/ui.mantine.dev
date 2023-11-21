@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { TableScrollArea } from './TableScrollArea';
 
-storiesOf('TableScrollArea', module).add('TableScrollArea', () => (
-  <StoryWrapper attributes={attributes} component={TableScrollArea} />
-));
+export default { title: 'TableScrollArea' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={TableScrollArea} />;
+}

@@ -1,9 +1,9 @@
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
-import { TaskCard as TaskCardComponent } from './TaskCard';
+import { TaskCard } from './TaskCard';
 
 export default { title: 'TaskCard' };
 
-export function TaskCard() {
-  return <StoryWrapper attributes={attributes} component={TaskCardComponent} />;
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={TaskCard} />;
 }

@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { UserMenu } from './UserMenu';
 
-storiesOf('UserMenu', module).add('UserMenu', () => (
-  <StoryWrapper attributes={attributes} component={UserMenu} />
-));
+export default { title: 'UserMenu' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={UserMenu} />;
+}

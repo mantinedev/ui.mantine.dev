@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { UsersStack } from './UsersStack';
 
-storiesOf('UsersStack', module).add('UsersStack', () => (
-  <StoryWrapper attributes={attributes} component={UsersStack} />
-));
+export default { title: 'UsersStack' };
+
+export function Usage() {
+  return <StoryWrapper attributes={attributes} component={UsersStack} />;
+}
