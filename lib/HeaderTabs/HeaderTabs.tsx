@@ -24,7 +24,7 @@ import {
   IconSwitchHorizontal,
   IconChevronDown,
 } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderTabs.module.css';
 
 const user = {

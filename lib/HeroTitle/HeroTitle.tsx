@@ -1,5 +1,5 @@
 import { Container, Text, Button, Group } from '@mantine/core';
-import { GithubIcon } from '@mantine/ds';
+import { GithubIcon } from '@mantinex/dev-icons';
 import classes from './HeroTitle.module.css';
 
 export function HeroTitle() {

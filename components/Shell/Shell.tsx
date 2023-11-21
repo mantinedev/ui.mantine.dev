@@ -1,12 +1,8 @@
 import Link from 'next/link';
 import { AppShell, Container, RemoveScroll, Group } from '@mantine/core';
-import {
-  ColorSchemeControl,
-  HeaderControls,
-  MantineLogo,
-  meta,
-  SearchMobileControl,
-} from '@mantine/ds';
+import { ColorSchemeControl, HeaderControls, SearchMobileControl } from '@mantinex/mantine-header';
+import { MantineLogo } from '@mantinex/mantine-logo';
+import { meta } from '@mantinex/mantine-meta';
 import { searchHandlers } from '../Search';
 import classes from './Shell.module.css';
 
@@ -28,6 +24,7 @@ export function Shell({ children }: ShellProps) {
             onSearch={searchHandlers.open}
             githubLink={meta.gitHubLinks.mantineUi}
             withDirectionToggle={false}
+            discordLink={meta.discordLink}
           />
 
           <Group hiddenFrom="sm">

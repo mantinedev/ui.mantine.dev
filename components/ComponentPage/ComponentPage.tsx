@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { MantineThemeProvider, useMantineTheme } from '@mantine/core';
-import { getCodeFileIcon } from '@mantine/ds';
+import { getCodeFileIcon } from '@mantinex/dev-icons';
 import { CodeHighlightTabs } from '@mantine/code-highlight';
 import * as UiComponents from '../../lib';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';

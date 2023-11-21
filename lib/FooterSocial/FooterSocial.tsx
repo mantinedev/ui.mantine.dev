@@ -1,6 +1,6 @@
 import { Container, Group, ActionIcon, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './FooterSocial.module.css';
 
 export function FooterSocial() {

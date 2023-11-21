@@ -9,7 +9,7 @@ import {
   IconUser,
   IconSettings,
 } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './DoubleNavbar.module.css';
 
 const mainLinksMockdata = [

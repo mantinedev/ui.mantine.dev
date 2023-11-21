@@ -1,6 +1,6 @@
 import { Anchor, Group, ActionIcon, rem } from '@mantine/core';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './FooterCentered.module.css';
 
 const links = [

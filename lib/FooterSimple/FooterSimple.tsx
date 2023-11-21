@@ -1,5 +1,5 @@
 import { Container, Group, Anchor } from '@mantine/core';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './FooterSimple.module.css';
 
 const links = [

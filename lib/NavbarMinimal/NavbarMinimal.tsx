@@ -11,7 +11,7 @@ import {
   IconLogout,
   IconSwitchHorizontal,
 } from '@tabler/icons-react';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './NavbarMinimal.module.css';
 
 interface NavbarLinkProps {

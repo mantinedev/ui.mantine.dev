@@ -1,5 +1,5 @@
 import { Card, Avatar, Text, Progress, Badge, Group, ActionIcon } from '@mantine/core';
-import { MantineLogo } from '@mantine/ds';
+import { MantineLogo } from '@mantinex/mantine-logo';
 import { IconUpload } from '@tabler/icons-react';
 
 const avatars = [

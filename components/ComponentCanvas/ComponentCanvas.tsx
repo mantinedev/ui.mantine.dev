@@ -2,7 +2,7 @@ import cx from 'clsx';
 import { useState } from 'react';
 import { CodeHighlightTabs } from '@mantine/code-highlight';
 import { MantineThemeProvider, Box } from '@mantine/core';
-import { getCodeFileIcon } from '@mantine/ds';
+import { getCodeFileIcon } from '@mantinex/dev-icons';
 import * as UiComponents from '../../lib';
 import { UiComponent } from '../../data';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';

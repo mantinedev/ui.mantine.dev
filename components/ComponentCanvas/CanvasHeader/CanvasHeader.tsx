@@ -1,4 +1,4 @@
-import { GithubIcon } from '@mantine/ds';
+import { GithubIcon } from '@mantinex/dev-icons';
 import { IconExternalLink, IconCode, IconEye } from '@tabler/icons-react';
 import { Group, Text, ActionIcon, Badge, SegmentedControl, Center, Box } from '@mantine/core';
 import { ColorControl } from '../ColorControl/ColorControl';

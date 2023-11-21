@@ -1,5 +1,5 @@
 import { Button, ButtonProps, Group } from '@mantine/core';
-import { GithubIcon, DiscordIcon, TwitterIcon } from '@mantine/ds';
+import { GithubIcon, DiscordIcon, TwitterIcon } from '@mantinex/dev-icons';
 import { GoogleIcon } from './GoogleIcon';
 import { FacebookIcon } from './FacebookIcon';
 import classes from './SocialButtons.module.css';

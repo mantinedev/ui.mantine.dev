@@ -70,7 +70,7 @@ export function NavbarSegmented() {
 
         <SegmentedControl
           value={section}
-          onChange={(value: 'account' | 'general') => setSection(value)}
+          onChange={(value: any) => setSection(value)}
           transitionTimingFunction="ease"
           fullWidth
           data={[

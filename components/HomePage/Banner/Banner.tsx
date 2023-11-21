@@ -1,6 +1,6 @@
 import cx from 'clsx';
 import { IconExternalLink } from '@tabler/icons-react';
-import { GithubIcon } from '@mantine/ds';
+import { GithubIcon } from '@mantinex/dev-icons';
 import {
   Title,
   Overlay,
