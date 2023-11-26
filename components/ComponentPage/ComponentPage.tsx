@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { MantineThemeProvider, useMantineTheme } from '@mantine/core';
 import { getCodeFileIcon } from '@mantinex/dev-icons';
-import { CodeHighlightTabs } from '@mantine/code-highlight';
+import { CodeHighlightTabs } from '@mantinex/shiki';
 import * as UiComponents from '../../lib';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 import { ComponentPreviewControls } from '../ComponentPreviewControls/ComponentPreviewControls';
@@ -59,7 +59,7 @@ export function ComponentPage({ data }: ComponentPageProps) {
           data={data}
         />
       ) : (
-        <CodeHighlightTabs code={data.code} getFileIcon={getCodeFileIcon} />
+        <CodeHighlightTabs code={data.code as any} getFileIcon={getCodeFileIcon} />
       )}
     </>
   );

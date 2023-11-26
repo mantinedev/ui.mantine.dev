@@ -19,7 +19,6 @@
   "dependencies": {
     "@hello-pangea/dnd": "^16.3.0",
     "@mantine/carousel": "7.2.2",
-    "@mantine/code-highlight": "7.2.2",
     "@mantine/core": "7.2.2",
     "@mantine/dropzone": "7.2.2",
     "@mantine/form": "7.2.2",
@@ -29,13 +28,15 @@
     "@mantinex/mantine-header": "^1.0.1",
     "@mantinex/mantine-logo": "^1.0.1",
     "@mantinex/mantine-meta": "^1.0.1",
+    "@mantinex/shiki": "^1.0.2",
     "@next/bundle-analyzer": "^14.0.3",
     "@tabler/icons-react": "^2.41.0",
     "dayjs": "^1.11.10",
     "embla-carousel-react": "^7.1.0",
     "next": "14.0.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "shikiji": "^0.7.4"
   },
   "devDependencies": {
     "@babel/core": "^7.23.3",

@@ -1,6 +1,6 @@
 import cx from 'clsx';
 import { useState } from 'react';
-import { CodeHighlightTabs } from '@mantine/code-highlight';
+import { CodeHighlightTabs } from '@mantinex/shiki';
 import { MantineThemeProvider, Box } from '@mantine/core';
 import { getCodeFileIcon } from '@mantinex/dev-icons';
 import * as UiComponents from '../../lib';
@@ -44,7 +44,7 @@ export function ComponentCanvas(props: UiComponent & { zIndex: number }) {
           </Box>
         ) : (
           <Box pos="relative">
-            <CodeHighlightTabs code={props.code} getFileIcon={getCodeFileIcon} />
+            <CodeHighlightTabs code={props.code as any} getFileIcon={getCodeFileIcon} />
           </Box>
         )}
       </div>

@@ -53,7 +53,7 @@ function getComponentCode(componentFolder: string, componentName: string) {
     { fileName: `${componentName}.tsx`, language: 'tsx', code: mainFileContent },
     ...otherFilesContent.map(({ name, content }) => ({
       fileName: name,
-      language: name.endsWith('.css') ? 'css' : 'tsx',
+      language: name.endsWith('.css') ? 'scss' : 'tsx',
       code: content,
     })),
   ];
