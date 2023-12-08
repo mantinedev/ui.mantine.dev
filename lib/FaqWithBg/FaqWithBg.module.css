@@ -14,7 +14,9 @@
 .title {
   color: var(--mantine-color-white);
   font-size: 52px;
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
 }
 

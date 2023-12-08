@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "next lint",
     "prettier:check": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:write": "prettier --write \"**/*.{ts,tsx}\"",
+    "prettier:write": "prettier --write \"**/*.{ts,tsx,css}\"",
     "test": "npm run prettier:check && npm run lint && npm run typecheck",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"

@@ -7,7 +7,9 @@
   font-weight: 900;
   font-size: rem(34px);
   margin-bottom: var(--mantine-spacing-md);
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
 
   @media (max-width: $mantine-breakpoint-sm) {
     font-size: rem(32px);

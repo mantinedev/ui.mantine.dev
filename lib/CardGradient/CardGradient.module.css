@@ -2,7 +2,9 @@
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 150ms ease, box-shadow 100ms ease;
+  transition:
+    transform 150ms ease,
+    box-shadow 100ms ease;
   padding: var(--mantine-spacing-xl);
   padding-left: calc(var(--mantine-spacing-xl) * 2);
 

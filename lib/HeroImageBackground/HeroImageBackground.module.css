@@ -26,7 +26,9 @@
   color: var(--mantine-color-white);
   margin-bottom: var(--mantine-spacing-xs);
   text-align: center;
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);

@@ -10,6 +10,8 @@
 }
 
 .title {
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
   line-height: 1;
 }

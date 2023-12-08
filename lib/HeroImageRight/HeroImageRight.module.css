@@ -35,7 +35,9 @@
 
 .title {
   color: var(--mantine-color-white);
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
   font-weight: 900;
   line-height: 1.05;
   max-width: rem(500px);
@@ -61,7 +63,9 @@
 .control {
   padding-left: rem(50px);
   padding-right: rem(50px);
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
   font-size: rem(22px);
 
   @media (max-width: $mantine-breakpoint-md) {

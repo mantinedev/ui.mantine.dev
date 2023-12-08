@@ -63,7 +63,9 @@
 .title {
   font-size: var(--mantine-font-size-lg);
   font-weight: 700;
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
   margin-bottom: calc(var(--mantine-spacing-xs) / 2);
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 }

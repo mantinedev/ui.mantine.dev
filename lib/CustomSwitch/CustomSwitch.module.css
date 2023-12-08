@@ -13,7 +13,9 @@
   width: rem(20px);
   height: rem(20px);
   left: rem(-2px);
-  transition: background-color 100ms ease, left 100ms ease;
+  transition:
+    background-color 100ms ease,
+    left 100ms ease;
 
   input:checked + * > & {
     background-color: var(--mantine-color-blue-filled);

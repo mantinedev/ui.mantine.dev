@@ -35,7 +35,9 @@
   letter-spacing: -1px;
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   margin-bottom: var(--mantine-spacing-xs);
-  font-family: Greycliff CF, var(--mantine-font-family);
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
 
   @media (max-width: $mantine-breakpoint-xs) {
     font-size: rem(28px);

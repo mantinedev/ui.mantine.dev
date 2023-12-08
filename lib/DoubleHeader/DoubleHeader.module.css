@@ -31,7 +31,9 @@
   padding: rem(7px) var(--mantine-spacing-sm);
   font-weight: 700;
   border-bottom: rem(2px) solid transparent;
-  transition: border-color 100ms ease, color 100ms ease;
+  transition:
+    border-color 100ms ease,
+    color 100ms ease;
 
   @mixin hover {
     color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
