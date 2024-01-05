@@ -1,4 +1,16 @@
-import { Menu, Group, Center, Burger, Container } from '@mantine/core';
+import {
+  Container,
+  Group,
+  Button,
+  Menu,
+  Divider,
+  Center,
+  Burger,
+  Drawer,
+  ScrollArea,
+  rem,
+  Stack,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
@@ -30,7 +42,7 @@ const links = [
 ];
 
 export function HeaderMenu() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
@@ -39,7 +51,15 @@ export function HeaderMenu() {
 
     if (menuItems) {
       return (
-        <Menu key={link.label} trigger="hover" transitionProps={{ exitDuration: 0 }} withinPortal>
+        <Menu
+          key={link.label}
+          trigger="click-hover"
+          position="bottom-start"
+          loop={false}
+          withinPortal={false}
+          trapFocus={false}
+          menuItemTabIndex={0}
+        >
           <Menu.Target>
             <a
               href={link.link}
@@ -70,16 +90,42 @@ export function HeaderMenu() {
   });
 
   return (
-    <header className={classes.header}>
-      <Container size="md">
-        <div className={classes.inner}>
-          <MantineLogo size={28} />
-          <Group gap={5} visibleFrom="sm">
+    <>
+      <header className={classes.header}>
+        <Container size="md">
+          <div className={classes.inner}>
+            <MantineLogo size={28} />
+            <Group gap={5} visibleFrom="sm">
+              {items}
+            </Group>
+            <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          </div>
+        </Container>
+      </header>
+      <Drawer
+        opened={drawerOpened}
+        onClose={closeDrawer}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+          <Stack align="stretch">
+            <Divider my="sm" />
+
             {items}
-          </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
-        </div>
-      </Container>
-    </header>
+
+            <Divider my="sm" />
+
+            <Group justify="center" grow pb="xl" px="md">
+              <Button variant="default">Log in</Button>
+              <Button>Sign up</Button>
+            </Group>
+          </Stack>
+        </ScrollArea>
+      </Drawer>
+    </>
   );
 }

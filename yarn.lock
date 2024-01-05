@@ -2509,91 +2509,92 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/carousel@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/carousel@npm:7.2.2"
+"@mantine/carousel@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/carousel@npm:7.4.0"
   peerDependencies:
-    "@mantine/core": 7.2.2
-    "@mantine/hooks": 7.2.2
-    embla-carousel-react: ^7.0.0
+    "@mantine/core": 7.4.0
+    "@mantine/hooks": 7.4.0
+    embla-carousel-react: ">=7.0.0"
     react: ^18.2.0
-  checksum: 2121992c61ffe0d7cb75882886ea9629297a21f408d3dc0bc2f99b648ff87e534776abd369fdccac29ea3189b9f2eebea6db12e3bf6d1658dfab330d78450ea3
+    react-dom: ^18.2.0
+  checksum: 85aa93376c55394d1adf9bb555ccf639aada7ed5e06cbab1d75d489f687a3f4b9ac82f75fb86c4ac799fe73cff39a3de6e982ba664123b2374ce43b92f466015
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/core@npm:7.2.2"
+"@mantine/core@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/core@npm:7.4.0"
   dependencies:
     "@floating-ui/react": "npm:^0.24.8"
     clsx: "npm:2.0.0"
-    react-number-format: "npm:^5.2.2"
-    react-remove-scroll: "npm:^2.5.6"
+    react-number-format: "npm:^5.3.1"
+    react-remove-scroll: "npm:^2.5.7"
     react-textarea-autosize: "npm:8.5.3"
     type-fest: "npm:^3.13.1"
   peerDependencies:
-    "@mantine/hooks": 7.2.2
+    "@mantine/hooks": 7.4.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: dc71d65dca0b4517eb75c053a51570bf5f6511b68e0c65631379878b575839719a7b5610c61d5bf5f268796c43123b4b627cce075f814ffc26f97153b43fd53e
+  checksum: edfb82287639e9e08071e730f2a2bfcbb098c80c6ffa60bc76aee5e0d995c827480561ad691bfd8a155b0d714dfdec6572670190f1d00256f10d9e510c90c5bf
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/dropzone@npm:7.2.2"
+"@mantine/dropzone@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/dropzone@npm:7.4.0"
   dependencies:
     react-dropzone-esm: "npm:15.0.1"
   peerDependencies:
-    "@mantine/core": 7.2.2
-    "@mantine/hooks": 7.2.2
+    "@mantine/core": 7.4.0
+    "@mantine/hooks": 7.4.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 289432bac132586e602d2156acb9969dc4932fc505869f8f87db1fa5196634ffb66cb5ff3804fa8134a09a548cb30bde70be0a1c073bbab1c2bf9fc07ced7ecd
+  checksum: 0dba7a6a56f36177e3eaade96a1fb312d5008ad469ab19828f141f1e76f75503e857daab3612d07b4e10748a98d3177a86b669a973d57a3d0c3b1e6a86d071ac
   languageName: node
   linkType: hard
 
-"@mantine/form@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/form@npm:7.2.2"
+"@mantine/form@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/form@npm:7.4.0"
   dependencies:
     fast-deep-equal: "npm:^3.1.3"
-    klona: "npm:^2.0.5"
+    klona: "npm:^2.0.6"
   peerDependencies:
     react: ^18.2.0
-  checksum: 2fca2378c995c240894a7cbc01f7d23cc494575f9d77142656ea4d838a4e159557fe3a3ed0f862e7f4cd277c2addfff19679a3313b3b7ff347b380b0c33704c6
+  checksum: 0f1a346202eacec960a877277a7a90d9ae02035f1cfd97605582fea03b8f1abfb23a0ea66b8e7f13090391b9ca2a00b3888ce3d62379e500f20aaf56248271ba
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/hooks@npm:7.2.2"
+"@mantine/hooks@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/hooks@npm:7.4.0"
   peerDependencies:
     react: ^18.2.0
-  checksum: b119152b7af7a1888f5e07ba50f4d167a96e3d7824761c37ec7c16ee78e7c7b99496a4509c47f062f66a543eae1bb9d9265d2d152b11c06561f2c2b7ea06a2fc
+  checksum: 6d38ba6cbe05594ef3df5e350bc31985b2f72ec05613cf81d3c83f9d0e8bc48564b1cfa0639886460c7ed476f8be67a9b587e8e79486ded9cd93e53a533d36d2
   languageName: node
   linkType: hard
 
-"@mantine/spotlight@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/spotlight@npm:7.2.2"
+"@mantine/spotlight@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/spotlight@npm:7.4.0"
   dependencies:
-    "@mantine/store": "npm:7.2.2"
+    "@mantine/store": "npm:7.4.0"
   peerDependencies:
-    "@mantine/core": 7.2.2
-    "@mantine/hooks": 7.2.2
+    "@mantine/core": 7.4.0
+    "@mantine/hooks": 7.4.0
     react: ^18.2.0
     react-dom: ^18.2.0
-  checksum: 830c444c1f9d8f74c2eeffa86bbafdf92c7090ea100f9595fd3fdff765f094ad9cf466030bf17371cc70196d840d57736709da22629e1d705172a8915f704439
+  checksum: a5228b1cc617ff7fab2a38a06cff48ff0c0a0ca29527d65d723fd3620b04a7cdb12625acbe92c915436f17c6efec61d607b441b7e9e3324d0597aa46d7fc5314
   languageName: node
   linkType: hard
 
-"@mantine/store@npm:7.2.2":
-  version: 7.2.2
-  resolution: "@mantine/store@npm:7.2.2"
+"@mantine/store@npm:7.4.0":
+  version: 7.4.0
+  resolution: "@mantine/store@npm:7.4.0"
   peerDependencies:
     react: ^18.2.0
-  checksum: 71ec7eaf6cbede9b32bfeda5a389f7629ca8221ce53d080953ab0306e31fe80fb37965ae0eb9a0e46dccfe89ba24473c9fea3e8c27336273ffaab3c5590ae33f
+  checksum: 514a4a7cf188987af0af5c99efc62d646259132f73401d46d88d88b26ddf67213b01945af6093386cb5ae5209144a196d17c30c5a022fc5f69260dfa937f89b1
   languageName: node
   linkType: hard
 
@@ -10385,7 +10386,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"klona@npm:^2.0.4, klona@npm:^2.0.5, klona@npm:^2.0.6":
+"klona@npm:^2.0.4, klona@npm:^2.0.6":
   version: 2.0.6
   resolution: "klona@npm:2.0.6"
   checksum: 94eed2c6c2ce99f409df9186a96340558897b3e62a85afdc1ee39103954d2ebe1c1c4e9fe2b0952771771fa96d70055ede8b27962a7021406374fdb695fd4d01
@@ -10636,12 +10637,12 @@ __metadata:
   dependencies:
     "@babel/core": "npm:^7.23.3"
     "@hello-pangea/dnd": "npm:^16.3.0"
-    "@mantine/carousel": "npm:7.2.2"
-    "@mantine/core": "npm:7.2.2"
-    "@mantine/dropzone": "npm:7.2.2"
-    "@mantine/form": "npm:7.2.2"
-    "@mantine/hooks": "npm:7.2.2"
-    "@mantine/spotlight": "npm:7.2.2"
+    "@mantine/carousel": "npm:7.4.0"
+    "@mantine/core": "npm:7.4.0"
+    "@mantine/dropzone": "npm:7.4.0"
+    "@mantine/form": "npm:7.4.0"
+    "@mantine/hooks": "npm:7.4.0"
+    "@mantine/spotlight": "npm:7.4.0"
     "@mantinex/dev-icons": "npm:^1.0.1"
     "@mantinex/mantine-header": "npm:^1.0.1"
     "@mantinex/mantine-logo": "npm:^1.0.1"
@@ -12585,15 +12586,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-number-format@npm:^5.2.2":
-  version: 5.3.0
-  resolution: "react-number-format@npm:5.3.0"
+"react-number-format@npm:^5.3.1":
+  version: 5.3.1
+  resolution: "react-number-format@npm:5.3.1"
   dependencies:
     prop-types: "npm:^15.7.2"
   peerDependencies:
     react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
-  checksum: 673926191a612ccc9064cd3cbf789f2567cd0cbb8ea5043f5dfee2db4b86136077694b2901775e07b5d8203e201701d17c1f776622ba467dc1b946f7efc788cb
+  checksum: 9e37698ab3d8224fd6cf5a69845c0308720d04de8459757031de0304379cfd2c0c897834cc9f62869933c4702a97888ba51abeb6490b7282e237a4c19a5fab04
   languageName: node
   linkType: hard
 
@@ -12671,9 +12672,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-remove-scroll@npm:^2.5.6":
-  version: 2.5.6
-  resolution: "react-remove-scroll@npm:2.5.6"
+"react-remove-scroll@npm:^2.5.7":
+  version: 2.5.7
+  resolution: "react-remove-scroll@npm:2.5.7"
   dependencies:
     react-remove-scroll-bar: "npm:^2.3.4"
     react-style-singleton: "npm:^2.2.1"
@@ -12686,7 +12687,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: c9831df3b67349c0e4aa8bbd2233dcb44f671b25fe84c790e1c42667fe63c8d5b9e7a1f2541a4bc081957c7a2fa4e4d295d24c5f5aed0718f9b1b73b246a7136
+  checksum: dcd523ada602bd0a839c2032cadf0b3e4af55ee85acefee3760976a9cceaa4606927801b093bbb8bf3c2989c71e048f5428c2c6eb9e6681762e86356833d039b
   languageName: node
   linkType: hard
 
