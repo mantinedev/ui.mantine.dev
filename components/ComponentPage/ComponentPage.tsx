@@ -38,10 +38,20 @@ export function ComponentPage({ data }: ComponentPageProps) {
   const [state, setState] = useState('preview');
   const [primaryColor, setPrimaryColor] = useState('blue');
 
+  const title = `${data.attributes.title} | Mantine UI`;
+
   return (
     <>
       <Head>
-        <title>{`${data.attributes.title} | Mantine UI`}</title>
+        <title>{title}</title>
+        <meta itemProp="name" content={title} key="item-title" />
+        <meta property="og:title" content={title} key="og-title" />
+        <meta name="twitter:title" content={title} key="twitter-title" />
+        <meta
+          property="og:url"
+          content={`https://ui.mantine.dev/component/${data.slug}`}
+          key="og-url"
+        />
       </Head>
 
       <ComponentPreviewControls

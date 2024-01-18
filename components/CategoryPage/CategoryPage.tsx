@@ -15,10 +15,20 @@ export function CategoryPage({ category, components }: CategoryPageProps) {
     <ComponentCanvas {...component} key={component.slug} zIndex={components.length - index} />
   ));
 
+  const title = `${category.name} | Mantine UI`;
+
   return (
     <Shell>
       <Head>
-        <title>{`${category.name} | Mantine UI`}</title>
+        <title>{title}</title>
+        <meta itemProp="name" content={title} key="item-title" />
+        <meta property="og:title" content={title} key="og-title" />
+        <meta name="twitter:title" content={title} key="twitter-title" />
+        <meta
+          property="og:url"
+          content={`https://ui.mantine.dev/category/${category.slug}`}
+          key="og-url"
+        />
       </Head>
       <Container size="xl" mt={50}>
         <CategoryHeader category={category} />

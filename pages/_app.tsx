@@ -27,7 +27,14 @@ export default function App({ Component, pageProps }: any) {
     <>
       <Head>
         <title>Mantine UI</title>
+        <meta itemProp="name" content="Mantine UI" key="item-title" />
+        <meta property="og:title" content="Mantine UI" key="og-title" />
+        <meta name="twitter:title" content="Mantine UI" key="twitter-title" />
+        <meta property="og:url" content="https://ui.mantine.dev/" key="og-url" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <meta name="language" content="English" />
+        <meta name="robots" content="index, follow" />
+        <meta name="keywords" content="react,mantine,components" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
@@ -41,6 +48,16 @@ export default function App({ Component, pageProps }: any) {
           name="og:image"
           content="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/social-preview.png"
         />
+        <meta
+          name="twitter:image"
+          content="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/social-preview.png"
+        />
+        <meta
+          itemProp="image"
+          content="http://raw.githubusercontent.com/mantinedev/mantine/master/.demo/social-preview.png"
+        />
+        <meta itemProp="description" content="120+ prebuilt components with Mantine" />
+        <meta name="description" content="120+ prebuilt components with Mantine" />
       </Head>
       <GaScript />
 
