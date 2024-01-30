@@ -1,4 +1,5 @@
 import cx from 'clsx';
+import { useState } from 'react';
 import { Box, Text, Group, rem } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
 import classes from './TableOfContents.module.css';
@@ -14,14 +15,16 @@ const links = [
   { label: 'With form', link: '#4', order: 2 },
 ];
 
-const active = '#overlays';
-
 export function TableOfContents() {
+  const [active, setActive] = useState('#overlays');
   const items = links.map((item) => (
     <Box<'a'>
       component="a"
       href={item.link}
-      onClick={(event) => event.preventDefault()}
+      onClick={(event) => {
+        event.preventDefault();
+        setActive(item.link)
+      }}
       key={item.label}
       className={cx(classes.link, { [classes.linkActive]: active === item.link })}
       style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))` }}
