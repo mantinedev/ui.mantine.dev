@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { CATEGORIES } from '../../data';
 import { Shell } from '../Shell';
 import { Banner } from './Banner/Banner';
@@ -16,9 +15,6 @@ export function HomePage({ componentsCountByCategory }: HomePageProps) {
 
   return (
     <Shell>
-      <Head>
-        <title>Mantine UI</title>
-      </Head>
       <Banner componentsCount={allComponentsCount} />
       <div id="main">
         <CategoriesList groups={CATEGORIES} componentsCountByCategory={componentsCountByCategory} />
