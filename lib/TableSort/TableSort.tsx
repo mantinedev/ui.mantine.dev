@@ -46,8 +46,9 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
 
 function filterData(data: RowData[], search: string) {
   const query = search.toLowerCase().trim();
+  const firstDataItemKeys = keys(data[0]);
   return data.filter((item) =>
-    keys(data[0]).some((key) => item[key].toLowerCase().includes(query))
+    firstDataItemKeys.some((key) => item[key].toLowerCase().includes(query))
   );
 }
 
