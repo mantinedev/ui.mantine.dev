@@ -93,12 +93,12 @@ export function HeaderMegaMenu() {
           <MantineLogo size={30} />
 
           <Group h="100%" gap={0} visibleFrom="sm">
-            <a href="#" className={classes.link}>
+            <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
               Home
             </a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
-                <a href="#" className={classes.link}>
+                <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
                   <Center inline>
                     <Box component="span" mr={5}>
                       Features
@@ -114,7 +114,7 @@ export function HeaderMegaMenu() {
               <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
                 <Group justify="space-between" px="md">
                   <Text fw={500}>Features</Text>
-                  <Anchor href="#" fz="xs">
+                  <Anchor href="#" fz="xs" onClick={e => e.preventDefault()}>
                     View all
                   </Anchor>
                 </Group>
@@ -140,10 +140,10 @@ export function HeaderMegaMenu() {
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>
+            <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
               Learn
             </a>
-            <a href="#" className={classes.link}>
+            <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
               Academy
             </a>
           </Group>
@@ -169,7 +169,7 @@ export function HeaderMegaMenu() {
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
-          <a href="#" className={classes.link}>
+          <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
             Home
           </a>
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
@@ -184,10 +184,10 @@ export function HeaderMegaMenu() {
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
+          <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
             Learn
           </a>
-          <a href="#" className={classes.link}>
+          <a href="#" className={classes.link} onClick={e => e.preventDefault()}>
             Academy
           </a>
 
