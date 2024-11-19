@@ -5,6 +5,6 @@
   font-weight: 900;
   margin-bottom: var(--mantine-spacing-md);
   margin-top: var(--mantine-spacing-md);
-  font-size: rem(44px);
+  font-size: 44px;
   color: var(--mantine-color-bright);
 }

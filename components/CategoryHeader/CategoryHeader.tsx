@@ -13,7 +13,7 @@ export function CategoryHeader({ category }: CategoryHeaderProps) {
     <>
       <Anchor component={Link} href="/#main">
         <Center inline>
-          <IconArrowLeft size="0.9rem" />
+          <IconArrowLeft size={14} />
           <Box component="span" ml={5}>
             Back to all categories
           </Box>

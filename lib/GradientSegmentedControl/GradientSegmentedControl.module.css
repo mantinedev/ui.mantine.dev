@@ -1,7 +1,7 @@
 .root {
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
   box-shadow: var(--mantine-shadow-md);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-4));
+  border: 1px solid light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-4));
 }
 
 .indicator {

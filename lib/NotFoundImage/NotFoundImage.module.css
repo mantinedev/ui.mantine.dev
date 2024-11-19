@@ -1,18 +1,18 @@
 .root {
-  padding-top: rem(80px);
-  padding-bottom: rem(80px);
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .title {
   font-weight: 900;
-  font-size: rem(34px);
+  font-size: 34px;
   margin-bottom: var(--mantine-spacing-md);
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(32px);
+    font-size: 32px;
   }
 }
 

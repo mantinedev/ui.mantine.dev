@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UnstyledButton, Tooltip, Title, rem } from '@mantine/core';
+import { UnstyledButton, Tooltip, Title } from '@mantine/core';
 import {
   IconHome2,
   IconGauge,
@@ -53,7 +53,7 @@ export function DoubleNavbar() {
         className={classes.mainLink}
         data-active={link.label === active || undefined}
       >
-        <link.icon style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
+        <link.icon size={22} stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   ));

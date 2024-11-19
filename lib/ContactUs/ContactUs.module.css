@@ -1,5 +1,5 @@
 .wrapper {
-  min-height: rem(400px);
+  min-height: 400px;
   background-image: linear-gradient(
     -60deg,
     var(--mantine-color-blue-4) 0%,
@@ -23,7 +23,7 @@
 
 .description {
   color: var(--mantine-color-blue-0);
-  max-width: rem(300px);
+  max-width: 300px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;

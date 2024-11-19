@@ -44,7 +44,7 @@ export function CanvasHeader({
               href={`/component/${slug}`}
               target="_blank"
             >
-              <IconExternalLink size="0.9rem" stroke={1.5} />
+              <IconExternalLink size={14} stroke={1.5} />
             </ActionIcon>
           )}
 
@@ -57,7 +57,7 @@ export function CanvasHeader({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon size="0.9rem" />
+            <GithubIcon size={14} />
           </ActionIcon>
 
           {attributes.responsive && <Badge variant="light">Responsive</Badge>}
@@ -76,7 +76,7 @@ export function CanvasHeader({
               value: 'preview',
               label: (
                 <Center>
-                  <IconEye size="1rem" stroke={1.5} />
+                  <IconEye size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Preview</div>
                 </Center>
               ),
@@ -85,7 +85,7 @@ export function CanvasHeader({
               value: 'code',
               label: (
                 <Center>
-                  <IconCode size="1rem" stroke={1.5} />
+                  <IconCode size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Code</div>
                 </Center>
               ),

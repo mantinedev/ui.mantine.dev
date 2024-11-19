@@ -1,6 +1,6 @@
 .canvas {
   border-radius: var(--mantine-radius-md);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
 
   &:not(:first-of-type) {
@@ -11,8 +11,8 @@
 .body {
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-  border-bottom-right-radius: calc(var(--mantine-radius-md) - rem(1px));
-  border-bottom-left-radius: calc(var(--mantine-radius-md) - rem(1px));
+  border-bottom-right-radius: calc(var(--mantine-radius-md) - 1px);
+  border-bottom-left-radius: calc(var(--mantine-radius-md) - 1px);
 
   @media (max-width: $mantine-breakpoint-sm) {
     padding: 0;
@@ -23,7 +23,7 @@
   padding: 0;
 
   & .preview {
-    padding: rem(4px);
+    padding: 4px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
@@ -35,8 +35,8 @@
 }
 
 .code {
-  border-bottom-right-radius: calc(var(--mantine-radius-md) - rem(1px));
-  border-bottom-left-radius: calc(var(--mantine-radius-md) - rem(1px));
+  border-bottom-right-radius: calc(var(--mantine-radius-md) - 1px);
+  border-bottom-left-radius: calc(var(--mantine-radius-md) - 1px);
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }

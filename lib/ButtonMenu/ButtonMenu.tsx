@@ -1,4 +1,4 @@
-import { Button, Menu, Text, rem, useMantineTheme } from '@mantine/core';
+import { Button, Menu, Text, useMantineTheme } from '@mantine/core';
 import {
   IconSquareCheck,
   IconPackage,
@@ -17,24 +17,13 @@ export function ButtonMenu() {
       withinPortal
     >
       <Menu.Target>
-        <Button
-          rightSection={
-            <IconChevronDown style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-          }
-          pr={12}
-        >
+        <Button rightSection={<IconChevronDown size={18} stroke={1.5} />} pr={12}>
           Create new
         </Button>
       </Menu.Target>
       <Menu.Dropdown>
         <Menu.Item
-          leftSection={
-            <IconPackage
-              style={{ width: rem(16), height: rem(16) }}
-              color={theme.colors.blue[6]}
-              stroke={1.5}
-            />
-          }
+          leftSection={<IconPackage size={16} color={theme.colors.blue[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" tt="uppercase" fw={700} c="dimmed">
               Ctrl + P
@@ -44,13 +33,7 @@ export function ButtonMenu() {
           Project
         </Menu.Item>
         <Menu.Item
-          leftSection={
-            <IconSquareCheck
-              style={{ width: rem(16), height: rem(16) }}
-              color={theme.colors.pink[6]}
-              stroke={1.5}
-            />
-          }
+          leftSection={<IconSquareCheck size={16} color={theme.colors.pink[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" tt="uppercase" fw={700} c="dimmed">
               Ctrl + T
@@ -60,13 +43,7 @@ export function ButtonMenu() {
           Task
         </Menu.Item>
         <Menu.Item
-          leftSection={
-            <IconUsers
-              style={{ width: rem(16), height: rem(16) }}
-              color={theme.colors.cyan[6]}
-              stroke={1.5}
-            />
-          }
+          leftSection={<IconUsers size={16} color={theme.colors.cyan[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" tt="uppercase" fw={700} c="dimmed">
               Ctrl + U
@@ -76,13 +53,7 @@ export function ButtonMenu() {
           Team
         </Menu.Item>
         <Menu.Item
-          leftSection={
-            <IconCalendar
-              style={{ width: rem(16), height: rem(16) }}
-              color={theme.colors.violet[6]}
-              stroke={1.5}
-            />
-          }
+          leftSection={<IconCalendar size={16} color={theme.colors.violet[6]} stroke={1.5} />}
           rightSection={
             <Text size="xs" tt="uppercase" fw={700} c="dimmed">
               Ctrl + E

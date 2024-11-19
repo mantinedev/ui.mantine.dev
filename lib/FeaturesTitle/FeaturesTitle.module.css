@@ -6,7 +6,7 @@
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-size: rem(36px);
+  font-size: 36px;
   font-weight: 900;
   line-height: 1.1;
   margin-bottom: var(--mantine-spacing-md);

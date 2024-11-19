@@ -16,11 +16,11 @@
 }
 
 .carouselIndicator {
-  width: rem(4px);
-  height: rem(4px);
+  width: 4px;
+  height: 4px;
   transition: width 250ms ease;
 
   &[data-active] {
-    width: rem(16px);
+    width: 16px;
   }
 }

@@ -1,6 +1,6 @@
 import cx from 'clsx';
 import { useState } from 'react';
-import { Table, Checkbox, ScrollArea, Group, Avatar, Text, rem } from '@mantine/core';
+import { Table, Checkbox, ScrollArea, Group, Avatar, Text } from '@mantine/core';
 import classes from './TableSelection.module.css';
 
 const data = [
@@ -81,7 +81,7 @@ export function TableSelection() {
       <Table miw={800} verticalSpacing="sm">
         <Table.Thead>
           <Table.Tr>
-            <Table.Th style={{ width: rem(40) }}>
+            <Table.Th w={40}>
               <Checkbox
                 onChange={toggleAll}
                 checked={selection.length === data.length}

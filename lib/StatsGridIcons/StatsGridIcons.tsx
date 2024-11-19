@@ -32,7 +32,7 @@ export function StatsGridIcons() {
             size={38}
             radius="md"
           >
-            <DiffIcon size="1.8rem" stroke={1.5} />
+            <DiffIcon size={28} stroke={1.5} />
           </ThemeIcon>
         </Group>
         <Text c="dimmed" fz="sm" mt="md">

@@ -7,7 +7,7 @@ import {
   Group,
   ActionIcon,
   Tooltip,
-  rem,
+  Box,
 } from '@mantine/core';
 import { IconBulb, IconUser, IconCheckbox, IconSearch, IconPlus } from '@tabler/icons-react';
 import { UserButton } from '../UserButton/UserButton';
@@ -53,7 +53,9 @@ export function NavbarSearch() {
       key={collection.label}
       className={classes.collectionLink}
     >
-      <span style={{ marginRight: rem(9), fontSize: rem(16) }}>{collection.emoji}</span>{' '}
+      <Box component="span" mr={9} fz={16}>
+        {collection.emoji}
+      </Box>{' '}
       {collection.label}
     </a>
   ));
@@ -67,7 +69,7 @@ export function NavbarSearch() {
       <TextInput
         placeholder="Search"
         size="xs"
-        leftSection={<IconSearch style={{ width: rem(12), height: rem(12) }} stroke={1.5} />}
+        leftSection={<IconSearch size={12} stroke={1.5} />}
         rightSectionWidth={70}
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
         styles={{ section: { pointerEvents: 'none' } }}
@@ -85,7 +87,7 @@ export function NavbarSearch() {
           </Text>
           <Tooltip label="Create collection" withArrow position="right">
             <ActionIcon variant="default" size={18}>
-              <IconPlus style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
+              <IconPlus size={12} stroke={1.5} />
             </ActionIcon>
           </Tooltip>
         </Group>

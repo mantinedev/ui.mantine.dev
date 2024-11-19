@@ -34,14 +34,14 @@ export function StatsGrid() {
           <Text size="xs" c="dimmed" className={classes.title}>
             {stat.title}
           </Text>
-          <Icon className={classes.icon} size="1.4rem" stroke={1.5} />
+          <Icon className={classes.icon} size={22} stroke={1.5} />
         </Group>
 
         <Group align="flex-end" gap="xs" mt={25}>
           <Text className={classes.value}>{stat.value}</Text>
           <Text c={stat.diff > 0 ? 'teal' : 'red'} fz="sm" fw={500} className={classes.diff}>
             <span>{stat.diff}%</span>
-            <DiffIcon size="1rem" stroke={1.5} />
+            <DiffIcon size={16} stroke={1.5} />
           </Text>
         </Group>
 

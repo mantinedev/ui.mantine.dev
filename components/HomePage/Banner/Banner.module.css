@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  min-height: rem(700px);
+  min-height: 700px;
   background-color: light-dark(var(--mantine-color-gray-1), var(--mantine-color-dark-8));
 }
 
@@ -27,7 +27,7 @@
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-size: rem(44px);
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 900;
 }
@@ -39,20 +39,20 @@
 .description {
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-2));
   line-height: 1.5;
-  max-width: rem(580px);
+  max-width: 580px;
   margin-top: var(--mantine-spacing-md);
 }
 
 .body {
-  flex: 0 0 rem(700px);
-  padding-top: rem(140px);
+  flex: 0 0 700px;
+  padding-top: 140px;
   position: relative;
   z-index: 1;
 }
 
 .image {
-  min-height: rem(700px);
-  width: rem(800px);
+  min-height: 700px;
+  width: 800px;
   flex: 1;
   background-size: auto 100%;
   background-repeat: no-repeat;
@@ -101,7 +101,7 @@
 }
 
 .features {
-  max-width: rem(740px);
+  max-width: 740px;
   padding-bottom: var(--mantine-spacing-xl);
 
   @media (max-width: em(755px)) {
@@ -122,7 +122,7 @@
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
   font-weight: 500;
   line-height: 1;
-  margin-bottom: rem(7px);
+  margin-bottom: 7px;
 }
 
 .featureDescription {

@@ -1,12 +1,12 @@
 .navbar {
   background-color: var(--mantine-color-body);
-  height: rem(700px);
-  width: rem(300px);
+  height: 700px;
+  width: 300px;
   padding: var(--mantine-spacing-md);
   padding-top: 0;
   display: flex;
   flex-direction: column;
-  border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .section {
@@ -15,16 +15,15 @@
   margin-bottom: var(--mantine-spacing-md);
 
   &:not(:last-of-type) {
-    border-bottom: rem(1px) solid
-      light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   }
 }
 
 .searchCode {
   font-weight: 700;
-  font-size: rem(10px);
+  font-size: 10px;
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-7));
 }
 
 .mainLinks {
@@ -38,7 +37,7 @@
   align-items: center;
   width: 100%;
   font-size: var(--mantine-font-size-xs);
-  padding: rem(8px) var(--mantine-spacing-xs);
+  padding: 8px var(--mantine-spacing-xs);
   border-radius: var(--mantine-radius-sm);
   font-weight: 500;
   color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
@@ -62,26 +61,26 @@
 
 .mainLinkBadge {
   padding: 0;
-  width: rem(20px);
-  height: rem(20px);
+  width: 20px;
+  height: 20px;
   pointer-events: none;
 }
 
 .collections {
-  padding-left: calc(var(--mantine-spacing-md) - rem(6px));
-  padding-right: calc(var(--mantine-spacing-md) - rem(6px));
+  padding-left: calc(var(--mantine-spacing-md) - 6px);
+  padding-right: calc(var(--mantine-spacing-md) - 6px);
   padding-bottom: var(--mantine-spacing-md);
 }
 
 .collectionsHeader {
-  padding-left: calc(var(--mantine-spacing-md) + rem(2px));
+  padding-left: calc(var(--mantine-spacing-md) + 2px);
   padding-right: var(--mantine-spacing-md);
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
 }
 
 .collectionLink {
   display: block;
-  padding: rem(8px) var(--mantine-spacing-xs);
+  padding: 8px var(--mantine-spacing-xs);
   text-decoration: none;
   border-radius: var(--mantine-radius-sm);
   font-size: var(--mantine-font-size-xs);

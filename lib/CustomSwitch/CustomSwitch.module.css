@@ -4,21 +4,21 @@
 }
 
 .track {
-  width: rem(40px);
-  height: rem(6px);
+  width: 40px;
+  height: 6px;
   overflow: visible;
 }
 
 .thumb {
-  width: rem(20px);
-  height: rem(20px);
-  left: rem(-2px);
+  width: 20px;
+  height: 20px;
+  left: -2px;
   transition:
     background-color 100ms ease,
     left 100ms ease;
 
   input:checked + * > & {
     background-color: var(--mantine-color-blue-filled);
-    left: calc(100% - rem(12px));
+    left: calc(100% - 12px);
   }
 }

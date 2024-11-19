@@ -12,7 +12,7 @@ export function TaskCard() {
   return (
     <Card withBorder padding="lg" radius="md">
       <Group justify="space-between">
-        <MantineLogo type="mark" size="2rem" />
+        <MantineLogo type="mark" size={32} />
         <Badge>12 days left</Badge>
       </Group>
 
@@ -41,7 +41,7 @@ export function TaskCard() {
           <Avatar radius="xl">+5</Avatar>
         </Avatar.Group>
         <ActionIcon variant="default" size="lg" radius="md">
-          <IconUpload size="1.1rem" />
+          <IconUpload size={18} />
         </ActionIcon>
       </Group>
     </Card>

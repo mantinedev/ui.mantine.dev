@@ -1,4 +1,4 @@
-import { Button, rem, Tooltip } from '@mantine/core';
+import { Button, Tooltip } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
 import { IconCopy, IconCheck } from '@tabler/icons-react';
 
@@ -17,17 +17,16 @@ export function ButtonCopy() {
         variant="light"
         rightSection={
           clipboard.copied ? (
-            <IconCheck style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+            <IconCheck size={20} stroke={1.5} />
           ) : (
-            <IconCopy style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+            <IconCopy size={20} stroke={1.5} />
           )
         }
         radius="xl"
         size="md"
-        styles={{
-          root: { paddingRight: rem(14), height: rem(48) },
-          section: { marginLeft: rem(22) },
-        }}
+        pr={14}
+        h={48}
+        styles={{ section: { marginLeft: 22 } }}
         onClick={() => clipboard.copy('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}
       >
         Copy link to clipboard

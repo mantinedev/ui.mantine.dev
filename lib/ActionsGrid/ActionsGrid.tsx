@@ -37,7 +37,7 @@ export function ActionsGrid() {
 
   const items = mockdata.map((item) => (
     <UnstyledButton key={item.title} className={classes.item}>
-      <item.icon color={theme.colors[item.color][6]} size="2rem" />
+      <item.icon color={theme.colors[item.color][6]} size={32} />
       <Text size="xs" mt={7}>
         {item.title}
       </Text>

@@ -1,4 +1,4 @@
-import { Title, Container, Accordion, ThemeIcon, rem } from '@mantine/core';
+import { Title, Container, Accordion, ThemeIcon } from '@mantine/core';
 import { IconPlus } from '@tabler/icons-react';
 import classes from './FaqWithBg.module.css';
 
@@ -22,7 +22,7 @@ export function FaqWithBg() {
           styles={{ label: { color: 'var(--mantine-color-black)' }, item: { border: 0 } }}
           chevron={
             <ThemeIcon radius="xl" className={classes.gradient} size={26}>
-              <IconPlus style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+              <IconPlus size={18} stroke={1.5} />
             </ThemeIcon>
           }
         >

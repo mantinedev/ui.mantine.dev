@@ -6,7 +6,7 @@
 }
 
 .content {
-  max-width: rem(480px);
+  max-width: 480px;
   margin-right: calc(var(--mantine-spacing-xl) * 3);
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -20,12 +20,12 @@
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-size: rem(44px);
+  font-size: 44px;
   line-height: 1.2;
   font-weight: 900;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: rem(28px);
+    font-size: 28px;
   }
 }
 
@@ -36,8 +36,8 @@
 }
 
 .image {
-  width: rem(376px);
-  height: rem(356px);
+  width: 376px;
+  height: 356px;
 
   @media (max-width: $mantine-breakpoint-md) {
     display: none;
@@ -48,5 +48,5 @@
   position: relative;
   background-color: var(--mantine-color-blue-light);
   border-radius: var(--mantine-radius-sm);
-  padding: rem(4px) rem(12px);
+  padding: 4px 12px;
 }

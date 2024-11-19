@@ -3,7 +3,7 @@
 }
 
 .body {
-  padding-left: rem(54px);
+  padding-left: 54px;
   padding-top: var(--mantine-spacing-sm);
   font-size: var(--mantine-font-size-sm);
 }

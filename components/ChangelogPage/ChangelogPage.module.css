@@ -4,6 +4,6 @@
     var(--mantine-font-family);
 
   @media (max-width: em(500px)) {
-    font-size: rem(26px);
+    font-size: 26px;
   }
 }

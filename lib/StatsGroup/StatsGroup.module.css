@@ -22,7 +22,7 @@
 
 .count {
   color: var(--mantine-color-white);
-  font-size: rem(32px);
+  font-size: 32px;
   line-height: 1;
   font-weight: 700;
   margin-bottom: var(--mantine-spacing-md);
@@ -34,7 +34,7 @@
 .description {
   color: var(--mantine-color-blue-0);
   font-size: var(--mantine-font-size-sm);
-  margin-top: rem(5px);
+  margin-top: 5px;
 }
 
 .stat {
@@ -43,7 +43,7 @@
   & + & {
     padding-left: var(--mantine-spacing-xl);
     margin-left: var(--mantine-spacing-xl);
-    border-left: rem(1px) solid var(--mantine-color-blue-3);
+    border-left: 1px solid var(--mantine-color-blue-3);
 
     @media (max-width: $mantine-breakpoint-sm) {
       padding-left: 0;
@@ -51,7 +51,7 @@
       border-left: 0;
       padding-top: var(--mantine-spacing-xl);
       margin-top: var(--mantine-spacing-xl);
-      border-top: rem(1px) solid var(--mantine-color-blue-3);
+      border-top: 1px solid var(--mantine-color-blue-3);
     }
   }
 }

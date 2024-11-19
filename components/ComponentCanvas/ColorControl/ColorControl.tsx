@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IconColorPicker } from '@tabler/icons-react';
-import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon, rem } from '@mantine/core';
+import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon } from '@mantine/core';
 
 interface ColorControlProps {
   onChange: (color: string) => void;
@@ -47,7 +47,7 @@ export function ColorControl({ onChange, value }: ColorControlProps) {
           size={22}
           style={{ display: 'block', cursor: 'pointer' }}
         >
-          <IconColorPicker style={{ width: rem(14), height: rem(14) }} color="#fff" />
+          <IconColorPicker size={14} color="#fff" />
         </ColorSwatch>
       </Popover.Target>
       <Popover.Dropdown>

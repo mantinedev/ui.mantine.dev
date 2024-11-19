@@ -6,7 +6,7 @@
 }
 
 .container {
-  height: rem(700px);
+  height: 700px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -16,31 +16,31 @@
   position: relative;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    height: rem(500px);
+    height: 500px;
     padding-bottom: calc(var(--mantine-spacing-xl) * 3);
   }
 }
 
 .title {
   color: var(--mantine-color-white);
-  font-size: rem(60px);
+  font-size: 60px;
   font-weight: 900;
   line-height: 1.1;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(40px);
+    font-size: 40px;
     line-height: 1.2;
   }
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: rem(28px);
+    font-size: 28px;
     line-height: 1.3;
   }
 }
 
 .description {
   color: var(--mantine-color-white);
-  max-width: rem(600px);
+  max-width: 600px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     max-width: 100%;

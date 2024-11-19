@@ -40,12 +40,12 @@
     var(--mantine-font-family);
   font-weight: 900;
   line-height: 1.05;
-  max-width: rem(500px);
-  font-size: rem(48px);
+  max-width: 500px;
+  font-size: 48px;
 
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
-    font-size: rem(34px);
+    font-size: 34px;
     line-height: 1.15;
   }
 }
@@ -53,7 +53,7 @@
 .description {
   color: var(--mantine-color-white);
   opacity: 0.75;
-  max-width: rem(500px);
+  max-width: 500px;
 
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
@@ -61,12 +61,12 @@
 }
 
 .control {
-  padding-left: rem(50px);
-  padding-right: rem(50px);
+  padding-left: 50px;
+  padding-right: 50px;
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-size: rem(22px);
+  font-size: 22px;
 
   @media (max-width: $mantine-breakpoint-md) {
     width: 100%;

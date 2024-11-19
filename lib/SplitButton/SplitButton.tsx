@@ -1,4 +1,4 @@
-import { Button, Menu, Group, ActionIcon, rem, useMantineTheme } from '@mantine/core';
+import { Button, Menu, Group, ActionIcon, useMantineTheme } from '@mantine/core';
 import { IconTrash, IconBookmark, IconCalendar, IconChevronDown } from '@tabler/icons-react';
 import classes from './SplitButton.module.css';
 
@@ -16,40 +16,22 @@ export function SplitButton() {
             size={36}
             className={classes.menuControl}
           >
-            <IconChevronDown style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <IconChevronDown size={16} stroke={1.5} />
           </ActionIcon>
         </Menu.Target>
         <Menu.Dropdown>
           <Menu.Item
-            leftSection={
-              <IconCalendar
-                style={{ width: rem(16), height: rem(16) }}
-                stroke={1.5}
-                color={theme.colors.blue[5]}
-              />
-            }
+            leftSection={<IconCalendar size={16} stroke={1.5} color={theme.colors.blue[5]} />}
           >
             Schedule for later
           </Menu.Item>
           <Menu.Item
-            leftSection={
-              <IconBookmark
-                style={{ width: rem(16), height: rem(16) }}
-                stroke={1.5}
-                color={theme.colors.blue[5]}
-              />
-            }
+            leftSection={<IconBookmark size={16} stroke={1.5} color={theme.colors.blue[5]} />}
           >
             Save draft
           </Menu.Item>
           <Menu.Item
-            leftSection={
-              <IconTrash
-                style={{ width: rem(16), height: rem(16) }}
-                stroke={1.5}
-                color={theme.colors.blue[5]}
-              />
-            }
+            leftSection={<IconTrash size={16} stroke={1.5} color={theme.colors.blue[5]} />}
           >
             Delete
           </Menu.Item>

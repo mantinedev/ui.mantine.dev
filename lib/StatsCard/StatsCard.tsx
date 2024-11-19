@@ -1,4 +1,4 @@
-import { ThemeIcon, Progress, Text, Group, Badge, Paper, rem } from '@mantine/core';
+import { ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
 import { IconSwimming } from '@tabler/icons-react';
 import classes from './StatsCard.module.css';
 
@@ -6,7 +6,7 @@ export function StatsCard() {
   return (
     <Paper radius="md" withBorder className={classes.card} mt={20}>
       <ThemeIcon className={classes.icon} size={60} radius={60}>
-        <IconSwimming style={{ width: rem(32), height: rem(32) }} stroke={1.5} />
+        <IconSwimming size={32} stroke={1.5} />
       </ThemeIcon>
 
       <Text ta="center" fw={700} className={classes.title}>

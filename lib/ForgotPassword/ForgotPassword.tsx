@@ -9,7 +9,6 @@ import {
   Anchor,
   Center,
   Box,
-  rem,
 } from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons-react';
 import classes from './ForgotPassword.module.css';
@@ -29,7 +28,7 @@ export function ForgotPassword() {
         <Group justify="space-between" mt="lg" className={classes.controls}>
           <Anchor c="dimmed" size="sm" className={classes.control}>
             <Center inline>
-              <IconArrowLeft style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
+              <IconArrowLeft size={12} stroke={1.5} />
               <Box ml={5}>Back to the login page</Box>
             </Center>
           </Anchor>

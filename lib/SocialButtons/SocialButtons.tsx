@@ -14,11 +14,7 @@ export function FacebookButton(props: ButtonProps & React.ComponentPropsWithoutR
 
 export function DiscordButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {
   return (
-    <Button
-      className={classes.discordButton}
-      leftSection={<DiscordIcon style={{ width: '1rem', height: '1rem' }} />}
-      {...props}
-    />
+    <Button className={classes.discordButton} leftSection={<DiscordIcon size={16} />} {...props} />
   );
 }
 
@@ -27,7 +23,7 @@ export function TwitterButton(props: ButtonProps & React.ComponentPropsWithoutRe
   return (
     <Button
       component="a"
-      leftSection={<TwitterIcon style={{ width: '1rem', height: '1rem' }} color="#00ACEE" />}
+      leftSection={<TwitterIcon size={16} color="#00ACEE" />}
       variant="default"
       {...props}
     />
@@ -36,11 +32,7 @@ export function TwitterButton(props: ButtonProps & React.ComponentPropsWithoutRe
 
 export function GithubButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {
   return (
-    <Button
-      {...props}
-      leftSection={<GithubIcon style={{ width: '1rem', height: '1rem' }} />}
-      className={classes.githubButton}
-    />
+    <Button {...props} leftSection={<GithubIcon size={16} />} className={classes.githubButton} />
   );
 }
 

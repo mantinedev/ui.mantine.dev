@@ -1,4 +1,4 @@
-import { ThemeIcon, Text, Title, Container, SimpleGrid, rem } from '@mantine/core';
+import { ThemeIcon, Text, Title, Container, SimpleGrid } from '@mantine/core';
 import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
 import classes from './FeaturesGrid.module.css';
 
@@ -45,7 +45,7 @@ export function Feature({ icon: Icon, title, description }: FeatureProps) {
   return (
     <div>
       <ThemeIcon variant="light" size={40} radius={40}>
-        <Icon style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+        <Icon size={18} stroke={1.5} />
       </ThemeIcon>
       <Text mt="sm" mb={7}>
         {title}

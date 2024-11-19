@@ -12,7 +12,7 @@
   text-align: center;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(28px);
+    font-size: 28px;
     text-align: left;
   }
 }

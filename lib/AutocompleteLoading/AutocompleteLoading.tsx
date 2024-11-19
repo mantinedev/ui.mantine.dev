@@ -27,7 +27,7 @@ export function AutocompleteLoading() {
       value={value}
       data={data}
       onChange={handleChange}
-      rightSection={loading ? <Loader size="1rem" /> : null}
+      rightSection={loading ? <Loader size={16} /> : null}
       label="Async Autocomplete data"
       placeholder="Your email"
     />

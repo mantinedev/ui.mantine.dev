@@ -1,4 +1,4 @@
-import { Paper, Text, ThemeIcon, rem } from '@mantine/core';
+import { Paper, Text, ThemeIcon } from '@mantine/core';
 import { IconColorSwatch } from '@tabler/icons-react';
 import classes from './CardGradient.module.css';
 
@@ -11,7 +11,7 @@ export function CardGradient() {
         variant="gradient"
         gradient={{ deg: 0, from: 'pink', to: 'orange' }}
       >
-        <IconColorSwatch style={{ width: rem(28), height: rem(28) }} stroke={1.5} />
+        <IconColorSwatch size={28} stroke={1.5} />
       </ThemeIcon>
       <Text size="xl" fw={500} mt="md">
         Theming documentation

@@ -12,7 +12,7 @@
 }
 
 .icon {
-  width: rem(21px);
-  height: rem(21px);
-  border-radius: rem(21px);
+  width: 21px;
+  height: 21px;
+  border-radius: 21px;
 }

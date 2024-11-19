@@ -7,7 +7,6 @@ import {
   Avatar,
   Badge,
   useMantineTheme,
-  rem,
 } from '@mantine/core';
 import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react';
 import classes from './ArticleCardFooter.module.css';
@@ -53,25 +52,13 @@ export function ArticleCardFooter() {
           </Text>
           <Group gap={0}>
             <ActionIcon variant="subtle" color="gray">
-              <IconHeart
-                style={{ width: rem(20), height: rem(20) }}
-                color={theme.colors.red[6]}
-                stroke={1.5}
-              />
+              <IconHeart size={20} color={theme.colors.red[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon variant="subtle" color="gray">
-              <IconBookmark
-                style={{ width: rem(20), height: rem(20) }}
-                color={theme.colors.yellow[6]}
-                stroke={1.5}
-              />
+              <IconBookmark size={20} color={theme.colors.yellow[6]} stroke={1.5} />
             </ActionIcon>
             <ActionIcon variant="subtle" color="gray">
-              <IconShare
-                style={{ width: rem(20), height: rem(20) }}
-                color={theme.colors.blue[6]}
-                stroke={1.5}
-              />
+              <IconShare size={20} color={theme.colors.blue[6]} stroke={1.5} />
             </ActionIcon>
           </Group>
         </Group>

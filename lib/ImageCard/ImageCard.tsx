@@ -1,5 +1,5 @@
 import { IconEye, IconMessageCircle } from '@tabler/icons-react';
-import { Card, Text, Group, Center, rem, useMantineTheme } from '@mantine/core';
+import { Card, Text, Group, Center, useMantineTheme } from '@mantine/core';
 import classes from './ImageCard.module.css';
 
 export function ImageCard() {
@@ -37,21 +37,13 @@ export function ImageCard() {
 
             <Group gap="lg">
               <Center>
-                <IconEye
-                  style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
-                  color={theme.colors.dark[2]}
-                />
+                <IconEye size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
                   7847
                 </Text>
               </Center>
               <Center>
-                <IconMessageCircle
-                  style={{ width: rem(16), height: rem(16) }}
-                  stroke={1.5}
-                  color={theme.colors.dark[2]}
-                />
+                <IconMessageCircle size={16} stroke={1.5} color={theme.colors.dark[2]} />
                 <Text size="sm" className={classes.bodyText}>
                   5
                 </Text>

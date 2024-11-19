@@ -1,11 +1,11 @@
 .navbar {
   background-color: var(--mantine-color-body);
-  height: rem(840px);
-  width: rem(300px);
+  height: 840px;
+  width: 300px;
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
-  border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .navbarMain {
@@ -15,7 +15,7 @@
 
 .title {
   text-transform: uppercase;
-  letter-spacing: rem(-0.25px);
+  letter-spacing: -0.25px;
 }
 
 .link {
@@ -53,11 +53,11 @@
 .linkIcon {
   color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-2));
   margin-right: var(--mantine-spacing-sm);
-  width: rem(25px);
-  height: rem(25px);
+  width: 25px;
+  height: 25px;
 }
 
 .footer {
-  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-top: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   padding-top: var(--mantine-spacing-md);
 }

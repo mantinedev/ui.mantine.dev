@@ -1,4 +1,3 @@
-import { rem } from '@mantine/core';
 import { Spotlight, createSpotlight } from '@mantine/spotlight';
 import { IconSearch } from '@tabler/icons-react';
 import { useRouter } from 'next/router';
@@ -27,7 +26,7 @@ export function Search({ data }: { data: any[] }) {
       limit={7}
       nothingFound="Nothing found..."
       searchProps={{
-        leftSection: <IconSearch style={{ width: rem(20), height: rem(20) }} />,
+        leftSection: <IconSearch size={20} />,
         placeholder: 'Search components...',
       }}
     />

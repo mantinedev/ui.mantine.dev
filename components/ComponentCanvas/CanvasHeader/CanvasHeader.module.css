@@ -1,52 +1,3 @@
-/* import { createStyles, rem } from '@mantine/core';
-
-export default createStyles((theme) => ({
-  header: {
-    position: 'relative',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: `${theme.spacing.xs} ${theme.spacing.md}`,
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.white,
-    borderTopRightRadius: theme.radius.md,
-    borderTopLeftRadius: theme.radius.md,
-    borderBottom: `${rem(1)} solid ${
-      theme.colorScheme === 'dark' ? theme.colors.dark[4] : theme.colors.gray[2]
-    }`,
-
-    [theme.fn.smallerThan('sm')]: {
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-    },
-  },
-
-  controls: {
-    [theme.fn.smallerThan('sm')]: {
-      marginTop: 0,
-      flexDirection: 'row-reverse',
-    },
-  },
-
-  controlLabel: {
-    marginLeft: theme.spacing.xs,
-  },
-
-  action: {
-    borderColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[3],
-    backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.white,
-
-    '&:hover': {
-      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[7] : theme.colors.gray[0],
-    },
-  },
-
-  actions: {
-    [theme.fn.smallerThan('sm')]: {
-      display: 'none',
-    },
-  },
-})); */
-
 .header {
   position: relative;
   display: flex;
@@ -56,7 +7,7 @@ export default createStyles((theme) => ({
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
   border-top-right-radius: var(--mantine-radius-md);
   border-top-left-radius: var(--mantine-radius-md);
-  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;

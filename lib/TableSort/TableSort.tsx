@@ -7,7 +7,6 @@ import {
   Text,
   Center,
   TextInput,
-  rem,
   keys,
 } from '@mantine/core';
 import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons-react';
@@ -36,7 +35,7 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
             {children}
           </Text>
           <Center className={classes.icon}>
-            <Icon style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <Icon size={16} stroke={1.5} />
           </Center>
         </Group>
       </UnstyledButton>
@@ -188,7 +187,7 @@ export function TableSort() {
       <TextInput
         placeholder="Search by any field"
         mb="md"
-        leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
+        leftSection={<IconSearch size={16} stroke={1.5} />}
         value={search}
         onChange={handleSearchChange}
       />

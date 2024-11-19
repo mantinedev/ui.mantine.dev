@@ -10,8 +10,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    border-bottom: rem(1px) solid
-      light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-3));
+    border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-3));
   }
 }
 

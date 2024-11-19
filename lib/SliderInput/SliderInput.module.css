@@ -4,8 +4,8 @@
 
 .input {
   height: auto;
-  padding-top: rem(22px);
-  padding-bottom: rem(3px);
+  padding-top: 22px;
+  padding-bottom: 3px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -21,12 +21,12 @@
 .slider {
   position: absolute;
   width: 100%;
-  bottom: rem(-1px);
+  bottom: -1px;
 }
 
 .thumb {
-  width: rem(16px);
-  height: rem(16px);
+  width: 16px;
+  height: 16px;
 }
 
 .track {

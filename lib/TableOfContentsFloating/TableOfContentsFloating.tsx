@@ -1,6 +1,6 @@
 import cx from 'clsx';
 import { useState } from 'react';
-import { Box, Text, Group, rem } from '@mantine/core';
+import { Box, Text, Group } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
 import classes from './TableOfContentsFloating.module.css';
 
@@ -37,7 +37,7 @@ export function TableOfContentsFloating() {
   return (
     <div className={classes.root}>
       <Group mb="md">
-        <IconListSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+        <IconListSearch size={18} stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       <div className={classes.links}>

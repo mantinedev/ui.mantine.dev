@@ -1,13 +1,13 @@
 .footer {
-  margin-top: rem(120px);
+  margin-top: 120px;
   padding-top: calc(var(--mantine-spacing-xl) * 2);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
 }
 
 .logo {
-  max-width: rem(200px);
+  max-width: 200px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     display: flex;
@@ -17,7 +17,7 @@
 }
 
 .description {
-  margin-top: rem(5px);
+  margin-top: 5px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     margin-top: var(--mantine-spacing-xs);
@@ -45,15 +45,15 @@
 }
 
 .wrapper {
-  width: rem(160px);
+  width: 160px;
 }
 
 .link {
   display: block;
   color: light-dark(var(--mantine-color-gray-6), var(--mantine-color-dark-1));
   font-size: var(--mantine-font-size-sm);
-  padding-top: rem(3px);
-  padding-bottom: rem(3px);
+  padding-top: 3px;
+  padding-bottom: 3px;
 
   &:hover {
     text-decoration: underline;
@@ -77,7 +77,7 @@
   margin-top: var(--mantine-spacing-xl);
   padding-top: var(--mantine-spacing-xl);
   padding-bottom: var(--mantine-spacing-xl);
-  border-top: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;

@@ -1,4 +1,4 @@
-import { Group, Code, ScrollArea, rem } from '@mantine/core';
+import { Group, Code, ScrollArea } from '@mantine/core';
 import {
   IconNotes,
   IconCalendarStats,
@@ -56,7 +56,7 @@ export function NavbarNested() {
     <nav className={classes.navbar}>
       <div className={classes.header}>
         <Group justify="space-between">
-          <Logo style={{ width: rem(120) }} />
+          <Logo style={{ width: 120 }} />
           <Code fw={700}>v3.1.2</Code>
         </Group>
       </div>

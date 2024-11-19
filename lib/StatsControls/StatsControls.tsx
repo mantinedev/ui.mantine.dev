@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import dayjs from 'dayjs';
-import { UnstyledButton, Text, Paper, Group, rem } from '@mantine/core';
+import { UnstyledButton, Text, Paper, Group } from '@mantine/core';
 import {
   IconSwimming,
   IconBike,
@@ -21,11 +21,7 @@ export function StatsControls() {
 
   const stats = data.map((stat) => (
     <Paper className={classes.stat} radius="md" shadow="md" p="xs" key={stat.label}>
-      <stat.icon
-        style={{ width: rem(32), height: rem(32) }}
-        className={classes.icon}
-        stroke={1.5}
-      />
+      <stat.icon size={32} className={classes.icon} stroke={1.5} />
       <div>
         <Text className={classes.label}>{stat.label}</Text>
         <Text fz="xs" className={classes.count}>
@@ -42,11 +38,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).add(1, 'day').toDate())}
         >
-          <IconChevronUp
-            style={{ width: rem(16), height: rem(16) }}
-            className={classes.controlIcon}
-            stroke={1.5}
-          />
+          <IconChevronUp size={16} className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
 
         <div className={classes.date}>
@@ -58,11 +50,7 @@ export function StatsControls() {
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).subtract(1, 'day').toDate())}
         >
-          <IconChevronDown
-            style={{ width: rem(16), height: rem(16) }}
-            className={classes.controlIcon}
-            stroke={1.5}
-          />
+          <IconChevronDown size={16} className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
       </div>
       <Group style={{ flex: 1 }}>{stats}</Group>
