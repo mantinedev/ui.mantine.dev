@@ -10841,7 +10841,7 @@ __metadata:
     gh-pages: "npm:^6.1.0"
     next: "npm:14.0.3"
     postcss: "npm:^8.4.31"
-    postcss-preset-mantine: "npm:1.11.0"
+    postcss-preset-mantine: "npm:1.17.0"
     postcss-simple-vars: "npm:^7.0.1"
     prettier: "npm:^3.1.0"
     react: "npm:18.3.1"
@@ -12260,15 +12260,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss-preset-mantine@npm:1.11.0":
-  version: 1.11.0
-  resolution: "postcss-preset-mantine@npm:1.11.0"
+"postcss-preset-mantine@npm:1.17.0":
+  version: 1.17.0
+  resolution: "postcss-preset-mantine@npm:1.17.0"
   dependencies:
     postcss-mixins: "npm:^9.0.4"
     postcss-nested: "npm:^6.0.1"
   peerDependencies:
     postcss: ">=8.0.0"
-  checksum: 10c0/0a3b26c944fb35541e045d9505cce5ad109f9f6e7ecefbacd413e2e7053f230d8fc24e6400eb4cf8fb07f2b17ab7cb588ffacef0df8fd5937b7f399b41013076
+  checksum: 10c0/9410196f8c9b6389f376abe04b732b92179859b195d1422d02e94e46fca1503272b553993727af396cddc6c094a162d73a9a8fd1f85bd3ac2c41135c9365210a
   languageName: node
   linkType: hard
 
