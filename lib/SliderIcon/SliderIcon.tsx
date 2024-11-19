@@ -1,5 +1,5 @@
-import { Slider, RangeSlider } from '@mantine/core';
 import { IconHeart, IconHeartBroken } from '@tabler/icons-react';
+import { RangeSlider, Slider } from '@mantine/core';
 
 const styles = { thumb: { borderWidth: 2, height: 26, width: 26, padding: 3 } };
 

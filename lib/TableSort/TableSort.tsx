@@ -1,15 +1,15 @@
 import { useState } from 'react';
+import { IconChevronDown, IconChevronUp, IconSearch, IconSelector } from '@tabler/icons-react';
 import {
-  Table,
-  ScrollArea,
-  UnstyledButton,
-  Group,
-  Text,
   Center,
-  TextInput,
+  Group,
   keys,
+  ScrollArea,
+  Table,
+  Text,
+  TextInput,
+  UnstyledButton,
 } from '@mantine/core';
-import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons-react';
 import classes from './TableSort.module.css';
 
 interface RowData {

@@ -1,7 +1,7 @@
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
+import { IconGripVertical } from '@tabler/icons-react';
 import { Table } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { IconGripVertical } from '@tabler/icons-react';
 import classes from './DndTable.module.css';
 
 const data = [

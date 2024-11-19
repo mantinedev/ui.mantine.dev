@@ -1,4 +1,4 @@
-import { Text, Title, TextInput, Button, Image } from '@mantine/core';
+import { Button, Image, Text, TextInput, Title } from '@mantine/core';
 import image from './image.svg';
 import classes from './EmailBanner.module.css';
 

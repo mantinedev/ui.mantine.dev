@@ -1,5 +1,5 @@
-import { Title, Container, Accordion, ThemeIcon } from '@mantine/core';
 import { IconPlus } from '@tabler/icons-react';
+import { Accordion, Container, ThemeIcon, Title } from '@mantine/core';
 import classes from './FaqWithBg.module.css';
 
 const placeholder =

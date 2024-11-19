@@ -1,6 +1,6 @@
-import { Card, Avatar, Text, Progress, Badge, Group, ActionIcon } from '@mantine/core';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import { IconUpload } from '@tabler/icons-react';
+import { ActionIcon, Avatar, Badge, Card, Group, Progress, Text } from '@mantine/core';
+import { MantineLogo } from '@mantinex/mantine-logo';
 
 const avatars = [
   'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png',

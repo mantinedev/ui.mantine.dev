@@ -1,5 +1,5 @@
 import cx from 'clsx';
-import { Title, Text, Container, Button, Overlay } from '@mantine/core';
+import { Button, Container, Overlay, Text, Title } from '@mantine/core';
 import classes from './HeroImageBackground.module.css';
 
 export function HeroImageBackground() {

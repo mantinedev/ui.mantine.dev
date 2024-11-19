@@ -1,6 +1,6 @@
-import cx from 'clsx';
 import { useState } from 'react';
-import { Table, Checkbox, ScrollArea, Group, Avatar, Text } from '@mantine/core';
+import cx from 'clsx';
+import { Avatar, Checkbox, Group, ScrollArea, Table, Text } from '@mantine/core';
 import classes from './TableSelection.module.css';
 
 const data = [

@@ -1,8 +1,8 @@
-import { Container } from '@mantine/core';
 import Head from 'next/head';
-import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';
-import { CategoryHeader } from '../CategoryHeader/CategoryHeader';
+import { Container } from '@mantine/core';
 import { Category, UiComponent } from '../../data';
+import { CategoryHeader } from '../CategoryHeader/CategoryHeader';
+import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';
 import { Shell } from '../Shell';
 
 interface CategoryPageProps {

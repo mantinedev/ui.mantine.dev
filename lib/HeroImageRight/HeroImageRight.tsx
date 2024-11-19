@@ -1,4 +1,4 @@
-import { Container, Title, Text, Button } from '@mantine/core';
+import { Button, Container, Text, Title } from '@mantine/core';
 import classes from './HeroImageRight.module.css';
 
 export function HeroImageRight() {

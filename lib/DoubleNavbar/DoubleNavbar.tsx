@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { UnstyledButton, Tooltip, Title } from '@mantine/core';
 import {
-  IconHome2,
-  IconGauge,
+  IconCalendarStats,
   IconDeviceDesktopAnalytics,
   IconFingerprint,
-  IconCalendarStats,
-  IconUser,
+  IconGauge,
+  IconHome2,
   IconSettings,
+  IconUser,
 } from '@tabler/icons-react';
+import { Title, Tooltip, UnstyledButton } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './DoubleNavbar.module.css';
 

@@ -1,14 +1,14 @@
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import {
-  Text,
-  Title,
-  SimpleGrid,
-  TextInput,
-  Textarea,
+  ActionIcon,
   Button,
   Group,
-  ActionIcon,
+  SimpleGrid,
+  Text,
+  Textarea,
+  TextInput,
+  Title,
 } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import { ContactIconsList } from './ContactIcons';
 import classes from './ContactUs.module.css';
 

@@ -1,5 +1,5 @@
-import { Progress, Box, Text, Group, Paper, SimpleGrid } from '@mantine/core';
 import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons-react';
+import { Box, Group, Paper, Progress, SimpleGrid, Text } from '@mantine/core';
 import classes from './StatsSegments.module.css';
 
 const data = [

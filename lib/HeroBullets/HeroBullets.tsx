@@ -1,5 +1,5 @@
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
+import { Button, Container, Group, Image, List, Text, ThemeIcon, Title } from '@mantine/core';
 import image from './image.svg';
 import classes from './HeroBullets.module.css';
 

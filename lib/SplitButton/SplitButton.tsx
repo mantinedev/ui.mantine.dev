@@ -1,5 +1,5 @@
-import { Button, Menu, Group, ActionIcon, useMantineTheme } from '@mantine/core';
-import { IconTrash, IconBookmark, IconCalendar, IconChevronDown } from '@tabler/icons-react';
+import { IconBookmark, IconCalendar, IconChevronDown, IconTrash } from '@tabler/icons-react';
+import { ActionIcon, Button, Group, Menu, useMantineTheme } from '@mantine/core';
 import classes from './SplitButton.module.css';
 
 export function SplitButton() {

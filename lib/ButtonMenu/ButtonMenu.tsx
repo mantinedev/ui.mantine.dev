@@ -1,11 +1,11 @@
-import { Button, Menu, Text, useMantineTheme } from '@mantine/core';
 import {
-  IconSquareCheck,
-  IconPackage,
-  IconUsers,
   IconCalendar,
   IconChevronDown,
+  IconPackage,
+  IconSquareCheck,
+  IconUsers,
 } from '@tabler/icons-react';
+import { Button, Menu, Text, useMantineTheme } from '@mantine/core';
 
 export function ButtonMenu() {
   const theme = useMantineTheme();

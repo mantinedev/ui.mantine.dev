@@ -1,5 +1,5 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
+import attributes from './attributes.json';
 import { NavbarSearch } from './NavbarSearch';
 
 export default { title: 'NavbarSearch' };

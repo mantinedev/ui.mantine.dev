@@ -1,6 +1,6 @@
-import cx from 'clsx';
-import { Box, Text, Group } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
+import cx from 'clsx';
+import { Box, Group, Text } from '@mantine/core';
 import classes from './TableOfContents.module.css';
 
 const links = [

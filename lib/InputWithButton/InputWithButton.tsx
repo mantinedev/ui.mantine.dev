@@ -1,5 +1,5 @@
-import { TextInput, TextInputProps, ActionIcon, useMantineTheme } from '@mantine/core';
-import { IconSearch, IconArrowRight } from '@tabler/icons-react';
+import { IconArrowRight, IconSearch } from '@tabler/icons-react';
+import { ActionIcon, TextInput, TextInputProps, useMantineTheme } from '@mantine/core';
 
 export function InputWithButton(props: TextInputProps) {
   const theme = useMantineTheme();

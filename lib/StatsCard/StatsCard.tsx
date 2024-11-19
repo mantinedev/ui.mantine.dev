@@ -1,5 +1,5 @@
-import { ThemeIcon, Progress, Text, Group, Badge, Paper } from '@mantine/core';
 import { IconSwimming } from '@tabler/icons-react';
+import { Badge, Group, Paper, Progress, Text, ThemeIcon } from '@mantine/core';
 import classes from './StatsCard.module.css';
 
 export function StatsCard() {

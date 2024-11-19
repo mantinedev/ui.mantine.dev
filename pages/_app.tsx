@@ -6,12 +6,13 @@ import '@mantine/dropzone/styles.css';
 import '@mantine/spotlight/styles.css';
 import '@mantinex/mantine-header/styles.css';
 import '@mantinex/mantine-logo/styles.css';
+
 import Head from 'next/head';
-import { MantineProvider, DirectionProvider, localStorageColorSchemeManager } from '@mantine/core';
+import { DirectionProvider, localStorageColorSchemeManager, MantineProvider } from '@mantine/core';
 import { ShikiProvider } from '@mantinex/shiki';
+import { GaScript } from '@/components/GaScript';
 import { HotKeysHandler } from '@/components/HotKeysHandler';
 import { Search } from '@/components/Search';
-import { GaScript } from '@/components/GaScript';
 
 async function loadShiki() {
   const { getHighlighter } = await import('shikiji');

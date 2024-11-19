@@ -1,6 +1,6 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { ArticleCardFooter } from './ArticleCardFooter';
+import attributes from './attributes.json';
 
 export default { title: 'ArticleCardFooter' };
 

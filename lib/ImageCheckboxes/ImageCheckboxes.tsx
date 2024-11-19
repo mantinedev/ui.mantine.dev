@@ -1,4 +1,4 @@
-import { UnstyledButton, Checkbox, Text, Image, SimpleGrid } from '@mantine/core';
+import { Checkbox, Image, SimpleGrid, Text, UnstyledButton } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 import icons from './icons';
 import classes from './ImageCheckboxes.module.css';

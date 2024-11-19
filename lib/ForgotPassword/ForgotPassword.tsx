@@ -1,16 +1,16 @@
+import { IconArrowLeft } from '@tabler/icons-react';
 import {
-  Paper,
-  Title,
-  Text,
-  TextInput,
+  Anchor,
+  Box,
   Button,
+  Center,
   Container,
   Group,
-  Anchor,
-  Center,
-  Box,
+  Paper,
+  Text,
+  TextInput,
+  Title,
 } from '@mantine/core';
-import { IconArrowLeft } from '@tabler/icons-react';
 import classes from './ForgotPassword.module.css';
 
 export function ForgotPassword() {

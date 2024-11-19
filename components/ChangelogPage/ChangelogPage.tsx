@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Container, Title, Text } from '@mantine/core';
+import { Container, Text, Title } from '@mantine/core';
 import { upperFirst } from '@mantine/hooks';
 import { UiComponent } from '../../data';
 import { ComponentCanvas } from '../ComponentCanvas/ComponentCanvas';

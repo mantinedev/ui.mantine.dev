@@ -1,6 +1,6 @@
-import { Image, Card, Text, Group, Button } from '@mantine/core';
-import { Carousel } from '@mantine/carousel';
 import { IconStar } from '@tabler/icons-react';
+import { Carousel } from '@mantine/carousel';
+import { Button, Card, Group, Image, Text } from '@mantine/core';
 import classes from './CarouselCard.module.css';
 
 const images = [

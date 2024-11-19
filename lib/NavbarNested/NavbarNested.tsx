@@ -1,15 +1,15 @@
-import { Group, Code, ScrollArea } from '@mantine/core';
 import {
-  IconNotes,
-  IconCalendarStats,
-  IconGauge,
-  IconPresentationAnalytics,
-  IconFileAnalytics,
   IconAdjustments,
+  IconCalendarStats,
+  IconFileAnalytics,
+  IconGauge,
   IconLock,
+  IconNotes,
+  IconPresentationAnalytics,
 } from '@tabler/icons-react';
-import { UserButton } from '../UserButton/UserButton';
+import { Code, Group, ScrollArea } from '@mantine/core';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
+import { UserButton } from '../UserButton/UserButton';
 import { Logo } from './Logo';
 import classes from './NavbarNested.module.css';
 

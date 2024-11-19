@@ -1,6 +1,6 @@
-import { Spotlight, createSpotlight } from '@mantine/spotlight';
-import { IconSearch } from '@tabler/icons-react';
 import { useRouter } from 'next/router';
+import { IconSearch } from '@tabler/icons-react';
+import { createSpotlight, Spotlight } from '@mantine/spotlight';
 
 export const [searchStore, searchHandlers] = createSpotlight();
 

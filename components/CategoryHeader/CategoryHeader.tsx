@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Title, Anchor, Center, Box } from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons-react';
+import { Anchor, Box, Center, Title } from '@mantine/core';
 import { Category } from '../../data';
 import classes from './CategoryHeader.module.css';
 

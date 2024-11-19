@@ -1,5 +1,5 @@
+import { IconGripVertical, IconPoint } from '@tabler/icons-react';
 import { RangeSlider } from '@mantine/core';
-import { IconPoint, IconGripVertical } from '@tabler/icons-react';
 import classes from './SliderMarks.module.css';
 
 const point = <IconPoint size={10} style={{ marginTop: 6 }} stroke={1.5} />;

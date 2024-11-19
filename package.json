@@ -41,6 +41,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@eslint/js": "^9.15.0",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@storybook/addon-styling-webpack": "^0.0.5",
     "@storybook/blocks": "^7.5.3",
     "@storybook/nextjs": "^7.5.3",

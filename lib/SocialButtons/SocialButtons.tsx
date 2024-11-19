@@ -1,7 +1,7 @@
 import { Button, ButtonProps, Group } from '@mantine/core';
-import { GithubIcon, DiscordIcon, TwitterIcon } from '@mantinex/dev-icons';
-import { GoogleIcon } from './GoogleIcon';
+import { DiscordIcon, GithubIcon, TwitterIcon } from '@mantinex/dev-icons';
 import { FacebookIcon } from './FacebookIcon';
+import { GoogleIcon } from './GoogleIcon';
 import classes from './SocialButtons.module.css';
 
 export function GoogleButton(props: ButtonProps & React.ComponentPropsWithoutRef<'button'>) {

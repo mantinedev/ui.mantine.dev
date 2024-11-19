@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Autocomplete, Loader } from '@mantine/core';
 
 export function AutocompleteLoading() {

@@ -1,19 +1,19 @@
-import cx from 'clsx';
 import { IconExternalLink } from '@tabler/icons-react';
-import { GithubIcon } from '@mantinex/dev-icons';
+import cx from 'clsx';
 import {
-  Title,
-  Overlay,
-  Group,
-  Text,
   Button,
-  ThemeIcon,
-  SimpleGrid,
   Container,
+  Group,
+  Overlay,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  Title,
 } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
-import data from './data';
+import { GithubIcon } from '@mantinex/dev-icons';
 import bannerImage from './banner.webp';
+import data from './data';
 import classes from './Banner.module.css';
 
 interface BannerProps {

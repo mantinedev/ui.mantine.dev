@@ -1,5 +1,5 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
+import attributes from './attributes.json';
 import { FloatingLabelInput } from './FloatingLabelInput';
 
 export default { title: 'FloatingLabelInput' };

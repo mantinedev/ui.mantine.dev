@@ -1,6 +1,6 @@
+import { IconCheck, IconCopy } from '@tabler/icons-react';
 import { Button, Tooltip } from '@mantine/core';
 import { useClipboard } from '@mantine/hooks';
-import { IconCopy, IconCheck } from '@tabler/icons-react';
 
 export function ButtonCopy() {
   const clipboard = useClipboard();

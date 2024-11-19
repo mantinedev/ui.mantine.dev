@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { Center, Tooltip, UnstyledButton, Stack } from '@mantine/core';
 import {
-  IconHome2,
-  IconGauge,
+  IconCalendarStats,
   IconDeviceDesktopAnalytics,
   IconFingerprint,
-  IconCalendarStats,
-  IconUser,
-  IconSettings,
+  IconGauge,
+  IconHome2,
   IconLogout,
+  IconSettings,
   IconSwitchHorizontal,
+  IconUser,
 } from '@tabler/icons-react';
+import { Center, Stack, Tooltip, UnstyledButton } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './NavbarMinimal.module.css';
 

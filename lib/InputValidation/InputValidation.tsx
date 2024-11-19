@@ -1,5 +1,5 @@
-import { TextInput } from '@mantine/core';
 import { IconAlertTriangle } from '@tabler/icons-react';
+import { TextInput } from '@mantine/core';
 import classes from './InputValidation.module.css';
 
 export function InputValidation() {

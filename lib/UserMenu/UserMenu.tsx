@@ -1,16 +1,16 @@
-import { Menu, Group, Text, Avatar, useMantineTheme, ActionIcon } from '@mantine/core';
 import {
-  IconLogout,
-  IconHeart,
-  IconStar,
-  IconMessage,
-  IconSettings,
-  IconPlayerPause,
-  IconTrash,
-  IconSwitchHorizontal,
   IconChevronRight,
   IconDots,
+  IconHeart,
+  IconLogout,
+  IconMessage,
+  IconPlayerPause,
+  IconSettings,
+  IconStar,
+  IconSwitchHorizontal,
+  IconTrash,
 } from '@tabler/icons-react';
+import { ActionIcon, Avatar, Group, Menu, Text, useMantineTheme } from '@mantine/core';
 
 export function UserMenu() {
   const theme = useMantineTheme();

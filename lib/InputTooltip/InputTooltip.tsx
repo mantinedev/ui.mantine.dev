@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { TextInput, PasswordInput, Tooltip, Center, Text } from '@mantine/core';
 import { IconInfoCircle } from '@tabler/icons-react';
+import { Center, PasswordInput, Text, TextInput, Tooltip } from '@mantine/core';
 
 function TooltipIcon() {
   const rightSection = (

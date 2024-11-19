@@ -1,14 +1,14 @@
+import { IconCookie, IconGauge, IconUser } from '@tabler/icons-react';
 import {
   Badge,
-  Group,
-  Title,
-  Text,
   Card,
-  SimpleGrid,
   Container,
+  Group,
+  SimpleGrid,
+  Text,
+  Title,
   useMantineTheme,
 } from '@mantine/core';
-import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
 import classes from './FeaturesCards.module.css';
 
 const mockdata = [

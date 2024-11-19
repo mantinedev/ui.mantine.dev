@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { ComponentPage } from '../../components/ComponentPage/ComponentPage';
 import { UiComponent } from '../../data';
 import { getAllComponents } from '../../data/components';
-import { ComponentPage } from '../../components/ComponentPage/ComponentPage';
 
 export default ComponentPage;
 

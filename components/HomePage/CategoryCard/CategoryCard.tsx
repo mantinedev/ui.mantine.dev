@@ -1,6 +1,6 @@
-import cx from 'clsx';
 import Link from 'next/link';
-import { Card, CardSection, Text, Image } from '@mantine/core';
+import cx from 'clsx';
+import { Card, CardSection, Image, Text } from '@mantine/core';
 import { Category } from '../../../data';
 import classes from './CategoryCard.module.css';
 

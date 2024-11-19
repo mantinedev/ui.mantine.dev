@@ -1,6 +1,6 @@
-import { Autocomplete, Group, Burger } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import { IconSearch } from '@tabler/icons-react';
+import { Autocomplete, Burger, Group } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderSearch.module.css';
 

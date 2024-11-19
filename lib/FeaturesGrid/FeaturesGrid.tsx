@@ -1,5 +1,5 @@
-import { ThemeIcon, Text, Title, Container, SimpleGrid } from '@mantine/core';
-import { IconGauge, IconCookie, IconUser, IconMessage2, IconLock } from '@tabler/icons-react';
+import { IconCookie, IconGauge, IconLock, IconMessage2, IconUser } from '@tabler/icons-react';
+import { Container, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
 import classes from './FeaturesGrid.module.css';
 
 export const MOCKDATA = [

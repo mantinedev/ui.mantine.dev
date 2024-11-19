@@ -1,15 +1,15 @@
+import { IconBulb, IconCheckbox, IconPlus, IconSearch, IconUser } from '@tabler/icons-react';
 import {
-  TextInput,
-  Code,
-  UnstyledButton,
-  Badge,
-  Text,
-  Group,
   ActionIcon,
-  Tooltip,
+  Badge,
   Box,
+  Code,
+  Group,
+  Text,
+  TextInput,
+  Tooltip,
+  UnstyledButton,
 } from '@mantine/core';
-import { IconBulb, IconUser, IconCheckbox, IconSearch, IconPlus } from '@tabler/icons-react';
 import { UserButton } from '../UserButton/UserButton';
 import classes from './NavbarSearch.module.css';
 

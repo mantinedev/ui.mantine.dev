@@ -1,8 +1,8 @@
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
+import { IconGripVertical } from '@tabler/icons-react';
 import cx from 'clsx';
 import { Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
-import { IconGripVertical } from '@tabler/icons-react';
 import classes from './DndListHandle.module.css';
 
 const data = [

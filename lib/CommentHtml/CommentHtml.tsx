@@ -1,4 +1,4 @@
-import { Text, Avatar, Group, TypographyStylesProvider, Paper } from '@mantine/core';
+import { Avatar, Group, Paper, Text, TypographyStylesProvider } from '@mantine/core';
 import classes from './CommentHtml.module.css';
 
 export function CommentHtml() {

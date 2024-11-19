@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next';
-import { countComponentsByCategory, getAllComponents } from '../data/components';
 import { HomePage } from '../components/HomePage/HomePage';
+import { countComponentsByCategory, getAllComponents } from '../data/components';
 
 export default HomePage;
 

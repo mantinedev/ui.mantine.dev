@@ -1,6 +1,6 @@
-import { Paper, Text, TextInput, Textarea, Button, Group, SimpleGrid } from '@mantine/core';
-import { ContactIconsList } from './ContactIcons';
+import { Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
 import bg from './bg.svg';
+import { ContactIconsList } from './ContactIcons';
 import classes from './GetInTouch.module.css';
 
 export function GetInTouch() {

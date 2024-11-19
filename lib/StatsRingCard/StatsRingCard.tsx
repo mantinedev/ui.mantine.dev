@@ -1,4 +1,4 @@
-import { Text, Card, RingProgress, Group, useMantineTheme } from '@mantine/core';
+import { Card, Group, RingProgress, Text, useMantineTheme } from '@mantine/core';
 import classes from './StatsRingCard.module.css';
 
 const stats = [

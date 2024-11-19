@@ -1,7 +1,7 @@
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
 import cx from 'clsx';
 import { Text } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
 import classes from './DndList.module.css';
 
 const data = [

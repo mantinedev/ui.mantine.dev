@@ -1,13 +1,13 @@
-import { useState } from 'react';
 import dayjs from 'dayjs';
-import { UnstyledButton, Text, Paper, Group } from '@mantine/core';
+import { useState } from 'react';
 import {
-  IconSwimming,
   IconBike,
-  IconRun,
   IconChevronDown,
   IconChevronUp,
+  IconRun,
+  IconSwimming,
 } from '@tabler/icons-react';
+import { Group, Paper, Text, UnstyledButton } from '@mantine/core';
 import classes from './StatsControls.module.css';
 
 const data = [

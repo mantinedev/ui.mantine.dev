@@ -1,7 +1,7 @@
-import cx from 'clsx';
 import { useState } from 'react';
-import { Box, Text, Group } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
+import cx from 'clsx';
+import { Box, Group, Text } from '@mantine/core';
 import classes from './TableOfContentsFloating.module.css';
 
 const links = [

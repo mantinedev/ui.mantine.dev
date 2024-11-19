@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { AppShell, Container, RemoveScroll, Group } from '@mantine/core';
+import { AppShell, Container, Group, RemoveScroll } from '@mantine/core';
 import { ColorSchemeControl, HeaderControls, SearchMobileControl } from '@mantinex/mantine-header';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { meta } from '@mantinex/mantine-meta';

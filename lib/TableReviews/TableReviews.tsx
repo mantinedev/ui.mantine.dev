@@ -1,4 +1,4 @@
-import { Table, Progress, Anchor, Text, Group } from '@mantine/core';
+import { Anchor, Group, Progress, Table, Text } from '@mantine/core';
 import classes from './TableReviews.module.css';
 
 const data = [

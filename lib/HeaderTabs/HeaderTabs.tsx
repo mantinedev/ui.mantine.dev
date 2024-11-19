@@ -1,28 +1,28 @@
-import cx from 'clsx';
 import { useState } from 'react';
 import {
-  Container,
+  IconChevronDown,
+  IconHeart,
+  IconLogout,
+  IconMessage,
+  IconPlayerPause,
+  IconSettings,
+  IconStar,
+  IconSwitchHorizontal,
+  IconTrash,
+} from '@tabler/icons-react';
+import cx from 'clsx';
+import {
   Avatar,
-  UnstyledButton,
+  Burger,
+  Container,
   Group,
-  Text,
   Menu,
   Tabs,
-  Burger,
+  Text,
+  UnstyledButton,
   useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import {
-  IconLogout,
-  IconHeart,
-  IconStar,
-  IconMessage,
-  IconSettings,
-  IconPlayerPause,
-  IconTrash,
-  IconSwitchHorizontal,
-  IconChevronDown,
-} from '@tabler/icons-react';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderTabs.module.css';
 

@@ -1,5 +1,5 @@
-import { Text, ThemeIcon, Stack } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
+import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { Stack, Text, ThemeIcon } from '@mantine/core';
 import classes from './ContactIcons.module.css';
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {

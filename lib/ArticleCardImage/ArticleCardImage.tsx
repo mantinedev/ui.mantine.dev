@@ -1,4 +1,4 @@
-import { Paper, Text, Title, Button } from '@mantine/core';
+import { Button, Paper, Text, Title } from '@mantine/core';
 import classes from './ArticleCardImage.module.css';
 
 export function ArticleCardImage() {

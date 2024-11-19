@@ -1,12 +1,12 @@
-import { Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import {
-  IconUserPlus,
+  IconArrowDownRight,
+  IconArrowUpRight,
+  IconCoin,
   IconDiscount2,
   IconReceipt2,
-  IconCoin,
-  IconArrowUpRight,
-  IconArrowDownRight,
+  IconUserPlus,
 } from '@tabler/icons-react';
+import { Group, Paper, SimpleGrid, Text } from '@mantine/core';
 import classes from './StatsGrid.module.css';
 
 const icons = {

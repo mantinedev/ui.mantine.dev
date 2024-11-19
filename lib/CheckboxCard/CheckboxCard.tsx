@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UnstyledButton, Checkbox, Text } from '@mantine/core';
+import { Checkbox, Text, UnstyledButton } from '@mantine/core';
 import classes from './CheckboxCard.module.css';
 
 export function CheckboxCard() {

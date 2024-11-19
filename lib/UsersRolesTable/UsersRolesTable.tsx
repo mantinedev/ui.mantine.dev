@@ -1,4 +1,4 @@
-import { Avatar, Badge, Table, Group, Text, Select } from '@mantine/core';
+import { Avatar, Badge, Group, Select, Table, Text } from '@mantine/core';
 
 const data = [
   {

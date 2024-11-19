@@ -1,23 +1,23 @@
 import {
-  Card,
-  Text,
-  SimpleGrid,
-  UnstyledButton,
-  Anchor,
-  Group,
-  useMantineTheme,
-} from '@mantine/core';
-import {
-  IconCreditCard,
   IconBuildingBank,
-  IconRepeat,
-  IconReceiptRefund,
-  IconReceipt,
-  IconReceiptTax,
-  IconReport,
   IconCashBanknote,
   IconCoin,
+  IconCreditCard,
+  IconReceipt,
+  IconReceiptRefund,
+  IconReceiptTax,
+  IconRepeat,
+  IconReport,
 } from '@tabler/icons-react';
+import {
+  Anchor,
+  Card,
+  Group,
+  SimpleGrid,
+  Text,
+  UnstyledButton,
+  useMantineTheme,
+} from '@mantine/core';
 import classes from './ActionsGrid.module.css';
 
 const mockdata = [

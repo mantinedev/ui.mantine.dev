@@ -1,14 +1,14 @@
 import {
-  TextInput,
-  PasswordInput,
-  Checkbox,
   Anchor,
-  Paper,
-  Title,
-  Text,
+  Button,
+  Checkbox,
   Container,
   Group,
-  Button,
+  Paper,
+  PasswordInput,
+  Text,
+  TextInput,
+  Title,
 } from '@mantine/core';
 import classes from './AuthenticationTitle.module.css';
 

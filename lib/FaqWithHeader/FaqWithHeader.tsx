@@ -1,4 +1,4 @@
-import { Title, Container, Text, UnstyledButton, Overlay, SimpleGrid } from '@mantine/core';
+import { Container, Overlay, SimpleGrid, Text, Title, UnstyledButton } from '@mantine/core';
 import { ContactIconsList } from './ContactIcons';
 import classes from './FaqWithHeader.module.css';
 

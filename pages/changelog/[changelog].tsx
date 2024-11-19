@@ -1,11 +1,11 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import { ChangelogPage } from '../../components/ChangelogPage/ChangelogPage';
 import { UiComponent } from '../../data';
 import {
   getAllChangelogs,
-  getComponentsByChangelog,
   getAllComponents,
+  getComponentsByChangelog,
 } from '../../data/components';
-import { ChangelogPage } from '../../components/ChangelogPage/ChangelogPage';
 
 export default ChangelogPage;
 

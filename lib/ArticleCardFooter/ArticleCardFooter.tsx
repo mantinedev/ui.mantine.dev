@@ -1,14 +1,14 @@
+import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
 import {
-  Card,
-  Image,
   ActionIcon,
-  Group,
-  Text,
   Avatar,
   Badge,
+  Card,
+  Group,
+  Image,
+  Text,
   useMantineTheme,
 } from '@mantine/core';
-import { IconHeart, IconBookmark, IconShare } from '@tabler/icons-react';
 import classes from './ArticleCardFooter.module.css';
 
 export function ArticleCardFooter() {

@@ -1,13 +1,13 @@
 import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
 import {
+  ActionIcon,
+  Avatar,
+  Badge,
   Card,
+  Center,
+  Group,
   Image,
   Text,
-  ActionIcon,
-  Badge,
-  Group,
-  Center,
-  Avatar,
   useMantineTheme,
 } from '@mantine/core';
 import classes from './ArticleCard.module.css';

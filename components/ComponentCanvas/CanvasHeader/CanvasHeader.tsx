@@ -1,8 +1,8 @@
+import { IconCode, IconExternalLink, IconEye } from '@tabler/icons-react';
+import { ActionIcon, Badge, Box, Center, Group, SegmentedControl, Text } from '@mantine/core';
 import { GithubIcon } from '@mantinex/dev-icons';
-import { IconExternalLink, IconCode, IconEye } from '@tabler/icons-react';
-import { Group, Text, ActionIcon, Badge, SegmentedControl, Center, Box } from '@mantine/core';
-import { ColorControl } from '../ColorControl/ColorControl';
 import { UiComponent } from '../../../data';
+import { ColorControl } from '../ColorControl/ColorControl';
 import classes from './CanvasHeader.module.css';
 
 export interface CanvasHeaderProps extends UiComponent, React.ComponentPropsWithoutRef<'div'> {

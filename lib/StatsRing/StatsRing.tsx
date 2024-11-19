@@ -1,5 +1,5 @@
-import { RingProgress, Text, SimpleGrid, Paper, Center, Group } from '@mantine/core';
-import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
+import { IconArrowDownRight, IconArrowUpRight } from '@tabler/icons-react';
+import { Center, Group, Paper, RingProgress, SimpleGrid, Text } from '@mantine/core';
 
 const icons = {
   up: IconArrowUpRight,

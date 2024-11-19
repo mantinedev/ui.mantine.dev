@@ -1,5 +1,5 @@
 import { IconHeart } from '@tabler/icons-react';
-import { Card, Image, Text, Group, Badge, Button, ActionIcon } from '@mantine/core';
+import { ActionIcon, Badge, Button, Card, Group, Image, Text } from '@mantine/core';
 import classes from './BadgeCard.module.css';
 
 const mockdata = {

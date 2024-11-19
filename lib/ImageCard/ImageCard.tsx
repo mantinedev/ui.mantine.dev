@@ -1,5 +1,5 @@
 import { IconEye, IconMessageCircle } from '@tabler/icons-react';
-import { Card, Text, Group, Center, useMantineTheme } from '@mantine/core';
+import { Card, Center, Group, Text, useMantineTheme } from '@mantine/core';
 import classes from './ImageCard.module.css';
 
 export function ImageCard() {

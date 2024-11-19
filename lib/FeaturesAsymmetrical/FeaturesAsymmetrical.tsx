@@ -1,5 +1,5 @@
-import { Text, SimpleGrid, Container } from '@mantine/core';
-import { IconTruck, IconCertificate, IconCoin } from '@tabler/icons-react';
+import { IconCertificate, IconCoin, IconTruck } from '@tabler/icons-react';
+import { Container, SimpleGrid, Text } from '@mantine/core';
 import classes from './FeaturesAsymmetrical.module.css';
 
 interface FeatureProps extends React.ComponentPropsWithoutRef<'div'> {

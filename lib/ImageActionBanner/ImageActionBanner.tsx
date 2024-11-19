@@ -1,4 +1,4 @@
-import { Card, Overlay, Button, Text } from '@mantine/core';
+import { Button, Card, Overlay, Text } from '@mantine/core';
 import classes from './ImageActionBanner.module.css';
 
 export function ImageActionBanner() {
