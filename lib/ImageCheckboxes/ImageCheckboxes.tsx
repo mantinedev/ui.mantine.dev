@@ -6,7 +6,7 @@ import classes from './ImageCheckboxes.module.css';
 interface ImageCheckboxProps {
   checked?: boolean;
   defaultChecked?: boolean;
-  onChange?(checked: boolean): void;
+  onChange?: (checked: boolean) => void;
   title: string;
   description: string;
   image: string;

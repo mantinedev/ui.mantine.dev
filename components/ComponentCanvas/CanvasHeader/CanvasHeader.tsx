@@ -7,8 +7,8 @@ import classes from './CanvasHeader.module.css';
 
 export interface CanvasHeaderProps extends UiComponent, React.ComponentPropsWithoutRef<'div'> {
   state: string;
-  onStateChange(state: string): void;
-  onPrimaryColorChange(color: string): void;
+  onStateChange: (state: string) => void;
+  onPrimaryColorChange: (color: string) => void;
   primaryColor: string;
   excludeExternal?: boolean;
   zIndex?: number;

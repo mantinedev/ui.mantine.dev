@@ -3,7 +3,7 @@ import { IconColorPicker } from '@tabler/icons-react';
 import { ColorSwatch, Group, Popover, useMantineTheme, CheckIcon, rem } from '@mantine/core';
 
 interface ColorControlProps {
-  onChange(color: string): void;
+  onChange: (color: string) => void;
   value: string;
 }
 

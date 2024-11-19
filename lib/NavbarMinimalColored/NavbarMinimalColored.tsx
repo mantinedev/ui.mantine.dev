@@ -18,7 +18,7 @@ interface NavbarLinkProps {
   icon: typeof IconHome2;
   label: string;
   active?: boolean;
-  onClick?(): void;
+  onClick?: () => void;
 }
 
 function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {

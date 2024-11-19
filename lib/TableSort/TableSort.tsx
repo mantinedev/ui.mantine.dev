@@ -23,7 +23,7 @@ interface ThProps {
   children: React.ReactNode;
   reversed: boolean;
   sorted: boolean;
-  onSort(): void;
+  onSort: () => void;
 }
 
 function Th({ children, reversed, sorted, onSort }: ThProps) {
