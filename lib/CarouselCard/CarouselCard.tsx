@@ -55,7 +55,7 @@ export function CarouselCard() {
       <Group justify="space-between" mt="md">
         <div>
           <Text fz="xl" span fw={500} className={classes.price}>
-            397$
+              $397
           </Text>
           <Text span fz="sm" c="dimmed">
             {' '}
