@@ -1,20 +1,19 @@
-import cx from 'clsx';
 import { IconExternalLink } from '@tabler/icons-react';
-import { GithubIcon } from '@mantinex/dev-icons';
+import cx from 'clsx';
 import {
-  Title,
-  Overlay,
-  Group,
-  Text,
   Button,
-  ThemeIcon,
-  SimpleGrid,
   Container,
-  rem,
+  Group,
+  Overlay,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  Title,
 } from '@mantine/core';
 import { useWindowScroll } from '@mantine/hooks';
-import data from './data';
+import { GithubIcon } from '@mantinex/dev-icons';
 import bannerImage from './banner.webp';
+import data from './data';
 import classes from './Banner.module.css';
 
 interface BannerProps {
@@ -27,7 +26,7 @@ export function Banner({ componentsCount }: BannerProps) {
   const features = data.map((feature) => (
     <div key={feature.title}>
       <ThemeIcon className={classes.featureIcon} size={44} radius="md">
-        <feature.icon style={{ width: rem(24), height: rem(24) }} stroke={1.5} />
+        <feature.icon size={24} stroke={1.5} />
       </ThemeIcon>
 
       <div className={classes.featureBody}>
@@ -65,7 +64,7 @@ export function Banner({ componentsCount }: BannerProps) {
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              leftSection={<GithubIcon size="1rem" />}
+              leftSection={<GithubIcon size={16} />}
               component="a"
               href="https://github.com/mantinedev/ui.mantine.dev"
             >
@@ -73,7 +72,7 @@ export function Banner({ componentsCount }: BannerProps) {
             </Button>
             <Button
               className={cx(classes.control, classes.controlSecondary)}
-              rightSection={<IconExternalLink size="1rem" stroke={1.5} />}
+              rightSection={<IconExternalLink size={16} stroke={1.5} />}
               component="a"
               href="https://mantine.dev/getting-started/"
             >

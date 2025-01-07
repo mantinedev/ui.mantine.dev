@@ -1,6 +1,6 @@
-import { Image, Card, Text, Group, Button, rem } from '@mantine/core';
-import { Carousel } from '@mantine/carousel';
 import { IconStar } from '@tabler/icons-react';
+import { Carousel } from '@mantine/carousel';
+import { Button, Card, Group, Image, Text } from '@mantine/core';
 import classes from './CarouselCard.module.css';
 
 const images = [
@@ -40,7 +40,7 @@ export function CarouselCard() {
         </Text>
 
         <Group gap={5}>
-          <IconStar style={{ width: rem(16), height: rem(16) }} />
+          <IconStar size={16} />
           <Text fz="xs" fw={500}>
             4.78
           </Text>

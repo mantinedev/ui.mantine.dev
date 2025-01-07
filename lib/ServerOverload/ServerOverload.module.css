@@ -1,6 +1,6 @@
 .root {
-  padding-top: rem(120px);
-  padding-bottom: rem(120px);
+  padding-top: 120px;
+  padding-bottom: 120px;
   background-color: var(--mantine-color-blue-filled);
 }
 
@@ -16,12 +16,12 @@
 }
 
 .content {
-  padding-top: rem(220px);
+  padding-top: 220px;
   position: relative;
   z-index: 1;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-top: rem(120px);
+    padding-top: 120px;
   }
 }
 
@@ -31,16 +31,16 @@
     var(--mantine-font-family);
   text-align: center;
   font-weight: 900;
-  font-size: rem(38px);
+  font-size: 38px;
   color: var(--mantine-color-white);
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(32px);
+    font-size: 32px;
   }
 }
 
 .description {
-  max-width: rem(460px);
+  max-width: 460px;
   margin: auto;
   margin-top: var(--mantine-spacing-xl);
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);

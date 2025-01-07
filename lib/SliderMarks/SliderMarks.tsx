@@ -1,10 +1,8 @@
-import { RangeSlider, rem } from '@mantine/core';
-import { IconPoint, IconGripVertical } from '@tabler/icons-react';
+import { IconGripVertical, IconPoint } from '@tabler/icons-react';
+import { RangeSlider } from '@mantine/core';
 import classes from './SliderMarks.module.css';
 
-const point = (
-  <IconPoint style={{ marginTop: rem(6), width: rem(10), height: rem(10) }} stroke={1.5} />
-);
+const point = <IconPoint size={10} style={{ marginTop: 6 }} stroke={1.5} />;
 
 export function SliderMarks() {
   return (
@@ -13,7 +11,7 @@ export function SliderMarks() {
       mb="xl"
       classNames={classes}
       defaultValue={[30, 60]}
-      thumbChildren={<IconGripVertical style={{ width: rem(20), height: rem(20) }} stroke={1.5} />}
+      thumbChildren={<IconGripVertical size={20} stroke={1.5} />}
       marks={[
         { value: 0, label: '0' },
         { value: 12.5, label: point },

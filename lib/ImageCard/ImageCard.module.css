@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  height: rem(280px);
+  height: 280px;
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
 
   @mixin hover {
@@ -37,12 +37,12 @@
 
 .title {
   color: var(--mantine-color-white);
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
 }
 
 .bodyText {
   color: var(--mantine-color-dark-2);
-  margin-left: rem(7px);
+  margin-left: 7px;
 }
 
 .author {

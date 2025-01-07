@@ -1,5 +1,5 @@
-import { RingProgress, Text, SimpleGrid, Paper, Center, Group, rem } from '@mantine/core';
-import { IconArrowUpRight, IconArrowDownRight } from '@tabler/icons-react';
+import { IconArrowDownRight, IconArrowUpRight } from '@tabler/icons-react';
+import { Center, Group, Paper, RingProgress, SimpleGrid, Text } from '@mantine/core';
 
 const icons = {
   up: IconArrowUpRight,
@@ -31,7 +31,7 @@ export function StatsRing() {
             sections={[{ value: stat.progress, color: stat.color }]}
             label={
               <Center>
-                <Icon style={{ width: rem(20), height: rem(20) }} stroke={1.5} />
+                <Icon size={20} stroke={1.5} />
               </Center>
             }
           />

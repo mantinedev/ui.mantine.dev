@@ -1,4 +1,4 @@
-import { Container, Group, Anchor } from '@mantine/core';
+import { Anchor, Container, Group } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './FooterSimple.module.css';
 

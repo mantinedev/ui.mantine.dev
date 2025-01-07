@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { Group, Code } from '@mantine/core';
 import {
+  Icon2fa,
   IconBellRinging,
+  IconDatabaseImport,
   IconFingerprint,
   IconKey,
-  IconSettings,
-  Icon2fa,
-  IconDatabaseImport,
-  IconReceipt2,
-  IconSwitchHorizontal,
   IconLogout,
+  IconReceipt2,
+  IconSettings,
+  IconSwitchHorizontal,
 } from '@tabler/icons-react';
+import { Code, Group } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './NavbarSimple.module.css';
 

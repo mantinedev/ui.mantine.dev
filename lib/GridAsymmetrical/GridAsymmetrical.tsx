@@ -1,4 +1,4 @@
-import { Grid, Skeleton, Container } from '@mantine/core';
+import { Container, Grid, Skeleton } from '@mantine/core';
 
 const child = <Skeleton height={140} radius="md" animate={false} />;
 

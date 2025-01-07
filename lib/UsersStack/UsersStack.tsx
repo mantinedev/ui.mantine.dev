@@ -1,12 +1,12 @@
-import { Avatar, Table, Group, Text, ActionIcon, Menu, rem } from '@mantine/core';
 import {
-  IconPencil,
+  IconDots,
   IconMessages,
   IconNote,
+  IconPencil,
   IconReportAnalytics,
   IconTrash,
-  IconDots,
 } from '@tabler/icons-react';
+import { ActionIcon, Avatar, Group, Menu, Table, Text } from '@mantine/core';
 
 const data = [
   {
@@ -82,7 +82,7 @@ export function UsersStack() {
       <Table.Td>
         <Group gap={0} justify="flex-end">
           <ActionIcon variant="subtle" color="gray">
-            <IconPencil style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
           <Menu
             transitionProps={{ transition: 'pop' }}
@@ -92,33 +92,18 @@ export function UsersStack() {
           >
             <Menu.Target>
               <ActionIcon variant="subtle" color="gray">
-                <IconDots style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+                <IconDots size={16} stroke={1.5} />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
-              <Menu.Item
-                leftSection={
-                  <IconMessages style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+              <Menu.Item leftSection={<IconMessages size={16} stroke={1.5} />}>
                 Send message
               </Menu.Item>
-              <Menu.Item
-                leftSection={<IconNote style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-              >
-                Add note
-              </Menu.Item>
-              <Menu.Item
-                leftSection={
-                  <IconReportAnalytics style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                }
-              >
+              <Menu.Item leftSection={<IconNote size={16} stroke={1.5} />}>Add note</Menu.Item>
+              <Menu.Item leftSection={<IconReportAnalytics size={16} stroke={1.5} />}>
                 Analytics
               </Menu.Item>
-              <Menu.Item
-                leftSection={<IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-                color="red"
-              >
+              <Menu.Item leftSection={<IconTrash size={16} stroke={1.5} />} color="red">
                 Terminate contract
               </Menu.Item>
             </Menu.Dropdown>

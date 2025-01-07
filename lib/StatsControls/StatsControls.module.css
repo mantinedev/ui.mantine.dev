@@ -21,9 +21,9 @@
 }
 
 .stat {
-  min-width: rem(98px);
+  min-width: 98px;
   padding-top: var(--mantine-spacing-xl);
-  min-height: rem(140px);
+  min-height: 140px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -53,12 +53,12 @@
 }
 
 .day {
-  font-size: rem(44px);
+  font-size: 44px;
   font-weight: 700;
   color: var(--mantine-color-white);
   line-height: 1;
   text-align: center;
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
@@ -92,7 +92,7 @@
 }
 
 .control {
-  height: rem(28px);
+  height: 28px;
   width: 100%;
   color: var(--mantine-color-blue-2);
   display: flex;
@@ -102,8 +102,8 @@
   transition: background-color 50ms ease;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    height: rem(34px);
-    width: rem(34px);
+    height: 34px;
+    width: 34px;
   }
 
   @mixin hover {

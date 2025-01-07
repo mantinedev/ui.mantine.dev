@@ -1,4 +1,4 @@
-import { Card, Image, Avatar, Text, Group } from '@mantine/core';
+import { Avatar, Card, Group, Image, Text } from '@mantine/core';
 import classes from './ArticleCardVertical.module.css';
 
 export function ArticleCardVertical() {

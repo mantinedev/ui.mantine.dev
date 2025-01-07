@@ -1,5 +1,5 @@
-import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 import { CanvasAttributes } from '../../data';
+import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 
 interface StoryWrapperProps {
   attributes: CanvasAttributes;

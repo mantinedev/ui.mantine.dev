@@ -3,10 +3,10 @@ import Head from 'next/head';
 import { MantineThemeProvider, useMantineTheme } from '@mantine/core';
 import { getCodeFileIcon } from '@mantinex/dev-icons';
 import { CodeHighlightTabs } from '@mantinex/shiki';
+import { UiComponent } from '../../data';
 import * as UiComponents from '../../lib';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 import { ComponentPreviewControls } from '../ComponentPreviewControls/ComponentPreviewControls';
-import { UiComponent } from '../../data';
 
 interface ComponentPreviewProps {
   data: UiComponent;

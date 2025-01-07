@@ -1,5 +1,5 @@
-import { Avatar, Badge, Table, Group, Text, ActionIcon, Anchor, rem } from '@mantine/core';
 import { IconPencil, IconTrash } from '@tabler/icons-react';
+import { ActionIcon, Anchor, Avatar, Badge, Group, Table, Text } from '@mantine/core';
 
 const data = [
   {
@@ -78,10 +78,10 @@ export function UsersTable() {
       <Table.Td>
         <Group gap={0} justify="flex-end">
           <ActionIcon variant="subtle" color="gray">
-            <IconPencil style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
           <ActionIcon variant="subtle" color="red">
-            <IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <IconTrash size={16} stroke={1.5} />
           </ActionIcon>
         </Group>
       </Table.Td>

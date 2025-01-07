@@ -1,8 +1,8 @@
-import cx from 'clsx';
-import { rem, Text } from '@mantine/core';
-import { useListState } from '@mantine/hooks';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
 import { IconGripVertical } from '@tabler/icons-react';
+import cx from 'clsx';
+import { Text } from '@mantine/core';
+import { useListState } from '@mantine/hooks';
 import classes from './DndListHandle.module.css';
 
 const data = [
@@ -25,7 +25,7 @@ export function DndListHandle() {
           {...provided.draggableProps}
         >
           <div {...provided.dragHandleProps} className={classes.dragHandle}>
-            <IconGripVertical style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+            <IconGripVertical size={18} stroke={1.5} />
           </div>
           <Text className={classes.symbol}>{item.symbol}</Text>
           <div>

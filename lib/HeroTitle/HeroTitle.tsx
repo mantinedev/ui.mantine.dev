@@ -1,4 +1,4 @@
-import { Container, Text, Button, Group } from '@mantine/core';
+import { Button, Container, Group, Text } from '@mantine/core';
 import { GithubIcon } from '@mantinex/dev-icons';
 import classes from './HeroTitle.module.css';
 

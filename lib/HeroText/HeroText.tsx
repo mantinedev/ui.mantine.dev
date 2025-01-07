@@ -1,4 +1,4 @@
-import { Title, Text, Button, Container } from '@mantine/core';
+import { Button, Container, Text, Title } from '@mantine/core';
 import { Dots } from './Dots';
 import classes from './HeroText.module.css';
 

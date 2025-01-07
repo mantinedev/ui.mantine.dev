@@ -1,23 +1,23 @@
 import { useState } from 'react';
-import { SegmentedControl, Text } from '@mantine/core';
 import {
-  IconShoppingCart,
-  IconLicense,
-  IconMessage2,
+  Icon2fa,
   IconBellRinging,
-  IconMessages,
+  IconDatabaseImport,
+  IconFileAnalytics,
   IconFingerprint,
   IconKey,
-  IconSettings,
-  Icon2fa,
-  IconUsers,
-  IconFileAnalytics,
-  IconDatabaseImport,
+  IconLicense,
+  IconLogout,
+  IconMessage2,
+  IconMessages,
   IconReceipt2,
   IconReceiptRefund,
-  IconLogout,
+  IconSettings,
+  IconShoppingCart,
   IconSwitchHorizontal,
+  IconUsers,
 } from '@tabler/icons-react';
+import { SegmentedControl, Text } from '@mantine/core';
 import classes from './NavbarSegmented.module.css';
 
 const tabs = {

@@ -1,6 +1,6 @@
-import { Menu, Group, Center, Burger, Container } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
 import { IconChevronDown } from '@tabler/icons-react';
+import { Burger, Center, Container, Group, Menu } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMenu.module.css';
 
@@ -48,7 +48,7 @@ export function HeaderMenu() {
             >
               <Center>
                 <span className={classes.linkLabel}>{link.label}</span>
-                <IconChevronDown size="0.9rem" stroke={1.5} />
+                <IconChevronDown size={14} stroke={1.5} />
               </Center>
             </a>
           </Menu.Target>

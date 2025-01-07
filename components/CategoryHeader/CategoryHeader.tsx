@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { Title, Anchor, Center, Box } from '@mantine/core';
 import { IconArrowLeft } from '@tabler/icons-react';
+import { Anchor, Box, Center, Title } from '@mantine/core';
 import { Category } from '../../data';
 import classes from './CategoryHeader.module.css';
 
@@ -13,7 +13,7 @@ export function CategoryHeader({ category }: CategoryHeaderProps) {
     <>
       <Anchor component={Link} href="/#main">
         <Center inline>
-          <IconArrowLeft size="0.9rem" />
+          <IconArrowLeft size={14} />
           <Box component="span" ml={5}>
             Back to all categories
           </Box>

@@ -1,6 +1,6 @@
 import { Carousel } from '@mantine/carousel';
+import { Button, Paper, Text, Title, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
-import { Paper, Text, Title, Button, useMantineTheme, rem } from '@mantine/core';
 import classes from './CardsCarousel.module.css';
 
 interface CardProps {
@@ -84,7 +84,7 @@ export function CardsCarousel() {
   return (
     <Carousel
       slideSize={{ base: '100%', sm: '50%' }}
-      slideGap={{ base: rem(2), sm: 'xl' }}
+      slideGap={{ base: 2, sm: 'xl' }}
       align="start"
       slidesToScroll={mobile ? 1 : 2}
     >

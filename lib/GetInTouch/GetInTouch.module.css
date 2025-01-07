@@ -2,8 +2,8 @@
   display: flex;
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
   border-radius: var(--mantine-radius-lg);
-  padding: rem(4px);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
+  padding: 4px;
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-8));
 
   @media (max-width: $mantine-breakpoint-sm) {
     flex-direction: column;
@@ -23,7 +23,7 @@
 }
 
 .fields {
-  margin-top: rem(-12px);
+  margin-top: -12px;
 }
 
 .fieldInput {
@@ -53,9 +53,9 @@
   border-radius: var(--mantine-radius-lg);
   background-size: cover;
   background-position: center;
-  border: rem(1px) solid transparent;
+  border: 1px solid transparent;
   padding: var(--mantine-spacing-xl);
-  flex: 0 0 rem(280px);
+  flex: 0 0 280px;
 
   @media (max-width: $mantine-breakpoint-sm) {
     margin-bottom: var(--mantine-spacing-sm);

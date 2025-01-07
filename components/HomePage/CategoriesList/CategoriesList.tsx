@@ -1,4 +1,4 @@
-import { Container, SimpleGrid, Title, Text } from '@mantine/core';
+import { Container, SimpleGrid, Text, Title } from '@mantine/core';
 import { CategoriesGroup } from '../../../data';
 import { CategoryCard } from '../CategoryCard/CategoryCard';
 import classes from './CategoriesList.module.css';

@@ -1,15 +1,15 @@
-import { Group, Code, ScrollArea, rem } from '@mantine/core';
 import {
-  IconNotes,
-  IconCalendarStats,
-  IconGauge,
-  IconPresentationAnalytics,
-  IconFileAnalytics,
   IconAdjustments,
+  IconCalendarStats,
+  IconFileAnalytics,
+  IconGauge,
   IconLock,
+  IconNotes,
+  IconPresentationAnalytics,
 } from '@tabler/icons-react';
-import { UserButton } from '../UserButton/UserButton';
+import { Code, Group, ScrollArea } from '@mantine/core';
 import { LinksGroup } from '../NavbarLinksGroup/NavbarLinksGroup';
+import { UserButton } from '../UserButton/UserButton';
 import { Logo } from './Logo';
 import classes from './NavbarNested.module.css';
 
@@ -56,7 +56,7 @@ export function NavbarNested() {
     <nav className={classes.navbar}>
       <div className={classes.header}>
         <Group justify="space-between">
-          <Logo style={{ width: rem(120) }} />
+          <Logo style={{ width: 120 }} />
           <Code fw={700}>v3.1.2</Code>
         </Group>
       </div>

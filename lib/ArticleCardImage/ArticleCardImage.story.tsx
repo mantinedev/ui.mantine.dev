@@ -1,6 +1,6 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { ArticleCardImage } from './ArticleCardImage';
+import attributes from './attributes.json';
 
 export default { title: 'ArticleCardImage' };
 

@@ -1,10 +1,10 @@
-import cx from 'clsx';
 import { useState } from 'react';
-import { CodeHighlightTabs } from '@mantinex/shiki';
-import { MantineThemeProvider, Box } from '@mantine/core';
+import cx from 'clsx';
+import { Box, MantineThemeProvider } from '@mantine/core';
 import { getCodeFileIcon } from '@mantinex/dev-icons';
-import * as UiComponents from '../../lib';
+import { CodeHighlightTabs } from '@mantinex/shiki';
 import { UiComponent } from '../../data';
+import * as UiComponents from '../../lib';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';
 import { CanvasHeader } from './CanvasHeader/CanvasHeader';
 import classes from './ComponentCanvas.module.css';

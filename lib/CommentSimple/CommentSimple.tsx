@@ -1,4 +1,4 @@
-import { Text, Avatar, Group } from '@mantine/core';
+import { Avatar, Group, Text } from '@mantine/core';
 
 export function CommentSimple() {
   return (

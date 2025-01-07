@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import { Text, Group, Button, rem, useMantineTheme } from '@mantine/core';
+import { IconCloudUpload, IconDownload, IconX } from '@tabler/icons-react';
+import { Button, Group, Text, useMantineTheme } from '@mantine/core';
 import { Dropzone, MIME_TYPES } from '@mantine/dropzone';
-import { IconCloudUpload, IconX, IconDownload } from '@tabler/icons-react';
 import classes from './DropzoneButton.module.css';
 
 export function DropzoneButton() {
@@ -21,21 +21,13 @@ export function DropzoneButton() {
         <div style={{ pointerEvents: 'none' }}>
           <Group justify="center">
             <Dropzone.Accept>
-              <IconDownload
-                style={{ width: rem(50), height: rem(50) }}
-                color={theme.colors.blue[6]}
-                stroke={1.5}
-              />
+              <IconDownload size={50} color={theme.colors.blue[6]} stroke={1.5} />
             </Dropzone.Accept>
             <Dropzone.Reject>
-              <IconX
-                style={{ width: rem(50), height: rem(50) }}
-                color={theme.colors.red[6]}
-                stroke={1.5}
-              />
+              <IconX size={50} color={theme.colors.red[6]} stroke={1.5} />
             </Dropzone.Reject>
             <Dropzone.Idle>
-              <IconCloudUpload style={{ width: rem(50), height: rem(50) }} stroke={1.5} />
+              <IconCloudUpload size={50} stroke={1.5} />
             </Dropzone.Idle>
           </Group>
 

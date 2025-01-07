@@ -1,4 +1,4 @@
-import { Container, Title, Accordion } from '@mantine/core';
+import { Accordion, Container, Title } from '@mantine/core';
 import classes from './FaqSimple.module.css';
 
 const placeholder =

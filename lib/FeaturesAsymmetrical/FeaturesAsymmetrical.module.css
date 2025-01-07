@@ -6,8 +6,8 @@
 
 .overlay {
   position: absolute;
-  height: rem(100px);
-  width: rem(160px);
+  height: 100px;
+  width: 160px;
   top: 0;
   left: 0;
   background-color: var(--mantine-color-blue-light);

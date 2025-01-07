@@ -1,4 +1,4 @@
-import { IconLicense, IconMoonStars, IconFlame } from '@tabler/icons-react';
+import { IconFlame, IconLicense, IconMoonStars } from '@tabler/icons-react';
 
 export default [
   {

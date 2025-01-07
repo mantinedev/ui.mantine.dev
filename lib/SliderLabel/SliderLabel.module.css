@@ -1,8 +1,8 @@
 .label {
   top: 0;
-  height: rem(28px);
-  line-height: rem(28px);
-  width: rem(34px);
+  height: 28px;
+  line-height: 28px;
+  width: 34px;
   padding: 0;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@
 
 .thumb {
   background-color: var(--mantine-color-blue-6);
-  height: rem(28px);
-  width: rem(34px);
+  height: 28px;
+  width: 34px;
   border: none;
 }

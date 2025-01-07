@@ -1,5 +1,5 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
+import attributes from './attributes.json';
 import { HeaderTabs } from './HeaderTabs';
 
 export default { title: 'HeaderTabs' };

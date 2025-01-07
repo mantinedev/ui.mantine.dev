@@ -1,11 +1,11 @@
 .wrapper {
   position: relative;
-  margin-bottom: rem(30px);
+  margin-bottom: 30px;
 }
 
 .dropzone {
-  border-width: rem(1px);
-  padding-bottom: rem(50px);
+  border-width: 1px;
+  padding-bottom: 50px;
 }
 
 .icon {
@@ -14,7 +14,7 @@
 
 .control {
   position: absolute;
-  width: rem(250px);
-  left: calc(50% - rem(125px));
-  bottom: rem(-20px);
+  width: 250px;
+  left: calc(50% - 125px);
+  bottom: -20px;
 }

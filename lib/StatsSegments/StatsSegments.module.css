@@ -7,8 +7,8 @@
 }
 
 .stat {
-  border-bottom: rem(3px) solid;
-  padding-bottom: rem(5px);
+  border-bottom: 3px solid;
+  padding-bottom: 5px;
 }
 
 .statCount {

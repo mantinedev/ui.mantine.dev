@@ -1,5 +1,5 @@
-import { Progress, Box, Text, Group, Paper, SimpleGrid, rem } from '@mantine/core';
 import { IconArrowUpRight, IconDeviceAnalytics } from '@tabler/icons-react';
+import { Box, Group, Paper, Progress, SimpleGrid, Text } from '@mantine/core';
 import classes from './StatsSegments.module.css';
 
 const data = [
@@ -39,10 +39,10 @@ export function StatsSegments() {
           </Text>
           <Text c="teal" className={classes.diff} fz="sm" fw={700}>
             <span>18%</span>
-            <IconArrowUpRight size="1rem" style={{ marginBottom: rem(4) }} stroke={1.5} />
+            <IconArrowUpRight size={16} style={{ marginBottom: 4 }} stroke={1.5} />
           </Text>
         </Group>
-        <IconDeviceAnalytics size="1.4rem" className={classes.icon} stroke={1.5} />
+        <IconDeviceAnalytics size={22} className={classes.icon} stroke={1.5} />
       </Group>
 
       <Text c="dimmed" fz="sm">

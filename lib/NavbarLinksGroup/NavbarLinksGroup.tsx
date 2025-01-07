@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Group, Box, Collapse, ThemeIcon, Text, UnstyledButton, rem } from '@mantine/core';
 import { IconCalendarStats, IconChevronRight } from '@tabler/icons-react';
+import { Box, Collapse, Group, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
 import classes from './NavbarLinksGroup.module.css';
 
 interface LinksGroupProps {
@@ -31,7 +31,7 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
         <Group justify="space-between" gap={0}>
           <Box style={{ display: 'flex', alignItems: 'center' }}>
             <ThemeIcon variant="light" size={30}>
-              <Icon style={{ width: rem(18), height: rem(18) }} />
+              <Icon size={18} />
             </ThemeIcon>
             <Box ml="md">{label}</Box>
           </Box>
@@ -39,11 +39,8 @@ export function LinksGroup({ icon: Icon, label, initiallyOpened, links }: LinksG
             <IconChevronRight
               className={classes.chevron}
               stroke={1.5}
-              style={{
-                width: rem(16),
-                height: rem(16),
-                transform: opened ? 'rotate(-90deg)' : 'none',
-              }}
+              size={16}
+              style={{ transform: opened ? 'rotate(-90deg)' : 'none' }}
             />
           )}
         </Group>

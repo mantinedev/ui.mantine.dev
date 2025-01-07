@@ -1,16 +1,15 @@
 import { useState } from 'react';
+import { IconChevronDown, IconChevronUp, IconSearch, IconSelector } from '@tabler/icons-react';
 import {
-  Table,
-  ScrollArea,
-  UnstyledButton,
-  Group,
-  Text,
   Center,
-  TextInput,
-  rem,
+  Group,
   keys,
+  ScrollArea,
+  Table,
+  Text,
+  TextInput,
+  UnstyledButton,
 } from '@mantine/core';
-import { IconSelector, IconChevronDown, IconChevronUp, IconSearch } from '@tabler/icons-react';
 import classes from './TableSort.module.css';
 
 interface RowData {
@@ -23,7 +22,7 @@ interface ThProps {
   children: React.ReactNode;
   reversed: boolean;
   sorted: boolean;
-  onSort(): void;
+  onSort: () => void;
 }
 
 function Th({ children, reversed, sorted, onSort }: ThProps) {
@@ -36,7 +35,7 @@ function Th({ children, reversed, sorted, onSort }: ThProps) {
             {children}
           </Text>
           <Center className={classes.icon}>
-            <Icon style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+            <Icon size={16} stroke={1.5} />
           </Center>
         </Group>
       </UnstyledButton>
@@ -188,7 +187,7 @@ export function TableSort() {
       <TextInput
         placeholder="Search by any field"
         mb="md"
-        leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
+        leftSection={<IconSearch size={16} stroke={1.5} />}
         value={search}
         onChange={handleSearchChange}
       />

@@ -1,6 +1,6 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
 import { ArticlesCardsGrid } from './ArticlesCardsGrid';
+import attributes from './attributes.json';
 
 export default { title: 'ArticlesCardsGrid' };
 

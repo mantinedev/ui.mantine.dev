@@ -1,5 +1,5 @@
-import { Title, SimpleGrid, Text, Button, ThemeIcon, Grid, rem } from '@mantine/core';
-import { IconReceiptOff, IconFlame, IconCircleDotted, IconFileCode } from '@tabler/icons-react';
+import { IconCircleDotted, IconFileCode, IconFlame, IconReceiptOff } from '@tabler/icons-react';
+import { Button, Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
 import classes from './FeaturesTitle.module.css';
 
 const features = [
@@ -36,7 +36,7 @@ export function FeaturesTitle() {
         variant="gradient"
         gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
       >
-        <feature.icon style={{ width: rem(26), height: rem(26) }} stroke={1.5} />
+        <feature.icon size={26} stroke={1.5} />
       </ThemeIcon>
       <Text fz="lg" mt="sm" fw={500}>
         {feature.title}

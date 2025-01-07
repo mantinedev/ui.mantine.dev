@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
-import { CATEGORIES_SLUGS, getCategoryData, Category } from '../../data';
-import { getAllComponents, getComponentsByCategory } from '../../data/components';
 import { CategoryPage } from '../../components/CategoryPage/CategoryPage';
+import { CATEGORIES_SLUGS, Category, getCategoryData } from '../../data';
+import { getAllComponents, getComponentsByCategory } from '../../data/components';
 
 export default CategoryPage;
 

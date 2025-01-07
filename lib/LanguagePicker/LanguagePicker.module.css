@@ -1,11 +1,11 @@
 .control {
-  width: rem(200px);
+  width: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
   border-radius: var(--mantine-radius-md);
-  border: rem(1px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-6));
   transition: background-color 150ms ease;
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
 

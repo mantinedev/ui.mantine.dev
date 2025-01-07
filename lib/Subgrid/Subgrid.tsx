@@ -1,4 +1,4 @@
-import { SimpleGrid, Skeleton, Container, Stack, useMantineTheme, px } from '@mantine/core';
+import { Container, px, SimpleGrid, Skeleton, Stack, useMantineTheme } from '@mantine/core';
 
 const getChild = (height: number) => <Skeleton height={height} radius="md" animate={false} />;
 const BASE_HEIGHT = 360;

@@ -1,6 +1,6 @@
 import React from 'react';
+import { useComputedColorScheme, useMantineColorScheme } from '@mantine/core';
 import { useHotkeys } from '@mantine/hooks';
-import { useMantineColorScheme, useComputedColorScheme } from '@mantine/core';
 
 export function HotKeysHandler() {
   const { setColorScheme } = useMantineColorScheme();

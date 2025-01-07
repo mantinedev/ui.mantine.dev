@@ -1,7 +1,7 @@
-import { Table, rem } from '@mantine/core';
-import { useListState } from '@mantine/hooks';
-import { DragDropContext, Droppable, Draggable } from '@hello-pangea/dnd';
+import { DragDropContext, Draggable, Droppable } from '@hello-pangea/dnd';
 import { IconGripVertical } from '@tabler/icons-react';
+import { Table } from '@mantine/core';
+import { useListState } from '@mantine/hooks';
 import classes from './DndTable.module.css';
 
 const data = [
@@ -21,12 +21,12 @@ export function DndTable() {
         <Table.Tr className={classes.item} ref={provided.innerRef} {...provided.draggableProps}>
           <Table.Td>
             <div className={classes.dragHandle} {...provided.dragHandleProps}>
-              <IconGripVertical style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+              <IconGripVertical size={18} stroke={1.5} />
             </div>
           </Table.Td>
-          <Table.Td style={{ width: rem(80) }}>{item.position}</Table.Td>
-          <Table.Td style={{ width: rem(120) }}>{item.name}</Table.Td>
-          <Table.Td style={{ width: rem(80) }}>{item.symbol}</Table.Td>
+          <Table.Td w={80}>{item.position}</Table.Td>
+          <Table.Td w={120}>{item.name}</Table.Td>
+          <Table.Td w={80}>{item.symbol}</Table.Td>
           <Table.Td>{item.mass}</Table.Td>
         </Table.Tr>
       )}
@@ -43,10 +43,10 @@ export function DndTable() {
         <Table>
           <Table.Thead>
             <Table.Tr>
-              <Table.Th style={{ width: rem(40) }} />
-              <Table.Th style={{ width: rem(80) }}>Position</Table.Th>
-              <Table.Th style={{ width: rem(120) }}>Name</Table.Th>
-              <Table.Th style={{ width: rem(40) }}>Symbol</Table.Th>
+              <Table.Th w={40} />
+              <Table.Th w={80}>Position</Table.Th>
+              <Table.Th w={120}>Name</Table.Th>
+              <Table.Th w={40}>Symbol</Table.Th>
               <Table.Th>Mass</Table.Th>
             </Table.Tr>
           </Table.Thead>

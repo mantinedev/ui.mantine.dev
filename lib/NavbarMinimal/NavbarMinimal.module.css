@@ -1,20 +1,20 @@
 .navbar {
-  width: rem(80px);
-  height: rem(750px);
+  width: 80px;
+  height: 750px;
   padding: var(--mantine-spacing-md);
   display: flex;
   flex-direction: column;
-  border-right: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+  border-right: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
 }
 
 .navbarMain {
   flex: 1;
-  margin-top: rem(50px);
+  margin-top: 50px;
 }
 
 .link {
-  width: rem(50px);
-  height: rem(50px);
+  width: 50px;
+  height: 50px;
   border-radius: var(--mantine-radius-md);
   display: flex;
   align-items: center;

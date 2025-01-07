@@ -1,4 +1,4 @@
-import { PasswordInput, Text, Group, Anchor } from '@mantine/core';
+import { Anchor, Group, PasswordInput, Text } from '@mantine/core';
 
 export function ForgotPasswordInput() {
   return (

@@ -1,8 +1,8 @@
 .header {
   padding-top: var(--mantine-spacing-sm);
   background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-  border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-2), transparent);
-  margin-bottom: rem(120px);
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), transparent);
+  margin-bottom: 120px;
 }
 
 .mainSection {
@@ -36,7 +36,7 @@
 
 .tab {
   font-weight: 500;
-  height: rem(38);
+  height: 38px;
   background-color: transparent;
   position: relative;
   bottom: -1px;

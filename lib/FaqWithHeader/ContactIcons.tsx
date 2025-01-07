@@ -1,5 +1,5 @@
-import { Text, ThemeIcon, Stack, rem } from '@mantine/core';
-import { IconSun, IconPhone, IconMapPin, IconAt } from '@tabler/icons-react';
+import { IconAt, IconMapPin, IconPhone, IconSun } from '@tabler/icons-react';
+import { Stack, Text, ThemeIcon } from '@mantine/core';
 import classes from './ContactIcons.module.css';
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
@@ -12,7 +12,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
   return (
     <div className={classes.wrapper} {...others}>
       <ThemeIcon size={40} radius="md" className={classes.icon}>
-        <Icon style={{ width: rem(24), height: rem(24) }} />
+        <Icon size={24} />
       </ThemeIcon>
 
       <div>

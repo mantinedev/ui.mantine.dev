@@ -6,12 +6,12 @@
 
 .inner {
   position: relative;
-  padding-top: rem(200px);
-  padding-bottom: rem(120px);
+  padding-top: 200px;
+  padding-bottom: 120px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    padding-bottom: rem(80px);
-    padding-top: rem(80px);
+    padding-bottom: 80px;
+    padding-top: 80px;
   }
 }
 
@@ -19,7 +19,7 @@
   font-family:
     Greycliff CF,
     var(--mantine-font-family);
-  font-size: rem(62px);
+  font-size: 62px;
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
@@ -27,17 +27,17 @@
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(42px);
+    font-size: 42px;
     line-height: 1.2;
   }
 }
 
 .description {
   margin-top: var(--mantine-spacing-xl);
-  font-size: rem(24px);
+  font-size: 24px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    font-size: rem(18px);
+    font-size: 18px;
   }
 }
 
@@ -50,14 +50,14 @@
 }
 
 .control {
-  height: rem(54px);
-  padding-left: rem(38px);
-  padding-right: rem(38px);
+  height: 54px;
+  padding-left: 38px;
+  padding-right: 38px;
 
   @media (max-width: $mantine-breakpoint-sm) {
-    height: rem(54px);
-    padding-left: rem(18px);
-    padding-right: rem(18px);
+    height: 54px;
+    padding-left: 18px;
+    padding-right: 18px;
     flex: 1;
   }
 }

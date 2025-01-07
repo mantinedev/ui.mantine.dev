@@ -1,5 +1,5 @@
-import { Card, Image, Text, Group, Badge, Center, Button } from '@mantine/core';
 import { IconGasStation, IconGauge, IconManualGearbox, IconUsers } from '@tabler/icons-react';
+import { Badge, Button, Card, Center, Group, Image, Text } from '@mantine/core';
 import classes from './FeaturesCard.module.css';
 
 const mockdata = [
@@ -12,7 +12,7 @@ const mockdata = [
 export function FeaturesCard() {
   const features = mockdata.map((feature) => (
     <Center key={feature.label}>
-      <feature.icon size="1.05rem" className={classes.icon} stroke={1.5} />
+      <feature.icon size={16} className={classes.icon} stroke={1.5} />
       <Text size="xs">{feature.label}</Text>
     </Center>
   ));

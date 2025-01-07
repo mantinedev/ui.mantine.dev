@@ -1,6 +1,6 @@
 .root {
-  --link-height: rem(38px);
-  --indicator-size: rem(10px);
+  --link-height: 38px;
+  --indicator-size: 10px;
   --indicator-offset: calc((var(--link-height) - var(--indicator-size)) / 2);
   position: relative;
 }
@@ -14,7 +14,7 @@
   height: var(--link-height);
   border-top-right-radius: var(--mantine-radius-sm);
   border-bottom-right-radius: var(--mantine-radius-sm);
-  border-left: rem(2px) solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
+  border-left: 2px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-4));
 
   @mixin hover {
     background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
@@ -28,11 +28,11 @@
 
 .indicator {
   transition: transform 150ms ease;
-  border: rem(2px) solid light-dark(var(--mantine-color-blue-7), var(--mantine-color-blue-4));
+  border: 2px solid light-dark(var(--mantine-color-blue-7), var(--mantine-color-blue-4));
   background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
   height: var(--indicator-size);
   width: var(--indicator-size);
   border-radius: var(--indicator-size);
   position: absolute;
-  left: calc(var(--indicator-size) / -2 + rem(1));
+  left: calc(var(--indicator-size) / -2 + 1px);
 }

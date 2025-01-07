@@ -1,4 +1,4 @@
-import { Avatar, Text, Button, Paper } from '@mantine/core';
+import { Avatar, Button, Paper, Text } from '@mantine/core';
 
 export function UserInfoAction() {
   return (

@@ -1,6 +1,6 @@
-import cx from 'clsx';
-import { Box, Text, Group, rem } from '@mantine/core';
 import { IconListSearch } from '@tabler/icons-react';
+import cx from 'clsx';
+import { Box, Group, Text } from '@mantine/core';
 import classes from './TableOfContents.module.css';
 
 const links = [
@@ -33,7 +33,7 @@ export function TableOfContents() {
   return (
     <div>
       <Group mb="md">
-        <IconListSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+        <IconListSearch size={18} stroke={1.5} />
         <Text>Table of contents</Text>
       </Group>
       {items}

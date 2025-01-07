@@ -1,5 +1,5 @@
-import { Image, Container, Title, Button, Group, Text, List, ThemeIcon, rem } from '@mantine/core';
 import { IconCheck } from '@tabler/icons-react';
+import { Button, Container, Group, Image, List, Text, ThemeIcon, Title } from '@mantine/core';
 import image from './image.svg';
 import classes from './HeroBullets.module.css';
 
@@ -22,7 +22,7 @@ export function HeroBullets() {
             size="sm"
             icon={
               <ThemeIcon size={20} radius="xl">
-                <IconCheck style={{ width: rem(12), height: rem(12) }} stroke={1.5} />
+                <IconCheck size={12} stroke={1.5} />
               </ThemeIcon>
             }
           >

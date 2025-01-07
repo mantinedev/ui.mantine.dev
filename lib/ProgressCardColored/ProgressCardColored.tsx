@@ -1,4 +1,4 @@
-import { Text, Progress, Card } from '@mantine/core';
+import { Card, Progress, Text } from '@mantine/core';
 import classes from './ProgressCardColored.module.css';
 
 export function ProgressCardColored() {

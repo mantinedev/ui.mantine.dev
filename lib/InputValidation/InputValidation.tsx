@@ -1,5 +1,5 @@
-import { TextInput, rem } from '@mantine/core';
 import { IconAlertTriangle } from '@tabler/icons-react';
+import { TextInput } from '@mantine/core';
 import classes from './InputValidation.module.css';
 
 export function InputValidation() {
@@ -9,13 +9,7 @@ export function InputValidation() {
       error="Invalid email"
       defaultValue="hello!gmail.com"
       classNames={{ input: classes.invalid }}
-      rightSection={
-        <IconAlertTriangle
-          stroke={1.5}
-          style={{ width: rem(18), height: rem(18) }}
-          className={classes.icon}
-        />
-      }
+      rightSection={<IconAlertTriangle stroke={1.5} size={18} className={classes.icon} />}
     />
   );
 }

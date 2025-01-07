@@ -1,4 +1,4 @@
-import { UnstyledButton, Checkbox, Text, Image, SimpleGrid } from '@mantine/core';
+import { Checkbox, Image, SimpleGrid, Text, UnstyledButton } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 import icons from './icons';
 import classes from './ImageCheckboxes.module.css';
@@ -6,7 +6,7 @@ import classes from './ImageCheckboxes.module.css';
 interface ImageCheckboxProps {
   checked?: boolean;
   defaultChecked?: boolean;
-  onChange?(checked: boolean): void;
+  onChange?: (checked: boolean) => void;
   title: string;
   description: string;
   image: string;

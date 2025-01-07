@@ -1,4 +1,4 @@
-import { Image, Accordion, Grid, Container, Title } from '@mantine/core';
+import { Accordion, Container, Grid, Image, Title } from '@mantine/core';
 import image from './image.svg';
 import classes from './FaqWithImage.module.css';
 

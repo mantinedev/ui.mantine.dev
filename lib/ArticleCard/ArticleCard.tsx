@@ -1,15 +1,14 @@
 import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
 import {
+  ActionIcon,
+  Avatar,
+  Badge,
   Card,
+  Center,
+  Group,
   Image,
   Text,
-  ActionIcon,
-  Badge,
-  Group,
-  Center,
-  Avatar,
   useMantineTheme,
-  rem,
 } from '@mantine/core';
 import classes from './ArticleCard.module.css';
 
@@ -55,16 +54,13 @@ export function ArticleCard() {
 
         <Group gap={8} mr={0}>
           <ActionIcon className={classes.action}>
-            <IconHeart style={{ width: rem(16), height: rem(16) }} color={theme.colors.red[6]} />
+            <IconHeart size={16} color={theme.colors.red[6]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <IconBookmark
-              style={{ width: rem(16), height: rem(16) }}
-              color={theme.colors.yellow[7]}
-            />
+            <IconBookmark size={16} color={theme.colors.yellow[7]} />
           </ActionIcon>
           <ActionIcon className={classes.action}>
-            <IconShare style={{ width: rem(16), height: rem(16) }} color={theme.colors.blue[6]} />
+            <IconShare size={16} color={theme.colors.blue[6]} />
           </ActionIcon>
         </Group>
       </Group>

@@ -1,4 +1,4 @@
-import { Switch, Group } from '@mantine/core';
+import { Group, Switch } from '@mantine/core';
 import classes from './CustomSwitch.module.css';
 
 export function CustomSwitch() {

@@ -1,4 +1,4 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button } from '@mantine/core';
+import { Button, Group, SimpleGrid, Textarea, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
 export function GetInTouchSimple() {

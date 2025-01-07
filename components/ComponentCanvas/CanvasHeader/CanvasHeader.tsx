@@ -1,14 +1,14 @@
+import { IconCode, IconExternalLink, IconEye } from '@tabler/icons-react';
+import { ActionIcon, Badge, Box, Center, Group, SegmentedControl, Text } from '@mantine/core';
 import { GithubIcon } from '@mantinex/dev-icons';
-import { IconExternalLink, IconCode, IconEye } from '@tabler/icons-react';
-import { Group, Text, ActionIcon, Badge, SegmentedControl, Center, Box } from '@mantine/core';
-import { ColorControl } from '../ColorControl/ColorControl';
 import { UiComponent } from '../../../data';
+import { ColorControl } from '../ColorControl/ColorControl';
 import classes from './CanvasHeader.module.css';
 
 export interface CanvasHeaderProps extends UiComponent, React.ComponentPropsWithoutRef<'div'> {
   state: string;
-  onStateChange(state: string): void;
-  onPrimaryColorChange(color: string): void;
+  onStateChange: (state: string) => void;
+  onPrimaryColorChange: (color: string) => void;
   primaryColor: string;
   excludeExternal?: boolean;
   zIndex?: number;
@@ -44,7 +44,7 @@ export function CanvasHeader({
               href={`/component/${slug}`}
               target="_blank"
             >
-              <IconExternalLink size="0.9rem" stroke={1.5} />
+              <IconExternalLink size={14} stroke={1.5} />
             </ActionIcon>
           )}
 
@@ -57,7 +57,7 @@ export function CanvasHeader({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <GithubIcon size="0.9rem" />
+            <GithubIcon size={14} />
           </ActionIcon>
 
           {attributes.responsive && <Badge variant="light">Responsive</Badge>}
@@ -76,7 +76,7 @@ export function CanvasHeader({
               value: 'preview',
               label: (
                 <Center>
-                  <IconEye size="1rem" stroke={1.5} />
+                  <IconEye size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Preview</div>
                 </Center>
               ),
@@ -85,7 +85,7 @@ export function CanvasHeader({
               value: 'code',
               label: (
                 <Center>
-                  <IconCode size="1rem" stroke={1.5} />
+                  <IconCode size={16} stroke={1.5} />
                   <div className={classes.controlLabel}>Code</div>
                 </Center>
               ),

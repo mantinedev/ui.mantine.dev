@@ -1,4 +1,4 @@
-import { Card, Image, Text, Group, RingProgress } from '@mantine/core';
+import { Card, Group, Image, RingProgress, Text } from '@mantine/core';
 import classes from './CardWithStats.module.css';
 
 const stats = [

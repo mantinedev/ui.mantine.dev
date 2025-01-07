@@ -15,7 +15,7 @@
     Greycliff CF,
     var(--mantine-font-family);
   font-weight: 700;
-  font-size: rem(22px);
+  font-size: 22px;
   line-height: 1;
 }
 

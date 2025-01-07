@@ -6,14 +6,14 @@
 .rating {
   position: absolute;
   top: var(--mantine-spacing-xs);
-  right: rem(12px);
+  right: 12px;
   pointer-events: none;
 }
 
 .title {
   display: block;
   margin-top: var(--mantine-spacing-md);
-  margin-bottom: rem(5px);
+  margin-bottom: 5px;
 }
 
 .action {

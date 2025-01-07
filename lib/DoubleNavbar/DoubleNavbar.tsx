@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { UnstyledButton, Tooltip, Title, rem } from '@mantine/core';
 import {
-  IconHome2,
-  IconGauge,
+  IconCalendarStats,
   IconDeviceDesktopAnalytics,
   IconFingerprint,
-  IconCalendarStats,
-  IconUser,
+  IconGauge,
+  IconHome2,
   IconSettings,
+  IconUser,
 } from '@tabler/icons-react';
+import { Title, Tooltip, UnstyledButton } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './DoubleNavbar.module.css';
 
@@ -53,7 +53,7 @@ export function DoubleNavbar() {
         className={classes.mainLink}
         data-active={link.label === active || undefined}
       >
-        <link.icon style={{ width: rem(22), height: rem(22) }} stroke={1.5} />
+        <link.icon size={22} stroke={1.5} />
       </UnstyledButton>
     </Tooltip>
   ));

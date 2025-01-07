@@ -1,5 +1,5 @@
-import attributes from './attributes.json';
 import { StoryWrapper } from '../../components/StoryWrapper/StoryWrapper';
+import attributes from './attributes.json';
 import { FaqWithHeader } from './FaqWithHeader';
 
 export default { title: 'FaqWithHeader' };
