@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import cx from 'clsx';
+import { CodeHighlightTabs } from '@mantine/code-highlight';
 import { Box, MantineThemeProvider } from '@mantine/core';
 import { getCodeFileIcon } from '@mantinex/dev-icons';
-import { CodeHighlightTabs } from '@mantinex/shiki';
 import { UiComponent } from '../../data';
 import * as UiComponents from '../../lib';
 import { ComponentPreview } from '../ComponentPreview/ComponentPreview';

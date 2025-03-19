@@ -85,8 +85,7 @@ export function CardsCarousel() {
     <Carousel
       slideSize={{ base: '100%', sm: '50%' }}
       slideGap={{ base: 2, sm: 'xl' }}
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
+      emblaOptions={{ align: 'start', slidesToScroll: mobile ? 1 : 2 }}
     >
       {slides}
     </Carousel>

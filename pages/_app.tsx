@@ -1,6 +1,6 @@
 import '../fonts/GreycliffCF/styles.css';
 import '@mantine/core/styles.css';
-import '@mantinex/shiki/styles.css';
+import '@mantine/code-highlight/styles.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/dropzone/styles.css';
 import '@mantine/spotlight/styles.css';
@@ -8,20 +8,24 @@ import '@mantinex/mantine-header/styles.css';
 import '@mantinex/mantine-logo/styles.css';
 
 import Head from 'next/head';
+import { CodeHighlightAdapterProvider, createShikiAdapter } from '@mantine/code-highlight';
 import { DirectionProvider, localStorageColorSchemeManager, MantineProvider } from '@mantine/core';
-import { ShikiProvider } from '@mantinex/shiki';
 import { GaScript } from '@/components/GaScript';
 import { HotKeysHandler } from '@/components/HotKeysHandler';
 import { Search } from '@/components/Search';
 
+// Shiki requires async code to load the highlighter
 async function loadShiki() {
-  const { getHighlighter } = await import('shikiji');
-  const shiki = await getHighlighter({
+  const { createHighlighter } = await import('shiki');
+  const shiki = await createHighlighter({
     langs: ['tsx', 'scss', 'html', 'bash', 'json'],
+    themes: [],
   });
 
   return shiki;
 }
+
+const shikiAdapter = createShikiAdapter(loadShiki);
 
 export default function App({ Component, pageProps }: any) {
   return (
@@ -67,11 +71,11 @@ export default function App({ Component, pageProps }: any) {
           defaultColorScheme="auto"
           colorSchemeManager={localStorageColorSchemeManager({ key: 'mantine-ui-color-scheme' })}
         >
-          <ShikiProvider loadShiki={loadShiki}>
+          <CodeHighlightAdapterProvider adapter={shikiAdapter}>
             <HotKeysHandler />
             <Component {...pageProps} />
             <Search data={pageProps.allComponents} />
-          </ShikiProvider>
+          </CodeHighlightAdapterProvider>
         </MantineProvider>
       </DirectionProvider>
     </>

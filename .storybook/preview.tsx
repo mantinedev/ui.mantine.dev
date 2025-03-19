@@ -1,4 +1,6 @@
 import '@mantine/core/styles.css';
+import '@mantine/dates/styles.css';
+import '@mantine/code-highlight/styles.css';
 
 import React, { useEffect } from 'react';
 import { addons } from '@storybook/preview-api';

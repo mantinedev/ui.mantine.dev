@@ -23,7 +23,7 @@ export function CarouselCard() {
       <Card.Section>
         <Carousel
           withIndicators
-          loop
+          emblaOptions={{ loop: true }}
           classNames={{
             root: classes.carousel,
             controls: classes.carouselControls,
