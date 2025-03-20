@@ -1,7 +1,6 @@
 {
   "title": "Custom switch",
   "category": "inputs",
-  "withColor": true,
   "changelog": "september-2022",
   "canvas": {
     "center": true

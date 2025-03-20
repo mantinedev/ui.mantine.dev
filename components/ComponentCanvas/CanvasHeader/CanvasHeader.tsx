@@ -2,7 +2,6 @@ import { IconCode, IconExternalLink, IconEye } from '@tabler/icons-react';
 import { ActionIcon, Badge, Box, Center, Group, SegmentedControl, Text } from '@mantine/core';
 import { GithubIcon } from '@mantinex/dev-icons';
 import { UiComponent } from '../../../data';
-import { ColorControl } from '../ColorControl/ColorControl';
 import classes from './CanvasHeader.module.css';
 
 export interface CanvasHeaderProps extends UiComponent, React.ComponentPropsWithoutRef<'div'> {
@@ -65,9 +64,6 @@ export function CanvasHeader({
       </Group>
 
       <Group className={classes.controls}>
-        {attributes.withColor && (
-          <ColorControl onChange={onPrimaryColorChange} value={primaryColor} />
-        )}
         <SegmentedControl
           value={state}
           onChange={onStateChange}

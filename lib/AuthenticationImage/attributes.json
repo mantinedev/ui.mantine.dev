@@ -1,7 +1,6 @@
 {
   "title": "Authentication page with image",
   "category": "authentication",
-  "withColor": true,
   "responsive": true,
   "canvas": {
     "center": false

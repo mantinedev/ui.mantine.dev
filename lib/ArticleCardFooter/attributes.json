@@ -1,7 +1,6 @@
 {
   "title": "Article card with footer",
   "category": "article-cards",
-  "withColor": true,
   "dimmed": true,
   "canvas": {
     "center": true,

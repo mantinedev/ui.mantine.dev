@@ -2,7 +2,6 @@
   "title": "Forgot password",
   "category": "authentication",
   "author": "rtivital",
-  "withColor": true,
   "dimmed": true,
   "responsive": true,
   "dependencies": [

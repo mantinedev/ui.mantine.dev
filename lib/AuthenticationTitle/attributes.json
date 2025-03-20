@@ -1,7 +1,6 @@
 {
   "title": "Authentication form with title",
   "category": "authentication",
-  "withColor": true,
   "dimmed": true,
   "canvas": {
     "center": false

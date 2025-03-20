@@ -2,7 +2,6 @@
   "title": "Card with icon features",
   "category": "app-cards",
   "author": "rtivital",
-  "withColor": true,
   "dimmed": true,
   "canvas": {
     "center": true,
