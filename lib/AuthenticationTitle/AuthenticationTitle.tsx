@@ -18,23 +18,21 @@ export function AuthenticationTitle() {
       <Title ta="center" className={classes.title}>
         Welcome back!
       </Title>
-      <Text c="dimmed" size="sm" ta="center" mt={5}>
-        Do not have an account yet?{' '}
-        <Anchor size="sm" component="button">
-          Create account
-        </Anchor>
+
+      <Text className={classes.subtitle}>
+        Do not have an account yet? <Anchor>Create account</Anchor>
       </Text>
 
-      <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-        <TextInput label="Email" placeholder="you@mantine.dev" required />
-        <PasswordInput label="Password" placeholder="Your password" required mt="md" />
+      <Paper withBorder shadow="sm" p={22} mt={30} radius="md">
+        <TextInput label="Email" placeholder="you@mantine.dev" required radius="md" />
+        <PasswordInput label="Password" placeholder="Your password" required mt="md" radius="md" />
         <Group justify="space-between" mt="lg">
           <Checkbox label="Remember me" />
           <Anchor component="button" size="sm">
             Forgot password?
           </Anchor>
         </Group>
-        <Button fullWidth mt="xl">
+        <Button fullWidth mt="xl" radius="md">
           Sign in
         </Button>
       </Paper>

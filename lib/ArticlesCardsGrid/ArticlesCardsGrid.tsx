@@ -32,20 +32,18 @@ export function ArticlesCardsGrid() {
   const cards = mockdata.map((article) => (
     <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
-        <Image src={article.image} />
+        <Image src={article.image} radius="md" />
       </AspectRatio>
-      <Text c="dimmed" size="xs" tt="uppercase" fw={700} mt="md">
-        {article.date}
-      </Text>
-      <Text className={classes.title} mt={5}>
-        {article.title}
-      </Text>
+      <Text className={classes.date}>{article.date}</Text>
+      <Text className={classes.title}>{article.title}</Text>
     </Card>
   ));
 
   return (
     <Container py="xl">
-      <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={{ base: 0, sm: 'md' }}>
+        {cards}
+      </SimpleGrid>
     </Container>
   );
 }

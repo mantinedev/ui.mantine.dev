@@ -15,9 +15,10 @@ export function ButtonMenu() {
       position="top-end"
       width={220}
       withinPortal
+      radius="md"
     >
       <Menu.Target>
-        <Button rightSection={<IconChevronDown size={18} stroke={1.5} />} pr={12}>
+        <Button rightSection={<IconChevronDown size={18} stroke={1.5} />} pr={12} radius="md">
           Create new
         </Button>
       </Menu.Target>

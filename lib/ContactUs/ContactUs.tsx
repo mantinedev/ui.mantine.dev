@@ -34,17 +34,20 @@ export function ContactUs() {
 
           <Group mt="xl">{icons}</Group>
         </div>
+
         <div className={classes.form}>
           <TextInput
             label="Email"
             placeholder="your@email.com"
             required
+            radius="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <TextInput
             label="Name"
             placeholder="John Doe"
             mt="md"
+            radius="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
           <Textarea
@@ -53,11 +56,14 @@ export function ContactUs() {
             placeholder="I want to order your goods"
             minRows={4}
             mt="md"
+            radius="md"
             classNames={{ input: classes.input, label: classes.inputLabel }}
           />
 
           <Group justify="flex-end" mt="md">
-            <Button className={classes.control}>Send message</Button>
+            <Button className={classes.control} radius="md">
+              Send message
+            </Button>
           </Group>
         </div>
       </SimpleGrid>

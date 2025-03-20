@@ -1,4 +1,4 @@
-import { IconStar } from '@tabler/icons-react';
+import { IconStarFilled } from '@tabler/icons-react';
 import { Carousel } from '@mantine/carousel';
 import { Button, Card, Group, Image, Text } from '@mantine/core';
 import classes from './CarouselCard.module.css';
@@ -40,8 +40,8 @@ export function CarouselCard() {
         </Text>
 
         <Group gap={5}>
-          <IconStar size={16} />
-          <Text fz="xs" fw={500}>
+          <IconStarFilled size={16} color="var(--mantine-color-yellow-6)" />
+          <Text fz="sm" fw={600}>
             4.78
           </Text>
         </Group>

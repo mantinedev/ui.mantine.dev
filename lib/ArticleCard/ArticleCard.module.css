@@ -12,6 +12,7 @@
 
 .title {
   display: block;
+  font-family: Outfit, var(--mantine-font-family);
   margin-top: var(--mantine-spacing-md);
   margin-bottom: 5px;
 }

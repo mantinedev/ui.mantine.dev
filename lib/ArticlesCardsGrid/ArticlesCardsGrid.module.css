@@ -1,15 +1,29 @@
 .card {
+  border: 1px solid transparent;
+  position: relative;
   transition:
+    border-color 150ms ease,
     transform 150ms ease,
     box-shadow 150ms ease;
 
-  &:hover {
+  @mixin hover {
+    z-index: 1;
     transform: scale(1.01);
     box-shadow: var(--mantine-shadow-md);
+    border-color: light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
   }
+}
+
+.date {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--mantine-color-dimmed);
+  font-size: var(--mantine-font-size-xs);
+  margin-top: var(--mantine-spacing-xs);
 }
 
 .title {
   font-family: 'Outfit', var(--mantine-font-family);
-  font-weight: bold;
+  font-weight: 500;
+  font-size: var(--mantine-font-size-lg);
 }

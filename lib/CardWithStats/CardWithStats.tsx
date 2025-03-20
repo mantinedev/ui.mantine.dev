@@ -20,7 +20,7 @@ export function CardWithStats() {
   ));
 
   return (
-    <Card withBorder padding="lg" className={classes.card}>
+    <Card withBorder padding="lg" radius="md" className={classes.card}>
       <Card.Section>
         <Image
           src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80"
@@ -29,10 +29,8 @@ export function CardWithStats() {
         />
       </Card.Section>
 
-      <Group justify="space-between" mt="xl">
-        <Text fz="sm" fw={700} className={classes.title}>
-          Running challenge
-        </Text>
+      <Group justify="space-between" mt="lg">
+        <Text className={classes.title}>Running challenge</Text>
         <Group gap={5}>
           <Text fz="xs" c="dimmed">
             80% completed

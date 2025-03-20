@@ -28,6 +28,7 @@ export function ButtonProgress() {
       className={classes.button}
       onClick={() => (loaded ? setLoaded(false) : !interval.active && interval.start())}
       color={loaded ? 'teal' : theme.primaryColor}
+      radius="md"
     >
       <div className={classes.label}>
         {progress !== 0 ? 'Uploading files' : loaded ? 'Files uploaded' : 'Upload files'}

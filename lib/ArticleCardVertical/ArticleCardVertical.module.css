@@ -1,9 +1,25 @@
 .card {
   background-color: var(--mantine-color-body);
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+
+  @mixin smaller-than 755px {
+    flex-direction: column;
+  }
+}
+
+.image {
+  max-width: 220px;
+
+  @mixin smaller-than 755px {
+    max-width: 100%;
+    max-height: 180px;
+  }
 }
 
 .title {
-  font-weight: bold;
+  font-weight: 500;
   font-family: Outfit, var(--mantine-font-family);
   line-height: 1.2;
 }

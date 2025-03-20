@@ -4,7 +4,7 @@
 
 .title {
   font-family: Outfit, var(--mantine-font-family);
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .item {
@@ -15,7 +15,7 @@
   text-align: center;
   border-radius: var(--mantine-radius-md);
   height: 90px;
-  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+  background-color: var(--mantine-color-body);
   transition:
     box-shadow 150ms ease,
     transform 100ms ease;

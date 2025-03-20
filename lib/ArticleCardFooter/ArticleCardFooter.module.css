@@ -4,6 +4,8 @@
 
 .title {
   font-family: Outfit, var(--mantine-font-family);
+  font-weight: 450;
+  margin-top: var(--mantine-spacing-xs);
 }
 
 .footer {

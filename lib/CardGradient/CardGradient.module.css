@@ -6,11 +6,11 @@
     transform 150ms ease,
     box-shadow 100ms ease;
   padding: var(--mantine-spacing-xl);
-  padding-left: calc(var(--mantine-spacing-xl) * 2);
+  padding-left: calc(var(--mantine-spacing-xl) * 1.5);
 
   @mixin hover {
-    box-shadow: var(--mantine-shadow-md);
-    transform: scale(1.02);
+    box-shadow: var(--mantine-shadow-sm);
+    transform: scale(1.01);
   }
 
   &::before {

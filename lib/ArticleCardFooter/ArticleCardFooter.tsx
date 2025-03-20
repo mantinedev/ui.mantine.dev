@@ -1,19 +1,8 @@
 import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
-import {
-  ActionIcon,
-  Avatar,
-  Badge,
-  Card,
-  Group,
-  Image,
-  Text,
-  useMantineTheme,
-} from '@mantine/core';
+import { ActionIcon, Avatar, Badge, Card, Group, Image, Text } from '@mantine/core';
 import classes from './ArticleCardFooter.module.css';
 
 export function ArticleCardFooter() {
-  const theme = useMantineTheme();
-
   return (
     <Card withBorder padding="lg" radius="md" className={classes.card}>
       <Card.Section mb="sm">
@@ -24,13 +13,8 @@ export function ArticleCardFooter() {
         />
       </Card.Section>
 
-      <Badge w="fit-content" variant="light">
-        decorations
-      </Badge>
-
-      <Text fw={700} className={classes.title} mt="xs">
-        Top 50 underrated plants for house decoration
-      </Text>
+      <Badge variant="light">decorations</Badge>
+      <Text className={classes.title}>Top 50 underrated plants for house decoration</Text>
 
       <Group mt="lg">
         <Avatar
@@ -52,13 +36,13 @@ export function ArticleCardFooter() {
           </Text>
           <Group gap={0}>
             <ActionIcon variant="subtle" color="gray">
-              <IconHeart size={20} color={theme.colors.red[6]} stroke={1.5} />
+              <IconHeart size={20} color="var(--mantine-color-red-6)" stroke={1.5} />
             </ActionIcon>
             <ActionIcon variant="subtle" color="gray">
-              <IconBookmark size={20} color={theme.colors.yellow[6]} stroke={1.5} />
+              <IconBookmark size={20} color="var(--mantine-color-yellow-6)" stroke={1.5} />
             </ActionIcon>
             <ActionIcon variant="subtle" color="gray">
-              <IconShare size={20} color={theme.colors.blue[6]} stroke={1.5} />
+              <IconShare size={20} color="var(--mantine-color-blue-6)" stroke={1.5} />
             </ActionIcon>
           </Group>
         </Group>
