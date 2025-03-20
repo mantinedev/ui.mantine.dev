@@ -19,8 +19,12 @@ export function EmailBanner() {
           <TextInput
             placeholder="Your email"
             classNames={{ input: classes.input, root: classes.inputWrapper }}
+            radius="md"
+            size="md"
           />
-          <Button className={classes.control}>Subscribe</Button>
+          <Button className={classes.control} radius="md" size="md">
+            Subscribe
+          </Button>
         </div>
       </div>
       <Image src={image.src} className={classes.image} />

@@ -24,7 +24,7 @@
 .title {
   color: var(--mantine-color-white);
   font-size: 60px;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.1;
 
   @media (max-width: $mantine-breakpoint-sm) {

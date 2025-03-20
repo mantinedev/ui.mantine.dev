@@ -48,7 +48,7 @@
   z-index: 0;
   position: absolute;
   color: var(--mantine-color-white);
-  font-weight: 900;
+  font-weight: 500;
   opacity: 0.1;
   font-size: 320px;
   line-height: 1;

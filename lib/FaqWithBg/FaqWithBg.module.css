@@ -15,11 +15,12 @@
   color: var(--mantine-color-white);
   font-size: 52px;
   font-family: Outfit, var(--mantine-font-family);
+  font-weight: 500;
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
 }
 
 .item {
-  background-color: var(--mantine-color-white);
+  background-color: var(--mantine-color-white) !important;
   border-bottom: 0;
   border-radius: var(--mantine-radius-md);
   box-shadow: var(--mantine-shadow-lg);

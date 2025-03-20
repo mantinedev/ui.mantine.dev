@@ -4,7 +4,7 @@
 }
 
 .title {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 34px;
   margin-bottom: var(--mantine-spacing-md);
   font-family: Outfit, var(--mantine-font-family);

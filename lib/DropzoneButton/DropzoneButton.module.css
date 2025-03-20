@@ -6,10 +6,11 @@
 .dropzone {
   border-width: 1px;
   padding-bottom: 50px;
+  color: var(--mantine-color-bright);
 }
 
 .icon {
-  color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+  color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-white));
 }
 
 .control {
@@ -17,4 +18,11 @@
   width: 250px;
   left: calc(50% - 125px);
   bottom: -20px;
+}
+
+.description {
+  text-align: center;
+  font-size: var(--mantine-font-size-sm);
+  color: var(--mantine-color-dimmed);
+  margin-top: var(--mantine-spacing-xs);
 }

@@ -5,7 +5,7 @@
 
 .label {
   text-align: center;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 38px;
   line-height: 1;
   margin-bottom: calc(1.5 * var(--mantine-spacing-xl));
@@ -26,7 +26,7 @@
 .title {
   font-family: 'Outfit', var(--mantine-font-family);
   text-align: center;
-  font-weight: 900;
+  font-weight: 500;
   font-size: 38px;
 
   @media (max-width: $mantine-breakpoint-sm) {

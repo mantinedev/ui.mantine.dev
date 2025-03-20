@@ -53,6 +53,7 @@
   margin-bottom: var(--mantine-spacing-xl);
   background-color: var(--mantine-color-body);
   padding: var(--mantine-spacing-md);
+  font-weight: 500;
   padding-top: 18px;
   height: 60px;
   border-bottom: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-7));

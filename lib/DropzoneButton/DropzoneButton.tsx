@@ -27,7 +27,7 @@ export function DropzoneButton() {
               <IconX size={50} color={theme.colors.red[6]} stroke={1.5} />
             </Dropzone.Reject>
             <Dropzone.Idle>
-              <IconCloudUpload size={50} stroke={1.5} />
+              <IconCloudUpload size={50} stroke={1.5} className={classes.icon} />
             </Dropzone.Idle>
           </Group>
 
@@ -36,7 +36,8 @@ export function DropzoneButton() {
             <Dropzone.Reject>Pdf file less than 30mb</Dropzone.Reject>
             <Dropzone.Idle>Upload resume</Dropzone.Idle>
           </Text>
-          <Text ta="center" fz="sm" mt="xs" c="dimmed">
+
+          <Text className={classes.description}>
             Drag&apos;n&apos;drop files here to upload. We can accept only <i>.pdf</i> files that
             are less than 30mb in size.
           </Text>

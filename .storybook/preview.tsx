@@ -1,5 +1,6 @@
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
+import '@mantine/dropzone/styles.css';
 import '@mantine/code-highlight/styles.css';
 
 import React, { useEffect } from 'react';

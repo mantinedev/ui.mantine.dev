@@ -37,7 +37,7 @@
 .title {
   color: var(--mantine-color-white);
   font-family: Outfit, var(--mantine-font-family);
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.05;
   max-width: 500px;
   font-size: 48px;
