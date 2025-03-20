@@ -13,6 +13,7 @@
   width: 20px;
   height: 20px;
   left: -2px;
+  border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
   transition:
     background-color 100ms ease,
     left 100ms ease;
@@ -20,5 +21,6 @@
   input:checked + * > & {
     background-color: var(--mantine-color-blue-filled);
     left: calc(100% - 12px);
+    border-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
   }
 }
