@@ -2,7 +2,8 @@
   background-color: #11284b;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%),
+  background-image:
+    linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%),
     url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8&auto=format&fit=crop&w=1080&q=80);
   padding-top: calc(var(--mantine-spacing-xl) * 3);
   padding-bottom: calc(var(--mantine-spacing-xl) * 3);
@@ -35,9 +36,7 @@
 
 .title {
   color: var(--mantine-color-white);
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
   font-weight: 900;
   line-height: 1.05;
   max-width: 500px;
@@ -63,9 +62,7 @@
 .control {
   padding-left: 50px;
   padding-right: 50px;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
   font-size: 22px;
 
   @media (max-width: $mantine-breakpoint-md) {

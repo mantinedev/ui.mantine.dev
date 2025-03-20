@@ -65,9 +65,7 @@
 
 .title {
   margin-bottom: calc(var(--mantine-spacing-xl) * 1.5);
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 
   @media (max-width: $mantine-breakpoint-sm) {
     margin-bottom: var(--mantine-spacing-xl);

@@ -9,9 +9,7 @@
 }
 
 .title {
-  font-family:
-    Greycliff CF,
-    sans-serif;
+  font-family: Outfit, sans-serif;
   font-weight: 900;
   color: var(--mantine-color-white);
   line-height: 1.2;

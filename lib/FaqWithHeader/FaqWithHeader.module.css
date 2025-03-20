@@ -35,9 +35,7 @@
   font-size: 46px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 
   @media (max-width: em(1080px)) {
     font-size: 22px;
@@ -57,9 +55,7 @@
   top: 10px;
   left: 45px;
   pointer-events: none;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 
   @media (max-width: em(1080px)) {
     display: none;

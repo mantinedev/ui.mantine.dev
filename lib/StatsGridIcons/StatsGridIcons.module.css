@@ -3,7 +3,5 @@
 }
 
 .label {
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 }

@@ -35,9 +35,7 @@
   text-transform: uppercase;
   font-weight: 700;
   font-size: var(--mantine-font-size-xs);
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
   color: var(--mantine-color-gray-6);
   line-height: 1.2;
 }
@@ -59,9 +57,7 @@
   line-height: 1;
   text-align: center;
   margin-bottom: 5px;
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 }
 
 .month {

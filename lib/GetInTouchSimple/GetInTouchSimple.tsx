@@ -21,7 +21,7 @@ export function GetInTouchSimple() {
       <Title
         order={2}
         size="h1"
-        style={{ fontFamily: 'Greycliff CF, var(--mantine-font-family)' }}
+        style={{ fontFamily: 'Outfit, var(--mantine-font-family)' }}
         fw={900}
         ta="center"
       >

@@ -7,9 +7,7 @@
   margin-bottom: var(--mantine-spacing-md);
   padding-left: var(--mantine-spacing-md);
   color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  font-family: Outfit, var(--mantine-font-family);
 }
 
 .item {
