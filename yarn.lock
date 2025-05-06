@@ -2212,108 +2212,108 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/carousel@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/carousel@npm:8.0.0-alpha.2"
+"@mantine/carousel@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/carousel@npm:8.0.0"
   peerDependencies:
-    "@mantine/core": 8.0.0-alpha.2
-    "@mantine/hooks": 8.0.0-alpha.2
+    "@mantine/core": 8.0.0
+    "@mantine/hooks": 8.0.0
     embla-carousel: ">=8.0.0"
     embla-carousel-react: ">=8.0.0"
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/21a2407bb89b69dc87a005a547e843bf07ac3fa97631e036e9716c73551842fb7ff6e654ab68db2ec9f7de054ac0e4ed0500366b7d812b6f27259eb47aef127b
+  checksum: 10c0/363fc3d9b20bf8dfc0aa1466b402a07e0dcc4ec202f7d70eb338149d3144acb5b29a07e9467a3eb3631d0608de606d8fce0b261acf2f53cba3e922a16473fb59
   languageName: node
   linkType: hard
 
-"@mantine/code-highlight@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/code-highlight@npm:8.0.0-alpha.2"
+"@mantine/code-highlight@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/code-highlight@npm:8.0.0"
   dependencies:
     clsx: "npm:^2.1.1"
     highlight.js: "npm:^11.10.0"
   peerDependencies:
-    "@mantine/core": 8.0.0-alpha.2
-    "@mantine/hooks": 8.0.0-alpha.2
+    "@mantine/core": 8.0.0
+    "@mantine/hooks": 8.0.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/2ed00d018ffbfd9933ecd7c8120bafbd46a11fc175ac79d181a0edecdd8358beaf2312c5c4725601da3ad1696821dc612dfdaaf992c4455b4c02906a65cbed66
+  checksum: 10c0/b99511b56dc1cb871323f707f727995723d0f6a7e87dca86909f507cf107cdd6968d2077a02c2438f8ad6e02ffd14834c12dddcf5507198751e6a3c652e1e5a5
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/core@npm:8.0.0-alpha.2"
+"@mantine/core@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/core@npm:8.0.0"
   dependencies:
     "@floating-ui/react": "npm:^0.26.28"
     clsx: "npm:^2.1.1"
     react-number-format: "npm:^5.4.3"
     react-remove-scroll: "npm:^2.6.2"
-    react-textarea-autosize: "npm:8.5.6"
+    react-textarea-autosize: "npm:8.5.9"
     type-fest: "npm:^4.27.0"
   peerDependencies:
-    "@mantine/hooks": 8.0.0-alpha.2
+    "@mantine/hooks": 8.0.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/ce33eb99534fff8994fe9407be1d91e3c796c9d1ae6d9e9a209f6766fdf5d2dfd0b1a2af477e857ec62c2bdc6f2403345358a4d240e08cda63eeaa58791a56dd
+  checksum: 10c0/d23099322ebcbb0632a8182fb5992719ef9dc54168eb136ae3a94f79aaa3c375afe81ab2001f7dd15f6738fa8970c333b8713f9fc125de6f3207ac388b4aacd5
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/dropzone@npm:8.0.0-alpha.2"
+"@mantine/dropzone@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/dropzone@npm:8.0.0"
   dependencies:
     react-dropzone-esm: "npm:15.2.0"
   peerDependencies:
-    "@mantine/core": 8.0.0-alpha.2
-    "@mantine/hooks": 8.0.0-alpha.2
+    "@mantine/core": 8.0.0
+    "@mantine/hooks": 8.0.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/0a19cacc0e5e212db7dba6ab21fb4ab49f710cda90fd9cdc305b33da6601bd936a9165768113c427cd18294eb6bdc5d675e6c0a9ccf0907bec0f7213392f434c
+  checksum: 10c0/a76405697f2e4870699aec5bbe5aa245cb92bd343df91805809574183ee142391f70f768ed89611e2c6669488d05dbdee23aa0245bc942018e759f064b0c513a
   languageName: node
   linkType: hard
 
-"@mantine/form@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/form@npm:8.0.0-alpha.2"
+"@mantine/form@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/form@npm:8.0.0"
   dependencies:
     fast-deep-equal: "npm:^3.1.3"
     klona: "npm:^2.0.6"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/52480856dca6e9e540a55f1cbbf06916d67ae7804ab367f4c0a9ec1c51a1e7343fdfd99992363987a26181da32385b9dede6fb6c62f6bd82554849978862193c
+  checksum: 10c0/0450463458e83339c713993d0ef0621ac4ab5ac028c61487386c45303d34c5f53ece8d564dd656a0d40e692f30919707f889af66a34e980d461ab442badb5805
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/hooks@npm:8.0.0-alpha.2"
+"@mantine/hooks@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/hooks@npm:8.0.0"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/61c4fdfa3ecd108028fc89be205272665f59ad7d061be3e9a511bbba8200398712d1c8d9e6c008403b94694df6b454f4fbec3762687b70c0b23c758a1a9390a6
+  checksum: 10c0/d1ff4d99e82abe14e230c1ac77347f2025b78e32f8fb75ca4d0cdee801bdecd8589687b3281138e0251bfed64dc7e4bbb17a97c2be915ddf43abadc794425249
   languageName: node
   linkType: hard
 
-"@mantine/spotlight@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/spotlight@npm:8.0.0-alpha.2"
+"@mantine/spotlight@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/spotlight@npm:8.0.0"
   dependencies:
-    "@mantine/store": "npm:8.0.0-alpha.2"
+    "@mantine/store": "npm:8.0.0"
   peerDependencies:
-    "@mantine/core": 8.0.0-alpha.2
-    "@mantine/hooks": 8.0.0-alpha.2
+    "@mantine/core": 8.0.0
+    "@mantine/hooks": 8.0.0
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/59c27cf1e1b009d18edb5b2b8466b5dab6acd6944d4e372ee4d6fb4b2298868541febd0fb66f3ecd560f252b226f0601c448cb1492778a56e3ba9112e528f990
+  checksum: 10c0/3f43f1091514f1f14e411581043c91ddd94d41a29c90ffdf97b054e5d28801f760d7e6ed207fe51e397afae41b7cff8660b3a8276bfa86e5b8fe2639f582f95e
   languageName: node
   linkType: hard
 
-"@mantine/store@npm:8.0.0-alpha.2":
-  version: 8.0.0-alpha.2
-  resolution: "@mantine/store@npm:8.0.0-alpha.2"
+"@mantine/store@npm:8.0.0":
+  version: 8.0.0
+  resolution: "@mantine/store@npm:8.0.0"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/a53f57cf1573a762d50cb60ffeb0c9e6365b459fcb5583311f47999a5967df794a20f93d57fc998b4023f7ad78717ef1da1338b4ea3e011c8b670e67dba0c08c
+  checksum: 10c0/2739479e16dcd5ec66d334c7e6c87486f7efcefa0146203158ab96f8490b767a247e128fdd1738066caa4b3b89de5ecfe43151300def3518a2ddda74bf7fde4e
   languageName: node
   linkType: hard
 
@@ -8496,13 +8496,13 @@ __metadata:
     "@eslint/js": "npm:^9.22.0"
     "@hello-pangea/dnd": "npm:^18.0.1"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.4.1"
-    "@mantine/carousel": "npm:8.0.0-alpha.2"
-    "@mantine/code-highlight": "npm:8.0.0-alpha.2"
-    "@mantine/core": "npm:8.0.0-alpha.2"
-    "@mantine/dropzone": "npm:8.0.0-alpha.2"
-    "@mantine/form": "npm:8.0.0-alpha.2"
-    "@mantine/hooks": "npm:8.0.0-alpha.2"
-    "@mantine/spotlight": "npm:8.0.0-alpha.2"
+    "@mantine/carousel": "npm:8.0.0"
+    "@mantine/code-highlight": "npm:8.0.0"
+    "@mantine/core": "npm:8.0.0"
+    "@mantine/dropzone": "npm:8.0.0"
+    "@mantine/form": "npm:8.0.0"
+    "@mantine/hooks": "npm:8.0.0"
+    "@mantine/spotlight": "npm:8.0.0"
     "@mantinex/dev-icons": "npm:^1.1.0"
     "@mantinex/mantine-header": "npm:^1.1.0"
     "@mantinex/mantine-logo": "npm:^1.1.0"
@@ -10092,16 +10092,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-textarea-autosize@npm:8.5.6":
-  version: 8.5.6
-  resolution: "react-textarea-autosize@npm:8.5.6"
+"react-textarea-autosize@npm:8.5.9":
+  version: 8.5.9
+  resolution: "react-textarea-autosize@npm:8.5.9"
   dependencies:
     "@babel/runtime": "npm:^7.20.13"
     use-composed-ref: "npm:^1.3.0"
     use-latest: "npm:^1.2.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10c0/652d290d316c55a253507ecf65ca27f2162801dace10c715f2241203e81d82e9de6d282095b758b26c6bc9e1af9ca552cab5c3a361b230e5fcf25bec31e1bd25
+  checksum: 10c0/3a924db59259a6e3b834dcddc12a8661b43dcdaa1b43c41c732e0548bb2761e9a53dbc6db4e0d9e237728b4869e42c25e5417408b0391aec290c90874733a09f
   languageName: node
   linkType: hard
 
@@ -11990,11 +11990,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>":
   version: 5.8.2
-  resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=cef18b"
+  resolution: "typescript@patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/8a6cd29dfb59bd5a978407b93ae0edb530ee9376a5b95a42ad057a6f80ffb0c410489ccd6fe48d1d0dfad6e8adf5d62d3874bbd251f488ae30e11a1ce6dabd28
+  checksum: 10c0/5448a08e595cc558ab321e49d4cac64fb43d1fa106584f6ff9a8d8e592111b373a995a1d5c7f3046211c8a37201eb6d0f1566f15cdb7a62a5e3be01d087848e2
   languageName: node
   linkType: hard
 
