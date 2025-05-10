@@ -36,7 +36,7 @@ export function ImageCheckbox({
       data-checked={value || undefined}
       className={classes.button}
     >
-      <Image src={image} alt={title} width={40} height={40} />
+      <Image src={image} alt={title} w={40} h={40} />
 
       <div className={classes.body}>
         <Text c="dimmed" size="xs" lh={1} mb={5}>
