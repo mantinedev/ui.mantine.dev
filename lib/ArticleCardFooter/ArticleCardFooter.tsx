@@ -17,7 +17,7 @@ interface ArticleCardFooterData {
 const data: ArticleCardFooterData = {
   category: 'Decorations',
   image:
-    'https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80',
+    'https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=500',
   authorName: 'Elsa Gardenowl',
   authorAvatar:
     'https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png',
@@ -36,11 +36,15 @@ export function ArticleCardFooter() {
         <Image src={data.image} alt={data.title} height={180} />
       </Card.Section>
 
-      <Badge color="violet.8">{data.category}</Badge>
+      <Badge color="violet" variant="outline">
+        {data.category}
+      </Badge>
+
       <Text className={classes.title}>{data.title}</Text>
 
       <Group mt="lg">
         <Avatar src={data.authorAvatar} radius="sm" alt={data.authorName} />
+
         <div>
           <Text c="bright" fw={500}>
             {data.authorName}
