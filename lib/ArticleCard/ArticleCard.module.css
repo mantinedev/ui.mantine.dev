@@ -1,6 +1,7 @@
 .card {
   position: relative;
   background-color: var(--mantine-color-body);
+  overflow: visible;
 }
 
 .rating {
@@ -15,6 +16,16 @@
   font-family: Outfit, var(--mantine-font-family);
   margin-top: var(--mantine-spacing-md);
   margin-bottom: 5px;
+  color: var(--mantine-color-bright);
+}
+
+.image {
+  border-top-left-radius: var(--mantine-radius-md);
+  border-top-right-radius: var(--mantine-radius-md);
+  margin-left: -1px;
+  margin-right: -1px;
+  margin-top: -1px;
+  width: calc(100% + 2px);
 }
 
 .action {
