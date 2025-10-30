@@ -1,5 +1,5 @@
-import { IconBookmark, IconHeart, IconShare } from '@tabler/icons-react';
-import { ActionIcon, Avatar, Badge, Card, Center, Group, Image, Text } from '@mantine/core';
+import { IconBookmarkFilled, IconHeartFilled, IconShare2 } from '@tabler/icons-react';
+import { ActionIcon, Avatar, Badge, Card, Group, Image, Text } from '@mantine/core';
 import classes from './ArticleCard.module.css';
 
 interface ArticleCardData {
@@ -27,23 +27,24 @@ const data: ArticleCardData = {
 export function ArticleCard() {
   return (
     <Card withBorder radius="md" className={classes.card}>
-      <Card.Section>
-        <a href={data.link} target="_blank" rel="noopener noreferrer">
-          <Image src={data.image} height={180} alt={data.title} className={classes.image} />
-        </a>
+      <Card.Section component="a" href={data.link} target="_blank" rel="noreferrer">
+        <Image src={data.image} height={180} alt={data.title} className={classes.image} />
       </Card.Section>
 
-      <Badge className={classes.rating} variant="gradient" gradient={{ from: 'yellow', to: 'red' }}>
+      <Badge
+        className={classes.rating}
+        variant="gradient"
+        gradient={{ from: 'indigo', to: 'violet', deg: 145 }}
+      >
         {data.rating}
       </Badge>
 
       <Text
         className={classes.title}
-        fw={500}
         component="a"
         href={data.link}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noreferrer"
       >
         {data.title}
       </Text>
@@ -53,28 +54,20 @@ export function ArticleCard() {
       </Text>
 
       <Group justify="space-between" className={classes.footer}>
-        <Center>
-          <Avatar
-            src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-1.png"
-            size={24}
-            radius="xl"
-            mr="xs"
-            alt={data.authorName}
-          />
-          <Text fz="sm" inline>
-            {data.authorName}
-          </Text>
-        </Center>
+        <Group gap="xs">
+          <Avatar src={data.authorAvatar} size={24} alt={data.authorName} />
+          <Text fz="sm">{data.authorName}</Text>
+        </Group>
 
         <Group gap={8}>
           <ActionIcon className={classes.action} aria-label="Like">
-            <IconHeart size={16} color="var(--mantine-color-red-6)" />
+            <IconHeartFilled size={16} color="var(--mantine-color-red-6)" />
           </ActionIcon>
           <ActionIcon className={classes.action} aria-label="Bookmark">
-            <IconBookmark size={16} color="var(--mantine-color-yellow-7)" />
+            <IconBookmarkFilled size={16} color="var(--mantine-color-yellow-7)" />
           </ActionIcon>
           <ActionIcon className={classes.action} aria-label="Share">
-            <IconShare size={16} color="var(--mantine-color-indigo-6)" />
+            <IconShare2 size={16} color="var(--mantine-color-cyan-6)" />
           </ActionIcon>
         </Group>
       </Group>

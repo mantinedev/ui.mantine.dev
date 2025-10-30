@@ -15,8 +15,9 @@
   display: block;
   font-family: Outfit, var(--mantine-font-family);
   margin-top: var(--mantine-spacing-md);
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   color: var(--mantine-color-bright);
+  font-weight: 500;
 }
 
 .image {
