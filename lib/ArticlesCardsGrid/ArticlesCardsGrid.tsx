@@ -32,7 +32,7 @@ export function ArticlesCardsGrid() {
   const cards = mockdata.map((article) => (
     <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
-        <Image src={article.image} radius="md" />
+        <Image src={article.image} alt={article.title} radius="md" />
       </AspectRatio>
       <Text className={classes.date}>{article.date}</Text>
       <Text className={classes.title}>{article.title}</Text>

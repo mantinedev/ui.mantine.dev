@@ -34,7 +34,7 @@ export function AuthenticationForm(props: PaperProps) {
 
   return (
     <Paper radius="md" p="lg" withBorder {...props}>
-      <Text size="lg" fw={500}>
+      <Text size="lg" fw={500} c="bright">
         Welcome to Mantine, {type} with
       </Text>
 
@@ -43,7 +43,12 @@ export function AuthenticationForm(props: PaperProps) {
         <TwitterButton radius="xl">Twitter</TwitterButton>
       </Group>
 
-      <Divider label="Or continue with email" labelPosition="center" my="lg" />
+      <Divider
+        label="Or continue with email"
+        labelPosition="center"
+        my="lg"
+        styles={{ label: { color: 'var(--mantine-color-bright)', opacity: 0.85 } }}
+      />
 
       <form onSubmit={form.onSubmit(() => {})}>
         <Stack>
@@ -87,7 +92,14 @@ export function AuthenticationForm(props: PaperProps) {
         </Stack>
 
         <Group justify="space-between" mt="xl">
-          <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
+          <Anchor
+            component="button"
+            type="button"
+            c="bright"
+            opacity={0.85}
+            onClick={() => toggle()}
+            size="xs"
+          >
             {type === 'register'
               ? 'Already have an account? Login'
               : "Don't have an account? Register"}
