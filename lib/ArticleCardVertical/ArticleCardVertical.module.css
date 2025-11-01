@@ -22,6 +22,7 @@
   font-weight: 500;
   font-family: Outfit, var(--mantine-font-family);
   line-height: 1.2;
+  color: var(--mantine-color-bright);
 }
 
 .body {
