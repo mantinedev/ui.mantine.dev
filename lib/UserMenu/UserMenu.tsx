@@ -24,7 +24,7 @@ export function UserMenu() {
         withinPortal
       >
         <Menu.Target>
-          <ActionIcon variant="default">
+          <ActionIcon variant="default" aria-label="User settings">
             <IconDots size={16} stroke={1.5} />
           </ActionIcon>
         </Menu.Target>
@@ -34,6 +34,7 @@ export function UserMenu() {
               <Avatar
                 radius="xl"
                 src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-7.png"
+                alt="Nancy Eggshacker"
               />
 
               <div>

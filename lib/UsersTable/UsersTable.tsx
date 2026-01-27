@@ -1,5 +1,14 @@
 import { IconPencil, IconTrash } from '@tabler/icons-react';
-import { ActionIcon, Anchor, Avatar, Badge, Group, Table, Text } from '@mantine/core';
+import {
+  ActionIcon,
+  Anchor,
+  Avatar,
+  Badge,
+  Group,
+  Table,
+  Text,
+  VisuallyHidden,
+} from '@mantine/core';
 
 const data = [
   {
@@ -55,7 +64,7 @@ export function UsersTable() {
     <Table.Tr key={item.name}>
       <Table.Td>
         <Group gap="sm">
-          <Avatar size={30} src={item.avatar} radius={30} />
+          <Avatar size={30} src={item.avatar} radius={30} alt="" />
           <Text fz="sm" fw={500}>
             {item.name}
           </Text>
@@ -77,10 +86,10 @@ export function UsersTable() {
       </Table.Td>
       <Table.Td>
         <Group gap={0} justify="flex-end">
-          <ActionIcon variant="subtle" color="gray">
+          <ActionIcon variant="subtle" color="gray" aria-label="Edit user">
             <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon variant="subtle" color="red">
+          <ActionIcon variant="subtle" color="red" aria-label="Delete user">
             <IconTrash size={16} stroke={1.5} />
           </ActionIcon>
         </Group>
@@ -97,7 +106,9 @@ export function UsersTable() {
             <Table.Th>Job title</Table.Th>
             <Table.Th>Email</Table.Th>
             <Table.Th>Phone</Table.Th>
-            <Table.Th />
+            <Table.Th>
+              <VisuallyHidden>Actions</VisuallyHidden>
+            </Table.Th>
           </Table.Tr>
         </Table.Thead>
         <Table.Tbody>{rows}</Table.Tbody>

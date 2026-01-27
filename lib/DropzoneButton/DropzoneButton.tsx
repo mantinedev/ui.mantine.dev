@@ -17,6 +17,7 @@ export function DropzoneButton() {
         radius="md"
         accept={[MIME_TYPES.pdf]}
         maxSize={30 * 1024 ** 2}
+        aria-label="Drop files here"
       >
         <div style={{ pointerEvents: 'none' }}>
           <Group justify="center">

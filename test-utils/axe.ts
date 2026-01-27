@@ -14,13 +14,21 @@ const config = {
   },
 };
 
-export function axe(elements: React.ReactElement[]) {
+export function axe(elements: React.ReactElement[], axeOptions?: any) {
   expect.extend(toHaveNoViolations);
 
   it('has no accessibility violations', async () => {
     for (const element of elements) {
       const { container } = await renderWithAct(element);
-      const result = await Axe(container, config);
+      const combinedConfig = {
+        ...config,
+        ...axeOptions,
+        rules: {
+          ...config.rules,
+          ...(axeOptions?.rules || {}),
+        },
+      };
+      const result = await Axe(container, combinedConfig);
       expect(result).toHaveNoViolations();
     }
   }, 30000);

@@ -27,7 +27,7 @@ export function EmailBanner() {
           </Button>
         </div>
       </div>
-      <Image src={image.src} className={classes.image} />
+      <Image src={image.src} className={classes.image} alt="" />
     </div>
   );
 }

@@ -60,7 +60,13 @@ export function HeaderTabs() {
         <Group justify="space-between">
           <MantineLogo size={28} />
 
-          <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            hiddenFrom="xs"
+            size="sm"
+            aria-label="Toggle navigation"
+          />
 
           <Menu
             width={260}
@@ -75,7 +81,7 @@ export function HeaderTabs() {
                 className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
               >
                 <Group gap={7}>
-                  <Avatar src={user.image} alt={user.name} radius="xl" size={20} />
+                  <Avatar src={user.image} alt="" radius="xl" size={20} />
                   <Text fw={500} size="sm" lh={1} mr={3}>
                     {user.name}
                   </Text>
@@ -134,6 +140,9 @@ export function HeaderTabs() {
           }}
         >
           <Tabs.List>{items}</Tabs.List>
+          {items.map((item) => (
+            <Tabs.Panel value={item.key as string} key={item.key} />
+          ))}
         </Tabs>
       </Container>
     </div>

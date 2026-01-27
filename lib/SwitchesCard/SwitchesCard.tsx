@@ -20,7 +20,13 @@ export function SwitchesCard() {
           {item.description}
         </Text>
       </div>
-      <Switch onLabel="ON" offLabel="OFF" className={classes.switch} size="lg" />
+      <Switch
+        onLabel="ON"
+        offLabel="OFF"
+        className={classes.switch}
+        size="lg"
+        aria-label={item.title}
+      />
     </Group>
   ));
 

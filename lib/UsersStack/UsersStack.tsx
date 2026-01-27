@@ -56,7 +56,7 @@ export function UsersStack() {
     <Table.Tr key={item.name}>
       <Table.Td>
         <Group gap="sm">
-          <Avatar size={40} src={item.avatar} radius={40} />
+          <Avatar size={40} src={item.avatar} radius={40} alt="" />
           <div>
             <Text fz="sm" fw={500}>
               {item.name}
@@ -81,7 +81,7 @@ export function UsersStack() {
       </Table.Td>
       <Table.Td>
         <Group gap={0} justify="flex-end">
-          <ActionIcon variant="subtle" color="gray">
+          <ActionIcon variant="subtle" color="gray" aria-label="Edit">
             <IconPencil size={16} stroke={1.5} />
           </ActionIcon>
           <Menu
@@ -91,7 +91,7 @@ export function UsersStack() {
             withinPortal
           >
             <Menu.Target>
-              <ActionIcon variant="subtle" color="gray">
+              <ActionIcon variant="subtle" color="gray" aria-label="Menu">
                 <IconDots size={16} stroke={1.5} />
               </ActionIcon>
             </Menu.Target>

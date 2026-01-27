@@ -17,7 +17,7 @@ export function LanguagePicker() {
   const [selected, setSelected] = useState(data[0]);
   const items = data.map((item) => (
     <Menu.Item
-      leftSection={<Image src={item.image} width={18} height={18} />}
+      leftSection={<Image src={item.image} width={18} height={18} alt="" />}
       onClick={() => setSelected(item)}
       key={item.label}
     >
@@ -36,7 +36,7 @@ export function LanguagePicker() {
       <Menu.Target>
         <UnstyledButton className={classes.control} data-expanded={opened || undefined}>
           <Group gap="xs">
-            <Image src={selected.image} w={22} h={22} />
+            <Image src={selected.image} w={22} h={22} alt="" />
             <span className={classes.label}>{selected.label}</span>
           </Group>
           <IconChevronDown size={16} className={classes.icon} stroke={1.5} />

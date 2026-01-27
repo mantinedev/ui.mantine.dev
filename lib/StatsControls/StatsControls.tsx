@@ -37,6 +37,7 @@ export function StatsControls() {
         <UnstyledButton
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).add(1, 'day').toDate())}
+          aria-label="Next day"
         >
           <IconChevronUp size={16} className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>
@@ -49,6 +50,7 @@ export function StatsControls() {
         <UnstyledButton
           className={classes.control}
           onClick={() => setDate((current) => dayjs(current).subtract(1, 'day').toDate())}
+          aria-label="Previous day"
         >
           <IconChevronDown size={16} className={classes.controlIcon} stroke={1.5} />
         </UnstyledButton>

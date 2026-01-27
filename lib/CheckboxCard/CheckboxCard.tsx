@@ -6,15 +6,13 @@ export function CheckboxCard() {
   const [value, onChange] = useState(true);
 
   return (
-    <UnstyledButton onClick={() => onChange(!value)} className={classes.button}>
+    <UnstyledButton component="label" className={classes.button}>
       <Checkbox
         checked={value}
-        onChange={() => {}}
-        tabIndex={-1}
+        onChange={(event) => onChange(event.currentTarget.checked)}
         size="md"
         mr="xl"
         styles={{ input: { cursor: 'pointer' } }}
-        aria-hidden
       />
 
       <div>

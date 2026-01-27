@@ -60,11 +60,15 @@ export function TableSelection() {
     return (
       <Table.Tr key={item.id} className={cx({ [classes.rowSelected]: selected })}>
         <Table.Td>
-          <Checkbox checked={selection.includes(item.id)} onChange={() => toggleRow(item.id)} />
+          <Checkbox
+            checked={selection.includes(item.id)}
+            onChange={() => toggleRow(item.id)}
+            aria-label="Select row"
+          />
         </Table.Td>
         <Table.Td>
           <Group gap="sm">
-            <Avatar size={26} src={item.avatar} radius={26} />
+            <Avatar size={26} src={item.avatar} radius={26} alt="" />
             <Text size="sm" fw={500}>
               {item.name}
             </Text>
@@ -81,11 +85,12 @@ export function TableSelection() {
       <Table miw={800} verticalSpacing="sm">
         <Table.Thead>
           <Table.Tr>
-            <Table.Th w={40}>
+            <Table.Th w={40} aria-label="Select all rows">
               <Checkbox
                 onChange={toggleAll}
                 checked={selection.length === data.length}
                 indeterminate={selection.length > 0 && selection.length !== data.length}
+                aria-label="Select all rows"
               />
             </Table.Th>
             <Table.Th>User</Table.Th>

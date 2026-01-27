@@ -12,6 +12,8 @@ export function SliderMarks() {
       classNames={classes}
       defaultValue={[30, 60]}
       thumbChildren={<IconGripVertical size={20} stroke={1.5} />}
+      thumbFromLabel="Start"
+      thumbToLabel="End"
       marks={[
         { value: 0, label: '0' },
         { value: 12.5, label: point },

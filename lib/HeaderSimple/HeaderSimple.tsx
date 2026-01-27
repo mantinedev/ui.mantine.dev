@@ -38,7 +38,13 @@ export function HeaderSimple() {
           {items}
         </Group>
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <Burger
+          opened={opened}
+          onClick={toggle}
+          hiddenFrom="xs"
+          size="sm"
+          aria-label="Toggle navigation"
+        />
       </Container>
     </header>
   );

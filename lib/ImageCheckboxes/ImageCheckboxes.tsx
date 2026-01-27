@@ -35,6 +35,7 @@ export function ImageCheckbox({
       onClick={() => handleChange(!value)}
       data-checked={value || undefined}
       className={classes.button}
+      component="div"
     >
       <Image src={image} alt={title} w={40} h={40} />
 
@@ -52,6 +53,7 @@ export function ImageCheckbox({
         onChange={() => {}}
         tabIndex={-1}
         styles={{ input: { cursor: 'pointer' } }}
+        aria-label={title}
       />
     </UnstyledButton>
   );

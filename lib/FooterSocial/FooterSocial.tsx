@@ -9,13 +9,13 @@ export function FooterSocial() {
       <Container className={classes.inner}>
         <MantineLogo size={28} />
         <Group gap={0} className={classes.links} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="Twitter">
             <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="YouTube">
             <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="Instagram">
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>

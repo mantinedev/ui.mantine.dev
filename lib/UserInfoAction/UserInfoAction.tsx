@@ -8,6 +8,7 @@ export function UserInfoAction() {
         size={120}
         radius={120}
         mx="auto"
+        alt="Jane Fingerlicker"
       />
       <Text ta="center" fz="lg" fw={500} mt="md">
         Jane Fingerlicker

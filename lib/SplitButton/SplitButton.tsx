@@ -15,6 +15,7 @@ export function SplitButton() {
             color={theme.primaryColor}
             size={36}
             className={classes.menuControl}
+            aria-label="More options"
           >
             <IconChevronDown size={16} stroke={1.5} />
           </ActionIcon>

@@ -9,6 +9,7 @@ export function UserButton() {
         <Avatar
           src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"
           radius="xl"
+          alt="Harriette Spoonlicker"
         />
 
         <div style={{ flex: 1 }}>

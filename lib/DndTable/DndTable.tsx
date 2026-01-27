@@ -15,7 +15,7 @@ import {
 } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
 import { IconGripVertical } from '@tabler/icons-react';
-import { Table } from '@mantine/core';
+import { Table, VisuallyHidden } from '@mantine/core';
 import { useListState } from '@mantine/hooks';
 import classes from './DndTable.module.css';
 
@@ -79,7 +79,9 @@ export function DndTable() {
         <Table>
           <Table.Thead>
             <Table.Tr>
-              <Table.Th w={40} />
+              <Table.Th w={40}>
+                <VisuallyHidden>Drag handle</VisuallyHidden>
+              </Table.Th>
               <Table.Th w={80}>Position</Table.Th>
               <Table.Th w={120}>Name</Table.Th>
               <Table.Th w={40}>Symbol</Table.Th>

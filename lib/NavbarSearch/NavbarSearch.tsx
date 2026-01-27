@@ -74,6 +74,7 @@ export function NavbarSearch() {
         rightSection={<Code className={classes.searchCode}>Ctrl + K</Code>}
         styles={{ section: { pointerEvents: 'none' } }}
         mb="sm"
+        aria-label="Search"
       />
 
       <div className={classes.section}>
@@ -86,7 +87,7 @@ export function NavbarSearch() {
             Collections
           </Text>
           <Tooltip label="Create collection" withArrow position="right">
-            <ActionIcon variant="default" size={18}>
+            <ActionIcon variant="default" size={18} aria-label="Create collection">
               <IconPlus size={12} stroke={1.5} />
             </ActionIcon>
           </Tooltip>

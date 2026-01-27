@@ -72,13 +72,13 @@ export function FooterLinks() {
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="Twitter">
             <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="Youtube">
             <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" color="gray" variant="subtle">
+          <ActionIcon size="lg" color="gray" variant="subtle" aria-label="Instagram">
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>
