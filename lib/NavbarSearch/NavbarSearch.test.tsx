@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NavbarSearch } from './NavbarSearch';
 import attributes from './attributes.json';
+import { NavbarSearch } from './NavbarSearch';
 
 describe('NavbarSearch', () => {
   axe([<NavbarSearch key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FooterSimple } from './FooterSimple';
 import attributes from './attributes.json';
+import { FooterSimple } from './FooterSimple';
 
 describe('FooterSimple', () => {
   axe([<FooterSimple key="1" {...(attributes as any)} />]);

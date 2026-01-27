@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CarouselCard } from './CarouselCard';
 import attributes from './attributes.json';
+import { CarouselCard } from './CarouselCard';
 
 describe('CarouselCard', () => {
   axe([<CarouselCard key="1" {...(attributes as any)} />]);

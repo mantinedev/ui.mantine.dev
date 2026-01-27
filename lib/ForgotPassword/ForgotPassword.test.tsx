@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ForgotPassword } from './ForgotPassword';
 import attributes from './attributes.json';
+import { ForgotPassword } from './ForgotPassword';
 
 describe('ForgotPassword', () => {
   axe([<ForgotPassword key="1" {...(attributes as any)} />]);

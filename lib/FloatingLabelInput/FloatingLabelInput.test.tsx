@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FloatingLabelInput } from './FloatingLabelInput';
 import attributes from './attributes.json';
+import { FloatingLabelInput } from './FloatingLabelInput';
 
 describe('FloatingLabelInput', () => {
   axe([<FloatingLabelInput key="1" {...(attributes as any)} />]);

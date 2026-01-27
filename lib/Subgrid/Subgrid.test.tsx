@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { Subgrid } from './Subgrid';
 import attributes from './attributes.json';
+import { Subgrid } from './Subgrid';
 
 describe('Subgrid', () => {
   axe([<Subgrid key="1" {...(attributes as any)} />]);

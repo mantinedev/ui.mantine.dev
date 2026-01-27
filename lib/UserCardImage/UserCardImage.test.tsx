@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UserCardImage } from './UserCardImage';
 import attributes from './attributes.json';
+import { UserCardImage } from './UserCardImage';
 
 describe('UserCardImage', () => {
   axe([<UserCardImage key="1" {...(attributes as any)} />]);

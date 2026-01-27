@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NotFoundImage } from './NotFoundImage';
 import attributes from './attributes.json';
+import { NotFoundImage } from './NotFoundImage';
 
 describe('NotFoundImage', () => {
   axe([<NotFoundImage key="1" {...(attributes as any)} />]);

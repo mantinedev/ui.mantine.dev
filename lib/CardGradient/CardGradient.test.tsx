@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CardGradient } from './CardGradient';
 import attributes from './attributes.json';
+import { CardGradient } from './CardGradient';
 
 describe('CardGradient', () => {
   axe([<CardGradient key="1" {...(attributes as any)} />]);

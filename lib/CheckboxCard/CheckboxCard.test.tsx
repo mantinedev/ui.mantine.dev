@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CheckboxCard } from './CheckboxCard';
 import attributes from './attributes.json';
+import { CheckboxCard } from './CheckboxCard';
 
 describe('CheckboxCard', () => {
   axe([<CheckboxCard key="1" {...(attributes as any)} />]);

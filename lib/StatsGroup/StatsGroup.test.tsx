@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { StatsGroup } from './StatsGroup';
 import attributes from './attributes.json';
+import { StatsGroup } from './StatsGroup';
 
 describe('StatsGroup', () => {
   axe([<StatsGroup key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { PasswordStrength } from './PasswordStrength';
 import attributes from './attributes.json';
+import { PasswordStrength } from './PasswordStrength';
 
 describe('PasswordStrength', () => {
   axe([<PasswordStrength key="1" {...(attributes as any)} />]);

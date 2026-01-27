@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { EmailBanner } from './EmailBanner';
 import attributes from './attributes.json';
+import { EmailBanner } from './EmailBanner';
 
 describe('EmailBanner', () => {
   axe([<EmailBanner key="1" {...(attributes as any)} />]);

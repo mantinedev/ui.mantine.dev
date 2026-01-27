@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeaderMenu } from './HeaderMenu';
 import attributes from './attributes.json';
+import { HeaderMenu } from './HeaderMenu';
 
 describe('HeaderMenu', () => {
   axe([<HeaderMenu key="1" {...(attributes as any)} />]);

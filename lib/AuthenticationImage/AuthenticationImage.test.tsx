@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { AuthenticationImage } from './AuthenticationImage';
 import attributes from './attributes.json';
+import { AuthenticationImage } from './AuthenticationImage';
 
 describe('AuthenticationImage', () => {
   axe([<AuthenticationImage key="1" {...(attributes as any)} />]);

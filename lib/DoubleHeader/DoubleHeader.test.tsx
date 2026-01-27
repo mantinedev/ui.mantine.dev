@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { DoubleHeader } from './DoubleHeader';
 import attributes from './attributes.json';
+import { DoubleHeader } from './DoubleHeader';
 
 describe('DoubleHeader', () => {
   axe([<DoubleHeader key="1" {...(attributes as any)} />]);

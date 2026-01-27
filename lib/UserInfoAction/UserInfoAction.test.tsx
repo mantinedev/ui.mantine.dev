@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UserInfoAction } from './UserInfoAction';
 import attributes from './attributes.json';
+import { UserInfoAction } from './UserInfoAction';
 
 describe('UserInfoAction', () => {
   axe([<UserInfoAction key="1" {...(attributes as any)} />]);

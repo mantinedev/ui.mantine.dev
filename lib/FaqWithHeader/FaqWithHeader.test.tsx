@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FaqWithHeader } from './FaqWithHeader';
 import attributes from './attributes.json';
+import { FaqWithHeader } from './FaqWithHeader';
 
 describe('FaqWithHeader', () => {
   axe([<FaqWithHeader key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { DndTable } from './DndTable';
 import attributes from './attributes.json';
+import { DndTable } from './DndTable';
 
 describe('DndTable', () => {
   axe([<DndTable key="1" {...(attributes as any)} />]);

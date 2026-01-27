@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FooterLinks } from './FooterLinks';
 import attributes from './attributes.json';
+import { FooterLinks } from './FooterLinks';
 
 describe('FooterLinks', () => {
   axe([<FooterLinks key="1" {...(attributes as any)} />]);

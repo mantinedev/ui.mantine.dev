@@ -1,4 +1,4 @@
-import { Checkbox, Image, SimpleGrid, Text, UnstyledButton } from '@mantine/core';
+import { Checkbox, ElementProps, Image, SimpleGrid, Text, UnstyledButton } from '@mantine/core';
 import { useUncontrolled } from '@mantine/hooks';
 import icons from './icons';
 import classes from './ImageCheckboxes.module.css';
@@ -21,7 +21,7 @@ export function ImageCheckbox({
   className,
   image,
   ...others
-}: ImageCheckboxProps & Omit<React.ComponentPropsWithoutRef<'button'>, keyof ImageCheckboxProps>) {
+}: ImageCheckboxProps & ElementProps<'div', keyof ImageCheckboxProps>) {
   const [value, handleChange] = useUncontrolled({
     value: checked,
     defaultValue: defaultChecked,

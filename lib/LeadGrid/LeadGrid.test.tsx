@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { LeadGrid } from './LeadGrid';
 import attributes from './attributes.json';
+import { LeadGrid } from './LeadGrid';
 
 describe('LeadGrid', () => {
   axe([<LeadGrid key="1" {...(attributes as any)} />]);

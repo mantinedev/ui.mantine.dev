@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SplitButton } from './SplitButton';
 import attributes from './attributes.json';
+import { SplitButton } from './SplitButton';
 
 describe('SplitButton', () => {
   axe([<SplitButton key="1" {...(attributes as any)} />]);

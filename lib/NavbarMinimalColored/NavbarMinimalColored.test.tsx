@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NavbarMinimalColored } from './NavbarMinimalColored';
 import attributes from './attributes.json';
+import { NavbarMinimalColored } from './NavbarMinimalColored';
 
 describe('NavbarMinimalColored', () => {
   axe([<NavbarMinimalColored key="1" {...(attributes as any)} />]);

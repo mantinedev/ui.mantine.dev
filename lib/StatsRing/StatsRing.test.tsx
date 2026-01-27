@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { StatsRing } from './StatsRing';
 import attributes from './attributes.json';
+import { StatsRing } from './StatsRing';
 
 describe('StatsRing', () => {
   axe([<StatsRing key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { GridAsymmetrical } from './GridAsymmetrical';
 import attributes from './attributes.json';
+import { GridAsymmetrical } from './GridAsymmetrical';
 
 describe('GridAsymmetrical', () => {
   axe([<GridAsymmetrical key="1" {...(attributes as any)} />]);

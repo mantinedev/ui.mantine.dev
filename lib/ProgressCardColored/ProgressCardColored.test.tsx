@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ProgressCardColored } from './ProgressCardColored';
 import attributes from './attributes.json';
+import { ProgressCardColored } from './ProgressCardColored';
 
 describe('ProgressCardColored', () => {
   axe([<ProgressCardColored key="1" {...(attributes as any)} />]);

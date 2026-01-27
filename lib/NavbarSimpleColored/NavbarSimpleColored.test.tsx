@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NavbarSimpleColored } from './NavbarSimpleColored';
 import attributes from './attributes.json';
+import { NavbarSimpleColored } from './NavbarSimpleColored';
 
 describe('NavbarSimpleColored', () => {
   axe([<NavbarSimpleColored key="1" {...(attributes as any)} />]);

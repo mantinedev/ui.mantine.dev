@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { InputTooltip } from './InputTooltip';
 import attributes from './attributes.json';
+import { InputTooltip } from './InputTooltip';
 
 describe('InputTooltip', () => {
   axe([<InputTooltip key="1" {...(attributes as any)} />]);

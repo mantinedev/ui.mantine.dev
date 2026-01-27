@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SliderHover } from './SliderHover';
 import attributes from './attributes.json';
+import { SliderHover } from './SliderHover';
 
 describe('SliderHover', () => {
   axe([<SliderHover key="1" {...(attributes as any)} />]);

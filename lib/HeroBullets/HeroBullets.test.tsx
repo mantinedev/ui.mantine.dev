@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeroBullets } from './HeroBullets';
 import attributes from './attributes.json';
+import { HeroBullets } from './HeroBullets';
 
 describe('HeroBullets', () => {
   axe([<HeroBullets key="1" {...(attributes as any)} />]);

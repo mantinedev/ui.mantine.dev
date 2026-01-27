@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { GetInTouch } from './GetInTouch';
 import attributes from './attributes.json';
+import { GetInTouch } from './GetInTouch';
 
 describe('GetInTouch', () => {
   axe([<GetInTouch key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FaqWithImage } from './FaqWithImage';
 import attributes from './attributes.json';
+import { FaqWithImage } from './FaqWithImage';
 
 describe('FaqWithImage', () => {
   axe([<FaqWithImage key="1" {...(attributes as any)} />]);

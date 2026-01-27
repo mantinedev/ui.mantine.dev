@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeaderSimple } from './HeaderSimple';
 import attributes from './attributes.json';
+import { HeaderSimple } from './HeaderSimple';
 
 describe('HeaderSimple', () => {
   axe([<HeaderSimple key="1" {...(attributes as any)} />]);

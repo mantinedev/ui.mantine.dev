@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeroContentLeft } from './HeroContentLeft';
 import attributes from './attributes.json';
+import { HeroContentLeft } from './HeroContentLeft';
 
 describe('HeroContentLeft', () => {
   axe([<HeroContentLeft key="1" {...(attributes as any)} />]);

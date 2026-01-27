@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ButtonMenu } from './ButtonMenu';
 import attributes from './attributes.json';
+import { ButtonMenu } from './ButtonMenu';
 
 describe('ButtonMenu', () => {
   axe([<ButtonMenu key="1" {...(attributes as any)} />]);

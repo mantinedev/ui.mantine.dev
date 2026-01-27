@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SwitchesCard } from './SwitchesCard';
 import attributes from './attributes.json';
+import { SwitchesCard } from './SwitchesCard';
 
 describe('SwitchesCard', () => {
   axe([<SwitchesCard key="1" {...(attributes as any)} />]);

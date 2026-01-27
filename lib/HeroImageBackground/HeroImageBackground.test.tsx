@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeroImageBackground } from './HeroImageBackground';
 import attributes from './attributes.json';
+import { HeroImageBackground } from './HeroImageBackground';
 
 describe('HeroImageBackground', () => {
   axe([<HeroImageBackground key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ImageActionBanner } from './ImageActionBanner';
 import attributes from './attributes.json';
+import { ImageActionBanner } from './ImageActionBanner';
 
 describe('ImageActionBanner', () => {
   axe([<ImageActionBanner key="1" {...(attributes as any)} />]);

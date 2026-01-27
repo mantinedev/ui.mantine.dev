@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ContainedInputs } from './ContainedInputs';
 import attributes from './attributes.json';
+import { ContainedInputs } from './ContainedInputs';
 
 describe('ContainedInputs', () => {
   axe([<ContainedInputs key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SliderLabel } from './SliderLabel';
 import attributes from './attributes.json';
+import { SliderLabel } from './SliderLabel';
 
 describe('SliderLabel', () => {
   axe([<SliderLabel key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { BadgeCard } from './BadgeCard';
 import attributes from './attributes.json';
+import { BadgeCard } from './BadgeCard';
 
 describe('BadgeCard', () => {
   axe([<BadgeCard key="1" {...(attributes as any)} />]);

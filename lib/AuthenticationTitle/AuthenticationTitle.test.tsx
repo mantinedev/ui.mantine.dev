@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { AuthenticationTitle } from './AuthenticationTitle';
 import attributes from './attributes.json';
+import { AuthenticationTitle } from './AuthenticationTitle';
 
 describe('AuthenticationTitle', () => {
   axe([<AuthenticationTitle key="1" {...(attributes as any)} />]);

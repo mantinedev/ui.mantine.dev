@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CookiesBanner } from './CookiesBanner';
 import attributes from './attributes.json';
+import { CookiesBanner } from './CookiesBanner';
 
 describe('CookiesBanner', () => {
   axe([<CookiesBanner key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CurrencyInput } from './CurrencyInput';
 import attributes from './attributes.json';
+import { CurrencyInput } from './CurrencyInput';
 
 describe('CurrencyInput', () => {
   axe([<CurrencyInput key="1" {...(attributes as any)} />]);

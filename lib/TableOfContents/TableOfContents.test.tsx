@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { TableOfContents } from './TableOfContents';
 import attributes from './attributes.json';
+import { TableOfContents } from './TableOfContents';
 
 describe('TableOfContents', () => {
   axe([<TableOfContents key="1" {...(attributes as any)} />]);

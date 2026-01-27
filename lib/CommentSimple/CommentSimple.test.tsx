@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CommentSimple } from './CommentSimple';
 import attributes from './attributes.json';
+import { CommentSimple } from './CommentSimple';
 
 describe('CommentSimple', () => {
   axe([<CommentSimple key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { InputValidation } from './InputValidation';
 import attributes from './attributes.json';
+import { InputValidation } from './InputValidation';
 
 describe('InputValidation', () => {
   axe([<InputValidation key="1" {...(attributes as any)} />]);

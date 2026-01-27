@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UserButton } from './UserButton';
 import attributes from './attributes.json';
+import { UserButton } from './UserButton';
 
 describe('UserButton', () => {
   axe([<UserButton key="1" {...(attributes as any)} />]);

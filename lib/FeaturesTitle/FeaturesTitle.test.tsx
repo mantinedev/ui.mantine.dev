@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FeaturesTitle } from './FeaturesTitle';
 import attributes from './attributes.json';
+import { FeaturesTitle } from './FeaturesTitle';
 
 describe('FeaturesTitle', () => {
   axe([<FeaturesTitle key="1" {...(attributes as any)} />]);

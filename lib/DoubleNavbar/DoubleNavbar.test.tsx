@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { DoubleNavbar } from './DoubleNavbar';
 import attributes from './attributes.json';
+import { DoubleNavbar } from './DoubleNavbar';
 
 describe('DoubleNavbar', () => {
   axe([<DoubleNavbar key="1" {...(attributes as any)} />]);

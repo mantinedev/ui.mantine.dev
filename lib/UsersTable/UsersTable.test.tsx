@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UsersTable } from './UsersTable';
 import attributes from './attributes.json';
+import { UsersTable } from './UsersTable';
 
 describe('UsersTable', () => {
   axe([<UsersTable key="1" {...(attributes as any)} />]);

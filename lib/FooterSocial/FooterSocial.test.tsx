@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FooterSocial } from './FooterSocial';
 import attributes from './attributes.json';
+import { FooterSocial } from './FooterSocial';
 
 describe('FooterSocial', () => {
   axe([<FooterSocial key="1" {...(attributes as any)} />]);

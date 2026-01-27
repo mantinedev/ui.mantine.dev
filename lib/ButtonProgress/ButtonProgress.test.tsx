@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ButtonProgress } from './ButtonProgress';
 import attributes from './attributes.json';
+import { ButtonProgress } from './ButtonProgress';
 
 describe('ButtonProgress', () => {
   axe([<ButtonProgress key="1" {...(attributes as any)} />]);

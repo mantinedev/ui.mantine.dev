@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { LanguagePicker } from './LanguagePicker';
 import attributes from './attributes.json';
+import { LanguagePicker } from './LanguagePicker';
 
 describe('LanguagePicker', () => {
   axe([<LanguagePicker key="1" {...(attributes as any)} />]);

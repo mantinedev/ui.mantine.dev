@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FaqSimple } from './FaqSimple';
 import attributes from './attributes.json';
+import { FaqSimple } from './FaqSimple';
 
 describe('FaqSimple', () => {
   axe([<FaqSimple key="1" {...(attributes as any)} />]);

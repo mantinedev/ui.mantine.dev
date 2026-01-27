@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SocialButtons } from './SocialButtons';
 import attributes from './attributes.json';
+import { SocialButtons } from './SocialButtons';
 
 describe('SocialButtons', () => {
   axe([<SocialButtons key="1" {...(attributes as any)} />]);

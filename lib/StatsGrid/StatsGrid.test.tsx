@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { StatsGrid } from './StatsGrid';
 import attributes from './attributes.json';
+import { StatsGrid } from './StatsGrid';
 
 describe('StatsGrid', () => {
   axe([<StatsGrid key="1" {...(attributes as any)} />]);

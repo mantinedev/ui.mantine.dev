@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { TaskCard } from './TaskCard';
 import attributes from './attributes.json';
+import { TaskCard } from './TaskCard';
 
 describe('TaskCard', () => {
   axe([<TaskCard key="1" {...(attributes as any)} />]);

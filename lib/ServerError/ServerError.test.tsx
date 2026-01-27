@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ServerError } from './ServerError';
 import attributes from './attributes.json';
+import { ServerError } from './ServerError';
 
 describe('ServerError', () => {
   axe([<ServerError key="1" {...(attributes as any)} />]);

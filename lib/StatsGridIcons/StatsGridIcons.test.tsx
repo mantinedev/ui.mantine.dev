@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { StatsGridIcons } from './StatsGridIcons';
 import attributes from './attributes.json';
+import { StatsGridIcons } from './StatsGridIcons';
 
 describe('StatsGridIcons', () => {
   axe([<StatsGridIcons key="1" {...(attributes as any)} />]);

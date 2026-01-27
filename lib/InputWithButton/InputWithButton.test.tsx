@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { InputWithButton } from './InputWithButton';
 import attributes from './attributes.json';
+import { InputWithButton } from './InputWithButton';
 
 describe('InputWithButton', () => {
   axe([<InputWithButton key="1" {...(attributes as any)} />]);

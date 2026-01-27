@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { TableSort } from './TableSort';
 import attributes from './attributes.json';
+import { TableSort } from './TableSort';
 
 describe('TableSort', () => {
   axe([<TableSort key="1" {...(attributes as any)} />]);

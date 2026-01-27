@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeaderTabs } from './HeaderTabs';
 import attributes from './attributes.json';
+import { HeaderTabs } from './HeaderTabs';
 
 describe('HeaderTabs', () => {
   axe([<HeaderTabs key="1" {...(attributes as any)} />]);

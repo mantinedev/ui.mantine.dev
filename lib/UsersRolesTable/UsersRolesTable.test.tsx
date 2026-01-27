@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UsersRolesTable } from './UsersRolesTable';
 import attributes from './attributes.json';
+import { UsersRolesTable } from './UsersRolesTable';
 
 describe('UsersRolesTable', () => {
   axe([<UsersRolesTable key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { CustomSwitch } from './CustomSwitch';
 import attributes from './attributes.json';
+import { CustomSwitch } from './CustomSwitch';
 
 describe('CustomSwitch', () => {
   axe([<CustomSwitch key="1" {...(attributes as any)} />]);

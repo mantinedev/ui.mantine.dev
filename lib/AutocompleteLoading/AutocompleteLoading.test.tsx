@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { AutocompleteLoading } from './AutocompleteLoading';
 import attributes from './attributes.json';
+import { AutocompleteLoading } from './AutocompleteLoading';
 
 describe('AutocompleteLoading', () => {
   axe([<AutocompleteLoading key="1" {...(attributes as any)} />]);

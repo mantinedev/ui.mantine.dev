@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ButtonCopy } from './ButtonCopy';
 import attributes from './attributes.json';
+import { ButtonCopy } from './ButtonCopy';
 
 describe('ButtonCopy', () => {
   axe([<ButtonCopy key="1" {...(attributes as any)} />]);

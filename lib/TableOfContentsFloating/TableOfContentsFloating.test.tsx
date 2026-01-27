@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { TableOfContentsFloating } from './TableOfContentsFloating';
 import attributes from './attributes.json';
+import { TableOfContentsFloating } from './TableOfContentsFloating';
 
 describe('TableOfContentsFloating', () => {
   axe([<TableOfContentsFloating key="1" {...(attributes as any)} />]);

@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { UsersStack } from './UsersStack';
 import attributes from './attributes.json';
+import { UsersStack } from './UsersStack';
 
 describe('UsersStack', () => {
   axe([<UsersStack key="1" {...(attributes as any)} />]);

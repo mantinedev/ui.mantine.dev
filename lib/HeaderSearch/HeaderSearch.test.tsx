@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { HeaderSearch } from './HeaderSearch';
 import attributes from './attributes.json';
+import { HeaderSearch } from './HeaderSearch';
 
 describe('HeaderSearch', () => {
   axe([<HeaderSearch key="1" {...(attributes as any)} />]);

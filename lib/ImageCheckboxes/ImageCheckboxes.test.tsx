@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { ImageCheckboxes } from './ImageCheckboxes';
 import attributes from './attributes.json';
+import { ImageCheckboxes } from './ImageCheckboxes';
 
 describe('ImageCheckboxes', () => {
   axe([<ImageCheckboxes key="1" {...(attributes as any)} />]);

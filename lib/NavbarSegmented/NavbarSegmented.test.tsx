@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NavbarSegmented } from './NavbarSegmented';
 import attributes from './attributes.json';
+import { NavbarSegmented } from './NavbarSegmented';
 
 describe('NavbarSegmented', () => {
   axe([<NavbarSegmented key="1" {...(attributes as any)} />]);

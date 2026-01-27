@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { SliderIcon } from './SliderIcon';
 import attributes from './attributes.json';
+import { SliderIcon } from './SliderIcon';
 
 describe('SliderIcon', () => {
   axe([<SliderIcon key="1" {...(attributes as any)} />]);

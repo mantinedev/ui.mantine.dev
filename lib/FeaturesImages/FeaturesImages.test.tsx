@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { FeaturesImages } from './FeaturesImages';
 import attributes from './attributes.json';
+import { FeaturesImages } from './FeaturesImages';
 
 describe('FeaturesImages', () => {
   axe([<FeaturesImages key="1" {...(attributes as any)} />]);

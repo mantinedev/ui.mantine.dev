@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NavbarNested } from './NavbarNested';
 import attributes from './attributes.json';
+import { NavbarNested } from './NavbarNested';
 
 describe('NavbarNested', () => {
   axe([<NavbarNested key="1" {...(attributes as any)} />]);

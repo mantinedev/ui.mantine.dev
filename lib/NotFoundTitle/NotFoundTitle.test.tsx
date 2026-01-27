@@ -1,6 +1,6 @@
 import { axe, render } from '@/test-utils';
-import { NotFoundTitle } from './NotFoundTitle';
 import attributes from './attributes.json';
+import { NotFoundTitle } from './NotFoundTitle';
 
 describe('NotFoundTitle', () => {
   axe([<NotFoundTitle key="1" {...(attributes as any)} />]);
