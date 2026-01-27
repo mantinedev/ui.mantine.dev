@@ -141,7 +141,9 @@ export function HeaderTabs() {
         >
           <Tabs.List>{items}</Tabs.List>
           {items.map((item) => (
-            <Tabs.Panel value={item.key as string} key={item.key} />
+            <Tabs.Panel value={item.key!} key={item.key}>
+              {' '}
+            </Tabs.Panel>
           ))}
         </Tabs>
       </Container>

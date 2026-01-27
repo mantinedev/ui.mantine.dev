@@ -1,11 +1,10 @@
 import { axe, render } from '@/test-utils';
 import { AuthenticationForm } from './AuthenticationForm';
-import attributes from './attributes.json';
 
 describe('AuthenticationForm', () => {
-  axe([<AuthenticationForm key="1" {...(attributes as any)} />]);
+  axe([<AuthenticationForm key="1" />]);
 
   it('renders correctly', () => {
-    render(<AuthenticationForm {...(attributes as any)} />);
+    render(<AuthenticationForm />);
   });
 });
