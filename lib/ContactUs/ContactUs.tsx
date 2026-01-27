@@ -12,11 +12,21 @@ import {
 import { ContactIconsList } from './ContactIcons';
 import classes from './ContactUs.module.css';
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+const social = [
+  { Icon: IconBrandTwitter, label: 'Twitter' },
+  { Icon: IconBrandYoutube, label: 'Youtube' },
+  { Icon: IconBrandInstagram, label: 'Instagram' },
+];
 
 export function ContactUs() {
-  const icons = social.map((Icon, index) => (
-    <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
+  const icons = social.map(({ Icon, label }, index) => (
+    <ActionIcon
+      key={index}
+      size={28}
+      className={classes.social}
+      variant="transparent"
+      aria-label={label}
+    >
       <Icon size={22} stroke={1.5} />
     </ActionIcon>
   ));

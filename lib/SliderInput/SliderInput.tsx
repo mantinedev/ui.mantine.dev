@@ -27,6 +27,7 @@ export function SliderInput() {
         size={2}
         className={classes.slider}
         classNames={classes}
+        thumbLabel="Daily Kcal"
       />
     </div>
   );

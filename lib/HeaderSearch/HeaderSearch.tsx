@@ -29,7 +29,13 @@ export function HeaderSearch() {
     <header className={classes.header}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            size="sm"
+            hiddenFrom="sm"
+            aria-label="Toggle navigation"
+          />
           <MantineLogo size={28} />
         </Group>
 

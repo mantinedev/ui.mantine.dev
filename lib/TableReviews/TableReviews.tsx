@@ -74,12 +74,14 @@ export function TableReviews() {
               className={classes.progressSection}
               value={positiveReviews}
               color="teal"
+              aria-label="Positive reviews"
             />
 
             <Progress.Section
               className={classes.progressSection}
               value={negativeReviews}
               color="red"
+              aria-label="Negative reviews"
             />
           </Progress.Root>
         </Table.Td>

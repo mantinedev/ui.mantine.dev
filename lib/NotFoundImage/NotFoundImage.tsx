@@ -6,7 +6,7 @@ export function NotFoundImage() {
   return (
     <Container className={classes.root}>
       <SimpleGrid spacing={{ base: 40, sm: 80 }} cols={{ base: 1, sm: 2 }}>
-        <Image src={image.src} className={classes.mobileImage} />
+        <Image src={image.src} className={classes.mobileImage} alt="Page not found" />
         <div>
           <Title className={classes.title}>Something is not right...</Title>
           <Text c="dimmed" size="lg">
@@ -17,7 +17,7 @@ export function NotFoundImage() {
             Get back to home page
           </Button>
         </div>
-        <Image src={image.src} className={classes.desktopImage} />
+        <Image src={image.src} className={classes.desktopImage} alt="Page not found" />
       </SimpleGrid>
     </Container>
   );

@@ -59,7 +59,7 @@ export function BadgeCard() {
         <Button radius="md" style={{ flex: 1 }}>
           Show details
         </Button>
-        <ActionIcon variant="default" radius="md" size={36}>
+        <ActionIcon variant="default" radius="md" size={36} aria-label="Like">
           <IconHeart className={classes.like} stroke={1.5} />
         </ActionIcon>
       </Group>

@@ -7,7 +7,7 @@ export function CookiesBanner() {
         <Text fz="md" fw={500}>
           Allow cookies
         </Text>
-        <CloseButton mr={-9} mt={-9} />
+        <CloseButton mr={-9} mt={-9} aria-label="Close cookie banner" />
       </Group>
       <Text c="dimmed" fz="xs">
         So the deal is, we want to spy on you. We would like to know what did you have for todays

@@ -64,6 +64,7 @@ export function DoubleHeader() {
           className={classes.burger}
           size="sm"
           hiddenFrom="sm"
+          aria-label="Toggle navigation"
         />
       </Container>
     </header>

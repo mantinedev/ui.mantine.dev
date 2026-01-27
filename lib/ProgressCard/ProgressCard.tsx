@@ -9,7 +9,7 @@ export function ProgressCard() {
       <Text fz="lg" fw={500}>
         $5.431 / $10.000
       </Text>
-      <Progress value={54.31} mt="md" size="lg" radius="xl" />
+      <Progress value={54.31} mt="md" size="lg" radius="xl" aria-label="Monthly goal progress" />
     </Card>
   );
 }

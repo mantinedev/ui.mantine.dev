@@ -35,6 +35,7 @@ export function UserCardImage() {
         mx="auto"
         mt={-30}
         className={classes.avatar}
+        alt="Bill Headbanger"
       />
       <Text ta="center" fz="lg" fw={500} mt="sm">
         Bill Headbanger

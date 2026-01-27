@@ -12,9 +12,9 @@ const images = [
 ];
 
 export function CarouselCard() {
-  const slides = images.map((image) => (
+  const slides = images.map((image, index) => (
     <Carousel.Slide key={image}>
-      <Image src={image} height={220} />
+      <Image src={image} height={220} alt={`Slide ${index + 1}`} />
     </Carousel.Slide>
   ));
 
@@ -29,6 +29,8 @@ export function CarouselCard() {
             controls: classes.carouselControls,
             indicator: classes.carouselIndicator,
           }}
+          previousControlProps={{ 'aria-label': 'Previous slide' }}
+          nextControlProps={{ 'aria-label': 'Next slide' }}
         >
           {slides}
         </Carousel>

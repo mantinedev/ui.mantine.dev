@@ -12,6 +12,7 @@ export function SliderIcon() {
         label={null}
         defaultValue={40}
         styles={styles}
+        thumbLabel="Slider with heart icon"
       />
 
       <RangeSlider
@@ -24,6 +25,8 @@ export function SliderIcon() {
           <IconHeart size={16} stroke={1.5} key="1" />,
           <IconHeartBroken size={16} stroke={1.5} key="2" />,
         ]}
+        thumbFromLabel="Minimum range slider"
+        thumbToLabel="Maximum range slider"
       />
     </>
   );

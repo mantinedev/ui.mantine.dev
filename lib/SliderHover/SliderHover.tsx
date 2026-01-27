@@ -11,6 +11,7 @@ export function SliderHover() {
       max={90}
       ref={ref}
       label={null}
+      thumbLabel="Hover slider"
       styles={{
         thumb: {
           transition: 'opacity 150ms ease',

@@ -19,6 +19,7 @@ export function ProgressCardColored() {
           root: classes.progressTrack,
           section: classes.progressSection,
         }}
+        aria-label="Monthly goal progress"
       />
     </Card>
   );

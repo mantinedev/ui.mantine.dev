@@ -49,6 +49,7 @@ export function PasswordStrength() {
         color={strength > 80 ? 'teal' : strength > 50 ? 'yellow' : 'red'}
         key={index}
         size={4}
+        aria-label={`Password strength segment ${index + 1}`}
       />
     ));
 

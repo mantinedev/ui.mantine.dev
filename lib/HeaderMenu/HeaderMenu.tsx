@@ -77,7 +77,13 @@ export function HeaderMenu() {
           <Group gap={5} visibleFrom="sm">
             {items}
           </Group>
-          <Burger opened={opened} onClick={toggle} size="sm" hiddenFrom="sm" />
+          <Burger
+            opened={opened}
+            onClick={toggle}
+            size="sm"
+            hiddenFrom="sm"
+            aria-label="Toggle navigation"
+          />
         </div>
       </Container>
     </header>

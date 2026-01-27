@@ -10,7 +10,12 @@ const data = [
 
 export function StatsSegments() {
   const segments = data.map((segment) => (
-    <Progress.Section value={segment.part} color={segment.color} key={segment.color}>
+    <Progress.Section
+      value={segment.part}
+      color={segment.color}
+      key={segment.color}
+      aria-label={segment.label}
+    >
       {segment.part > 10 && <Progress.Label>{segment.part}%</Progress.Label>}
     </Progress.Section>
   ));

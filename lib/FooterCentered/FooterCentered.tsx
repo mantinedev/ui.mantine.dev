@@ -33,13 +33,13 @@ export function FooterCentered() {
         <Group className={classes.links}>{items}</Group>
 
         <Group gap="xs" justify="flex-end" wrap="nowrap">
-          <ActionIcon size="lg" variant="default" radius="xl">
+          <ActionIcon size="lg" variant="default" radius="xl" aria-label="Twitter">
             <IconBrandTwitter size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
+          <ActionIcon size="lg" variant="default" radius="xl" aria-label="YouTube">
             <IconBrandYoutube size={18} stroke={1.5} />
           </ActionIcon>
-          <ActionIcon size="lg" variant="default" radius="xl">
+          <ActionIcon size="lg" variant="default" radius="xl" aria-label="Instagram">
             <IconBrandInstagram size={18} stroke={1.5} />
           </ActionIcon>
         </Group>

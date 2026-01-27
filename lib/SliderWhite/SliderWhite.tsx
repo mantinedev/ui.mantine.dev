@@ -9,6 +9,7 @@ export function SliderWhite() {
       thumbChildren={<IconGripHorizontal size={20} stroke={1.5} />}
       defaultValue={40}
       label={null}
+      thumbLabel="Slider"
     />
   );
 }

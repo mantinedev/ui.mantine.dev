@@ -22,6 +22,7 @@ export function CurrencyInput() {
           marginRight: -2,
         },
       }}
+      aria-label="Currency"
     />
   );
 

@@ -60,7 +60,7 @@ export function UsersRolesTable() {
     <Table.Tr key={item.name}>
       <Table.Td>
         <Group gap="sm">
-          <Avatar size={40} src={item.avatar} radius={40} />
+          <Avatar size={40} src={item.avatar} radius={40} alt="" />
           <div>
             <Text fz="sm" fw={500}>
               {item.name}
@@ -78,6 +78,7 @@ export function UsersRolesTable() {
           defaultValue={item.role}
           variant="unstyled"
           allowDeselect={false}
+          aria-label="Role"
         />
       </Table.Td>
       <Table.Td>{item.lastActive}</Table.Td>

@@ -17,13 +17,14 @@
 .date {
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--mantine-color-dimmed);
   font-size: var(--mantine-font-size-xs);
   margin-top: var(--mantine-spacing-xs);
+  opacity: 0.85;
 }
 
 .title {
   font-family: 'Outfit', var(--mantine-font-family);
   font-weight: 500;
   font-size: var(--mantine-font-size-lg);
+  color: var(--mantine-color-bright);
 }

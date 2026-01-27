@@ -29,7 +29,7 @@ export function FeaturesImages() {
   const items = data.map((item) => (
     <div className={classes.item} key={item.image}>
       <ThemeIcon variant="light" className={classes.itemIcon} size={60} radius="md">
-        <Image src={IMAGES[item.image]} />
+        <Image src={IMAGES[item.image]} alt={item.title} />
       </ThemeIcon>
 
       <div>

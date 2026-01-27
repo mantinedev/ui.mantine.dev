@@ -31,16 +31,18 @@ export function TaskCard() {
         </Text>
       </Text>
 
-      <Progress value={(23 / 36) * 100} mt={5} />
+      <Progress value={(23 / 36) * 100} mt={5} aria-label="Task completion" />
 
       <Group justify="space-between" mt="md">
         <Avatar.Group spacing="sm">
-          <Avatar src={avatars[0]} radius="xl" />
-          <Avatar src={avatars[1]} radius="xl" />
-          <Avatar src={avatars[2]} radius="xl" />
-          <Avatar radius="xl">+5</Avatar>
+          <Avatar src={avatars[0]} radius="xl" alt="Avatar 1" />
+          <Avatar src={avatars[1]} radius="xl" alt="Avatar 2" />
+          <Avatar src={avatars[2]} radius="xl" alt="Avatar 3" />
+          <Avatar radius="xl" alt="More users">
+            +5
+          </Avatar>
         </Avatar.Group>
-        <ActionIcon variant="default" size="lg" radius="md">
+        <ActionIcon variant="default" size="lg" radius="md" aria-label="Upload">
           <IconUpload size={18} />
         </ActionIcon>
       </Group>

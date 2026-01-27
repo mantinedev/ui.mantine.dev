@@ -2,5 +2,13 @@ import { RangeSlider } from '@mantine/core';
 import classes from './SliderLabel.module.css';
 
 export function SliderLabel() {
-  return <RangeSlider labelAlwaysOn defaultValue={[20, 60]} classNames={classes} />;
+  return (
+    <RangeSlider
+      labelAlwaysOn
+      defaultValue={[20, 60]}
+      classNames={classes}
+      thumbFromLabel="Start value"
+      thumbToLabel="End value"
+    />
+  );
 }

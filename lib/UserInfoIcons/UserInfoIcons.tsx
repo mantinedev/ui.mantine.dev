@@ -10,6 +10,7 @@ export function UserInfoIcons() {
           src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-2.png"
           size={94}
           radius="md"
+          alt="Robert Glassbreaker"
         />
         <div>
           <Text fz="xs" tt="uppercase" fw={700} c="dimmed">

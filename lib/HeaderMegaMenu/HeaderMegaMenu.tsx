@@ -149,7 +149,12 @@ export function HeaderMegaMenu() {
             <Button>Sign up</Button>
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger
+            opened={drawerOpened}
+            onClick={toggleDrawer}
+            hiddenFrom="sm"
+            aria-label="Toggle navigation"
+          />
         </Group>
       </header>
 

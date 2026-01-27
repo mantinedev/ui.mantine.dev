@@ -4,8 +4,10 @@
 
 .title {
   font-family: Outfit, var(--mantine-font-family);
+  line-height: 1.35;
   font-weight: 450;
   margin-top: var(--mantine-spacing-xs);
+  color: var(--mantine-color-bright);
 }
 
 .footer {

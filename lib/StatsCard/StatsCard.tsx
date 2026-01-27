@@ -25,7 +25,7 @@ export function StatsCard() {
         </Text>
       </Group>
 
-      <Progress value={62} mt={5} />
+      <Progress value={62} mt={5} aria-label="Progress" />
 
       <Group justify="space-between" mt="md">
         <Text fz="sm">20 / 36 km</Text>
