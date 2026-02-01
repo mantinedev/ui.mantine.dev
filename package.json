@@ -37,7 +37,7 @@
     "@tabler/icons-react": "^3.36.1",
     "dayjs": "^1.11.19",
     "embla-carousel-react": "^8.6.0",
-    "next": "16.1.5",
+    "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "shiki": "^3.21.0"
