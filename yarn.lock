@@ -2416,8 +2416,8 @@ __metadata:
   linkType: hard
 
 "@ianvs/prettier-plugin-sort-imports@npm:^4.7.0":
-  version: 4.7.0
-  resolution: "@ianvs/prettier-plugin-sort-imports@npm:4.7.0"
+  version: 4.7.1
+  resolution: "@ianvs/prettier-plugin-sort-imports@npm:4.7.1"
   dependencies:
     "@babel/generator": "npm:^7.26.2"
     "@babel/parser": "npm:^7.26.2"
@@ -2425,7 +2425,7 @@ __metadata:
     "@babel/types": "npm:^7.26.0"
     semver: "npm:^7.5.2"
   peerDependencies:
-    "@prettier/plugin-oxc": ^0.0.4
+    "@prettier/plugin-oxc": ^0.0.4 || ^0.1.0
     "@vue/compiler-sfc": 2.7.x || 3.x
     content-tag: ^4.0.0
     prettier: 2 || 3 || ^4.0.0-0
@@ -2439,7 +2439,7 @@ __metadata:
       optional: true
     prettier-plugin-ember-template-tag:
       optional: true
-  checksum: 10c0/bd2c58c43c12aaa7b67557d971d5eb087b22f5f09e81ba18a2cc0a6d8f1c7f4e2d603c2a0af8c84df8ede56b29b0ab7bb9db86d273bc003b70aba29d7dd347ae
+  checksum: 10c0/cda335ef13b4f95825c7667a4962bd679c0065863572f9d3bd715f2d2a463e56e93808dc7b5c24ecca33d63ddf2159780cfdb3d78f30c828b6efb054972dfc5b
   languageName: node
   linkType: hard
 
@@ -3132,37 +3132,37 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/carousel@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/carousel@npm:8.3.13"
+"@mantine/carousel@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/carousel@npm:8.3.14"
   peerDependencies:
-    "@mantine/core": 8.3.13
-    "@mantine/hooks": 8.3.13
+    "@mantine/core": 8.3.14
+    "@mantine/hooks": 8.3.14
     embla-carousel: ">=8.0.0"
     embla-carousel-react: ">=8.0.0"
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/4acb989e1d0aeb6a786aaea185520dd6ebfef99b510285de0ac5d235a734b9ac04f9a47ddcd49d56a0584039aa8445b4f89cce49eb8d6c13064ec6930e46f20c
+  checksum: 10c0/466cd5b52fa115ae465bde43772fc99d311f6f675c455762620290b30f8ec7e69bcb5a33fda75f80b348b2bf3a3bfe8be460e8e454de8a978d3d282c76e5f5bb
   languageName: node
   linkType: hard
 
-"@mantine/code-highlight@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/code-highlight@npm:8.3.13"
+"@mantine/code-highlight@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/code-highlight@npm:8.3.14"
   dependencies:
     clsx: "npm:^2.1.1"
   peerDependencies:
-    "@mantine/core": 8.3.13
-    "@mantine/hooks": 8.3.13
+    "@mantine/core": 8.3.14
+    "@mantine/hooks": 8.3.14
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/532402903eceee69b9ecd44b403542212a90cd693f092bb8616fdcbfb4fefbce4e6016939c357df7d12bf24f20eec348636dd58abf075a65ea00261f5182ab3e
+  checksum: 10c0/ed214f7f799c172d02aa5312840787710571f3baf5037854a02fea68f98f07fcb9b0ad3ddf882d207ca567798101d21dd6ce637c58b6b1e45fcd086649d73436
   languageName: node
   linkType: hard
 
-"@mantine/core@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/core@npm:8.3.13"
+"@mantine/core@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/core@npm:8.3.14"
   dependencies:
     "@floating-ui/react": "npm:^0.27.16"
     clsx: "npm:^2.1.1"
@@ -3171,68 +3171,68 @@ __metadata:
     react-textarea-autosize: "npm:8.5.9"
     type-fest: "npm:^4.41.0"
   peerDependencies:
-    "@mantine/hooks": 8.3.13
+    "@mantine/hooks": 8.3.14
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/5fe5259fd4449b6398cd59e474008a1c4a457689a8483d19d5a2729264202c6260ae1e64ace1ca39531c04f0ae2d8b0647965f5560a79c56dfd27b57d226b449
+  checksum: 10c0/3a6d10c6b988f9cc63be44f3d1147d9361511fde9b0867093c6e4f3b829b6311b2ed49fc18b5f15ff7116bcfd8a06274726ca58d973358baaac729fd8b072329
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/dropzone@npm:8.3.13"
+"@mantine/dropzone@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/dropzone@npm:8.3.14"
   dependencies:
     react-dropzone: "npm:14.3.8"
   peerDependencies:
-    "@mantine/core": 8.3.13
-    "@mantine/hooks": 8.3.13
+    "@mantine/core": 8.3.14
+    "@mantine/hooks": 8.3.14
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/9e2ac4042c5b5f131784d4206d860f5494820365fd1bdb5a520d6dbdb24de65bd5ef61058a8d60469596bc7e7a21c21338cacded064cce86eac6d54d47948e4e
+  checksum: 10c0/875661f84d8ffaf6a99ef6b167179e5a66d01a087a957b5d2ce701f597850b3f165a9d33f5fff33a5827836855e72cdf0f50f5c265e65aceba0fb78a0fc284da
   languageName: node
   linkType: hard
 
-"@mantine/form@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/form@npm:8.3.13"
+"@mantine/form@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/form@npm:8.3.14"
   dependencies:
     fast-deep-equal: "npm:^3.1.3"
     klona: "npm:^2.0.6"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/21c585403b6e1004beb3ff1ec39a9ed91c0b043f9fb28130664b7fd9368a2a02591e31cd291bc43d01c65b26f3c7c1bf0069f4dd27cddd58f91a3ca82d704ee1
+  checksum: 10c0/84a459117c85f9c66ba4243fd90bbc805217d1cdb58eb874212de828f33e247e09076230e92713ccee83a307a1798730bf94511104a07f5f91d4a8a77a42ea7b
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/hooks@npm:8.3.13"
+"@mantine/hooks@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/hooks@npm:8.3.14"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/2b91a20ddaf2f209e09c45f11e4b157f43b0652d9eef5e9fc8874c7947316481d0a969ab50a50594b834cbe2e5ca3478797ccff51ed42f721a7c672f52fdb130
+  checksum: 10c0/80da7b07001accd87e8c22f99760998812ee9cc12ca178acfb96395298bab3fa038d1cd2375a88cc38ae7cb0bae0c5ffaed3b1e74cbf3221d5d203156e7ab68b
   languageName: node
   linkType: hard
 
-"@mantine/spotlight@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/spotlight@npm:8.3.13"
+"@mantine/spotlight@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/spotlight@npm:8.3.14"
   dependencies:
-    "@mantine/store": "npm:8.3.13"
+    "@mantine/store": "npm:8.3.14"
   peerDependencies:
-    "@mantine/core": 8.3.13
-    "@mantine/hooks": 8.3.13
+    "@mantine/core": 8.3.14
+    "@mantine/hooks": 8.3.14
     react: ^18.x || ^19.x
     react-dom: ^18.x || ^19.x
-  checksum: 10c0/8e73de58012b6b9fbf7d510b6b243eff53832572e1095ca8b84e97e5ad5b920d869862f3dc9e55310a7504398ede97cc2479fd018640b1ff574d70c8e4f06016
+  checksum: 10c0/9dbe14acbcb390f90ebdf53b5f93d2075cdc06b0fd2d018a7d4253227d03c763fa532fed8669f5d980115b701ca4390e2b62ee6821beabac257e8b088f39caa8
   languageName: node
   linkType: hard
 
-"@mantine/store@npm:8.3.13":
-  version: 8.3.13
-  resolution: "@mantine/store@npm:8.3.13"
+"@mantine/store@npm:8.3.14":
+  version: 8.3.14
+  resolution: "@mantine/store@npm:8.3.14"
   peerDependencies:
     react: ^18.x || ^19.x
-  checksum: 10c0/a14f90291ec081844a3b9df2bb7748a912a94a88068c8e9c697be7ea8154a10a9871534ca80e67364c2398daf6be76abdb17f0de66f96e1309aff16a15af52e3
+  checksum: 10c0/9f2cf44c0287aa3bf7c8204e326f0553acb69945e6ef817f089c6481f8a13b33de9a7ef4b57738e6bbe558d53f0957b426b6664fd81be8559967583fe9b9f565
   languageName: node
   linkType: hard
 
@@ -3572,21 +3572,21 @@ __metadata:
   linkType: hard
 
 "@storybook/addon-themes@npm:^10.2.0":
-  version: 10.2.3
-  resolution: "@storybook/addon-themes@npm:10.2.3"
+  version: 10.2.7
+  resolution: "@storybook/addon-themes@npm:10.2.7"
   dependencies:
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^10.2.3
-  checksum: 10c0/c3e2ae46aca4ec573883d0fdf2dfe15eb2ddbc796f0954118a9d546df50444e145833f6fb105eb59dc9d0a25b6d68b751b554863f0659a908014cffeae69d551
+    storybook: ^10.2.7
+  checksum: 10c0/19eb2007686624cb9577ab717bed8cad81e6e6ce58043e22b0c2dff21e7be5891c4101c7886fd57fd62d5f16f2e33078af47b2e56e5707626fcfec9040ea00c4
   languageName: node
   linkType: hard
 
-"@storybook/builder-webpack5@npm:10.2.3":
-  version: 10.2.3
-  resolution: "@storybook/builder-webpack5@npm:10.2.3"
+"@storybook/builder-webpack5@npm:10.2.7":
+  version: 10.2.7
+  resolution: "@storybook/builder-webpack5@npm:10.2.7"
   dependencies:
-    "@storybook/core-webpack": "npm:10.2.3"
+    "@storybook/core-webpack": "npm:10.2.7"
     case-sensitive-paths-webpack-plugin: "npm:^2.4.0"
     cjs-module-lexer: "npm:^1.2.3"
     css-loader: "npm:^7.1.2"
@@ -3602,22 +3602,22 @@ __metadata:
     webpack-hot-middleware: "npm:^2.25.1"
     webpack-virtual-modules: "npm:^0.6.0"
   peerDependencies:
-    storybook: ^10.2.3
+    storybook: ^10.2.7
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/71ab80dd5eaaba0e510b9f151e765bbf0f5f4e24bc5f74aa2aaf46bf4914ca8daeff87599732c9fe3ce4db16a4a8202cd77e54efae3fc4397cba5a7eef208eb0
+  checksum: 10c0/2b85e40140e115fca1303f4b6246c739bced18c94a402d88ee85dbe4a10e615b41393af1f21f8f27a86327287596c24988e8424d606e2c8834d1bfa10c0c9bee
   languageName: node
   linkType: hard
 
-"@storybook/core-webpack@npm:10.2.3":
-  version: 10.2.3
-  resolution: "@storybook/core-webpack@npm:10.2.3"
+"@storybook/core-webpack@npm:10.2.7":
+  version: 10.2.7
+  resolution: "@storybook/core-webpack@npm:10.2.7"
   dependencies:
     ts-dedent: "npm:^2.0.0"
   peerDependencies:
-    storybook: ^10.2.3
-  checksum: 10c0/54273a8b075f3615a224bef352127f45a5a053ed3b7bc5c267398e2de5e8eddfb049f8eefcda6ea53a2948932507b9dc0194b0e15c8b25d868b665309b5fa790
+    storybook: ^10.2.7
+  checksum: 10c0/edf24ef18aa8b1d6d795f56bd021eff33768fe6ca212c5af4ac952d9054f384a36887a1445076f0ffc49afa01a5664eaece1c19207f2ad7a87eabee9de60fd00
   languageName: node
   linkType: hard
 
@@ -3639,8 +3639,8 @@ __metadata:
   linkType: hard
 
 "@storybook/nextjs@npm:^10.2.0":
-  version: 10.2.3
-  resolution: "@storybook/nextjs@npm:10.2.3"
+  version: 10.2.7
+  resolution: "@storybook/nextjs@npm:10.2.7"
   dependencies:
     "@babel/core": "npm:^7.28.5"
     "@babel/plugin-syntax-bigint": "npm:^7.8.3"
@@ -3656,9 +3656,9 @@ __metadata:
     "@babel/preset-typescript": "npm:^7.28.5"
     "@babel/runtime": "npm:^7.28.4"
     "@pmmmwh/react-refresh-webpack-plugin": "npm:^0.5.11"
-    "@storybook/builder-webpack5": "npm:10.2.3"
-    "@storybook/preset-react-webpack": "npm:10.2.3"
-    "@storybook/react": "npm:10.2.3"
+    "@storybook/builder-webpack5": "npm:10.2.7"
+    "@storybook/preset-react-webpack": "npm:10.2.7"
+    "@storybook/react": "npm:10.2.7"
     "@types/semver": "npm:^7.7.1"
     babel-loader: "npm:^9.1.3"
     css-loader: "npm:^6.7.3"
@@ -3679,22 +3679,22 @@ __metadata:
     next: ^14.1.0 || ^15.0.0 || ^16.0.0
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.3
+    storybook: ^10.2.7
     webpack: ^5.0.0
   peerDependenciesMeta:
     typescript:
       optional: true
     webpack:
       optional: true
-  checksum: 10c0/e1b6649ef45e9fb46614f0e6aca38708d347a30cb4b4f51f7e8cbb969f9a5ece20e40e37e825bd74a974e7579640c2af43afe3ee0a68a7526127f07c04f1ae82
+  checksum: 10c0/ff27b8ccae409cd7068f8ca4df252b2aae8d90e9c5ba247fff83db329601d172ec37edcd8d218931a2228cf2ccf25b9eaa4c8f23db7e5315033e38da6c4bad64
   languageName: node
   linkType: hard
 
-"@storybook/preset-react-webpack@npm:10.2.3":
-  version: 10.2.3
-  resolution: "@storybook/preset-react-webpack@npm:10.2.3"
+"@storybook/preset-react-webpack@npm:10.2.7":
+  version: 10.2.7
+  resolution: "@storybook/preset-react-webpack@npm:10.2.7"
   dependencies:
-    "@storybook/core-webpack": "npm:10.2.3"
+    "@storybook/core-webpack": "npm:10.2.7"
     "@storybook/react-docgen-typescript-plugin": "npm:1.0.6--canary.9.0c3f3b7.0"
     "@types/semver": "npm:^7.7.1"
     magic-string: "npm:^0.30.5"
@@ -3706,11 +3706,11 @@ __metadata:
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.3
+    storybook: ^10.2.7
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/bd77fb57257b5dae29faa7190a30e1814a5dc07d22ed3b62d5093503cd0316fce63c393425fac1bbd56aca484fe9cb2c215952ec8dabbabeaeba03fd2a9a1cfd
+  checksum: 10c0/2703e07e594695a136540b23082d32a177f30dd2fcac636e33ec1b83a4bda3e584b2e83c7d4540298c026b8a64badb098c42b300e143af104b7f9d123fc5cf84
   languageName: node
   linkType: hard
 
@@ -3732,33 +3732,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-dom-shim@npm:10.2.3":
-  version: 10.2.3
-  resolution: "@storybook/react-dom-shim@npm:10.2.3"
+"@storybook/react-dom-shim@npm:10.2.7":
+  version: 10.2.7
+  resolution: "@storybook/react-dom-shim@npm:10.2.7"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.3
-  checksum: 10c0/3d6130616b53c68e07f7b2cc82e298a36826f9b8254860a202b17607e126dabcef189506e1f3fdcdf3003cb34dc2933fb7ec6a527defacc3fb9053c1cff81a0d
+    storybook: ^10.2.7
+  checksum: 10c0/607222ebb18414525a64f1314dbc48f7eb41b89cbcae8e7d1eb7db9fda36bfecbce1b1e9e6ea1fd7ea372f4d554fcabdad7ac182bc15d8baeb9a1a650db643d2
   languageName: node
   linkType: hard
 
-"@storybook/react@npm:10.2.3, @storybook/react@npm:^10.2.0":
-  version: 10.2.3
-  resolution: "@storybook/react@npm:10.2.3"
+"@storybook/react@npm:10.2.7, @storybook/react@npm:^10.2.0":
+  version: 10.2.7
+  resolution: "@storybook/react@npm:10.2.7"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react-dom-shim": "npm:10.2.3"
+    "@storybook/react-dom-shim": "npm:10.2.7"
     react-docgen: "npm:^8.0.2"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-    storybook: ^10.2.3
+    storybook: ^10.2.7
     typescript: ">= 4.9.x"
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/649afeb7dd415ce3ebe19838c061cc90d3f4edef15333bb60b03a5223a56eb3d3dd8cd08ebf4c3cbd6fe5078cae94cc980e7e09d23fbb2e79ca44874154e5505
+  checksum: 10c0/596b6beeb9fa427b2ace39f0d98ea1363b8131767df15f0c7096d2a764db68993e88ba9746124c57d673212c381cfff3adb550ef1acd36c72d027e341082b55c
   languageName: node
   linkType: hard
 
@@ -4121,20 +4121,20 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^25.0.10":
-  version: 25.1.0
-  resolution: "@types/node@npm:25.1.0"
+  version: 25.2.2
+  resolution: "@types/node@npm:25.2.2"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10c0/5f393a127dc9565e2e152514a271455d580c7095afc51302e73ffe8aac3526b64ebacc3c10dd40c93cef81a95436ef2c6a8b522930df567a3f6b189c0eef649a
+  checksum: 10c0/45aa45b00df0aac4712c2d6e934a6ed21ac54e0284dd726df1c7620b8c7d36a4fb601b9f8fe1d2951298d1ee7618cf8275688e329c295eb36e8b8fa827a8e334
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.10":
-  version: 19.2.10
-  resolution: "@types/react@npm:19.2.10"
+"@types/react@npm:19.2.13":
+  version: 19.2.13
+  resolution: "@types/react@npm:19.2.13"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10c0/17b96203a79ad3fa3cee8f1f1f324b93f005bc125755e29ac149402807275feaf3f00a4e65b8405f633923ac993da5737fd9800d27ee49911f3ed51dc27478f9
+  checksum: 10c0/e512dc53b805b9066f5c6ad42944372e1204290d618dbaec634d8bbd80d3aadcc1b8cdd7251329936bbdafae0425c02f531083213473bb370df903f20bb66e91
   languageName: node
   linkType: hard
 
@@ -10659,13 +10659,13 @@ __metadata:
     "@dnd-kit/utilities": "npm:^3.2.2"
     "@eslint/js": "npm:^9.39.2"
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.7.0"
-    "@mantine/carousel": "npm:8.3.13"
-    "@mantine/code-highlight": "npm:8.3.13"
-    "@mantine/core": "npm:8.3.13"
-    "@mantine/dropzone": "npm:8.3.13"
-    "@mantine/form": "npm:8.3.13"
-    "@mantine/hooks": "npm:8.3.13"
-    "@mantine/spotlight": "npm:8.3.13"
+    "@mantine/carousel": "npm:8.3.14"
+    "@mantine/code-highlight": "npm:8.3.14"
+    "@mantine/core": "npm:8.3.14"
+    "@mantine/dropzone": "npm:8.3.14"
+    "@mantine/form": "npm:8.3.14"
+    "@mantine/hooks": "npm:8.3.14"
+    "@mantine/spotlight": "npm:8.3.14"
     "@mantinex/dev-icons": "npm:^2.0.0"
     "@mantinex/mantine-header": "npm:^2.0.0"
     "@mantinex/mantine-logo": "npm:^2.0.0"
@@ -10682,7 +10682,7 @@ __metadata:
     "@types/jest": "npm:^30.0.0"
     "@types/jest-axe": "npm:^3.5.9"
     "@types/node": "npm:^25.0.10"
-    "@types/react": "npm:19.2.10"
+    "@types/react": "npm:19.2.13"
     babel-loader: "npm:^10.0.0"
     dayjs: "npm:^1.11.19"
     embla-carousel-react: "npm:^8.6.0"
@@ -13530,8 +13530,8 @@ __metadata:
   linkType: hard
 
 "storybook@npm:^10.2.0":
-  version: 10.2.3
-  resolution: "storybook@npm:10.2.3"
+  version: 10.2.7
+  resolution: "storybook@npm:10.2.7"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
     "@storybook/icons": "npm:^2.0.1"
@@ -13552,7 +13552,7 @@ __metadata:
       optional: true
   bin:
     storybook: ./dist/bin/dispatcher.js
-  checksum: 10c0/21d54f09bb92afd6dfe5e037d68cbd9559feacd275ac2b0eed0e6abac98779901b8613e4eca0ae9e3fd6411b07c44625a4981f0cd5e80cb79aa73f2f449586a8
+  checksum: 10c0/b74524b0d85f99f5ebef2bd9147d82f3c0daf72a8dff6d2d9268a493f0cc5aad3bd96e63c023d0e2ee4635c4e7785a5002a7a21554a11966673411d8ca065acc
   languageName: node
   linkType: hard
 
