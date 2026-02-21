@@ -181,7 +181,7 @@ export function HeaderMegaMenu() {
               <IconChevronDown size={16} color={theme.colors.blue[6]} />
             </Center>
           </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
+          <Collapse expanded={linksOpened}>{links}</Collapse>
           <a href="#" className={classes.link}>
             Learn
           </a>

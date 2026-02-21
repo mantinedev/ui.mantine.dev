@@ -14,7 +14,7 @@ export function HeroTitle() {
           React components and hooks library
         </h1>
 
-        <Text className={classes.description} color="dimmed">
+        <Text className={classes.description} c="dimmed">
           Build fully functional accessible web applications with ease – Mantine includes more than
           100 customizable components and hooks to cover you in any situation
         </Text>

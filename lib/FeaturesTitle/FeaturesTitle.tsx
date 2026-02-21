@@ -49,7 +49,7 @@ export function FeaturesTitle() {
 
   return (
     <div className={classes.wrapper}>
-      <Grid gutter={80}>
+      <Grid gap={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
           <Title className={classes.title} order={2}>
             A fully featured React components library for your next project

@@ -29,7 +29,7 @@ export function CanvasHeader({
     <div className={classes.header} {...others}>
       <Group>
         <Box id={slug} style={{ visibility: 'hidden', position: 'absolute', top: -75 }} />
-        <Text fw={500} mr="md" component="a" href={`#${slug}`}>
+        <Text fw={500} mr="md" component="a" c="bright" href={`#${slug}`}>
           {attributes.title}
         </Text>
 

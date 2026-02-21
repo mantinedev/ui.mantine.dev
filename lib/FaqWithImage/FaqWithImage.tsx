@@ -9,7 +9,7 @@ export function FaqWithImage() {
   return (
     <div className={classes.wrapper}>
       <Container size="lg">
-        <Grid id="faq-grid" gutter={50}>
+        <Grid id="faq-grid" gap={50}>
           <Grid.Col span={{ base: 12, md: 6 }}>
             <Image src={image.src} alt="Frequently Asked Questions" />
           </Grid.Col>

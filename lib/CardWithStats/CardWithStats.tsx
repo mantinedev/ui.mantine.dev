@@ -10,7 +10,7 @@ const stats = [
 export function CardWithStats() {
   const items = stats.map((stat) => (
     <div key={stat.title}>
-      <Text size="xs" color="dimmed">
+      <Text size="xs" c="dimmed">
         {stat.title}
       </Text>
       <Text fw={500} size="sm">

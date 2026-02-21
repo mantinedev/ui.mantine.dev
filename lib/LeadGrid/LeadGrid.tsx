@@ -9,7 +9,7 @@ export function LeadGrid() {
     <Container my="md">
       <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md">
         <Skeleton height={PRIMARY_COL_HEIGHT} radius="md" animate={false} />
-        <Grid gutter="md">
+        <Grid gap="md">
           <Grid.Col>
             <Skeleton height={SECONDARY_COL_HEIGHT} radius="md" animate={false} />
           </Grid.Col>
