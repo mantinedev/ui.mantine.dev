@@ -41,11 +41,11 @@
     "next": "16.1.6",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "shiki": "^3.21.0"
+    "shiki": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.28.6",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@storybook/addon-themes": "^10.2.0",
     "@storybook/nextjs": "^10.2.0",
@@ -59,7 +59,7 @@
     "@types/node": "^25.0.10",
     "@types/react": "19.2.14",
     "babel-loader": "^10.0.0",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.0",
     "eslint-config-mantine": "^4.0.3",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
