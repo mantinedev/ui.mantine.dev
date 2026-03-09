@@ -1,11 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "schedule": ["before 5am on sunday"],
-  "groupName": "all dependencies",
+  "separateMajorMinor": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
   "packageRules": [
     {
-      "matchPackagePatterns": ["*"],
-      "groupName": "all dependencies"
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "all non-major dependencies",
+      "automerge": true
     }
   ],
   "prHourlyLimit": 0,
