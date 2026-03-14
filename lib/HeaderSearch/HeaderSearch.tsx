@@ -1,5 +1,5 @@
 import { IconSearch } from '@tabler/icons-react';
-import { Autocomplete, Burger, Group } from '@mantine/core';
+import { Autocomplete, Burger, Divider, Drawer, Group, ScrollArea } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderSearch.module.css';
@@ -12,7 +12,7 @@ const links = [
 ];
 
 export function HeaderSearch() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
 
   const items = links.map((link) => (
     <a
@@ -52,6 +52,28 @@ export function HeaderSearch() {
           />
         </Group>
       </div>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+        <ScrollArea h="calc(100vh - 80px" mx="-md">
+          <Divider my="sm" />
+          <Autocomplete
+            placeholder="Search"
+            leftSection={<IconSearch size={16} stroke={1.5} />}
+            data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
+            mx="md"
+            mb="sm"
+          />
+          {items}
+        </ScrollArea>
+      </Drawer>
     </header>
   );
 }

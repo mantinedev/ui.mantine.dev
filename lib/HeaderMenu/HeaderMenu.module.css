@@ -22,6 +22,25 @@
   font-size: var(--mantine-font-size-sm);
   font-weight: 500;
 
+  @media (max-width: $mantine-breakpoint-sm) {
+    border-radius: 0;
+    padding: var(--mantine-spacing-md);
+    width: 100%;
+  }
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  }
+}
+
+.subLink {
+  display: block;
+  text-decoration: none;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
+  padding-left: calc(var(--mantine-spacing-md) * 2);
+  font-size: var(--mantine-font-size-sm);
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+
   @mixin hover {
     background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
   }

@@ -15,8 +15,11 @@ import {
   Avatar,
   Burger,
   Container,
+  Divider,
+  Drawer,
   Group,
   Menu,
+  ScrollArea,
   Tabs,
   Text,
   UnstyledButton,
@@ -45,7 +48,7 @@ const tabs = [
 
 export function HeaderTabs() {
   const theme = useMantineTheme();
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [userMenuOpened, setUserMenuOpened] = useState(false);
 
   const items = tabs.map((tab) => (
@@ -147,6 +150,25 @@ export function HeaderTabs() {
           ))}
         </Tabs>
       </Container>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        hiddenFrom="xs"
+        zIndex={1000000}
+      >
+        <ScrollArea h="calc(100vh - 80px" mx="-md">
+          <Divider my="sm" />
+          {tabs.map((tab) => (
+            <a href="#" key={tab} className={classes.drawerLink} onClick={(event) => event.preventDefault()}>
+              {tab}
+            </a>
+          ))}
+        </ScrollArea>
+      </Drawer>
     </div>
   );
 }

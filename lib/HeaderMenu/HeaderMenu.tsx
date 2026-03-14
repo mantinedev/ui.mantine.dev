@@ -1,5 +1,16 @@
 import { IconChevronDown } from '@tabler/icons-react';
-import { Burger, Center, Container, Group, Menu } from '@mantine/core';
+import {
+  Burger,
+  Center,
+  Collapse,
+  Container,
+  Divider,
+  Drawer,
+  Group,
+  Menu,
+  ScrollArea,
+  UnstyledButton,
+} from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMenu.module.css';
@@ -30,7 +41,7 @@ const links = [
 ];
 
 export function HeaderMenu() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
 
   const items = links.map((link) => {
     const menuItems = link.links?.map((item) => (
@@ -86,6 +97,65 @@ export function HeaderMenu() {
           />
         </div>
       </Container>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+        <ScrollArea h="calc(100vh - 80px" mx="-md">
+          <Divider my="sm" />
+          {links.map((link) => {
+            if (link.links) {
+              return (
+                <DrawerLinksGroup key={link.label} link={link} />
+              );
+            }
+
+            return (
+              <a
+                key={link.label}
+                href={link.link}
+                className={classes.link}
+                onClick={(event) => event.preventDefault()}
+              >
+                {link.label}
+              </a>
+            );
+          })}
+        </ScrollArea>
+      </Drawer>
     </header>
+  );
+}
+
+function DrawerLinksGroup({ link }: { link: { link: string; label: string; links?: { link: string; label: string }[] } }) {
+  const [opened, { toggle }] = useDisclosure(false);
+
+  return (
+    <>
+      <UnstyledButton className={classes.link} onClick={toggle}>
+        <Center inline>
+          <span className={classes.linkLabel}>{link.label}</span>
+          <IconChevronDown size={14} stroke={1.5} />
+        </Center>
+      </UnstyledButton>
+      <Collapse expanded={opened}>
+        {link.links?.map((subLink) => (
+          <a
+            key={subLink.link}
+            href={subLink.link}
+            className={classes.subLink}
+            onClick={(event) => event.preventDefault()}
+          >
+            {subLink.label}
+          </a>
+        ))}
+      </Collapse>
+    </>
   );
 }

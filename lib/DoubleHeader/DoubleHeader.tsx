@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Anchor, Box, Burger, Container, Group } from '@mantine/core';
+import { Anchor, Box, Burger, Container, Divider, Drawer, Group, ScrollArea } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './DoubleHeader.module.css';
@@ -19,7 +19,7 @@ const mainLinks = [
 ];
 
 export function DoubleHeader() {
-  const [opened, { toggle }] = useDisclosure(false);
+  const [opened, { toggle, close }] = useDisclosure(false);
   const [active, setActive] = useState(0);
 
   const mainItems = mainLinks.map((item, index) => (
@@ -67,6 +67,41 @@ export function DoubleHeader() {
           aria-label="Toggle navigation"
         />
       </Container>
+
+      <Drawer
+        opened={opened}
+        onClose={close}
+        size="100%"
+        padding="md"
+        title="Navigation"
+        hiddenFrom="sm"
+        zIndex={1000000}
+      >
+        <ScrollArea h="calc(100vh - 80px" mx="-md">
+          <Divider my="sm" />
+          {mainLinks.map((item) => (
+            <a
+              href={item.link}
+              key={item.label}
+              className={classes.drawerLink}
+              onClick={(event) => event.preventDefault()}
+            >
+              {item.label}
+            </a>
+          ))}
+          <Divider my="sm" />
+          {userLinks.map((item) => (
+            <a
+              href={item.link}
+              key={item.label}
+              className={classes.drawerLink}
+              onClick={(event) => event.preventDefault()}
+            >
+              {item.label}
+            </a>
+          ))}
+        </ScrollArea>
+      </Drawer>
     </header>
   );
 }

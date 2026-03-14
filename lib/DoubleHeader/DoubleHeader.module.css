@@ -57,3 +57,16 @@
     text-decoration: none;
   }
 }
+
+.drawerLink {
+  display: block;
+  padding: var(--mantine-spacing-md);
+  text-decoration: none;
+  color: light-dark(var(--mantine-color-gray-7), var(--mantine-color-dark-0));
+  font-size: var(--mantine-font-size-sm);
+  font-weight: 500;
+
+  @mixin hover {
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+  }
+}
