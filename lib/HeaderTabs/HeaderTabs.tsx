@@ -163,7 +163,12 @@ export function HeaderTabs() {
         <ScrollArea h="calc(100vh - 80px" mx="-md">
           <Divider my="sm" />
           {tabs.map((tab) => (
-            <a href="#" key={tab} className={classes.drawerLink} onClick={(event) => event.preventDefault()}>
+            <a
+              href="#"
+              key={tab}
+              className={classes.drawerLink}
+              onClick={(event) => event.preventDefault()}
+            >
               {tab}
             </a>
           ))}

@@ -111,9 +111,7 @@ export function HeaderMenu() {
           <Divider my="sm" />
           {links.map((link) => {
             if (link.links) {
-              return (
-                <DrawerLinksGroup key={link.label} link={link} />
-              );
+              return <DrawerLinksGroup key={link.label} link={link} />;
             }
 
             return (
@@ -133,7 +131,11 @@ export function HeaderMenu() {
   );
 }
 
-function DrawerLinksGroup({ link }: { link: { link: string; label: string; links?: { link: string; label: string }[] } }) {
+function DrawerLinksGroup({
+  link,
+}: {
+  link: { link: string; label: string; links?: { link: string; label: string }[] };
+}) {
   const [opened, { toggle }] = useDisclosure(false);
 
   return (
