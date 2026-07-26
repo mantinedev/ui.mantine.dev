@@ -54,7 +54,7 @@
     "@testing-library/react": "^16.3.2",
     "@types/jest": "^30.0.0",
     "@types/jest-axe": "^3.5.9",
-    "@types/node": "^25.0.10",
+    "@types/node": "^26.0.0",
     "@types/react": "19.2.14",
     "babel-loader": "^10.0.0",
     "gh-pages": "^6.3.0",
