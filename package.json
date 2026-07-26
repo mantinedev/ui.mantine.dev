@@ -44,7 +44,7 @@
     "shiki": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.6",
+    "@babel/core": "^8.0.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@storybook/addon-themes": "^10.2.0",
     "@storybook/nextjs": "^10.2.0",
