@@ -68,7 +68,7 @@
     "prettier": "^3.8.1",
     "storybook": "^10.2.0",
     "ts-node": "^10.9.2",
-    "typescript": "^6"
+    "typescript": "^7.0.0"
   },
   "packageManager": "yarn@4.13.0"
 }
