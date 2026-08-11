@@ -1,22 +1,7 @@
 .feature {
   position: relative;
-  padding-top: var(--mantine-spacing-xl);
-  padding-left: var(--mantine-spacing-xl);
-}
-
-.overlay {
-  position: absolute;
-  height: 100px;
-  width: 160px;
-  top: 0;
-  left: 0;
+  padding: var(--mantine-spacing-xl);
   background-color: var(--mantine-color-blue-light);
-  z-index: 1;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
 }
 
 .icon {
