@@ -8,7 +8,7 @@ export function ActionToggle() {
   const computedColorScheme = useComputedColorScheme('light', { getInitialValueInEffect: true });
 
   return (
-    <Group justify="center">
+    <Group justify="center" p="xl">
       <ActionIcon
         onClick={() => setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')}
         variant="default"
