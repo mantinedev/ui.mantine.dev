@@ -11,9 +11,9 @@ import { Group, Paper, Text, UnstyledButton } from '@mantine/core';
 import classes from './StatsControls.module.css';
 
 const data = [
-  { icon: IconRun, label: 'Running' },
-  { icon: IconSwimming, label: 'Swimming' },
-  { icon: IconBike, label: 'Bike' },
+  { icon: IconRun, label: 'Running', distance: 8 },
+  { icon: IconSwimming, label: 'Swimming', distance: 5 },
+  { icon: IconBike, label: 'Bike', distance: 6 },
 ];
 
 export function StatsControls() {
@@ -25,7 +25,7 @@ export function StatsControls() {
       <div>
         <Text className={classes.label}>{stat.label}</Text>
         <Text fz="xs" className={classes.count}>
-          <span className={classes.value}>{Math.floor(Math.random() * 6 + 4)}km</span> / 10km
+          <span className={classes.value}>{stat.distance}km</span> / 10km
         </Text>
       </div>
     </Paper>
