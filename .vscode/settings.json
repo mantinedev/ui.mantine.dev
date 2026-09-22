@@ -1,0 +1,17 @@
+{
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "oxc.lint.enable": true,
+  "oxc.configPath": ".oxlintrc.json",
+  "oxc.fmt.configPath": "oxfmt.config.mjs",
+  "eslint.enable": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  }
+}

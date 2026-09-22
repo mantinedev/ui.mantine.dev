@@ -1,6 +1,6 @@
 import '@mantine/core/styles.css';
-import '@mantine/code-highlight/styles.css';
 import '@mantine/carousel/styles.css';
+import '@mantine/code-highlight/styles.css';
 import '@mantine/dropzone/styles.css';
 import '@mantine/spotlight/styles.css';
 import '@mantinex/mantine-header/styles.css';
