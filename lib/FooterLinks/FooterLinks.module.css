@@ -38,6 +38,7 @@
 .groups {
   display: flex;
   flex-wrap: wrap;
+  gap: rem(20px);
 
   @media (max-width: $mantine-breakpoint-sm) {
     display: none;
